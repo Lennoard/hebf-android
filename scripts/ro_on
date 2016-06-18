@@ -1,0 +1,38 @@
+#!/system/bin/sh
+# HEBF
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o remount,rw /
+mount -o remount,rw rootfs
+mount -o remount,rw /system
+
+busybox sed -i '/windowsmgr.max_events_per_sec=200/d' /system/build.prop
+busybox sed -i '/ro.min_pointer_dur=8/d' /system/build.prop
+busybox sed -i '/ro.max.fling_velocity=12000/d' /system/build.prop
+busybox sed -i '/ro.min.fling_velocity=8000' /system/build.prop
+busybox sed -i '/video.accelerate.hw=1' /system/build.prop
+busybox sed -i '/debug.performance.tuning=1' /system/build.prop
+busybox sed -i '/windowsmgr.max_events_per_sec=90/d' /system/build.prop
+busybox sed -i '/windowsmgr.max_events_per_sec=150/d' /system/build.prop
+busybox sed -i '/windowsmgr.max_events_per_sec=240/d' /system/build.prop
+busybox echo "#Rolagem
+windowsmgr.max_events_per_sec=200
+ro.min_pointer_dur=8
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+video.accelerate.hw=1
+debug.performance.tuning=1
+" >> /system/build.prop
+
+mount -o remount,ro /
+mount -o remount,ro rootfs
+mount -o remount,ro /system

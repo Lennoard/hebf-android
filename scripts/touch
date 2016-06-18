@@ -1,0 +1,39 @@
+#!/system/bin/sh
+# HEBF
+# edited @IvsomEmidio
+# by Paget96, edited by churapa
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o remount,rw /
+mount -o remount,rw rootfs
+mount -o remount,rw /system
+
+HEBF=/system/etc/HEBF/touch.log
+
+ rm -f $HEBF
+ touch $HEBF
+
+ echo "# Touch log" | busybox tee -a $HEBF
+ echo "" | busybox tee -a $HEBF
+ echo "$( date +"%m-%d-%Y %H:%M:%S" ) Adding Touch tweak..." | busybox tee -a $HEBF
+
+
+if [ -e /sys/class/touch/switch/set_touchscreen ]; then
+	 echo 7025 > /sys/class/touch/switch/set_touchscreen
+	 echo 8002 > /sys/class/touch/switch/set_touchscreen
+	 echo 11001 > /sys/class/touch/switch/set_touchscreen
+	 echo 13030 > /sys/class/touch/switch/set_touchscreen
+	 echo 14005 > /sys/class/touch/switch/set_touchscreen
+fi
+
+ echo "" | busybox tee -a $LS
+ echo "$( date +"%m-%d-%Y %H:%M:%S" ) Touch tweak added" | busybox tee -a $HEBF
