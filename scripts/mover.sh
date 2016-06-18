@@ -11,6 +11,8 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
+#Create folders, moves the files to the correct folders, sets the permissions, makes the 1st BackUp
+
 mount -o rw,remount /data
 mount -o rw,remount /system
 
