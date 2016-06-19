@@ -1,0 +1,258 @@
+<resources>
+    <string name="app_name">HEBF Beta</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Themes</string>
+    <string name="hebf" translatable="false">Hearth empty, battery full</string>
+    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
+    <string name="play_services">Google Play Services drain fix</string>
+    <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.</string>
+    <string name="play_services_on">Google Play Services drain fix activated</string>
+    <string name="play_services_off">Google Play Services drain fix deactivated</string>
+    <string name="zipalign">Zipalign</string>
+    <string name="zipalign_sub">Optimizes the android package files (and its uncompressed data) alignment.</string>
+    <string name="zipalign_on">Zipalign turned on</string>
+    <string name="zipalign_off">Zipalign turned off</string>
+    <string name="net">Internet tweaks</string>
+    <string name="net_sub">Unique tweaks that improves the internet latency by optimizating the DNS server.</string>
+    <string name="net_on">Internet tweaks enabled</string>
+    <string name="net_off">Internet tweaks disabled</string>
+    <string name="gerais">General tweaks</string>
+    <string name="fstrim">Filesystem trim</string>
+    <string name="fstrim_sub">Discards (\"trims\") unused blocks on a mounted filesystem, reducing the lag. It is recommended that you fstrim at least once in a week.</string>
+    <string name="fstrim_on">Filesystems trimmed.</string>
+    <string name="fstrim_botao">FSTRIM NOW</string>
+    <string name="performance">Performance</string>
+    <string name="ferramentas">Tools</string>
+    <string name="bateria">Battery</string>
+    <string name="principal">Main</string>
+    <string name="tweaks">Tweaks</string>
+    <string name="outro">Other</string>
+    <string name="compartilhar">Share</string>
+    <string name="sobre">About</string>
+    <string name="boot">Faster boot</string>
+    <string name="boot_sub">Reduces the boot time by disabling the bootanimation (It may seem that your device will not turn on corrrectly, but it is normal), it also uses another system properties to accelerate the boot time.</string>
+    <string name="boot_on">Bootanimation disabled, reboot</string>
+    <string name="boot_off">Bootanimation enabled again, reboot</string>
+    <string name="title_activity_performance">Performance</string>
+    <string name="game">Gaming mode</string>
+    <string name="game_on">Gaming mode activated</string>
+    <string name="game_off">Gaming mode deactivated</string>
+    <string name="game_sub">Performance improvement in games, optimizes the FPS limit.</string>
+    <string name="performance_tweak">Performance tweak</string>
+    <string name="performance_sub">Performance tweaks. No battery drain included.</string>
+    <string name="pf_on">Performance tweaks enabled</string>
+    <string name="pf_off">Performance tweaks disabled</string>
+    <string name="multitasking">Best multitasking</string>
+    <string name="multitasking_on">Multitasking profile enabled</string>
+    <string name="multitasking_off">Multitasking profile disabled</string>
+    <string name="multitasking_sub">Perfect multitasking. For those who like to use lots of apps at the same time without draining the battery.</string>
+    <string name="performance_texto">General performace</string>
+    <string name="ui_tweaks">UI Tweaks</string>
+    <string name="liquid">Liquid smooth UI</string>
+    <string name="liquid_on">Liquid smooth UI enabled</string>
+    <string name="liquid_off">Liquid smooth UI disabled</string>
+    <string name="liquid_sub">Improves the user interface elements.</string>
+    <string name="scroll">Better scrolling</string>
+    <string name="scroll_on">Better scrolling profile enabled</string>
+    <string name="scroll_off">Better scrolling profile disabled</string>
+    <string name="scroll_sub">Improves the scrolling.</string>
+    <string name="principal_fail">You already are on \"Main\"</string>
+    <string name="performance_fail">You already are on \"Performance\"</string>
+    <string name="battery_fail">You already are on \"Battery\"</string>
+    <string name="ferramentas_fail">You already are on \"Tools\"</string>
+    <string name="title_activity_tools">Tools</string>
+    <string name="adblocker">Ad Blocker</string>
+    <string name="ad_sub">Blocks all the advertisements, including in-app ads.</string>
+    <string name="misc">Miscellaneous</string>
+    <string name="rebooter">Rebooter</string>
+    <string name="reboot">REBOOT</string>
+    <string name="recovery">RECOVERY</string>
+    <string name="bootloader">BOOTLOADER</string>
+    <string name="sysui">RESTART SYSTEMUI</string>
+    <string name="power_off">POWER OFF</string>
+    <string name="calibrar">Battery Calibration</string>
+    <string name="calibrar_sub">Calibrates your battery by erasing the batterystatus.bin file generated by the Android OS containing battery statistics (which sometimes gets corrupted). YOU MUST ONLY CALIBRATE WITH BATTERY LEVEL AT 100%.</string>
+    <string name="calibrar_botao">CALIBRATE NOW</string>
+    <string name="art">ART Fix</string>
+    <string name="art_sub">Gives more free space.</string>
+    <string name="art_sub_aviso">ONLY FOR ANDROID 5.0+ LOLLIPOP</string>
+    <string name="art_sub_kk_toast">Only for Android 5.0+ (SDK21+)!</string>
+    <string name="art_on">Done. You should wipe cache and reboot now</string>
+    <string name="art_off">ART fix turned off. Reboot.</string>
+    <string name="dpi">DPI Changer</string>
+    <string name="dpi_sub">Changes the LCD density. Smaller values are equal to larger screen space. Long click for more information.</string>
+    <string name="dpi_botao">CHANGE</string>
+    <string name="dpi_edit">Value</string>
+    <string name="dpi_dialogo">This feature is currently being tested and still has work to be done.\n
+        \n
+        Default DPI for some screen resolutions:\n
+        \n
+        240x320(ldpi) - 120;\n
+        320x480(mdpi) - 160;\n
+        480x854(hdpi) - 240;\n
+        540x960(hdpi as well) - 240;\n
+        720x1280(xhdpi) - 320;\n
+        1080x1920(xxhdpi) - 480\n
+        \n
+        Warning: Please disregard the above information if you are running this application on a Tablet.
+</string>
+    <string name="dpi_reboot">Your value will be set to the properties file and the device will be rebooted now, proceed?</string>
+    <string name="reiniciar_aviso">Your device will be rebooted.</string>
+    <string name="cancelar">CANCEL</string>
+    <string name="permissive">SET PERMISSIVE</string>
+    <string name="enforcing">SET ENFORCING</string>
+    <string name="se">SELinux Changer</string>
+    <string name="se_aviso">Please note that changing SELinux status might not work on some devices or ROMs.\nChange anyway?</string>
+    <string name="se_snack">SELinux status changed. A reboot may be necessary.</string>
+    <string name="se_sub">Changes the Security Enhancements status (SELinux). On Android 4.4 and later, the default value is enforcing, unless changed by a custom kernel.</string>
+    <string name="title_activity_bateria">Battery</string>
+    <string name="bateria_kk">Improve Battery [KK]</string>
+    <string name="bateria_kk_sub">Android KitKat special tweak to improve your battery life.</string>
+    <string name="bateria_kk_aviso">ONLY FOR ANDROID 4.4 KITKAT</string>
+    <string name="bateria_toast">…</string>
+    <string name="bateria_lp">Improve Battery [LP/MM]</string>
+    <string name="bateria_lp_sub">Android Lollipop special tweak to improve your battery life.</string>
+    <string name="bateria_lp_aviso">ONLY FOR ANDROID 5.0 AND UP</string>
+    <string name="ultra">Ultra battery saver [UNIVERSAL]</string>
+    <string name="ultra_sub">Ultra tweaks to save battery on all devices. Noticeable improvement.</string>
+    <string name="ultra_snack_on">Ultra battery saver profile activated</string>
+    <string name="ultra_snack_off">Ultra battery saver profile deactivated</string>
+    <string name="geral">General</string>
+    <string name="wifi">Wi-Fi Sleeper</string>
+    <string name="wifi_sub">Increases your battery life by controlling, preventing and scheduling the Wi-Fi to switch itself on/off.</string>
+    <string name="wifi_on">Wi-Fi Sleeper enabled</string>
+    <string name="wifi_off">Wi-Fi Sleeper disabled</string>
+    <string name="root_fail">Root access is missing, please fix it!</string>
+    <string name="sysui_aviso">Your SystemUi.apk will be restarted and the phone will be locked.</string>
+    <string name="recovery_aviso">Your device will be rebooted into recovery.</string>
+    <string name="fastboot_aviso">Your device will be rebooted into bootloader mode.</string>
+    <string name="shut_aviso">Your device will be shut down.</string>
+    <string name="dispensar">OK</string>
+    <string name="fab">System boosted.</string>
+    <string name="fab_dialogo">Booster</string>
+    <string name="fab_dialogo_sub">Boosts your device once, drops the caches, frees the RAM.</string>
+    <string name="bem_vindo">HEBF Optimizer</string>
+    <string name="manifest_armazenamento">We need to copy some needed files to your device, for that, we need storage permissions (and root access).</string>
+    <string name="backup_sub">For security, we will back up some important files.</string>
+    <string name="final_sub">Tap the bottom button to complete the application setup.</string>
+    <string name="finalizar">All set!</string>
+    <string name="backup">Backup / Restore</string>
+    <string name="restaurar_botao">RESTORE</string>
+    <string name="backup_botao">BACKUP</string>
+    <string name="backup_sub_botao">Backup of files completed</string>
+    <string name="restaurar_sub">Files restored</string>
+    <string name="ad_on">Adblocker activated :)</string>
+    <string name="ad_off">Adblocker deactivated :|</string>
+    <string name="calibrado">Calibrated</string>
+    <string name="copia_falha">There was a failure to copy the required files, have you granted ROOT and STORAGE permissions?</string>
+    <string name="eh_noyz">Welcome!</string>
+    <string name="procede">OK</string>
+    <string name="nao_procede">CANCEL</string>
+    <string name="calibrar_aviso">You should only calibrate the battery with the level at 100%, if the value is different from that, no changes will be made.</string>
+    <string name="title_activity_mais">Miscellaneous Tools</string>
+    <string name="log">Disable logging</string>
+    <string name="log_sub">If you don\'t want to see the Android striving to record everything that is happening in all applications, enable this option</string>
+    <string name="utilidades">Utilities</string>
+    <string name="host">Hostname Changer</string>
+    <string name="host_sub">Changes the hostname (the device\'s name when connected to a Wi-Fi or Ethernet network).</string>
+    <string name="hostname">Hostname</string>
+    <string name="host_snack">Hostname changed</string>
+    <string name="diversos">Miscellaneous Tools</string>
+    <string name="log_off">Logging disabled</string>
+    <string name="log_on">Logging enabled again</string>
+    <string name="mais_trigger_sub">Touch here for more useful tools</string>
+    <string name="cleaner_trigger_sub">Touch here to open the cleaner</string>
+    <string name="root_dialog_sub">This application can only work with root access, please, clean the application\'s data and grant access when the prompt appear. In case your device does not have root access, you can find more relevant information here: \nhttp://forum.xda-developers.com</string>
+    <string name="root_dialog">Critical failure</string>
+    <string name="root_fail_caos_header">Where is the root access!?</string>
+    <string name="root_fail_caos_sub">This application cannot work at this state, please fix it!\nFirst, clean the application data, then launch HEBF Optimizer again and do not forget to grant root permissions!</string>
+    <string name="fail_huehue">Not so quick! Give me root access first :)</string>
+    <string name="title_activity_opcoes">Options</string>
+    <string name="melhoras">Improvements</string>
+    <string name="bateria_kk_snack">Battery improvements enabled</string>
+    <string name="bateria_kk_snack_off">Battery improvements disabled</string>
+    <string name="encontrado">Found</string>
+    <string name="nao_encontrado">Not found!</string>
+    <string name="backup_status">Backup status:</string>
+    <string name="backup_date">Backup date: </string>
+    <string name="apagar">DELETE</string>
+    <string name="backup_intro">Backup</string>
+    <string name="aviso">Warning!</string>
+    <string name="apagar_sub">You won\'t be able to recover this backup, proceed anyway?</string>
+    <string name="apagado">Backup deleted</string>
+    <string name="title_activity_cleaner">Cleaner</string>
+    <string name="easy">Careful with what you\'re doing, watch your step man…</string>
+    <string name="wpp_aviso">This can\'t be undone, proceed anyway?</string>
+    <string name="limpo">Junk removed</string>
+    <string name="wpp_boot">Apply at startup</string>
+    <string name="wpp_boot_sub">Runs the selected cleanup scripts at this point during boot.</string>
+    <string name="erro">Error</string>
+    <string name="busybox">This application requires Stericson\'s busybox to work, please download and install it.</string>
+    <string name="play_store">PLAY STORE</string>
+    <string name="good_bye">CLOSE</string>
+    <string name="do_not_be_evil">GOOGLE</string>
+    <string name="root_fail_intro">This application requires root access which wasn\'t found.\nIf you don\'t know what we are talking about please uninstall this application.\nGoogle has some quick references.</string>
+    <string name="title_activity_sobre">About</string>
+    <string name="wpp_cleaner">WhatsApp Files Cleaner</string>
+    <string name="gplus" translatable="false">GOOGLE+</string>
+    <string name="xda" translatable="false">XDA</string>
+    <string name="lennoard_sub">Developer and designer</string>
+    <string name="lennoard_frase" translatable="false">\"Fake people have an image to maintain, real people just don\'t care.\"</string>
+    <string name="project">The project</string>
+    <string name="empty">Empty heart?</string>
+    <string name="title_activity_thanks">Thanks</string>
+    <string name="special">Special thanks</string>
+    <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> for the:</string>
+    <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Learn basic scripting, how to execute scripts, mod building</a> guide, where we took inspiration and some initial knowledge. Thanks, you are somewhere in our empty heart.</string>
+    <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
+    <string name="special_sub_2">We also use some open source scripts made by own paget69 and with contributions from several members of the developer community (check the license in such files).</string>
+    <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
+    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
+    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n\n – Não nos esquecemos de vocês.</string>
+    <string name="contribuicoes">Important contributions</string>
+    <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
+    <string name="iv_sub">…And full battery, in a moment of a loving disilusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivsom Emídio</string>
+    <string name="dev">The developers</string>
+    <string name="title_activity_versao">Version</string>
+    <string name="versao">Version 1.0.1b</string>
+    <string name="data">2016/06/17</string>
+    <string name="changelog">Changelog:</string>
+    <string name="changelog_sub" translatable="false">1.0.1b\n\n
+    ▪ Second beta release\n
+    ▪ ! Now HEBF notifies you when the thumbnails size is over 300Mb ! \n
+    ▪ Fixed Force Close when switching to Landscape mode\n
+    ▪ Tweaks revisions\n
+    ▪ Added Force connection type indicator\n
+    ▪ Color changes\n
+    ▪ Text revisions\n
+    ▪ Added more cleaner options\n
+    ▪ Collapsing AppBar Layout on About screen. The new FloatingActionButton takes you to the build folder at AFH\n
+    ▪ HEBF now verifies whether the necessary files exists and shows a warning if does not \n
+    ▪ Updated credits\n
+    ▪ Updated licenses dialog\n</string>
+    <string name="iv" translatable="false">Ivsom Emídio</string>
+    <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
+    <string name="iv_h1">Initial project, developer</string>
+    <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
+    <string name="lennoard" translatable="false">Lennoard Silva</string>
+    <string name="yahari" translatable="false">– Hikigaya Hachiman</string>
+    <string name="mascote">The mascot</string>
+    <string name="force">Force connection type indicator</string>
+    <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
+    <string name="force_on">Hack enabled :v</string>
+    <string name="force_off">Hack disabled :v</string>
+    <string name="force_sub_2">If there are problems even after disabling this tool, try the button below and reboot.</string>
+    <string name="force_botao">FIX</string>
+    <string name="force_snack">OK, reboot</string>
+    <string name="thumbs_botao">Clean hidden thumbnails</string>
+    <string name="lixo_botao">Clean junk files</string>
+    <string name="thumb_tamanho">Thumbnails size:</string>
+    <string name="thumb_snack">Thumbnails deleted</string>
+    <string name="desconhecido">Unknown</string>
+    <string name="big"> (Big)</string>
+    <string name="wtf"> (What the… Better clean it!)</string>
+    <string name="wtff"> (What the… Self-destruction risk!)</string>
+    <string name="arquivos_fail">Could not find one or more files required for application operation. The most common cause is that the application was closed during the first opening or your system uses a different path to \"/data\".\nYou can clear the application\'s data to force the copy again.</string>
+    <string name="config">SETTINGS</string>
+</resources>
