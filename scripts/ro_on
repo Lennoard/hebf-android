@@ -11,8 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
 
 busybox sed -i '/windowsmgr.max_events_per_sec=200/d' /system/build.prop
@@ -33,6 +31,4 @@ video.accelerate.hw=1
 debug.performance.tuning=1
 " >> /system/build.prop
 
-mount -o remount,ro /
-mount -o remount,ro rootfs
 mount -o remount,ro /system
