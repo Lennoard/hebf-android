@@ -11,7 +11,15 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /data
+mount -o rw,remount /data
+mount -o rw,remount /system
 
+IN0=/data/data/com.androidvip.hebf/wifi
+OUT0=/system/etc/init.d/wifi
+dd if="$IN0" of="$OUT0"
+
+mv /system/etc/init.d/wifi /system/etc/init.d/08wifi
+chmod 755 /system/etc/init.d/08wifi
+
+mount -o ro,remount /data
+mount -o ro,remount /system

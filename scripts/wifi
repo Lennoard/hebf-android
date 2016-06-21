@@ -11,17 +11,13 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
-mount -o remount,rw /system
-
 HEBF=/system/etc/HEBF/Wifi_sleeper.log
 
- rm -f $HEBF
+ rm -rf $HEBF
  touch $HEBF
 
  echo "# HEBF_WiFi_Sleeper" | busybox tee -a $HEBF
- echo "" | busybox tee -a $v
+ echo "" | busybox tee -a $HEBF #Ctrl + v failed attemp
  echo "$( date +"%m-%d-%Y %H:%M:%S" ) Activating wifi sleeper" | busybox tee -a $HEBF
 
 # wifi_idle_wait value = 15 seconds

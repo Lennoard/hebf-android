@@ -11,7 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o rw,remount /data
 mount -o rw,remount /system
 
 IN0=/data/data/com.androidvip.hebf/yrolram
@@ -21,5 +20,4 @@ dd if="$IN0" of="$OUT0"
 mv /system/etc/init.d/yrolram /system/etc/init.d/09yrolram
 chmod 755 /system/etc/init.d/09yrolram
 
-mount -o ro,remount /data
 mount -o ro,remount /system

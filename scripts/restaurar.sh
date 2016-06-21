@@ -11,11 +11,9 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o rw,remount /data
 mount -o rw,remount /system
 
 cp /data/data/com.androidvip.hebf/BackUps/build.prop /system/build.prop
 cp -R /data/data/com.androidvip.hebf/BackUps/init /system/etc/init.d
 
-mount -o ro,remount /data
 mount -o ro,remount /system

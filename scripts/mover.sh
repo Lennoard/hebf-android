@@ -11,9 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-#Create folders, moves the files to the correct folders, sets the permissions, makes the 1st BackUp
-
-mount -o rw,remount /data
 mount -o rw,remount /system
 
 #1st Backup
@@ -92,4 +89,9 @@ OUT13=/data/data/com.androidvip.hebf/limpador/wpp_video.sh
 dd if="$IN13" of="$OUT13"
 rm -f "$IN13"
 
-mount -o ro,remount /data
+IN14=/data/data/com.androidvip.hebf/thumb
+OUT14=/data/data/com.androidvip.hebf/limpador/thumb
+dd if="$IN14" of="$OUT14"
+rm -f "$IN14"
+
+mount -o ro,remount /system

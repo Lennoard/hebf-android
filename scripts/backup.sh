@@ -12,7 +12,6 @@
 #=======================================================================#
 
 
-mount -o rw,remount /data
 mount -o rw,remount /system
 
 backup=/data/data/com.androidvip.hebf/BackUps
@@ -23,5 +22,4 @@ mkdir "/data/data/com.androidvip.hebf/BackUps/init"
 cp /system/build.prop /data/data/com.androidvip.hebf/BackUps
 cp -R /system/etc/init.d /data/data/com.androidvip.hebf/BackUps/init
 
-mount -o ro,remount /data
 mount -o ro,remount /system

@@ -11,8 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
 
 busybox sed -i '/#Bateria_LP/d' /system/build.prop
@@ -44,6 +42,4 @@ dalvik.vm.execution-mode=int:jit
 profiler.force_disable_err_rpt=1
 " >> /system/build.prop
 
-mount -o remount,ro /
-mount -o remount,ro rootfs
 mount -o remount,ro /system

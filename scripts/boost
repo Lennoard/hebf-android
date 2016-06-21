@@ -11,18 +11,10 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
-mount -o remount,rw /system
-clear
 sync
- echo "3" > /proc/sys/vm/drop_caches
-dc=/proc/sys/vm/drop_caches
-dc_v=`cat $dc`
-if [ "$dc_v" -gt 1 ]; then
-	 echo "1" > /proc/sys/vm/drop_caches
-fi
+ busybox sysctl -w vm.drop_caches=3
  killall -9 android.process.media
- killall -9 mediaserver
+ killall -9 
+mediaserver
 
- 
+

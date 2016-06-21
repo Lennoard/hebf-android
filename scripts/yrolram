@@ -12,12 +12,10 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
 
 HEBF=/system/etc/HEBF/yrolram.log
- rm -f $HEBF
+ rm -rf $HEBF
  touch $HEBF
 
  echo "# HEBF " | busybox tee -a $HEBF
@@ -126,4 +124,6 @@ fi
 
 
  echo "" >> $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) OK: Multitasking profile applied" |  busybox tee -a $LS
+ echo "$( date +"%m-%d-%Y %H:%M:%S" ) OK: Multitasking profile applied" |  busybox tee -a $HEBF  #Read few times when you change something
+
+mount -o remount,ro /system

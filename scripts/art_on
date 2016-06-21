@@ -12,14 +12,12 @@
 #=======================================================================#
 
 mount -o rw,remount /system
-mount -o rw,remount /data
 
 busybox sed -i '/dalvik.vm.dex2oat-filter=interpret-only/d' /system/build.prop
 busybox sed -i '/dalvik.vm.image-dex2oat-filter=speed/d' /system/build.prop
 
 echo "dalvik.vm.dex2oat-filter=interpret-only" >> /system/build.prop
 echo "dalvik.vm.image-dex2oat-filter=speed" >> /system/build.prop
-rm /data/dalvik-cache
+rm -rf /data/dalvik-cache
 mount -o ro,remount /system
-mount -o ro,remount /data
 

@@ -11,8 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
 
 echo "500" > /proc/sys/vm/dirty_expire_centisecs;
@@ -141,6 +139,4 @@ debug.qctwa.statusbar=1
 " >> /system/build.prop
 busybox sed -i '/^$/d' /system/build.prop
 		
-mount -o remount,ro /
-mount -o remount,ro rootfs
 mount -o remount,ro /system		
