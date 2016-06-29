@@ -22,6 +22,14 @@ busybox sed -i '/persist.sys.NV_STEREOSEPCHG=0 /d' /system/build.prop
 busybox sed -i '/persist.sys.NV_STEREOSEP=20/d' /system/build.prop
 busybox sed -i '/persist.sys.purgeable_assets=1/d' /system/build.prop
 
+setprop persist.sys.NV_FPSLIMIT 60 
+setprop persist.sys.NV_POWERMODE 1
+setprop persist.sys.NV_PROFVER 15
+setprop persist.sys.NV_STEREOCTRL 0
+setprop persist.sys.NV_STEREOSEPCHG 0
+setprop persist.sys.NV_STEREOSEP 20
+setprop persist.sys.purgeable_assets 1
+
 echo "#Modo jogo
 persist.sys.NV_FPSLIMIT=60 
 persist.sys.NV_POWERMODE=1 
