@@ -19,7 +19,7 @@ HEBF=/system/etc/HEBF/kill_media.log
 
  echo "# HEBF_Media" | busybox tee -a $HEBF
  echo "" | busybox tee -a $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) Killing media server" | busybox tee -a $HEBF
+ echo "Killing media server" | busybox tee -a $HEBF
 
 if [ "`pgrep media`" ] && [ "`pgrep mediaserver`" ]; then
 	 killall -9 android.process.media
@@ -27,6 +27,6 @@ if [ "`pgrep media`" ] && [ "`pgrep mediaserver`" ]; then
 fi
 
  echo "" | busybox tee -a $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) OK!" | busybox tee -a $HEBF
+ echo "OK!" | busybox tee -a $HEBF
 
 mount -o remount,ro /system
