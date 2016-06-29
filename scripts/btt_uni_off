@@ -11,9 +11,8 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
+mount -o remount,rw /data
 
 busybox sed -i '/#Battery Saver Universal/d' /system/build.prop
 busybox sed -i '/ENFORCE_PROCESS_LIMIT=false/d' /system/build.prop
@@ -49,7 +48,6 @@ busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
 busybox sed -i '/profiler.force_disable_ulog=1/d' /system/build.prop
 busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/persist.android.strictpersist.sys.pur/d' /system/build.propgeable_assets=1
 busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
 busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
 busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
@@ -68,6 +66,8 @@ busybox sed -i '/debug.qc.hardware=true/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
 
-mount -o remount,ro /
-mount -o remount,ro rootfs
+rm -f /data/property/persist.android.strictmode
+rm -f /data/property/persist.sys.purgeable_assets
+
 mount -o remount,ro /system
+mount -o remount,ro /data

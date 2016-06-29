@@ -1,4 +1,5 @@
 mount -o remount,rw /system
+mount -o remount,rw /data
 
 busybox sed -i '/#Bateria_KK/d' /system/build.prop
 busybox sed -i '/ENFORCE_PROCESS_LIMIT/d' /system/build.prop
@@ -53,3 +54,4 @@ rm -f /data/property/persist.android.strictmode
 rm -f /data/property/persist.sys.purgeable_assets
 
 mount -o remount,ro /system
+mount -o remount,ro /data
