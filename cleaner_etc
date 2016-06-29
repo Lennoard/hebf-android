@@ -1,0 +1,37 @@
+#!/system/bin/sh
+# HEBF
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o rw,remount /data
+mount -o remount,rw /system
+
+HEBF=/system/etc/HEBF/cleaner.log
+
+rm -f $HEBF
+busybox touch $HEBF
+
+echo "#Thumbs" | busybox tee -a $HEBF
+echo "" | busybox tee -a $HEBF
+echo "Cleaning..." | busybox tee -a $HEBF
+ 
+    rm -rf /sdcard/LOST.DIR 2> /dev/null
+    THUMB=/data/media/0/DCIM/.thumbnails
+    THUMBA=/storage/emulated/0/DCIM/.thumbnails
+
+	rm -Rf "$THUMB"
+	rm -Rf "$THUMBA" 
+
+echo "" | busybox tee -a $HEBF
+echo "Thumbs cleaned" | busybox tee -a $HEBF
+
+mount -o ro,remount /data
+mount -o ro,remount /system
