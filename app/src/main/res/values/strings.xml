@@ -5,8 +5,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Themes</string>
-    <string name="hebf" translatable="false">Hearth empty, battery full</string>
-    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
     <string name="play_services">Google Play Services drain fix</string>
     <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.</string>
     <string name="play_services_on">Google Play Services drain fix activated</string>
@@ -195,10 +193,7 @@
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nIf you don\'t know what we are talking about please uninstall this application.\nGoogle has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Files Cleaner</string>
-    <string name="gplus" translatable="false">GOOGLE+</string>
-    <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
-    <string name="lennoard_frase" translatable="false">\"Fake people have an image to maintain, real people just don\'t care.\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -208,7 +203,6 @@
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
-    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
     <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n\n – Não nos esquecemos de vocês.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
@@ -216,12 +210,9 @@
     <string name="dev">The developers</string>
     <string name="title_activity_versao">Version</string>
     <string name="changelog">Changelog:</string>
-    <string name="iv" translatable="false">Ivsom Emídio</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
-    <string name="lennoard" translatable="false">Lennoard Silva</string>
-    <string name="yahari" translatable="false">– Hikigaya Hachiman</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
     <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
@@ -259,16 +250,5 @@
     <string name="nenhum">None</string>
     <string name="perfis">Profiles</string>
     <string name="reset">Reset</string>
-    <color name="blue_btn_bg_color">#ffffff</color>
-    <color name="blue_btn_bg_pressed_color">#ff80ab</color>
-    <color name="gray_btn_bg_color">#ffffff</color>
-    <color name="gray_btn_bg_pressed_color">#ff80ab</color>
-    <color name="red_btn_bg_color">#ffffff</color>
-    <color name="red_btn_bg_pressed_color">#ff80ab</color>
-    <color name="button_text_color">#f50057</color>
-    <color name="error_stroke_color">#f44336</color>
-    <color name="success_stroke_color">#4caf50</color>
-    <color name="warning_stroke_color">#ff9800</color>
-    <color name="text_color">#424242</color>
 
 </resources>
