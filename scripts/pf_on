@@ -11,8 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /
-mount -o remount,rw rootfs
 mount -o remount,rw /system
 
 busybox sed -i '/#Performance/d' /system/build.prop
@@ -29,8 +27,9 @@ busybox sed -i '/persist.sys.ui.hw=1/d' /system/build.prop
 busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
 busybox sed -i '/debug.sf.hw=1/d' /system/build.prop
 busybox sed -i '/debug.composition.type=c2d/d' /system/build.prop
-busybox sed -i '/persist.sys.composition.type=c2d/d' /system/build.prop
 busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
+
+setprop persist.sys.ui.hw 1
 
 busybox echo "#Performance
 logcat.live=disable
@@ -46,10 +45,7 @@ persist.sys.ui.hw=1
 ro.sf.compbypass.enable=0
 debug.sf.hw=1
 debug.composition.type=c2d
-persist.sys.composition.type=c2d
 debug.performance.tuning=1
 " >> /system/build.prop
 
-mount -o remount,ro /
-mount -o remount,ro rootfs
 mount -o remount,ro /system
