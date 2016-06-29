@@ -66,20 +66,10 @@ busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
 busybox sed -i '/profiler.force_disable_ulog=1/d' /system/build.prop
 busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/persist.android.strictpersist.sys.pur/d' /system/build.propgeable_assets=1
 busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
 busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
 busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/dalvik.vm.checkjni=false/d' /system/build.prop
-busybox sed -i '/dalvik.vm.execution-mode=int:jit/d' /system/build.prop
-busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
-busybox sed -i '/profiler.force_disable_ulog=1/d' /system/build.prop
-busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/ro.ril.power_collapse=1/d' /system/build.prop
-busybox sed -i '/wifi.supplicant_scan_interval=180/d' /system/build.prop
-busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
-busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 busybox sed -i '/com.qc.hardware=1/d' /system/build.prop
 busybox sed -i '/debug.qc.hardware=true/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
@@ -118,25 +108,18 @@ profiler.force_disable_err_rpt=1
 profiler.force_disable_ulog=1
 ro.ril.disable.power.collapse=0
 pm.sleep_mode=1
-persist.android.strictpersist.sys.purgeable_assets=1
 ro.com.google.networklocation=0
 ro.kernel.android.checkjni=0
 ro.config.nocheckin=1
 ro.vold.umsdirtyratio=20
-dalvik.vm.checkjni=false
-dalvik.vm.execution-mode=int:jit
-profiler.force_disable_err_rpt=1
-profiler.force_disable_ulog=1
-pm.sleep_mode=1
-ro.ril.power_collapse=1
-wifi.supplicant_scan_interval=180
-ro.mot.eri.losalert.delay=1000
-ro.mot.eri.losalert.delay=1000
 com.qc.hardware=1
 debug.qc.hardware=true
 debug.qctwa.preservebuf=1
 debug.qctwa.statusbar=1
 " >> /system/build.prop
 busybox sed -i '/^$/d' /system/build.prop
+
+setprop persist.android.strictmode 0
+setprop persist.sys.purgeable_assets 1
 		
 mount -o remount,ro /system		
