@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Beta</string>
 
@@ -42,9 +43,9 @@
     <string name="game">Gaming mode</string>
     <string name="game_on">Gaming mode activated</string>
     <string name="game_off">Gaming mode deactivated</string>
-    <string name="game_sub">Optimizes the FPS limit, enables HW accelerated UI, enables purge of assets and frees more RAM for performance improvement in games.</string>
+    <string name="game_sub">Optimizes the FPS limit, enables purge of assets and frees more RAM for performance improvements in games.</string>
     <string name="performance_tweak">Performance tweak</string>
-    <string name="performance_sub">Allows hardware rendering and enables the performance tunning mode for a general improvement.</string>
+    <string name="performance_sub">Enables the performance tunning mode, decreases the colors number to 16bpp (16 bits per pixel) and optimizes the \"fling\" velocity (smooth scroll) for a general improvement with minimal impact on battery.</string>
     <string name="pf_on">Performance tweaks enabled</string>
     <string name="pf_off">Performance tweaks disabled</string>
     <string name="multitasking">Best multitasking</string>
@@ -56,7 +57,7 @@
     <string name="liquid">Liquid smooth UI</string>
     <string name="liquid_on">Liquid smooth UI enabled</string>
     <string name="liquid_off">Liquid smooth UI disabled</string>
-    <string name="liquid_sub">Optimizes the touchs pressure scale for improved user interface elements.</string>
+    <string name="liquid_sub">Optimizes the touch pressure scale for improved user interface elements.</string>
     <string name="scroll">Better scrolling</string>
     <string name="scroll_on">Better scrolling profile enabled</string>
     <string name="scroll_off">Better scrolling profile disabled</string>
@@ -264,11 +265,33 @@
     <string name="title_activity_net">Internet Tweaks</string>
     <string name="google_dns">Use Google DNS</string>
     <string name="google_dns_sub">An public alternative to your current DNS provider. Google DNS (8.8.8.8 and 8.8.4.4) will improve the security and speed up the browsing.\nGuess what, it is free.</string>
+    <string name="dns_on">Google DNS enabled</string>
+    <string name="dns_off">Google DNS disabled</string>
     <string name="signal">Improve 3G speed and signal</string>
     <string name="signal_sub">Improves a set of RIL and HSDPA properties, prefix and GPRS classes to improve the quality of the connection.</string>
+    <string name="sinal_on">3G tweaks enabled</string>
+    <string name="sinal_off">3G tweaks disabled</string>
     <string name="browsing">Improve browsing speed</string>
-    <string name="browsing_sub">Tweaks for the buffer size of several connection types. Results in a better browsing experience.</string>
+    <string name="browsing_sub">Tweaks for the buffer size of the connection types, from LTE to GPRS. Results in a better browsing experience.</string>
+    <string name="browsing_off">Buffer tweaks disabled</string>
+    <string name="browsing_on">Buffer tweaks enabled</string>
     <string name="stream">Improve video streaming</string>
     <string name="stream_sub">Tweaks for the stagefright (the Android media library, not the bug). Results in smoother video streams.</string>
-
+    <string name="stream_on">Streaming tweaks enabled</string>
+    <string name="st_off">Streaming tweaks disabled</string>
+    <string name="ring">Reduce in-call delay</string>
+    <string name="ring_sub">Reduces the delay to receive or end a call.</string>
+    <string name="ring_on">In-call delay reduced</string>
+    <string name="ring_off">In-call delay tweak disabled</string>
+    <string name="rendering_tweaks">Rendering tweaks</string>
+    <string name="rendering">Improve rendering quality</string>
+    <string name="rendering_sub">Optimizes the screen composition properties and enables overlay UI mode for a better graphics quality.</string>
+    <string name="render_on">Rendering tweaks enabled</string>
+    <string name="render_off">Rendering tweaks disabled</string>
+    <string name="gpu">Use GPU Acceleration</string>
+    <string name="gpu_sub">Enables the hardware accelerated UI, forces GPU screen composing and disables the vsync for a much better performance at the cost of battery.</string>
+    <string name="gpu_on">GPU tweaks enabled</string>
+    <string name="gpu_off">GPU tweaks disabled</string>
+    <string name="hebf_notif">HEBF needs to copy the required files</string>
+    <string name="hebf_notif_sub">This is necessary to ensure the functioning of the app.</string>
 </resources>
