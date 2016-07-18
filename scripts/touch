@@ -15,12 +15,15 @@
 
 HEBF=/system/etc/HEBF/touch.log
 
- rm -f $HEBF
- touch $HEBF
+ rm -Rf $HEBF
+ busybox touch $HEBF
 
- echo "# Touch log" | busybox tee -a $HEBF
  echo "" | busybox tee -a $HEBF
+<<<<<<< HEAD
  echo "Starting" | busybox tee -a $HEBF
+=======
+ echo "Adding Touch tweak" | busybox tee -a $HEBF
+>>>>>>> origin/master
 
 
 if [ -e /sys/class/touch/switch/set_touchscreen ]; then
@@ -32,3 +35,8 @@ if [ -e /sys/class/touch/switch/set_touchscreen ]; then
 fi
 echo "#Touch tweak activated $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log | busybox tee -a $HEBF
 
+<<<<<<< HEAD
+=======
+ echo "" | busybox tee -a $HEBF
+ echo "OK! " | busybox tee -a $HEBF
+>>>>>>> origin/master

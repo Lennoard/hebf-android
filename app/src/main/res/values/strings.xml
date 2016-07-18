@@ -306,6 +306,7 @@
     <string name="gpu_off">GPU tweaks disabled</string>
     <string name="hebf_notif">HEBF needs to copy the required files</string>
     <string name="hebf_notif_sub">This is necessary to ensure the functioning of the app.</string>
+<<<<<<< HEAD
     <string name="application_settings">Application settings</string>
     <string name="application_settings_sub">Open the Android settings screen for this application.</string>
     <string name="forcar_parada">Force stop</string>
@@ -330,4 +331,6 @@
     <string name="lmk_parameters">Parameters</string>
     <string name="lmk_erro">There are values missing, please check the text fields.</string>
     <string name="lmk_novo_valor">Your new values are</string>
+=======
+>>>>>>> origin/master
 </resources>
