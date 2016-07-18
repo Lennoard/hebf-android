@@ -13,20 +13,23 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/windowsmgr.max_events_per_sec=200/d' /system/build.prop
-busybox sed -i '/ro.min_pointer_dur=8/d' /system/build.prop
-busybox sed -i '/ro.max.fling_velocity=12000/d' /system/build.prop
-busybox sed -i '/ro.min.fling_velocity=8000' /system/build.prop
-busybox sed -i '/windowsmgr.max_events_per_sec=90/d' /system/build.prop
-busybox sed -i '/windowsmgr.max_events_per_sec=150/d' /system/build.prop
-busybox sed -i '/windowsmgr.max_events_per_sec=240/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-http=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-player=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-scan=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-record=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-qcp=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-aac=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-meta=true/d' /system/build.prop
 
-busybox echo "windowsmgr.max_events_per_sec=200
-ro.min_pointer_dur=8
-ro.max.fling_velocity=12000
-ro.min.fling_velocity=8000
+busybox echo "media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-record=true
 " >> /system/build.prop
 
-busybox echo "#Scrolling tweaks added $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Added video streaming tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

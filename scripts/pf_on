@@ -13,39 +13,21 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/#Performance/d' /system/build.prop
-busybox sed -i '/logcat.live=disable/d' /system/build.prop
-busybox sed -i '/debug.enabletr=true/d' /system/build.prop
-busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
-busybox sed -i '/video.accelerate.hw=1/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
-busybox sed -i '/debug.egl.hw=1/d' /system/build.prop
-busybox sed -i '/ro.fb.mode=1/d' /system/build.prop
-busybox sed -i '/hw3d.force=1/d' /system/build.prop
-busybox sed -i '/persist.sys.ui.hw=1/d' /system/build.prop
-busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
-busybox sed -i '/debug.sf.hw=1/d' /system/build.prop
-busybox sed -i '/debug.composition.type=c2d/d' /system/build.prop
 busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
+busybox sed -i '/persist.sys.use_dithering=0/d' /system/build.prop
+busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
+busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
+busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 
-setprop persist.sys.ui.hw 1
+persist.sys.use_16bpp_alpha 1
 
-busybox echo "#Performance
-logcat.live=disable
-debug.enabletr=true
-dev.pm.dyn_samplingrate=1
-video.accelerate.hw=1
-ro.vold.umsdirtyratio=20
-debug.overlayui.enable=1
-debug.egl.hw=1
-ro.fb.mode=1
-hw3d.force=1
-persist.sys.ui.hw=1
-ro.sf.compbypass.enable=0
-debug.sf.hw=1
-debug.composition.type=c2d
-debug.performance.tuning=1
+busybox echo "debug.performance.tuning=1
+persist.sys.use_dithering=0
+persist.sys.use_16bpp_alpha=1
+ro.min.fling_velocity=8000
+ro.mot.eri.losalert.delay=1000
 " >> /system/build.prop
+
+busybox echo "#Added performance tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

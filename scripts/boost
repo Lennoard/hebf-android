@@ -12,9 +12,6 @@
 #=======================================================================#
 
 sync
- busybox sysctl -w vm.drop_caches=3
- killall -9 android.process.media
- killall -9 
-mediaserver
+busybox sysctl -w vm.drop_caches=3
 
 

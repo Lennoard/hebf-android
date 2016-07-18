@@ -20,7 +20,7 @@ HEBF=/system/etc/HEBF/yrolram.log
 
  echo "# HEBF " | busybox tee -a $HEBF
  echo "" | busybox tee -a $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) Starting" | busybox tee -a $HEBF
+ echo "Setting profle" | busybox tee -a $HEBF
 
 # ADJ Values
 chmod 644 /sys/module/lowmemorykiller/parameters/adj
@@ -124,6 +124,7 @@ fi
 
 
  echo "" >> $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) OK: Multitasking profile applied" |  busybox tee -a $HEBF  #Read few times when you change something
+ echo "#Added muiltitasking $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+ echo "#Added muiltitasking $(date +%A) at $(date +%H:%M)" >> $HEBF
 
 mount -o remount,ro /system

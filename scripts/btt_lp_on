@@ -13,7 +13,6 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/#Bateria_LP/d' /system/build.prop
 busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 busybox sed -i '/ro.ril.power_collapse=1/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
@@ -27,8 +26,7 @@ busybox sed -i '/dalvik.vm.checkjni=false/d' /system/build.prop
 busybox sed -i '/dalvik.vm.execution-mode=int:jit/d' /system/build.prop
 busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
 
-echo "#Bateria_LP
-ro.mot.eri.losalert.delay=1000
+busybox echo "ro.mot.eri.losalert.delay=1000
 ro.ril.power_collapse=1
 pm.sleep_mode=1
 wifi.supplicant_scan_interval=180
@@ -41,5 +39,7 @@ dalvik.vm.checkjni=false
 dalvik.vm.execution-mode=int:jit
 profiler.force_disable_err_rpt=1
 " >> /system/build.prop
+
+busybox echo "#Added battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

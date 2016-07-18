@@ -11,12 +11,18 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /data
+mount -o remount,rw /system
 
-mount -o rw,remount /system
+busybox sed -i '/debug.composition.type=c2d/d' /system/build.prop
+busybox sed -i '/persist.sys.composition.type=c2d/d' /system/build.prop
+busybox sed -i '/debug.enabletr=true/d' /system/build.prop
+busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
+busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
+busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
+busybox sed -i '/ro.fb.mode=1' /system/build.prop
+busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
+busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
 
-busybox echo "#Filesystems trimmed $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Removed rendering tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
-mount -o ro,remount /system
+mount -o remount,ro /system

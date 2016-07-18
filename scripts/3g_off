@@ -12,17 +12,20 @@
 #=======================================================================#
 
 mount -o remount,rw /system
-mount -o remount,rw /data
 
-busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
-busybox sed -i '/persist.sys.use_dithering=0/d' /system/build.prop
-busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
-busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
-busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
+busybox sed -i '/ro.ril.hsxpa=2/d' /system/build.prop
+busybox sed -i '/ro.ril.hep=1/d' /system/build.prop
+busybox sed -i '/ro.ril.enable.dtm=1/d' /system/build.prop
+busybox sed -i '/ro.ril.hsdpa.category=10/d' /system/build.prop
+busybox sed -i '/ro.ril.enable.a53=1/d' /system/build.prop
+busybox sed -i '/ro.ril.enable.3g.prefix=1/d' /system/build.prop
+busybox sed -i '/ro.ril.gprsclass=10/d' /system/build.prop
+busybox sed -i '/ro.ril.hsupa.category=7/d' /system/build.prop
+busybox sed -i '/ro.ril.hsdpa.category=10/d' /system/build.prop
+busybox sed -i '/ro.ril.enable.a52=1/d' /system/build.prop
+busybox sed -i '/ro.ril.set.mtu1472=1/d' /system/build.prop
+busybox sed -i '/persist.cust.tel.eons=1/d' /system/build.prop
 
-rm -f /data/property/persist.sys.use_16bpp_alpha
-
-busybox echo "#Removed performance tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Removed 3G tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system
-mount -o remount,ro /data

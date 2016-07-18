@@ -14,12 +14,11 @@
 mount -o remount,rw /system
 mount -o remount,rw /data/
 
-busybox sed -i '/#Modo jogo/d' /system/build.prop
 busybox sed -i '/persist.sys.NV_FPSLIMIT=60/d' /system/build.prop
-busybox sed -i '/persist.sys.NV_POWERMODE=1 /d' /system/build.prop
-busybox sed -i '/persist.sys.NV_PROFVER=15 /d' /system/build.prop
-busybox sed -i '/persist.sys.NV_STEREOCTRL=0 /d' /system/build.prop
-busybox sed -i '/persist.sys.NV_STEREOSEPCHG=0 /d' /system/build.prop
+busybox sed -i '/persist.sys.NV_POWERMODE=1/d' /system/build.prop
+busybox sed -i '/persist.sys.NV_PROFVER=15/d' /system/build.prop
+busybox sed -i '/persist.sys.NV_STEREOCTRL=0/d' /system/build.prop
+busybox sed -i '/persist.sys.NV_STEREOSEPCHG=0/d' /system/build.prop
 busybox sed -i '/persist.sys.NV_STEREOSEP=20/d' /system/build.prop
 busybox sed -i '/persist.sys.purgeable_assets=1/d' /system/build.prop
 
@@ -30,6 +29,8 @@ rm -f /data/property/persist.sys.NV_STEREOCTRL
 rm -f /data/property/persist.sys.NV_STEREOSEPCHG
 rm -f /data/property/persist.sys.NV_STEREOSEP
 rm -f /data/property/persist.sys.purgeable_assets
+
+busybox echo "#Removed gamming tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system
 mount -o remount,ro /data

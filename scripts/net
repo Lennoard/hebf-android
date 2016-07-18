@@ -21,7 +21,7 @@ HEBF=/system/etc/HEBF/net.log
 
  echo "# HEBF" | busybox tee -a $HEBF
  echo "" | busybox tee -a $HEBF
- echo "Adding Net tweaks" | busybox tee -a $HEBF
+ echo "NET Tweaks" | busybox tee -a $HEBF
 
  echo "0" > /proc/sys/net/ipv4/tcp_timestamps
  echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse
@@ -38,6 +38,6 @@ HEBF=/system/etc/HEBF/net.log
  echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
 
  echo "" | busybox tee -a $HEBF
- echo "OK!" | busybox tee -a $HEBF
- 
+ echo "#TCP tweaks added $(date +%A) at $(date +%H:%M)" | busybox tee -a $HEBF
+
  mount -o remount,ro /system

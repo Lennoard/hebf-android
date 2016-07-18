@@ -13,19 +13,27 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
-busybox sed -i '/ro.ril.power_collapse=1/d' /system/build.prop
-busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/wifi.supplicant_scan_interval=180/d' /system/build.prop
-busybox sed -i '/power.saving.mode=1/d' /system/build.prop
-busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
-busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
-busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
+busybox sed -i '/debug.composition.type=c2d/d' /system/build.prop
+busybox sed -i '/persist.sys.composition.type=c2d/d' /system/build.prop
+busybox sed -i '/debug.enabletr=true/d' /system/build.prop
+busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
+busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
+busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
+busybox sed -i '/ro.fb.mode=1' /system/build.prop
+busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/dalvik.vm.checkjni=false/d' /system/build.prop
-busybox sed -i '/dalvik.vm.execution-mode=int:jit/d' /system/build.prop
-busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
 
-busybox echo "#Removed battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "debug.composition.type=c2d
+persist.sys.composition.type=c2d
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.qctwa.preservebuf=1
+dev.pm.dyn_samplingrate=1
+ro.fb.mode=1
+ro.sf.compbypass.enable=0
+ro.vold.umsdirtyratio=20
+" >> /system/build.prop
+
+busybox echo "#Added rendering tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

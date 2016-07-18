@@ -15,4 +15,6 @@ mount -o rw,remount /system
 
 rm -f /system/etc/init.d/02play
 
+busybox echo "#Removed Play services tweak $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o ro,remount /system

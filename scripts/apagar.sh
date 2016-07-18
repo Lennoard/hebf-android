@@ -11,5 +11,12 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
+
+mount -o rw,remount /data
+mount -o rw,remount /system
+
 backup=/data/data/com.androidvip.hebf/BackUps
 rm -rf "$backup"
+
+mount -o ro,remount /data
+mount -o ro,remount /system

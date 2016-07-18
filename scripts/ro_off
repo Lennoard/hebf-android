@@ -13,12 +13,11 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/#Rolagem/d' /system/build.prop
 busybox sed -i '/windowsmgr.max_events_per_sec=200/d' /system/build.prop
 busybox sed -i '/ro.min_pointer_dur=8/d' /system/build.prop
 busybox sed -i '/ro.max.fling_velocity=12000/d' /system/build.prop
-busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
-busybox sed -i '/video.accelerate.hw=1/d' /system/build.prop
-busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
+busybox sed -i '/ro.min.fling_velocity=8000' /system/build.prop
+
+busybox echo "#Removed Scrolling tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

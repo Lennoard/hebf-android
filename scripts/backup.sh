@@ -22,4 +22,6 @@ mkdir "/data/data/com.androidvip.hebf/BackUps/init"
 cp /system/build.prop /data/data/com.androidvip.hebf/BackUps
 cp -R /system/etc/init.d /data/data/com.androidvip.hebf/BackUps/init
 
+busybox echo "#Backup created $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o ro,remount /system

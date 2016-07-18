@@ -12,10 +12,14 @@
 #=======================================================================#
 
 mount -o rw,remount /system
+mount -o rw,remount /data
+
+mkdir /data/data/com.androidvip.hebf/LMK
+mkdir /data/data/com.androidvip.hebf/limpador
 
 #1st Backup
 cp -p /system/build.prop /data/data/com.androidvip.hebf/BackUps
-cp -Rp /system/etc/init.d /data/data/com.androidvip.hebf/BackUps/init
+cp -Rp /system/etc/init.d /data/data/com.androidvip.hebf/BackUps
 
 IN0=/data/data/com.androidvip.hebf/no_adblock
 OUT0=/data/data/com.androidvip.hebf/arquivos/no_adblock
@@ -94,4 +98,16 @@ OUT14=/data/data/com.androidvip.hebf/limpador/thumb
 dd if="$IN14" of="$OUT14"
 rm -f "$IN14"
 
+IN15=/data/data/com.androidvip.hebf/get_lmk
+OUT15=/data/data/com.androidvip.hebf/LMK/get_lmk
+dd if="$IN15" of="$OUT15"
+rm -f "$IN15"
+
+mount -o rw,remount /data
+
+busybox touch /data/data/com.androidvip.hebf/hebf.hebf
+busybox echo "Created file by mover.sh or user force copy $(date +%A) at $(date +%H:%M)" >> /data/data/com.androidvip.hebf/hebf.hebf
+busybox echo "Created file by mover.sh or user force copy $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o ro,remount /system
+

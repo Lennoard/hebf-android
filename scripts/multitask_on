@@ -20,4 +20,6 @@ dd if="$IN0" of="$OUT0"
 mv /system/etc/init.d/yrolram /system/etc/init.d/09yrolram
 chmod 755 /system/etc/init.d/09yrolram
 
+busybox echo "#Added multitasking tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o ro,remount /system

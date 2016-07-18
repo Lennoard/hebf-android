@@ -13,7 +13,6 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/#Liquid Smooth UI/d' /system/build.prop
 busybox sed -i '/persist.service.lgospd.enable=0/d' /system/build.prop
 busybox sed -i '/persist.service.pcsync.enable=0/d' /system/build.prop
 busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
@@ -21,10 +20,11 @@ busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
 setprop persist.service.lgospd.enable 0
 setprop persist.service.pcsync.enable 0
 
-busybox echo "#Liquid Smooth UI
-persist.service.lgospd.enable=0
+busybox echo "persist.service.lgospd.enable=0
 persist.service.pcsync.enable=0
 touch.pressure.scale=0.001
 " >> /system/build.prop
+
+busybox echo "#Added UI tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o remount,ro /system

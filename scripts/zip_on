@@ -11,7 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o rw,remount /data
 mount -o rw,remount /system
 
 IN0=/data/data/com.androidvip.hebf/zipalign_tweak
@@ -21,5 +20,6 @@ dd if="$IN0" of="$OUT0"
 mv /system/etc/init.d/zipalign_tweak /system/etc/init.d/03zipalign
 chmod 755 /system/etc/init.d/03zipalign
 
-mount -o ro,remount /data
+echo "#Zipalign enabled $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o ro,remount /system

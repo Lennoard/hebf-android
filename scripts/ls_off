@@ -22,5 +22,7 @@ busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
 rm -f /data/property/persist.service.pcsync.enable
 rm -f /data/property/persist.service.lgospd.enable
 
+busybox echo "#Removed UI tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+
 mount -o remount,ro /system
 mount -o remount,ro /data

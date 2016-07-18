@@ -14,6 +14,14 @@
 mount -o rw,remount /system
 
 cp /data/data/com.androidvip.hebf/BackUps/build.prop /system/build.prop
-cp -R /data/data/com.androidvip.hebf/BackUps/init /system/etc/init.d
+
+rm -f /system/etc/init.d/02play
+rm -f /system/etc/init.d/03zipalign
+rm -f /system/etc/init.d/04net
+rm -f /system/etc/init.d/04tcp
+rm -f /system/etc/init.d/09yrolram
+rm -f /system/etc/init.d/08wifi
+
+busybox echo "#Backup restored $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
 mount -o ro,remount /system

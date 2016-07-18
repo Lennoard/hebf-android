@@ -24,7 +24,7 @@ if [ ! -f $ZIPALIGNDB ]; then
 	touch $ZIPALIGNDB
 fi
 
- echo "Starting Automatic ZipAlign $( date +"%m-%d-%Y %H:%M:%S" )" | busybox tee -a $HEBF
+ echo "Zipalign tweak..." | busybox tee -a $HEBF
 for DIR in /data/app; do
   cd $DIR
   for APK in *.apk; do
@@ -120,5 +120,5 @@ for DIR in /system/framework; do
 done
 
 touch $ZIPALIGNDB
-echo "Automatic ZipAlign finished at $( date +"%m-%d-%Y %H:%M:%S" )" | busybox tee -a $HEBF
+echo "OK!" | busybox tee -a $HEBF
 mount -o ro,remount /system

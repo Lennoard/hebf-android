@@ -16,7 +16,6 @@ mount -o remount,rw /system
 echo "500" > /proc/sys/vm/dirty_expire_centisecs;
 echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
 
-busybox sed -i '/#Bateria_KK/d' /system/build.prop
 busybox sed -i '/ENFORCE_PROCESS_LIMIT/d' /system/build.prop
 busybox sed -i '/MAX_SERVICE_INACTIVITY/d' /system/build.prop
 busybox sed -i '/MIN_HIDDEN_APPS/d' /system/build.prop
@@ -74,10 +73,8 @@ busybox sed -i '/com.qc.hardware=1/d' /system/build.prop
 busybox sed -i '/debug.qc.hardware=true/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
-
-#Adicionar		
- echo "#Bateria_KK
-ENFORCE_PROCESS_LIMIT=false
+	
+busybox echo "ENFORCE_PROCESS_LIMIT=false
 MAX_SERVICE_INACTIVITY=false
 MIN_HIDDEN_APPS=false
 MAX_HIDDEN_APPS=false
@@ -121,5 +118,7 @@ busybox sed -i '/^$/d' /system/build.prop
 
 setprop persist.android.strictmode 0
 setprop persist.sys.purgeable_assets 1
+
+busybox echo "#Added battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 		
 mount -o remount,ro /system		

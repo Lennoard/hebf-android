@@ -17,8 +17,8 @@ HEBF=/system/etc/HEBF/Wifi_sleeper.log
  touch $HEBF
 
  echo "# HEBF_WiFi_Sleeper" | busybox tee -a $HEBF
- echo "" | busybox tee -a $HEBF #Ctrl + v failed attemp
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) Activating wifi sleeper" | busybox tee -a $HEBF
+ echo "" | busybox tee -a $HEBF
+ echo "Activating wifi sleeper" | busybox tee -a $HEBF
 
 # wifi_idle_wait value = 15 seconds
 sqlite=/system/xbin/sqlite3
@@ -33,4 +33,4 @@ else
 fi
 
  echo "" | busybox tee -a $HEBF
- echo "$( date +"%m-%d-%Y %H:%M:%S" ) Wifi sleeper activated" | busybox tee -a $HEBF
+ busybox echo "#Wi-Fi sleper activated $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log | busybox tee -a $HEBF

@@ -8,15 +8,21 @@
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 #  GNU General Public License for more details.
-#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#  You should have received a copy of the GNU !General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /data
+atual=/data/data/com.androidvip.hebf/LMK/0atual
 
-mount -o rw,remount /system
+rm -f $atual
+busybox touch $atual
 
-busybox echo "#Filesystems trimmed $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+cat /sys/module/lowmemorykiller/parameters/minfree | busybox tee -a $atual
 
-mount -o ro,remount /system
+cd /data/data/com.androidvip.hebf/LMK
+IFS=, read a b c d e f <"$atual"
+busybox echo "$a" >1foreground
+busybox echo "$b" >2visible
+busybox echo "$c" >3secondary
+busybox echo "$d" >4hidden
+busybox echo "$e" >5content
+busybox echo "$f" >6empty

@@ -11,12 +11,17 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /data
+mount -o remount,rw /system
 
-mount -o rw,remount /system
+busybox sed -i '/net.tcp.buffersize.default/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.wifi/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.lte/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.hsdpa/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.hspa/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.umts/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.edge/d' /system/build.prop
+busybox sed -i '/net.tcp.buffersize.gprs/d' /system/build.prop
 
-busybox echo "#Filesystems trimmed $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Removed buffer tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 
-mount -o ro,remount /system
+mount -o remount,ro /system
