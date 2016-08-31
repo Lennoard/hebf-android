@@ -13,18 +13,18 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/net.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.dns2=8.8.4.4/d' /system/build.prop
-busybox sed -i '/net.rmnet0.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.rmnet0.dns2=8.8.4.4/d' /system/build.prop
-busybox sed -i '/net.ppp0.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.ppp0.dns2=8.8.4.4/d' /system/build.prop
-busybox sed -i '/net.wlan0.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.wlan0.dns2=8.8.4.4/d' /system/build.prop
-busybox sed -i '/net.gprs.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.gprs.dns2=8.8.4.4/d' /system/build.prop
-busybox sed -i '/net.eth0.dns1=8.8.8.8/d' /system/build.prop
-busybox sed -i '/net.eth0.dns2=8.8.4.4/d' /system/build.prop
+busybox sed -i '/net.dns1/d' /system/build.prop
+busybox sed -i '/net.dns2/d' /system/build.prop
+busybox sed -i '/net.rmnet0.dns1/d' /system/build.prop
+busybox sed -i '/net.rmnet0.dns2/d' /system/build.prop
+busybox sed -i '/net.ppp0.dns1/d' /system/build.prop
+busybox sed -i '/net.ppp0.dns2/d' /system/build.prop
+busybox sed -i '/net.wlan0.dns1/d' /system/build.prop
+busybox sed -i '/net.wlan0.dns2/d' /system/build.prop
+busybox sed -i '/net.gprs.dns1/d' /system/build.prop
+busybox sed -i '/net.gprs.dns2/d' /system/build.prop
+busybox sed -i '/net.eth0.dns1/d' /system/build.prop
+busybox sed -i '/net.eth0.dns2/d' /system/build.prop
 
 busybox echo "net.dns1=8.8.8.8
 net.dns2=8.8.4.4

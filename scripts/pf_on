@@ -19,7 +19,7 @@ busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
 busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
 busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 
-persist.sys.use_16bpp_alpha 1
+setprop persist.sys.use_16bpp_alpha 1
 
 busybox echo "debug.performance.tuning=1
 persist.sys.use_dithering=0

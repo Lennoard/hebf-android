@@ -27,6 +27,7 @@ busybox sed -i '/debug.egl.profiler=1/d' /system/build.prop
 busybox sed -i '/debug.egl.hw=1' /system/build.prop
 busybox sed -i '/debug.composition.type=gpu/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
+busybox sed -i '/hwui.disable_vsync=true/d' /system/build.prop
 
 rm -f /data/property/persist.sampling_profiler
 rm -f /data/property/persist.sys.ui.hw

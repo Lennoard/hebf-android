@@ -15,11 +15,11 @@ mount -o remount,rw /system
 
 busybox sed -i '/media.stagefright.enable-http=true/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-player=true/d' /system/build.prop
-busybox sed -i '/media.stagefright.enable-scan=true/d' /system/build.prop
-busybox sed -i '/media.stagefright.enable-record=true/d' /system/build.prop
-busybox sed -i '/media.stagefright.enable-qcp=true/d' /system/build.prop
-busybox sed -i '/media.stagefright.enable-aac=true/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-meta=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-aac=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-qcp=true/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-scan=tru/d' /system/build.prop
+busybox sed -i '/media.stagefright.enable-record=true/d' /system/build.prop
 
 busybox echo "#Removed video streaming tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
 

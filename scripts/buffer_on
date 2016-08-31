@@ -22,7 +22,7 @@ busybox sed -i '/net.tcp.buffersize.umts/d' /system/build.prop
 busybox sed -i '/net.tcp.buffersize.edge/d' /system/build.prop
 busybox sed -i '/net.tcp.buffersize.gprs/d' /system/build.prop
 
-busybox echo "net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+busybox echo "net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
 net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
 net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576

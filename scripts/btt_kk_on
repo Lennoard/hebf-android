@@ -17,40 +17,6 @@ echo "500" > /proc/sys/vm/dirty_expire_centisecs;
 echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
 
 busybox sed -i '/ENFORCE_PROCESS_LIMIT/d' /system/build.prop
-busybox sed -i '/MAX_SERVICE_INACTIVITY/d' /system/build.prop
-busybox sed -i '/MIN_HIDDEN_APPS/d' /system/build.prop
-busybox sed -i '/MAX_HIDDEN_APPS/d' /system/build.prop
-busybox sed -i '/CONTENT_APP_IDLE_OFFSET/d' /system/build.prop
-busybox sed -i '/EMPTY_APP_IDLE_OFFSET/d' /system/build.prop
-busybox sed -i '/MAX_ACTIVITIES/d' /system/build.prop
-busybox sed -i '/ACTIVITY_INACTIVITY_RESET_TIME/d' /system/build.prop
-busybox sed -i '/MAX_RECENT_TASKS/d' /system/build.prop
-busybox sed -i '/MIN_RECENT_TASKS/d' /system/build.prop
-busybox sed -i '/APP_SWITCH_DELAY_TIME/d' /system/build.prop
-busybox sed -i '/MAX_PROCESSES/d' /system/build.prop
-busybox sed -i '/PROC_START_TIMEOUT/d' /system/build.prop
-busybox sed -i '/CPU_MIN_CHECK_DURATION/d' /system/build.prop
-busybox sed -i '/GC_TIMEOUT/d' /system/build.prop
-busybox sed -i '/SERVICE_TIMEOUT/d' /system/build.prop
-busybox sed -i '/MIN_CRASH_INTERVAL/d' /system/build.prop
-busybox sed -i '/Bateria_KK/d' /system/build.prop
-busybox sed -i '/ENFORCE_PROCESS_LIMIT=false/d' /system/build.prop
-busybox sed -i '/MAX_SERVICE_INACTIVITY=false/d' /system/build.prop
-busybox sed -i '/MIN_HIDDEN_APPS=false/d' /system/build.prop
-busybox sed -i '/MAX_HIDDEN_APPS=false/d' /system/build.prop
-busybox sed -i '/CONTENT_APP_IDLE_OFFSET=false/d' /system/build.prop
-busybox sed -i '/EMPTY_APP_IDLE_OFFSET=false/d' /system/build.prop
-busybox sed -i '/MAX_ACTIVITIES=false/d' /system/build.prop
-busybox sed -i '/ACTIVITY_INACTIVITY_RESET_TIME=false/d' /system/build.prop
-busybox sed -i '/MAX_RECENT_TASKS=false/d' /system/build.prop
-busybox sed -i '/MIN_RECENT_TASKS=false/d' /system/build.prop
-busybox sed -i '/APP_SWITCH_DELAY_TIME=false/d' /system/build.prop
-busybox sed -i '/MAX_PROCESSES=false/d' /system/build.prop
-busybox sed -i '/PROC_START_TIMEOUT=false/d' /system/build.prop
-busybox sed -i '/CPU_MIN_CHECK_DURATION=false/d' /system/build.prop
-busybox sed -i '/GC_TIMEOUT=false/d' /system/build.prop
-busybox sed -i '/SERVICE_TIMEOUT=false/d' /system/build.prop
-busybox sed -i '/MIN_CRASH_INTERVAL=false/d' /system/build.prop
 busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
 busybox sed -i '/persist.android.strictmode=0/d' /system/build.prop
@@ -75,22 +41,6 @@ busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
 	
 busybox echo "ENFORCE_PROCESS_LIMIT=false
-MAX_SERVICE_INACTIVITY=false
-MIN_HIDDEN_APPS=false
-MAX_HIDDEN_APPS=false
-CONTENT_APP_IDLE_OFFSET=false
-EMPTY_APP_IDLE_OFFSET=false
-MAX_ACTIVITIES=false
-ACTIVITY_INACTIVITY_RESET_TIME=false
-MAX_RECENT_TASKS=false
-MIN_RECENT_TASKS=false
-APP_SWITCH_DELAY_TIME=false
-MAX_PROCESSES=false
-PROC_START_TIMEOUT=false
-CPU_MIN_CHECK_DURATION=false
-GC_TIMEOUT=false
-SERVICE_TIMEOUT=false
-MIN_CRASH_INTERVAL=false
 ro.ril.disable.power.collapse=0
 pm.sleep_mode=1
 persist.android.strictmode=0
@@ -114,7 +64,6 @@ debug.qc.hardware=true
 debug.qctwa.preservebuf=1
 debug.qctwa.statusbar=1
 " >> /system/build.prop
-busybox sed -i '/^$/d' /system/build.prop
 
 setprop persist.android.strictmode 0
 setprop persist.sys.purgeable_assets 1

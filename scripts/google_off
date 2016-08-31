@@ -14,18 +14,18 @@
 mount -o remount,rw /system
 mount -o remount,rw /data
 
-busybox sed -i '/hw3d.force=1/d' /system/build.prop
-busybox sed -i '/ro.product.gpu.driver=1/d' /system/build.prop
-busybox sed -i '/persist.sampling_profiler=0/d' /system/build.prop
-busybox sed -i '/hwui.render_dirty_regions=false/d' /system/build.prop
-busybox sed -i '/persist.sys.ui.hw=1/d' /system/build.prop
-busybox sed -i '/ro.config.disable.hw_accel=false/d' /system/build.prop
-busybox sed -i '/video.accelerate.hw=1/d' /system/build.prop
-busybox sed -i '/persist.sys.composition.type=gpu/d' /system/build.prop
-busybox sed -i '/debug.egl.profiler=1/d' /system/build.prop
-busybox sed -i '/debug.egl.hw=1' /system/build.prop
-busybox sed -i '/debug.composition.type=gpu/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
+busybox sed -i '/net.dns1/d' /system/build.prop
+busybox sed -i '/net.dns2/d' /system/build.prop
+busybox sed -i '/net.rmnet0.dns1/d' /system/build.prop
+busybox sed -i '/net.rmnet0.dns2/d' /system/build.prop
+busybox sed -i '/net.ppp0.dns1/d' /system/build.prop
+busybox sed -i '/net.ppp0.dns2/d' /system/build.prop
+busybox sed -i '/net.wlan0.dns1/d' /system/build.prop
+busybox sed -i '/net.wlan0.dns2/d' /system/build.prop
+busybox sed -i '/net.gprs.dns1/d' /system/build.prop
+busybox sed -i '/net.gprs.dns2/d' /system/build.prop
+busybox sed -i '/net.eth0.dns1/d' /system/build.prop
+busybox sed -i '/net.eth0.dns2/d' /system/build.prop
 
 rm -f /data/property/persist.sampling_profiler
 rm -f /data/property/persist.sys.ui.hw

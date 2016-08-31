@@ -29,8 +29,7 @@ setprop persist.sys.NV_STEREOSEPCHG 0
 setprop persist.sys.NV_STEREOSEP 20
 setprop persist.sys.purgeable_assets 1
 
-echo "#Modo jogo
-persist.sys.NV_FPSLIMIT=60 
+busybox echo "persist.sys.NV_FPSLIMIT=60
 persist.sys.NV_POWERMODE=1 
 persist.sys.NV_PROFVER=15 
 persist.sys.NV_STEREOCTRL=0 

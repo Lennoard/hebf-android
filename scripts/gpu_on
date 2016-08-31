@@ -26,19 +26,25 @@ busybox sed -i '/debug.egl.profiler=1/d' /system/build.prop
 busybox sed -i '/debug.egl.hw=1' /system/build.prop
 busybox sed -i '/debug.composition.type=gpu/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
+busybox sed -i '/hwui.disable_vsync=true/d' /system/build.prop
 
-busybox echo "debug.composition.type=gpu
-persist.sys.composition.type=gpu
-debug.sf.hw=1
-persist.sys.ui.hw=1
+setprop persist.sampling_profiler 0
+setprop persist.sys.ui.hw 1
+setprop persist.sys.composition.type gpu
+
+busybox echo "hw3d.force=1
+ro.product.gpu.driver=1
 persist.sampling_profiler=0
+hwui.render_dirty_regions=false
+persist.sampling_profiler=0
+persist.sys.ui.hw=1
 ro.config.disable.hw_accel=false
 video.accelerate.hw=1
+persist.sys.composition.type=gpu
 debug.egl.profiler=1
 debug.egl.hw=1
-hw3d.force=1
-ro.product.gpu.driver=1
-hwui.render_dirty_regions=false
+debug.composition.type=gpu
+ro.vold.umsdirtyratio=20
 hwui.disable_vsync=true
 " >> /system/build.prop
 
