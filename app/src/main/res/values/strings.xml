@@ -70,10 +70,6 @@
     <string name="battery_fail">You already are on \"Battery\"</string>
     <string name="ferramentas_fail">You already are on \"Tools\"</string>
     <string name="title_activity_tools">Tools</string>
-    <string name="adblocker">Ad Blocker</string>
-    <string name="ad_sub">Blocks all the advertisements, including in-app ads.</string>
-    <string name="ad_on">Adblocker activated :)</string>
-    <string name="ad_off">Adblocker deactivated :|</string>
     <string name="misc">Miscellaneous</string>
     <string name="rebooter">Rebooter</string>
     <string name="reboot">REBOOT</string>
@@ -108,7 +104,8 @@
         720x1280(xhdpi) - 320;\n
         1080x1920(xxhdpi) - 480\n
         \n
-        Warning: Please disregard the above information if you are running this application on a Tablet.
+        Warning: Please disregard the above information if you are running this application on a Tablet.\n
+        Warning 2: Please avoid using this option in stock ROMs.
 </string>
     <string name="dpi_reboot">This has the potential to cause a bootloop on your device!\nIf you have set an absurd or inappropriate value for your device it will be passed to the properties file now!</string>
     <string name="dpi_valor"> was the chosen dpi value, proceed?</string>
@@ -116,20 +113,14 @@
     <string name="cancelar">CANCEL</string>
     <string name="permissive">SET PERMISSIVE</string>
     <string name="enforcing">SET ENFORCING</string>
-    <string name="se">SELinux Changer</string>
-    <string name="se_aviso">Please note that changing SELinux status might not work on some devices or ROMs.\nChange anyway?</string>
-    <string name="se_snack">SELinux status changed. A reboot may be necessary.</string>
-    <string name="se_sub">Changes the Security Enhancements status (SELinux). On Android 4.4 and later, the default value is enforcing, unless changed by a custom kernel.</string>
     <string name="title_activity_bateria">Battery</string>
     <string name="bateria_kk">Improve Battery</string>
     <string name="bateria_kk_sub">Optimizes the Wi-Fi scan interval, enables the power saving mode, disables the error reports without performance impacts to improve your battery life.</string>
-    <string name="bateria_kk_aviso">ONLY FOR ANDROID 4.4 KITKAT</string>
     <string name="bateria_toast">…</string>
     <string name="bateria_lp">Improve Battery</string>
     <string name="bateria_lp_sub">Optimizes the Wi-Fi scan interval, enables the power saving mode, disables the error reports without performance impacts to improve your battery life.</string>
-    <string name="bateria_lp_aviso">ONLY FOR ANDROID 5.0 AND UP</string>
     <string name="ultra">VIP Battery Saver</string>
-    <string name="ultra_sub">No sub yet</string>
+    <string name="ultra_sub">Better battery saving per profile, this option can change the CPU governor according to the selected profile and basic settings, always be careful and be sure before you activate Ultra Battery Saver and performance options.</string>
     <string name="ultra_snack_on">Ultra battery saver profile activated</string>
     <string name="ultra_snack_off">Ultra battery saver profile deactivated</string>
     <string name="geral">General</string>
@@ -203,7 +194,7 @@
     <string name="play_store">PLAY STORE</string>
     <string name="good_bye">CLOSE</string>
     <string name="do_not_be_evil">GOOGLE</string>
-    <string name="root_fail_intro">This application requires root access which wasn\'t found.\nIf you don\'t know what we are talking about please uninstall this application.\nGoogle has some quick references.</string>
+    <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Files Cleaner</string>
     <string name="gplus" translatable="false">GOOGLE+</string>
@@ -220,7 +211,7 @@
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
     <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
-    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n\n – Não nos esquecemos de vocês.</string>
+    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n\n – We did not forget you.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
     <string name="iv_sub">…And full battery, in a moment of a loving disillusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivsom Emídio</string>
@@ -299,7 +290,7 @@
     <string name="st_off">Streaming tweaks disabled</string>
     <string name="ring">Reduce in-call delay</string>
     <string name="ring_sub">Reduces the delay to receive or end a call.</string>
-    <string name="ring_on">In-call delay reduced</string>
+    <string name="ring_on">In-call delay has been reduced</string>
     <string name="ring_off">In-call delay tweak disabled</string>
     <string name="rendering_tweaks">Rendering tweaks</string>
     <string name="rendering">Improve rendering quality</string>
@@ -370,7 +361,7 @@
     <string name="kernel_fail2">Try again with another custom kernel.</string>
     <string name="escolher_pacote">Choose a package</string>
     <string name="sleeper_extra">Choose your own value to Wi-Fi Idle Wait</string>
-    <string name="segundos">15 seconds</string>
+    <string name="segundos">seconds</string>
     <string name="lock">Lock apps in memory (Master)</string>
     <string name="definido">Value has been set</string>
     <string name="lock_sub">Select an application to be locked on the memory, preventing it to be killed.</string>
@@ -393,10 +384,16 @@
     <string name="seila_user_sub">These settings will be always available for you at the settings screen.</string>
     <string name="kernel">Kernel Options</string>
     <string name="title_activity_bug_report">Bug report</string>
-    <string name="br_sum">If you found a bug or have any suggestions please feel free to send us. We will respond as soon as possible.</string>
+    <string name="br_sum">If you found a bug or have any suggestions please feel free to send us (via email). We will respond as soon as possible.</string>
     <string name="which">Which?</string>
     <string name="iscustom_rom">Is it a custom ROM?</string>
     <string name="show_more">Show more</string>
     <string name="enviar">SEND!</string>
     <string name="message">Message</string>
+    <string name="vip_aviso">This option may slow down your device</string>
+    <string name="vip_aviso_fail">Still disabled</string>
+    <string name="title_activity_doacao">Donate</string>
+    <string name="donation_sub">Does this app deserves your respect?\n If you want, you can here contribute to the improvement of our work through a donation.\n Click one of the buttons below to continue.</string>
+    <string name="estou_sem_dinheiro">I don\'t have money</string>
+    <string name="hebf_sobre_sub_2">Feeling heartbroken? Someone screwed up with you? Forget it. Your heart can be empty, do not let your battery get too!</string>
 </resources>
