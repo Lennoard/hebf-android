@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
+    <string name="adblocker">Ad Blocker</string>
+    <string name="ad_sub">Blocks all the advertisements, including in-app ads.</string>
+    <string name="ad_on">Adblocker activated :)</string>
+    <string name="ad_off">Adblocker deactivated :|</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="hebf" translatable="false">Heart empty, battery full</string>
@@ -196,11 +200,12 @@
     <string name="do_not_be_evil">GOOGLE</string>
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
-    <string name="wpp_cleaner">WhatsApp Files Cleaner</string>
+    <string name="wpp_cleaner">WhatsApp Cleaner</string>
     <string name="gplus" translatable="false">GOOGLE+</string>
     <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
-    <string name="lennoard_frase" translatable="false">\"Fake people have an image to maintain, real people just don\'t care.\"</string>
+    <string name="lennoard_frase" translatable="false">\"No-one can destroy the metal, the metal will strike you down with a vicious blow\n
+        We are the vanquished foes of the metal, we tried to win for why we do not know\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -223,7 +228,7 @@
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
     <string name="lennoard" translatable="false">Lennoard Silva</string>
-    <string name="yahari" translatable="false">– Hikigaya Hachiman</string>
+    <string name="yahari" translatable="false">– Tenacious D</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
     <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
@@ -232,15 +237,9 @@
     <string name="force_sub_2">If there are problems even after disabling this tool, try the button below and reboot.</string>
     <string name="force_botao">FIX</string>
     <string name="force_snack">OK, reboot</string>
-    <string name="thumbs_botao">Clean hidden thumbnails</string>
-    <string name="lixo_botao">Clean junk files</string>
-    <string name="thumb_tamanho">Thumbnails size:</string>
+    <string name="thumbs_botao">Hidden thumbnails</string>
+    <string name="lixo_botao">Junk files</string>
     <string name="thumb_snack">Thumbnails deleted</string>
-    <string name="desconhecido">Unknown</string>
-    <string name="big"> (Big)</string>
-    <string name="wtf"> (What the… Better clean it!)</string>
-    <string name="wtff"> (What the… Self-destruction risk!)</string>
-    <string name="thumb_bug"><![CDATA[ÿÌùä better üßø?û?üû??ü clean &?üÀú?üUê it! þÿpþþ?ÿPý?üø]]></string>
     <string name="arquivos_fail">Could not find one or more files required for application operation. The most common cause is that the application was closed during the first opening or your system uses a different path to \"/data\".\nYou can clear the application\'s data to force the copy again.</string>
     <string name="config">SETTINGS</string>
     <string name="thumb_over">Thumbnails are taking up too much space</string>
@@ -314,7 +313,7 @@
     <string name="lmk_visible_sub">Those applications that are running in the background and still doing some actions.</string>
     <string name="lmk_secondary_sub">Services needed by some applications. The Android keeps them alive in a space in RAM in case they are needed to do something.</string>
     <string name="lmk_hidden_sub">Processes in idle, inactive but with a reserved space in case it is needed by an alive running application.</string>
-    <string name="lmk_provider_sub">Those applications that provides the content needed for the Android and the applications to work, i.e the data, refreshing every X minutes. They can manage audio, video, images or personal contact data.</string>
+    <string name="lmk_provider_sub">Those applications that provides the content needed for the Android and the applications to work, i.e the data, refreshing every X minutes.</string>
     <string name="lmk_empty_sub">The \"ghosts\", applications that you finished. The Android still keeps them in memory in order to open them again faster. They won\'t use CPU or drain battery and will get lost if more RAM is needed by another applcation.</string>
     <string name="lmk_sub_recycler">Provides an option to manually tune your Low Memory Killer (LMK) values.</string>
     <string name="lmk_sub">LMK is a set of parameters that sets the limits at which applications are killed in order to free RAM. Set the value to the levels below in megabytes.</string>
@@ -393,7 +392,29 @@
     <string name="vip_aviso">This option may slow down your device</string>
     <string name="vip_aviso_fail">Still disabled</string>
     <string name="title_activity_doacao">Donate</string>
-    <string name="donation_sub">Does this app deserves your respect?\n If you want, you can here contribute to the improvement of our work through a donation.\n Click one of the buttons below to continue.</string>
+    <string name="donation_sub">Does this app deserves your respect?\nIf you want, you can here contribute to the improvement of our work through a donation.\n Click one of the buttons below to continue.</string>
     <string name="estou_sem_dinheiro">I don\'t have money</string>
     <string name="hebf_sobre_sub_2">Feeling heartbroken? Someone screwed up with you? Forget it. Your heart can be empty, do not let your battery get too!</string>
+    <string name="screen_overlay">Screen overlay problem</string>
+    <string name="screen_overlay_sub">If you are using a screen recorder app…\n\nWhen activated, the screen overlay interferes with the app and other permissions that were granted. To solve the problem you need to disable the overlay in order to fix other permissions.</string>
+    <string name="request_permission">You need to grant storage permissions in order to open this option.\n</string>
+    <string name="screenshots">Screenshots</string>
+    <string name="total_size">Total size:</string>
+    <string name="open_now">OPEN NOW</string>
+    <string name="we_need_to_know">We need to know:</string>
+    <string name="we_need_to_know_sub">Can you recover from a bootloop?</string>
+    <string name="what_is_this_sub">We would like to recommend you to change the user type to \"Normal\" in order to avoid major problems.\n\nBootloop is when the system fails to start properly.</string>
+    <string name="what_is_it">WHAT IS IT?</string>
+    <string name="disclaimer">We would like to recommend you to change the user type to \"Normal\" in order to avoid major problems.\nBackups are created in /data/data/com.androidvip.hebf, store it somewhere safer\n\nSince you can not recover, we do not recommend using advanced features of the app, it can be somewhat dangerous, please understand.\n\nWe would also like to add that we are not responsible for bootloops.</string>
+    <string name="sair">Do you really want to close this application?</string>
+    <string name="oh_yeah">Alright, you rock!\nBy the way, backups are created in /data/data/com.androidvip.hebf, just in case.</string>
+    <string name="sim">YES</string>
+    <string name="nao">NO!</string>
+    <string name="busybox1">The busybox assures us that all commands will run on all versions of the system, it is a binary that gathers the most common LINUX / UNIX commands into one, so if one of them is missing on your system, it will be present in busybox.</string>
+    <string name="busybox2">We recommend installing the Stericson\'s busybox installer from Play Store to keep it up to date. Installation is simple, just tap the INSTALL button and nothing else, but we also offer an offline option.</string>
+    <string name="install_now">INSTALL NOW</string>
+    <string name="mk">Choose your destiny</string>
+    <string name="tele">Telegram Cleaner</string>
+    <string name="low_ram_device_flag">Low RAM Device flag</string>
+    <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.\nIf disabled, you may need to reboot to apply the changes.</string>
 </resources>
