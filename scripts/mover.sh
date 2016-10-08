@@ -63,45 +63,10 @@ dd if="$IN7" of="$OUT7"
 rm -f "$IN7"
 chmod 755 /system/xbin/zipalign
 
-IN8=/data/data/com.androidvip.hebf/wpp_media.sh
-OUT8=/data/data/com.androidvip.hebf/limpador/wpp_media.sh
+IN8=/data/data/com.androidvip.hebf/get_lmk
+OUT8=/data/data/com.androidvip.hebf/LMK/get_lmk
 dd if="$IN8" of="$OUT8"
 rm -f "$IN8"
-
-IN9=/data/data/com.androidvip.hebf/wpp_audio.sh
-OUT9=/data/data/com.androidvip.hebf/limpador/wpp_audio.sh
-dd if="$IN9" of="$OUT9"
-rm -f "$IN9"
-
-IN10=/data/data/com.androidvip.hebf/wpp_imagens.sh
-OUT10=/data/data/com.androidvip.hebf/limpador/wpp_imagens.sh
-dd if="$IN10" of="$OUT10"
-rm -f "$IN10"
-
-IN11=/data/data/com.androidvip.hebf/wpp_docs.sh
-OUT11=/data/data/com.androidvip.hebf/limpador/wpp_docs.sh
-dd if="$IN11" of="$OUT11"
-rm -f "$IN11"
-
-IN12=/data/data/com.androidvip.hebf/wpp_voz.sh
-OUT12=/data/data/com.androidvip.hebf/limpador/wpp_voz.sh
-dd if="$IN12" of="$OUT12"
-rm -f "$IN12"
-
-IN13=/data/data/com.androidvip.hebf/wpp_video.sh
-OUT13=/data/data/com.androidvip.hebf/limpador/wpp_video.sh
-dd if="$IN13" of="$OUT13"
-rm -f "$IN13"
-
-IN14=/data/data/com.androidvip.hebf/thumb
-OUT14=/data/data/com.androidvip.hebf/limpador/thumb
-dd if="$IN14" of="$OUT14"
-rm -f "$IN14"
-
-IN15=/data/data/com.androidvip.hebf/get_lmk
-OUT15=/data/data/com.androidvip.hebf/LMK/get_lmk
-dd if="$IN15" of="$OUT15"
-rm -f "$IN15"
 
 mount -o rw,remount /data
 
