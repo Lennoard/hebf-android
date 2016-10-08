@@ -14,6 +14,7 @@
 mount -o rw,remount /system
 
 cp /data/data/com.androidvip.hebf/BackUps/build.prop /system/build.prop
+chmod 644 /system/build.prop
 
 rm -f /system/etc/init.d/02play
 rm -f /system/etc/init.d/03zipalign
