@@ -7,8 +7,6 @@
     <string name="ad_off">Adblocker deactivated :|</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="hebf" translatable="false">Heart empty, battery full</string>
-    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
     <string name="play_services">Google Play Services drain fix (Master)</string>
     <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.\nWARNING: IT WILL DISABLE THE SERVICES, ENABLE THIS OPTION ONLY IF YOU ARE OK WITH IT AND IF YOU ARE EXPERIENCING DRAIN.</string>
     <string name="play_services_on">Ready to listen your choices</string>
@@ -201,11 +199,7 @@
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Cleaner</string>
-    <string name="gplus" translatable="false">GOOGLE+</string>
-    <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
-    <string name="lennoard_frase" translatable="false">\"No-one can destroy the metal, the metal will strike you down with a vicious blow\n
-        We are the vanquished foes of the metal, we tried to win for why we do not know\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -215,20 +209,16 @@
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
-    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
-    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n\n – We did not forget you.</string>
+    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n\n – We did not forget you.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
     <string name="iv_sub">…And full battery, in a moment of a loving disillusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivsom Emídio</string>
     <string name="dev">The developers</string>
     <string name="title_activity_versao">Version</string>
     <string name="changelog">Changelog:</string>
-    <string name="iv" translatable="false">Ivsom Emídio</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
-    <string name="lennoard" translatable="false">Lennoard Silva</string>
-    <string name="yahari" translatable="false">– Tenacious D</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
     <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
@@ -389,7 +379,7 @@
     <string name="show_more">Show more</string>
     <string name="enviar">SEND!</string>
     <string name="message">Message</string>
-    <string name="vip_aviso">This option may slow down your device</string>
+    <string name="vip_aviso">This option may slow down your device.</string>
     <string name="vip_aviso_fail">Still disabled</string>
     <string name="title_activity_doacao">Donate</string>
     <string name="donation_sub">Does this app deserves your respect?\nIf you want, you can here contribute to the improvement of our work through a donation.\n Click one of the buttons below to continue.</string>
@@ -402,8 +392,7 @@
     <string name="total_size">Total size:</string>
     <string name="open_now">OPEN NOW</string>
     <string name="we_need_to_know">We need to know:</string>
-    <string name="we_need_to_know_sub">Can you recover from a bootloop?</string>
-    <string name="what_is_this_sub">We would like to recommend you to change the user type to \"Normal\" in order to avoid major problems.\n\nBootloop is when the system fails to start properly.</string>
+    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
     <string name="what_is_it">WHAT IS IT?</string>
     <string name="disclaimer">We would like to recommend you to change the user type to \"Normal\" in order to avoid major problems.\nBackups are created in /data/data/com.androidvip.hebf, store it somewhere safer\n\nSince you can not recover, we do not recommend using advanced features of the app, it can be somewhat dangerous, please understand.\n\nWe would also like to add that we are not responsible for bootloops.</string>
     <string name="sair">Do you really want to close this application?</string>
@@ -416,5 +405,24 @@
     <string name="mk">Choose your destiny</string>
     <string name="tele">Telegram Cleaner</string>
     <string name="low_ram_device_flag">Low RAM Device flag</string>
-    <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.\nIf disabled, you may need to reboot to apply the changes.</string>
+    <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.\n\nIf disabled, you may need to REBOOT to apply the changes.</string>
+    <string name="copiado">Files were copied</string>
+    <string name="user_sub">Change the user type to show / hide risky options.</string>
+    <string name="user">Change the user type</string>
+    <string name="mais">More</string>
+    <string name="title_activity_set_user">Survey</string>
+    <string name="fosure">FOR SURE</string>
+    <string name="survey_root">The root access allows, among other things, modify system files. We use it to fine tune some values. Are you able to manually change some of these values?</string>
+    <string name="survey_custom">Custom ROMs are fully customized Operation Systems (e.g CyanogenMod, Nexus Experience), usually based on clean AOSP code, directly from Google. Are you running a Custom ROM?</string>
+    <string name="survey_kernel">Kernel is the big organizer of the whole system. It is responsible for the interaction between software and hardware, managing everything (RAM, for example). Is your Kernel stable?</string>
+    <string name="user_survey">Answer a few questions to determine the type of user. Based on that, we will decide which options will be available for you.</string>
+    <string name="proximo">NEXT</string>
+    <string name="theme_sub">Change the application\'s theme</string>
+    <string name="theme">Theme</string>
+    <string name="fps_unlocker">FPS Unlocker</string>
+    <string name="fps_sub">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another).</string>
+    <string name="fps_on">You need to lock and unlock the device so that it is activated.</string>
+    <string name="apply_on_boot">Apply on boot</string>
+    <string name="on_boot_title">Re-applying your settings…</string>
+    <string name="on_boot_finished">Your settings have been reapplied</string>
 </resources>
