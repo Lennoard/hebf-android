@@ -12,15 +12,15 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
+mount -o remount,rw /data
 
-HEBF=/system/etc/HEBF/yrolram.log
+HEBF=/data/data/com.androidvip.hebf/hebf_logs/yrolram.log
  rm -rf $HEBF
  touch $HEBF
 
- echo "# HEBF " | busybox tee -a $HEBF
- echo "" | busybox tee -a $HEBF
- echo "Setting profle" | busybox tee -a $HEBF
+ echo "Better multitasking" >> $HEBF
+ echo "" >> $HEBF
+ echo "Setting profile..." >> $HEBF
 
 # ADJ Values
 chmod 644 /sys/module/lowmemorykiller/parameters/adj
@@ -123,8 +123,7 @@ else
 fi
 
 
- echo "" >> $HEBF
- echo "#Added muiltitasking $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
- echo "#Added muiltitasking $(date +%A) at $(date +%H:%M)" >> $HEBF
+echo "" >> $HEBF
+echo "Multitasking profile set $(date +%A) at $(date +%H:%M)" >> $HEBF
 
-mount -o remount,ro /system
+mount -o remount,ro /data
