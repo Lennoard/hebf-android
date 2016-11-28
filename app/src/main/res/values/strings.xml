@@ -423,6 +423,14 @@
     <string name="fps_sub">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another).</string>
     <string name="fps_on">You need to lock and unlock the device so that it is activated.</string>
     <string name="apply_on_boot">Apply on boot</string>
-    <string name="on_boot_title">Re-applying your settings…</string>
-    <string name="on_boot_finished">Your settings have been reapplied</string>
+    <string name="on_boot_title">Re-applying…</string>
+    <string name="on_boot_finished">Successfully applied</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="updating">Updating…</string>
+    <string name="updated">HEBF has been updated</string>
+    <string name="rate_this_app">Rate this app</string>
+    <string name="rate_this_app_sub">Leave your review on the Google Play Store</string>
+    <string name="donate_sub">Donate to the developers</string>
+    <string name="uninstall">Uninstall this app</string>
+    <string name="uninstall_sub">Remove the changes made by this app to the system for a complete and safer restore</string>
 </resources>
