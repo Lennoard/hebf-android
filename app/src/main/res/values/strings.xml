@@ -7,6 +7,8 @@
     <string name="ad_off">Adblocker deactivated :|</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="hebf" translatable="false">Heart empty, battery full</string>
+    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
     <string name="play_services">Google Play Services drain fix (Master)</string>
     <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.\nWARNING: IT WILL DISABLE THE SERVICES, ENABLE THIS OPTION ONLY IF YOU ARE OK WITH IT AND IF YOU ARE EXPERIENCING DRAIN.</string>
     <string name="play_services_on">Ready to listen your choices</string>
@@ -148,7 +150,7 @@
     <string name="restaurar_botao">RESTORE</string>
     <string name="backup_botao">BACKUP</string>
     <string name="backup_sub_botao">Backup of files has been completed</string>
-    <string name="restaurar_sub">Files has been restored</string>
+    <string name="restaurar_sub">Files were been restored</string>
     <string name="calibrado">Battery has been calibrated</string>
     <string name="copia_falha">There was a failure to copy the required files, have you granted ROOT and STORAGE permissions?</string>
     <string name="eh_noyz">Welcome!</string>
@@ -199,7 +201,10 @@
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Cleaner</string>
+    <string name="gplus" translatable="false">GOOGLE+</string>
+    <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
+    <string name="lennoard_frase" translatable="false">\"He who makes a beast of himself gets rid of the pain of being a man\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -209,6 +214,7 @@
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
+    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
     <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n\n – We did not forget you.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
@@ -216,15 +222,17 @@
     <string name="dev">The developers</string>
     <string name="title_activity_versao">Version</string>
     <string name="changelog">Changelog:</string>
+    <string name="iv" translatable="false">Ivsom Emídio</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
+    <string name="lennoard" translatable="false">Lennoard Silva</string>
+    <string name="yahari" translatable="false">– Samuel Johnson</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
     <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
     <string name="force_on">Hack enabled :v</string>
     <string name="force_off">Hack disabled</string>
-    <string name="force_sub_2">If there are problems even after disabling this tool, try the button below and reboot.</string>
     <string name="force_botao">FIX</string>
     <string name="force_snack">OK, reboot</string>
     <string name="thumbs_botao">Hidden thumbnails</string>
@@ -295,7 +303,7 @@
     <string name="application_settings">Application settings</string>
     <string name="application_settings_sub">Open the Android settings screen for this application.</string>
     <string name="forcar_parada">Force stop</string>
-    <string name="forcar_parada_sub">Kill the application.</string>
+    <string name="forcar_parada_sub">Kill the application</string>
     <string name="gerenciador">RAM Manager</string>
     <string name="title_activity_lmk">Low Memory Killer</string>
     <string name="atual">Current</string>
@@ -317,7 +325,7 @@
     <string name="lmk_erro">There are values missing, please check the text fields.</string>
     <string name="lmk_novo_valor">Your new values are</string>
     <string name="force_english_language">Force English language</string>
-    <string name="force_english_language_sub">Force the use of English language in application.</string>
+    <string name="force_english_language_sub">Force the use of English language in application</string>
     <string name="fab_cache">Clean caches</string>
     <string name="fab_media">Kill media server</string>
     <string name="fab_media_sub">The Mediaserver process scans your device for media files. Most of the time only a reboot is enough to fix problems with it.\nIs Mediaserver draining your battery? Try to kill it (You may get no sound output).</string>
@@ -407,7 +415,7 @@
     <string name="low_ram_device_flag">Low RAM Device flag</string>
     <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.\n\nIf disabled, you may need to REBOOT to apply the changes.</string>
     <string name="copiado">Files were copied</string>
-    <string name="user_sub">Change the user type to show / hide risky options.</string>
+    <string name="user_sub">Change the user type to show / hide risky options</string>
     <string name="user">Change the user type</string>
     <string name="mais">More</string>
     <string name="title_activity_set_user">Survey</string>
@@ -423,7 +431,10 @@
     <string name="fps_sub">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another).</string>
     <string name="fps_on">You need to lock and unlock the device so that it is activated.</string>
     <string name="apply_on_boot">Apply on boot</string>
-    <string name="on_boot_title">Re-applying…</string>
+    <string name="build_changelog" translatable="false">▪ Safer tweak methods (no more build.prop)\n▪ Updated buffer tweak\n▪ Improved navigation and reduced code size\n▪ Added fstrim on boot\n▪ Fixed crashes\n▪ WiFi sleeper updated for everybody on 6.0+\n▪ Force indicator updated (5.0+)\n▪ Added a improved Backup option(Restore seems not working well, though)\n▪ You can now choose whether or not to show warning / info notifications\n▪ The green theme is now part of this family\n▪ Clean junk files on boot\n▪ Updated libraries\n</string>
+    <string name="build_date" translatable="false">Codename: Back in Black\n2016/12/25\nMerry Christmas!</string>
+    <string name="build_version" translatable="false">v1.4.4.3 - Play Store Beta</string>
+    <string name="on_boot_title">HEBF Optimizer</string>
     <string name="on_boot_finished">Successfully applied</string>
     <string name="check_for_updates">Check for updates</string>
     <string name="updating">Updating…</string>
@@ -433,4 +444,22 @@
     <string name="donate_sub">Donate to the developers</string>
     <string name="uninstall">Uninstall this app</string>
     <string name="uninstall_sub">Remove the changes made by this app to the system for a complete and safer restore</string>
+    <string name="application_preferences">Application preferences</string>
+    <string name="backup_app_prefs_sub">Makes a backup of the current app preferences, your user settings.</string>
+    <string name="backup_sub_card">Makes a backup of the current app settings, the features that you have enabled.</string>
+    <string name="status">Status</string>
+    <string name="delete_backup">Delete backup</string>
+    <string name="copy_to_sd">Copy to SD</string>
+    <string name="delete_from_sd">Delete from SD</string>
+    <string name="restore_from_sd">Restore from SD</string>
+    <string name="app_intro">App Intro</string>
+    <string name="app_intro_sub">Opens the App Intro again</string>
+    <string name="show_notifications">Show notifications</string>
+    <string name="show_notifications_sub">Choose whether or not to show warning / info notifications</string>
+    <string name="clean_on_boot">Clean on boot</string>
+    <string name="advanced_toast_cont">You\'re %1$s steps away from unlocking advanced options</string>
+    <string name="advanced_toast">You have unlocked the advanced options!</string>
+    <string name="advanced_fail">Sorry, try again</string>
+    <string name="advanced_options">Advanced options</string>
+
 </resources>
