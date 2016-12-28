@@ -1,0 +1,30 @@
+#!/system/bin/sh
+# HEBF
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o remount,rw /system
+
+busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
+busybox sed -i '/persist.sys.use_dithering=0/d' /system/build.prop
+busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
+busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
+busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
+
+setprop debug.performance.tuning 1
+setprop persist.sys.use_dithering 0
+setprop persist.sys.use_16bpp_alpha 1
+setprop ro.min.fling_velocity 8000
+setprop ro.mot.eri.losalert.delay 1000
+
+busybox echo "#Added performance tweaks $(date +%A), $(date +%H:%M)" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+
+mount -o remount,ro /system

@@ -1,0 +1,28 @@
+#!/system/bin/sh
+# HEBF
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU !General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+atual=/data/data/com.androidvip.hebf/LMK/0atual
+
+rm -f $atual
+busybox touch $atual
+
+cat /sys/module/lowmemorykiller/parameters/minfree | busybox tee -a $atual
+
+cd /data/data/com.androidvip.hebf/LMK
+IFS=, read a b c d e f <"$atual"
+busybox echo "$a" >1foreground
+busybox echo "$b" >2visible
+busybox echo "$c" >3secondary
+busybox echo "$d" >4hidden
+busybox echo "$e" >5content
+busybox echo "$f" >6empty

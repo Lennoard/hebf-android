@@ -1,0 +1,129 @@
+#!/system/bin/sh
+# HEBF
+# Credits to Page96 for this one
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o remount,rw /data
+
+HEBF=/data/data/com.androidvip.hebf/hebf_logs/yrolram.log
+ rm -rf $HEBF
+ touch $HEBF
+
+ echo "Better multitasking" >> $HEBF
+ echo "" >> $HEBF
+ echo "Setting profile..." >> $HEBF
+
+# ADJ Values
+chmod 644 /sys/module/lowmemorykiller/parameters/adj
+echo "0,1,3,5,7,15" > /sys/module/lowmemorykiller/parameters/adj
+
+# Minfree Values 
+
+mem=`free|grep Mem | awk '{print $2}'`
+
+#256
+oom10=8
+oom20=11
+oom30=14
+oom40=21
+oom50=24
+oom60=29
+
+lmk10=$(($oom10*1024/4));
+lmk20=$(($oom20*1024/4));
+lmk30=$(($oom30*1024/4));
+lmk40=$(($oom40*1024/4));
+lmk50=$(($oom50*1024/4));
+lmk60=$(($oom60*1024/4));
+
+#512
+oom11=9
+oom21=12
+oom31=16
+oom41=25
+oom51=28
+oom61=34
+
+lmk11=$(($oom11*1024/4));
+lmk21=$(($oom21*1024/4));
+lmk31=$(($oom31*1024/4));
+lmk41=$(($oom41*1024/4));
+UVlmk51=$(($oom51*1024/4));
+lmk61=$(($oom61*1024/4));
+
+#768
+oom12=17
+oom22=23
+oom32=29
+oom42=45
+oom52=51
+oom62=61
+
+lmk12=$(($oom12*1024/4));
+lmk22=$(($oom22*1024/4));
+lmk32=$(($oom32*1024/4));
+lmk42=$(($oom42*1024/4));
+lmk52=$(($oom52*1024/4));
+lmk62=$(($oom62*1024/4));
+
+#1024
+oom13=8
+oom23=16
+oom33=24
+oom43=40
+oom53=56
+oom63=74
+
+lmk13=$(($oom13*1024/4));
+lmk23=$(($oom23*1024/4));
+lmk33=$(($oom33*1024/4));
+lmk43=$(($oom43*1024/4));
+lmk53=$(($oom53*1024/4));
+lmk63=$(($oom63*1024/4));
+
+#1024+
+oom14=37
+oom24=51
+oom34=66
+oom44=99
+oom54=114
+oom64=135
+
+lmk14=$(($oom14*1024/4));
+lmk24=$(($oom24*1024/4));
+lmk34=$(($oom34*1024/4));
+lmk44=$(($oom44*1024/4));
+lmk54=$(($oom54*1024/4));
+lmk64=$(($oom64*1024/4));
+
+if [ "$mem" -lt 256000 ]; then
+	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
+	 echo "$lmk10,$lmk20,$lmk30,$lmk40,$lmk50,$lmk60" > /sys/module/lowmemorykiller/parameters/minfree
+elif [ "$mem" -lt 512000 ]; then
+	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
+	 echo "$lmk11,$lmk21,$lmk31,$lmk41,$lmk51,$lmk61" > /sys/module/lowmemorykiller/parameters/minfree
+elif [ "$mem" -lt 768000 ]; then
+	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
+	 echo "$lmk12,$lmk22,$lmk32,$lmk42,$lmk52,$lmk62" >/sys/module/lowmemorykiller/parameters/minfree
+elif [ "$mem" -lt 1024000 ]; then
+	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
+	 echo "$lmk13,$lmk23,$lmk33,$lmk43,$lmk53,$lmk63" > /sys/module/lowmemorykiller/parameters/minfree
+else
+	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
+	 echo "$lmk14,$lmk24,$lmk34,$lmk44,$lmk54,$lmk64" > /sys/module/lowmemorykiller/parameters/minfree
+fi
+
+
+echo "" >> $HEBF
+echo "Multitasking profile set $(date +%A), $(date +%H:%M)" >> $HEBF
+
+mount -o remount,ro /data
