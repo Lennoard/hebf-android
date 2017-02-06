@@ -12,32 +12,21 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
+mount -o remount,rw /data
 
-HEBF=/system/etc/HEBF/net.log
+echo "0" > /proc/sys/net/ipv4/tcp_timestamps
+echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse
+echo "1" > /proc/sys/net/ipv4/tcp_sack
+echo "1" > /proc/sys/net/ipv4/tcp_dsack
+echo "1" > /proc/sys/net/ipv4/tcp_tw_recycle
+echo "1" > /proc/sys/net/ipv4/tcp_window_scaling
+echo "1" > /proc/sys/net/ipv4/tcp_moderate_rcvbuf
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
+echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
+echo "5" > /proc/sys/net/ipv4/tcp_keepalive_probes
+echo "30" > /proc/sys/net/ipv4/tcp_keepalive_intvl
+echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
 
- rm -f $HEBF
- touch $HEBF
 
- echo "# HEBF" | busybox tee -a $HEBF
- echo "" | busybox tee -a $HEBF
- echo "NET Tweaks" | busybox tee -a $HEBF
-
- echo "0" > /proc/sys/net/ipv4/tcp_timestamps
- echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse
- echo "1" > /proc/sys/net/ipv4/tcp_sack
- echo "1" > /proc/sys/net/ipv4/tcp_dsack
- echo "1" > /proc/sys/net/ipv4/tcp_tw_recycle
- echo "1" > /proc/sys/net/ipv4/tcp_window_scaling
- echo "1" > /proc/sys/net/ipv4/tcp_moderate_rcvbuf
- echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
- echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
- echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
- echo "5" > /proc/sys/net/ipv4/tcp_keepalive_probes
- echo "30" > /proc/sys/net/ipv4/tcp_keepalive_intvl
- echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
-
- echo "" | busybox tee -a $HEBF
- echo "#TCP tweaks added $(date +%A) at $(date +%H:%M)" | busybox tee -a $HEBF
-
- mount -o remount,ro /system
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| TCP tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

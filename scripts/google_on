@@ -11,6 +11,9 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
+iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination 8.8.8.8:53
+iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination 8.8.8.8:53
+
 mount -o remount,rw /system
 
 busybox sed -i '/net.dns1/d' /system/build.prop
@@ -26,20 +29,20 @@ busybox sed -i '/net.gprs.dns2/d' /system/build.prop
 busybox sed -i '/net.eth0.dns1/d' /system/build.prop
 busybox sed -i '/net.eth0.dns2/d' /system/build.prop
 
-busybox echo "net.dns1=8.8.8.8
-net.dns2=8.8.4.4
-net.rmnet0.dns1=8.8.8.8
-net.rmnet0.dns2=8.8.4.4
-net.gprs.dns1=8.8.8.8
-net.gprs.dns2=8.8.4.4
-net.ppp0.dns1=8.8.8.8
-net.ppp0.dns2=8.8.4.4
-net.wlan0.dns1=8.8.8.8
-net.wlan0.dns2=8.8.4.4
-net.eth0.dns1=8.8.8.8
-net.eth0.dns2=8.8.4.4
-" >> /system/build.prop
+#No longer doing its job properly
+setprop net.dns1 8.8.8.8
+setprop net.dns2 8.8.4.4
+setprop net.rmnet0.dns1 8.8.8.8
+setprop net.rmnet0.dns2 8.8.4.4
+setprop net.gprs.dns1 8.8.8.8
+setprop net.gprs.dns2 8.8.4.4
+setprop net.ppp0.dns1 8.8.8.8
+setprop net.ppp0.dns2 8.8.4.4
+setprop net.wlan0.dns1 8.8.8.8
+setprop net.wlan0.dns2 8.8.4.4
+setprop net.eth0.dns1 8.8.8.8
+setprop net.eth0.dns2 8.8.4.4
 
-busybox echo "#Added Google DNS $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added Google DNS tweak" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

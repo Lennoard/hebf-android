@@ -14,7 +14,6 @@
 mount -o remount,rw /system
 mount -o remount,rw /data
 
-busybox sed -i '/ENFORCE_PROCESS_LIMIT/d' /system/build.prop
 busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
 busybox sed -i '/persist.android.strictmode=0/d' /system/build.prop
@@ -41,7 +40,7 @@ busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
 rm -f /data/property/persist.android.strictmode
 rm -f /data/property/persist.sys.purgeable_assets
 
-busybox echo "#Removed battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system
 mount -o remount,ro /data

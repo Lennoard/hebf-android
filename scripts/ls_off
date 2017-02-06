@@ -14,7 +14,6 @@
 mount -o remount,rw /system
 mount -o remount,rw /data
 
-busybox sed -i '/#Liquid Smooth UI/d' /system/build.prop
 busybox sed -i '/persist.service.lgospd.enable=0/d' /system/build.prop
 busybox sed -i '/persist.service.pcsync.enable=0/d' /system/build.prop
 busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
@@ -22,7 +21,7 @@ busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
 rm -f /data/property/persist.service.pcsync.enable
 rm -f /data/property/persist.service.lgospd.enable
 
-busybox echo "#Removed UI tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed UI tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system
 mount -o remount,ro /data

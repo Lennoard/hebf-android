@@ -16,7 +16,6 @@ mount -o remount,rw /system
 echo "500" > /proc/sys/vm/dirty_expire_centisecs;
 echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
 
-busybox sed -i '/ENFORCE_PROCESS_LIMIT/d' /system/build.prop
 busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
 busybox sed -i '/persist.android.strictmode=0/d' /system/build.prop
@@ -40,34 +39,29 @@ busybox sed -i '/debug.qc.hardware=true/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
 	
-busybox echo "ENFORCE_PROCESS_LIMIT=false
-ro.ril.disable.power.collapse=0
-pm.sleep_mode=1
-persist.android.strictmode=0
-persist.sys.purgeable_assets=1
-ro.com.google.networklocation=0
-ro.kernel.android.checkjni=0
-ro.config.nocheckin=1
-ro.vold.umsdirtyratio=20
-dalvik.vm.checkjni=false
-ro.vold.umsdirtyratio=int:jit
-profiler.force_disable_err_rpt=1
-profiler.force_disable_ulog=1
-ro.ril.disable.power.collapse=0
-pm.sleep_mode=1
-ro.com.google.networklocation=0
-ro.kernel.android.checkjni=0
-ro.config.nocheckin=1
-ro.vold.umsdirtyratio=20
-com.qc.hardware=1
-debug.qc.hardware=true
-debug.qctwa.preservebuf=1
-debug.qctwa.statusbar=1
-" >> /system/build.prop
-
+setprop ro.ril.disable.power.collapse 0
+setprop pm.sleep_mode 1
 setprop persist.android.strictmode 0
 setprop persist.sys.purgeable_assets 1
+setprop ro.com.google.networklocation 0
+setprop ro.kernel.android.checkjni 0
+setprop ro.config.nocheckin 1
+setprop ro.vold.umsdirtyratio 20
+setprop dalvik.vm.checkjni false
+setprop ro.vold.umsdirtyratio int:jit
+setprop profiler.force_disable_err_rpt 1
+setprop profiler.force_disable_ulog 1
+setprop ro.ril.disable.power.collapse 0
+setprop pm.sleep_mode 1
+setprop ro.com.google.networklocation 0
+setprop ro.kernel.android.checkjni 0
+setprop ro.config.nocheckin 1
+setprop ro.vold.umsdirtyratio 20
+setprop com.qc.hardware 1
+setprop debug.qc.hardware true
+setprop debug.qctwa.preservebuf 1
+setprop debug.qctwa.statusbar 1
 
-busybox echo "#Added battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 		
 mount -o remount,ro /system		

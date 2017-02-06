@@ -10,13 +10,18 @@
 #  GNU General Public License for more details.
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
-
-fstrim -v /cache
-fstrim -v /system
-fstrim -v /data
-
 mount -o rw,remount /system
 
-busybox echo "#Filesystems trimmed $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox sed -i "/checkin/d" /system/etc/init.d/02play
+
+pm enable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$Receiver
+pm enable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$SecretCodeReceiver
+pm enable com.google.android.gsf/com.google.android.gsf.checkin.CheckinService\$TriggerReceiver
+pm enable com.google.android.gsf/.checkin.CheckinService
+pm enable com.google.android.gms/.checkin.CheckinService$ActiveReceiver
+pm enable com.google.android.gms/.checkin.CheckinService$ClockworkFallbackReceiver
+pm enable com.google.android.gms/.checkin.CheckinService$ImposeReceiver
+pm enable com.google.android.gms/.checkin.CheckinService$SecretCodeReceiver
+pm enable com.google.android.gms/.checkin.CheckinService$TriggerReceiver
 
 mount -o ro,remount /system

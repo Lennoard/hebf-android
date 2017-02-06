@@ -13,20 +13,9 @@
 
 mount -o remount,rw /system
 
-HEBF=/system/etc/HEBF/kill_media.log
- rm -f $HEBF
- touch $HEBF
+# @razz1's value
+busybox sed -i '/debug.egl.swapinterval=-60/d' /system/build.prop
 
- echo "# HEBF_Media" | busybox tee -a $HEBF
- echo "" | busybox tee -a $HEBF
- echo "Killing media server" | busybox tee -a $HEBF
-
-if [ "`pgrep media`" ] && [ "`pgrep mediaserver`" ]; then
-	 killall -9 android.process.media
-	 killall -9 mediaserver
-fi
-
- echo "" | busybox tee -a $HEBF
- echo "OK!" | busybox tee -a $HEBF
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| FPS tweak disabled" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

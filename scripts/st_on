@@ -21,15 +21,14 @@ busybox sed -i '/media.stagefright.enable-qcp=true/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-scan=tru/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-record=true/d' /system/build.prop
 
-busybox echo "media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-media.stagefright.enable-record=true
-" >> /system/build.prop
+setprop media.stagefright.enable-http true
+setprop media.stagefright.enable-player true
+setprop media.stagefright.enable-meta true
+setprop media.stagefright.enable-aac true
+setprop media.stagefright.enable-qcp true
+setprop media.stagefright.enable-scan true
+setprop media.stagefright.enable-record true
 
-busybox echo "#Added video streaming tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added video streaming tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

@@ -21,6 +21,6 @@ busybox sed -i '/media.stagefright.enable-qcp=true/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-scan=tru/d' /system/build.prop
 busybox sed -i '/media.stagefright.enable-record=true/d' /system/build.prop
 
-busybox echo "#Removed video streaming tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed video streaming tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

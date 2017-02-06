@@ -17,10 +17,10 @@ mount -o rw,remount /data
 	if [ "$NIVEL" == "100" ] ; then
 		 mount -o rw,remount /data
 		 rm -f /data/system/batterystats.bin
-		 busybox echo "Battery calibrated $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+		 busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Battery calibrated" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 		 mount -o ro,remount /data
 	else
-		 busybox echo "#Battery not calibrated $(date +%A) at $(date +%H:%M), it is not fully charged" >> /system/etc/HEBF/app.log
+		 busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| [ERROR:] Failed to calibrate battery, it is not fully charged" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 	fi
 fi
 mount -o ro,remount /data

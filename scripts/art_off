@@ -18,7 +18,7 @@ busybox sed -i '/dalvik.vm.image-dex2oat-filter=speed/d' /system/build.
 
 rm -rf /data/dalvik-cache
 
-busybox echo "#Removed ART Fix tweak $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Removed ART Fix tweak $(date +%A) at $(date +%H:%M)" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o ro,remount /system
 mount -o ro,remount /data

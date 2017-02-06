@@ -19,15 +19,12 @@ busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
 busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
 busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 
+setprop debug.performance.tuning 1
+setprop persist.sys.use_dithering 0
 setprop persist.sys.use_16bpp_alpha 1
+setprop ro.min.fling_velocity 8000
+setprop ro.mot.eri.losalert.delay 1000
 
-busybox echo "debug.performance.tuning=1
-persist.sys.use_dithering=0
-persist.sys.use_16bpp_alpha=1
-ro.min.fling_velocity=8000
-ro.mot.eri.losalert.delay=1000
-" >> /system/build.prop
-
-busybox echo "#Added performance tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added performance tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

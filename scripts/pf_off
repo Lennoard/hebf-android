@@ -22,7 +22,7 @@ busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 
 rm -f /data/property/persist.sys.use_16bpp_alpha
 
-busybox echo "#Removed performance tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed performance tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system
 mount -o remount,ro /data

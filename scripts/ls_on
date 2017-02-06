@@ -19,12 +19,8 @@ busybox sed -i '/touch.pressure.scale=0.001/d' /system/build.prop
 
 setprop persist.service.lgospd.enable 0
 setprop persist.service.pcsync.enable 0
+setprop touch.pressure.scale 0.001
 
-busybox echo "persist.service.lgospd.enable=0
-persist.service.pcsync.enable=0
-touch.pressure.scale=0.001
-" >> /system/build.prop
-
-busybox echo "#Added UI tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added UI tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

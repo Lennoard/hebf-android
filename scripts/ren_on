@@ -19,21 +19,20 @@ busybox sed -i '/debug.enabletr=true/d' /system/build.prop
 busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
-busybox sed -i '/ro.fb.mode=1' /system/build.prop
+busybox sed -i '/ro.fb.mode=1/d' /system/build.prop
 busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
 
-busybox echo "debug.composition.type=c2d
-persist.sys.composition.type=c2d
-debug.enabletr=true
-debug.overlayui.enable=1
-debug.qctwa.preservebuf=1
-dev.pm.dyn_samplingrate=1
-ro.fb.mode=1
-ro.sf.compbypass.enable=0
-ro.vold.umsdirtyratio=20
-" >> /system/build.prop
+setprop debug.composition.type c2d
+setprop persist.sys.composition.type c2d
+setprop debug.enabletr true
+setprop debug.overlayui.enable 1
+setprop debug.qctwa.preservebuf 1
+setprop dev.pm.dyn_samplingrate 1
+setprop ro.fb.mode 1
+setprop ro.sf.compbypass.enable 0
+setprop ro.vold.umsdirtyratio 20
 
-busybox echo "#Added rendering tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added rendering tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

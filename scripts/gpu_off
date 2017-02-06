@@ -24,7 +24,7 @@ busybox sed -i '/ro.config.disable.hw_accel=false/d' /system/build.prop
 busybox sed -i '/video.accelerate.hw=1/d' /system/build.prop
 busybox sed -i '/persist.sys.composition.type=gpu/d' /system/build.prop
 busybox sed -i '/debug.egl.profiler=1/d' /system/build.prop
-busybox sed -i '/debug.egl.hw=1' /system/build.prop
+busybox sed -i '/debug.egl.hw=1/d' /system/build.prop
 busybox sed -i '/debug.composition.type=gpu/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
 busybox sed -i '/hwui.disable_vsync=true/d' /system/build.prop
@@ -33,7 +33,7 @@ rm -f /data/property/persist.sampling_profiler
 rm -f /data/property/persist.sys.ui.hw
 rm -f /data/property/persist.sys.composition.type
 
-busybox echo "#Removed GPU tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed GPU tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system
 mount -o remount,ro /data

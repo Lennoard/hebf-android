@@ -16,30 +16,20 @@ mount -o rw,remount /data
 
 mkdir /data/data/com.androidvip.hebf/LMK
 mkdir /data/data/com.androidvip.hebf/limpador
+mkdir /data/data/com.androidvip.hebf/arquivos
+mkdir /data/data/com.androidvip.hebf/hebf_logs
 
-#1st Backup
-cp -p /system/build.prop /data/data/com.androidvip.hebf/BackUps
-cp -Rp /system/etc/init.d /data/data/com.androidvip.hebf/BackUps
-
-IN0=/data/data/com.androidvip.hebf/no_adblock
-OUT0=/data/data/com.androidvip.hebf/arquivos/no_adblock
-dd if="$IN0" of="$OUT0"
-rm -f "$IN0"
+busybox touch /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 IN1=/data/data/com.androidvip.hebf/adblock
 OUT1=/data/data/com.androidvip.hebf/arquivos/adblock
 dd if="$IN1" of="$OUT1"
 rm -f "$IN1"
 
-IN2=/data/data/com.androidvip.hebf/adblock_on.sh
-OUT2=/data/data/com.androidvip.hebf/arquivos/adblock_on.sh
+IN2=/data/data/com.androidvip.hebf/no_adblock
+OUT2=/data/data/com.androidvip.hebf/arquivos/no_adblock
 dd if="$IN2" of="$OUT2"
 rm -f "$IN2"
-
-IN3=/data/data/com.androidvip.hebf/adblock_off.sh
-OUT3=/data/data/com.androidvip.hebf/arquivos/adblock_off.sh
-dd if="$IN3" of="$OUT3"
-rm -f "$IN3"
 
 IN4=/data/data/com.androidvip.hebf/cleaner
 OUT4=/data/data/com.androidvip.hebf/limpador/cleaner
@@ -51,28 +41,34 @@ OUT5=/data/data/com.androidvip.hebf/limpador/cleaner_etc
 dd if="$IN5" of="$OUT5"
 rm -f "$IN5"
 
-IN6=/data/data/com.androidvip.hebf/fstrim
-OUT6=/system/bin/fstrim
-dd if="$IN6" of="$OUT6"
-rm -f "$IN6"
-chmod 766 /system/xbin/zipalign
-
 IN7=/data/data/com.androidvip.hebf/zipalign
-OUT7=/system/xbin/zipalign
+OUT7=/system/bin/zipalign
 dd if="$IN7" of="$OUT7"
 rm -f "$IN7"
-chmod 755 /system/xbin/zipalign
+chmod 755 /system/bin/zipalign
+rm -f /system/xbin/zipalign
 
-IN8=/data/data/com.androidvip.hebf/get_lmk
-OUT8=/data/data/com.androidvip.hebf/LMK/get_lmk
-dd if="$IN8" of="$OUT8"
-rm -f "$IN8"
+IN14=/data/data/com.androidvip.hebf/thumb
+OUT14=/data/data/com.androidvip.hebf/limpador/thumb
+dd if="$IN14" of="$OUT14"
+rm -f "$IN14"
 
-mount -o rw,remount /data
+IN15=/data/data/com.androidvip.hebf/get_lmk
+OUT15=/data/data/com.androidvip.hebf/LMK/get_lmk
+dd if="$IN15" of="$OUT15"
+rm -f "$IN15"
+
+IN16=/data/data/com.androidvip.hebf/sqlite3
+OUT16=/system/bin/sqlite3
+dd if="$IN16" of="$OUT16"
+rm -f "$IN16"
+chmod 755 /system/bin/sqlite3
 
 busybox touch /data/data/com.androidvip.hebf/hebf.hebf
-busybox echo "Created file by mover.sh or user force copy $(date +%A) at $(date +%H:%M)" >> /data/data/com.androidvip.hebf/hebf.hebf
-busybox echo "Created file by mover.sh or user force copy $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
-
+busybox echo "" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf.hebf
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+busybox echo "" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+mount -o rw,remount /data
 mount -o ro,remount /system
 

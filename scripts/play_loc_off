@@ -1,0 +1,32 @@
+#!/system/bin/sh
+# HEBF
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+mount -o rw,remount /system
+
+busybox sed -i "/location/d" /system/etc/init.d/02play
+
+pm enable com.google.android.gms/com.google.android.location.settings.GoogleLocationSettingsActivity
+pm enable com.google.android.gms/com.google.android.location.settings.LocationHistorySettingsActivity
+pm enable com.google.android.gms/com.google.android.location.settings.LocationSettingsCheckerActivity
+pm enable com.google.android.gms/com.google.android.location.reporting.service.ReportingContentProvider
+pm enable com.google.android.gms/com.google.android.location.internal.LocationContentProvider
+pm enable com.google.android.gms/com.google.android.location.internal.LocationProviderEnabler
+pm enable com.google.android.gms/com.google.android.location.places.ImplicitSignalsReceiver
+pm enable com.google.android.gms/com.google.android.location.reporting.service.DeleteHistoryService
+pm enable com.google.android.gms/com.google.android.location.reporting.service.LocationHistoryInjectorService
+pm enable com.google.android.gms/com.google.android.location.reporting.service.ReportingAndroidService
+pm enable com.google.android.gms/com.google.android.location.reporting.service.ReportingSyncService
+pm enable com.google.android.gms/com.google.android.location.fused.FusedLocationService
+pm enable com.google.android.gms/com.google.android.location.fused.service.FusedProviderService
+pm enable com.google.android.gms/com.google.android.location.places.PlaylogService
+
+mount -o ro,remount /system

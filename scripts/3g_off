@@ -26,6 +26,6 @@ busybox sed -i '/ro.ril.enable.a52=1/d' /system/build.prop
 busybox sed -i '/ro.ril.set.mtu1472=1/d' /system/build.prop
 busybox sed -i '/persist.cust.tel.eons=1/d' /system/build.prop
 
-busybox echo "#Removed 3G tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed 3G tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

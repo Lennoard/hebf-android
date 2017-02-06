@@ -19,10 +19,10 @@ busybox sed -i '/debug.enabletr=true/d' /system/build.prop
 busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
 busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
 busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
-busybox sed -i '/ro.fb.mode=1' /system/build.prop
+busybox sed -i '/ro.fb.mode=1/d' /system/build.prop
 busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
 
-busybox echo "#Removed rendering tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed rendering tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

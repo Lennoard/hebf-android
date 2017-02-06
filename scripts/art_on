@@ -22,7 +22,7 @@ echo "dalvik.vm.image-dex2oat-filter=speed" >> /system/build.prop
 
 rm -rf /data/dalvik-cache
 
-busybox echo "#Added ART Fix tweak $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "#Added ART Fix tweak $(date +%A) at $(date +%H:%M)" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o ro,remount /system
 mount -o ro,remount /data

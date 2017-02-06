@@ -13,11 +13,13 @@
 
 mount -o remount,rw /system
 
-busybox sed -i '/windowsmgr.max_events_per_sec=200/d' /system/build.prop
 busybox sed -i '/ro.min_pointer_dur=8/d' /system/build.prop
 busybox sed -i '/ro.max.fling_velocity=12000/d' /system/build.prop
+busybox sed -i '/persist.sys.scrollingcache=3' /system/build.prop
+busybox sed -i '/ro.securestorage.knox=false/d' /system/build.prop
 busybox sed -i '/ro.min.fling_velocity=8000' /system/build.prop
+busybox sed -i '/windowsmgr.max_events_per_sec=*/d' /system/build.prop
 
-busybox echo "#Removed Scrolling tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed Scrolling tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

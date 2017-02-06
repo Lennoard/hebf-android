@@ -13,12 +13,13 @@
 
 mount -o remount,rw /system
 
+busybox sed -i '/ro.config.hw_power_saving=1/d' /system/build.prop
+busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
 busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
 busybox sed -i '/ro.ril.power_collapse=1/d' /system/build.prop
 busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
 busybox sed -i '/wifi.supplicant_scan_interval=180/d' /system/build.prop
 busybox sed -i '/power.saving.mode=1/d' /system/build.prop
-busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
 busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
 busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
 busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
@@ -26,20 +27,20 @@ busybox sed -i '/dalvik.vm.checkjni=false/d' /system/build.prop
 busybox sed -i '/dalvik.vm.execution-mode=int:jit/d' /system/build.prop
 busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
 
-busybox echo "ro.mot.eri.losalert.delay=1000
-ro.ril.power_collapse=1
-pm.sleep_mode=1
-wifi.supplicant_scan_interval=180
-power.saving.mode=1
-ro.com.google.networklocation=0
-ro.kernel.android.checkjni=0
-ro.config.nocheckin=1
-ro.vold.umsdirtyratio=20
-dalvik.vm.checkjni=false
-dalvik.vm.execution-mode=int:jit
-profiler.force_disable_err_rpt=1
-" >> /system/build.prop
+setprop ro.mot.eri.losalert.delay 1000
+setprop ro.config.hw_power_saving 1
+setprop ro.ril.power_collapse 1
+setprop pm.sleep_mode 1
+setprop wifi.supplicant_scan_interval 180
+setprop power.saving.mode 1
+setprop ro.com.google.networklocation 0
+setprop ro.kernel.android.checkjni 0
+setprop ro.config.nocheckin 1
+setprop ro.vold.umsdirtyratio 20
+setprop dalvik.vm.checkjni false
+setprop dalvik.vm.execution-mode int:jit
+setprop profiler.force_disable_err_rpt 1
 
-busybox echo "#Added battery tweaks $(date +%A) at $(date +%H:%M)" >> /system/etc/HEBF/app.log
+busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
 mount -o remount,ro /system

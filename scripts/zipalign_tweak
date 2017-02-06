@@ -10,42 +10,36 @@
 #  GNU General Public License for more details.
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
-
 mount -o rw,remount /system
 
 ZIPALIGNDB=/data/zipalign.db
-HEBF=/system/etc/HEBF/zipalign.log
-
-if [ -e $HEBF ]; then
-	rm $HEBF
-fi
+HEBF=/data/data/com.androidvip.hebf/hebf_logs/align.log
 
 if [ ! -f $ZIPALIGNDB ]; then
 	touch $ZIPALIGNDB
 fi
 
- echo "Zipalign tweak..." | busybox tee -a $HEBF
 for DIR in /data/app; do
-  cd $DIR
-  for APK in *.apk; do
-    if [ $APK -ot $ZIPALIGNDB ] && [ $(busybox grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ]; then
-      echo "Already checked: $DIR/$APK" | busybox tee -a $HEBF
-    else
-      zipalign -c 4 $APK
-      if [ $? -eq 0 ]; then
-        echo "Already aligned: $DIR/$APK" | busybox tee -a $HEBF
-        busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
-      else
-        echo "Now aligning: $DIR/$APK" | busybox tee -a $HEBF
-        zipalign -f 4 $APK /cache/$APK
-         mount -o rw,remount /system
-        cp -f -p /cache/$APK $APK
-		chmod 644 $APK
-         rm -f /cache/$APK
-        busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
-      fi
-    fi
-  done
+    cd $DIR
+        for APK in *.apk; do
+        if [ $APK -ot $ZIPALIGNDB ] && [ $(busybox grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ]; then
+            echo "Already checked: $DIR/$APK" >> $HEBF
+        else
+            zipalign -c 4 $APK
+            if [ $? -eq 0 ]; then
+                echo "Already aligned: $DIR/$APK" >> $HEBF
+                busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
+            else
+                echo "Now aligning: $DIR/$APK" >> $HEBF
+                zipalign -f 4 $APK /cache/$APK
+                mount -o rw,remount /system
+                cp -f -p /cache/$APK $APK
+                chmod 644 $APK
+                rm -f /cache/$APK
+                busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
+            fi
+        fi
+    done
 done
 
 #Zipalign /system 
@@ -54,19 +48,19 @@ for DIR in /system/app; do
   cd $DIR
   for APK in *.apk; do
     if [ $APK -ot $ZIPALIGNDB ] && [ $(busybox grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ]; then
-      echo "Already checked: $DIR/$APK" | busybox tee -a $HEBF
+      echo "Already checked: $DIR/$APK" >> $HEBF
     else
       zipalign -c 4 $APK
       if [ $? -eq 0 ]; then
-        echo "Already aligned: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Already aligned: $DIR/$APK" >> $HEBF
         busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
       else
-        echo "Now aligning: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Now aligning: $DIR/$APK" >> $HEBF
         zipalign -f 4 $APK /cache/$APK
-         mount -o rw,remount /system
+        mount -o rw,remount /system
         cp -f -p /cache/$APK $APK
 		chmod 644 $APK
-         rm -f /cache/$APK
+        rm -f /cache/$APK
         busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
       fi
     fi
@@ -77,19 +71,19 @@ for DIR in /system/priv-app; do
   cd $DIR
   for APK in *.apk; do
     if [ $APK -ot $ZIPALIGNDB ] && [ $(busybox grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ] ; then
-      echo "Already checked: $DIR/$APK" | busybox tee -a $HEBF
+      echo "Already checked: $DIR/$APK" >> $HEBF
     else
       zipalign -c 4 $APK
       if [ $? -eq 0 ]; then
-        echo "Already aligned: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Already aligned: $DIR/$APK" >> $HEBF
         busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
       else
-        echo "Now aligning: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Now aligning: $DIR/$APK" >> $HEBF
         zipalign -f 4 $APK /cache/$APK
-         mount -o rw,remount /system
+        mount -o rw,remount /system
         cp -f -p /cache/$APK $APK
 		chmod 644 $APK
-         rm -f /cache/$APK
+        rm -f /cache/$APK
         busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
       fi
     fi
@@ -100,14 +94,14 @@ for DIR in /system/framework; do
   cd $DIR
   for APK in *.apk ; do
     if [ $APK -ot $ZIPALIGNDB ] && [ $(busybox grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ]; then
-      echo "Already checked: $DIR/$APK" | busybox tee -a $HEBF
+      echo "Already checked: $DIR/$APK" >> $HEBF
     else
       zipalign -c 4 $APK
       if [ $? -eq 0 ]; then
-        echo "Already aligned: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Already aligned: $DIR/$APK" >> $HEBF
         busybox grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
       else
-        echo "Now aligning: $DIR/$APK" | busybox tee -a $HEBF
+        echo "Now aligning: $DIR/$APK" >> $HEBF
         zipalign -f 4 $APK /cache/$APK
          mount -o rw,remount /system
         cp -f -p /cache/$APK $APK
