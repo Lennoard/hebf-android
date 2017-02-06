@@ -7,8 +7,6 @@
     <string name="ad_off">Adblocker deactivated :|</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="hebf" translatable="false">Heart empty, battery full</string>
-    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
     <string name="play_services">Google Play Services drain fix (Master)</string>
     <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.\nWARNING: IT WILL DISABLE THE SERVICES, ENABLE THIS OPTION ONLY IF YOU ARE OK WITH IT AND IF YOU ARE EXPERIENCING DRAIN.</string>
     <string name="play_services_on">Ready to listen your choices</string>
@@ -69,10 +67,6 @@
     <string name="scroll_on">Better scrolling profile enabled</string>
     <string name="scroll_off">Better scrolling profile disabled</string>
     <string name="scroll_sub">Improves the scrolling responsiveness and speed.</string>
-    <string name="principal_fail">You already are on \"Main\"</string>
-    <string name="performance_fail">You already are on \"Performance\"</string>
-    <string name="battery_fail">You already are on \"Battery\"</string>
-    <string name="ferramentas_fail">You already are on \"Tools\"</string>
     <string name="title_activity_tools">Tools</string>
     <string name="misc">Miscellaneous</string>
     <string name="rebooter">Rebooter</string>
@@ -115,8 +109,6 @@
     <string name="dpi_valor"> was the chosen dpi value, proceed?</string>
     <string name="reiniciar_aviso">Your device will be rebooted.</string>
     <string name="cancelar">CANCEL</string>
-    <string name="permissive">SET PERMISSIVE</string>
-    <string name="enforcing">SET ENFORCING</string>
     <string name="title_activity_bateria">Battery</string>
     <string name="bateria_kk">Improve Battery</string>
     <string name="bateria_kk_sub">Optimizes the Wi-Fi scan interval, enables the power saving mode, disables the error reports without performance impacts to improve your battery life.</string>
@@ -168,8 +160,6 @@
     <string name="diversos">Miscellaneous Tools</string>
     <string name="log_off">Logging disabled</string>
     <string name="log_on">Logging enabled again</string>
-    <string name="mais_trigger_sub">Touch here for more useful tools</string>
-    <string name="cleaner_trigger_sub">Touch here to open the cleaner</string>
     <string name="root_dialog_sub">This application can only work with root access, please, clean the application\'s data and grant access when the prompt appear. In case your device does not have root access, you can find more relevant information here: \nhttp://forum.xda-developers.com</string>
     <string name="root_dialog">Critical failure</string>
     <string name="root_fail_caos_header">Where is the root access!?</string>
@@ -189,7 +179,6 @@
     <string name="apagar_sub">You won\'t be able to recover this backup, proceed anyway?</string>
     <string name="apagado">Backup has been deleted</string>
     <string name="title_activity_cleaner">Cleaner</string>
-    <string name="easy">Careful with what you\'re doing, watch your step man…</string>
     <string name="wpp_aviso">This can\'t be undone, proceed anyway?</string>
     <string name="limpo">Junk removed</string>
     <string name="at_boot">Apply at startup</string>
@@ -201,10 +190,7 @@
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Cleaner</string>
-    <string name="gplus" translatable="false">GOOGLE+</string>
-    <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
-    <string name="lennoard_frase" translatable="false">\"He who makes a beast of himself gets rid of the pain of being a man\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -214,23 +200,19 @@
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
-    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
-    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n\n – We did not forget you.</string>
+    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n▪ Wesley: Various tips and suggestions\n\n – We did not forget you.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
     <string name="iv_sub">…And full battery, in a moment of a loving disillusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivsom Emídio</string>
     <string name="dev">The developers</string>
     <string name="title_activity_versao">Version</string>
     <string name="changelog">Changelog:</string>
-    <string name="iv" translatable="false">Ivsom Emídio</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
-    <string name="lennoard" translatable="false">Lennoard Silva</string>
-    <string name="yahari" translatable="false">– Samuel Johnson</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
-    <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). Requires a AOSP or AOSP based Custom ROM.</string>
+    <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). This option also removes the no connectivity warning icon.</string>
     <string name="force_on">Hack enabled :v</string>
     <string name="force_off">Hack disabled</string>
     <string name="force_botao">FIX</string>
@@ -247,9 +229,6 @@
     <string name="off">Disabled</string>
     <string name="perm">Please allow storage permissions</string>
     <string name="art_aviso">For this function to work smoothly, you need to clear the cache and reboot.\nWhen you press OK the device will reboot.</string>
-    <string name="force_copy">FORCE COPY</string>
-    <string name="force_settings">Force copy</string>
-    <string name="force_settings_sub">HEBF Optimizer needs to copy the required files to the working folder to ensure the new updates will be run. This option attempts to force the copy.</string>
     <string name="license">Open source licenses</string>
     <string name="app_ver">Application version</string>
     <string name="notices_title">Licenses</string>
@@ -298,8 +277,6 @@
     <string name="gpu_sub">Enables the hardware accelerated UI, forces GPU screen composing and disables the vsync for a much better performance at the cost of battery.</string>
     <string name="gpu_on">GPU tweaks enabled</string>
     <string name="gpu_off">GPU tweaks disabled</string>
-    <string name="hebf_notif">HEBF needs to copy the required files</string>
-    <string name="hebf_notif_sub">This is necessary to ensure the functioning of the app.</string>
     <string name="application_settings">Application settings</string>
     <string name="application_settings_sub">Open the Android settings screen for this application.</string>
     <string name="forcar_parada">Force stop</string>
@@ -341,16 +318,12 @@
     <string name="copiando">Coping files…</string>
     <string name="carregando">Loading…</string>
     <string name="core_sub">This CPU balance attempts to run the workload in the system on minimum number of CPU packages and tries to keep rest of them idle for longer duration, helping other packages to be in idle state and save power.</string>
-    <string name="freeze">Disable manufacturer bloatware</string>
-    <string name="freeze_sub">Freezes some useless packages and applications, you choose which.</string>
-    <string name="dialog_sub">Check to disable, uncheck to enable. The operation may take up to 2 minutes.</string>
     <string name="entendi">GOT IT</string>
     <string name="misc_kernel_info">These features require a custom kernel. If your kernel does not support one of them, it will remain hidden.</string>
     <string name="mostrar_novamente">Don\'t show again</string>
     <string name="tap_sub">Wake up your device with a double tap on the screen, similar to Knock On of some LG devices.</string>
     <string name="fast_charge">USB Fast charge</string>
     <string name="fast_charge_sub">Speeds up battery charging via USB when connected to a PC or notebook.</string>
-    <string name="misc_kernel_info2">For now these settings will be lost after a reboot.</string>
     <string name="dynamic_fsync">Dynamic fsync</string>
     <string name="dynamic_fsync_sub">Fsync ensures that all data be written to the storage device, it waits until the device reports that the transfer has completed, preventing data loss if the system crashes. (Which may cause delays).</string>
     <string name="ksm_sub">Crucial for low RAM devices, the KSM merges two kernel pages if they are found to have same data, helping the user to get more free space for the applications.</string>
@@ -363,11 +336,6 @@
     <string name="definido">Value has been set</string>
     <string name="lock_sub">Select an application to be locked on the memory, preventing it to be killed.</string>
     <string name="restaurando">Restoring</string>
-    <string name="intro_restaurando_sub">A backup has been created but sometimes things may not go the way we expect.</string>
-    <string name="twrp">From TWRP (Bootloop workaround)</string>
-    <string name="twrp_sub"><![CDATA[1. Mount > data, system\n2. Advanced > File Manager\n3. /data/data/com.androidvip.hebf/BackUps\n4. Copy build.prop to /system\n5. Go to /system\n6. chmod 644 /system/build.prop]]></string>
-    <string name="from_hebf_intro">From HEBF</string>
-    <string name="from_hebf_intro_sub"><![CDATA[Tools > Backup/Restore > Restore]]></string>
     <string name="intro_desc">Options and descriptions</string>
     <string name="intro_desc_sub">The application provides you a description about what each option is doing.</string>
     <string name="tipo_usuario">What type of user are you?</string>
@@ -399,12 +367,6 @@
     <string name="screenshots">Screenshots</string>
     <string name="total_size">Total size:</string>
     <string name="open_now">OPEN NOW</string>
-    <string name="we_need_to_know">We need to know:</string>
-    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
-    <string name="what_is_it">WHAT IS IT?</string>
-    <string name="disclaimer">We would like to recommend you to change the user type to \"Normal\" in order to avoid major problems.\nBackups are created in /data/data/com.androidvip.hebf, store it somewhere safer\n\nSince you can not recover, we do not recommend using advanced features of the app, it can be somewhat dangerous, please understand.\n\nWe would also like to add that we are not responsible for bootloops.</string>
-    <string name="sair">Do you really want to close this application?</string>
-    <string name="oh_yeah">Alright, you rock!\nBy the way, backups are created in /data/data/com.androidvip.hebf, just in case.</string>
     <string name="sim">YES</string>
     <string name="nao">NO!</string>
     <string name="busybox1">The busybox assures us that all commands will run on all versions of the system, it is a binary that gathers the most common LINUX / UNIX commands into one, so if one of them is missing on your system, it will be present in busybox.</string>
@@ -425,15 +387,16 @@
     <string name="survey_kernel">Kernel is the big organizer of the whole system. It is responsible for the interaction between software and hardware, managing everything (RAM, for example). Is your Kernel stable?</string>
     <string name="user_survey">Answer a few questions to determine the type of user. Based on that, we will decide which options will be available for you.</string>
     <string name="proximo">NEXT</string>
+    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
+    <string name="sair">Do you really want to close this application?</string>
+    <string name="what_is_it">WHAT IS IT?</string>
+    <string name="force_copy">FORCE COPY</string>
     <string name="theme_sub">Change the application\'s theme</string>
     <string name="theme">Theme</string>
     <string name="fps_unlocker">FPS Unlocker</string>
     <string name="fps_sub">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another).</string>
     <string name="fps_on">You need to lock and unlock the device so that it is activated.</string>
     <string name="apply_on_boot">Apply on boot</string>
-    <string name="build_changelog" translatable="false">▪ Safer tweak methods (no more build.prop)\n▪ Updated buffer tweak\n▪ Improved navigation and reduced code size\n▪ Added fstrim on boot\n▪ Fixed crashes\n▪ WiFi sleeper updated for everybody on 6.0+\n▪ Force indicator updated (5.0+)\n▪ Added a improved Backup option(Restore seems not working well, though)\n▪ You can now choose whether or not to show warning / info notifications\n▪ The green theme is now part of this family\n▪ Clean junk files on boot\n▪ Updated libraries\n</string>
-    <string name="build_date" translatable="false">Codename: Back in Black\n2016/12/25\nMerry Christmas!</string>
-    <string name="build_version" translatable="false">v1.4.4.3 - Play Store Beta</string>
     <string name="on_boot_title">HEBF Optimizer</string>
     <string name="on_boot_finished">Successfully applied</string>
     <string name="check_for_updates">Check for updates</string>
@@ -461,5 +424,24 @@
     <string name="advanced_toast">You have unlocked the advanced options!</string>
     <string name="advanced_fail">Sorry, try again</string>
     <string name="advanced_options">Advanced options</string>
-
+    <string name="title_activity_build_prop">Build.prop Editor</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="add">Add</string>
+    <string name="add_from_presets">Add from presets</string>
+    <string name="view_log">View the logs</string>
+    <string name="title_activity_dns">Manual DNS</string>
+    <string name="fsync_sub">Fsync synchronizes a file\'s in-core state with the storage device so that all changed information can be retrieved even after the system crashed or was rebooted.\nFor safety, if you disable it, make sure you have a proper backup.</string>
+    <string name="title_activity_entropia">Entropy</string>
+    <string name="entropy_sub">Entropy is a measure of available random numbers. If the available entropy in /dev/random reaches 0, then Houston, we have a problem:\nThe system is unable to provide more of those numbers and all the operations waiting for the randomness stalls until more entropy is available.</string>
+    <string name="poolsize_sub">The size of the entropy pool, i.e.,the maximum reachable value.</string>
+    <string name="write_sub">The number of bits of entropy which wake up processes that monitor multiple file descriptors for write access to /dev/random.</string>
+    <string name="read_sub">The number of bits of entropy required for waking up processes that sleep waiting for entropy from /dev/random.</string>
+    <string name="read">Read</string>
+    <string name="write">Write</string>
+    <string name="dns_sub">A custom DNS can improve speed, response and security. It and can also allow you to access blocked websites and bypass some censorship filters of your network, depending of your location.</string>
+    <string name="value">Value</string>
+    <string name="key">Key</string>
+    <string name="command">Command</string>
+    <string name="game_booster_sub">Improve your performance in games by setting the CPU governor before open the game.</string>
 </resources>
