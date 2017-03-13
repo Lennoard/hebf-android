@@ -1,17 +1,5 @@
-<!-- Translations notes and tips
-     1. "\n" means a line break, keep it alive!
-	 2. If you need to type " or '
-	 (quotation marks or single quotes), place a backslash before each
-	    2.1 E.g: won\'t = won't, \"Double quotes\" = "Double quotes"
-	 3. If you find a <![CDATA[Some text here]]> be concerned only with the "human" text	
-	 4. That's it! -->
-
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="do_not_edit_here">Edit Here!</string>
-	
-	<!-- Got it? :)-->
-
     <string name="app_name">HEBF 优化</string>
     <string name="adblocker">Ad Blocker</string>
     <string name="ad_sub">拦截一切广告，包括应用内置的那种。</string>
@@ -464,4 +452,3 @@
     <string name="temperatura">温度： %1$s</string>
 
 </resources>
-<!-- Thanks! You will be honored :) -->
