@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="psfmc_array">
+        <item>Dimatikan</item>
+        <item>Medium</item>
+        <item>Maksimum</item>
+    </string-array>
+
+    <string-array name="vip">
+        <item>Default</item>
+        <item>Medium</item>
+        <item>Ekstrim</item>
+        <item>Ultra ekstrim</item>
+    </string-array>
+
+    <string-array name="bateria">
+        <item>Status:</item>
+        <item>Mengisi daya via:</item>
+        <item>Kesehatan:</item>
+        <item>Teknologi:</item>
+        <item>Voltase:</item>
+        <item>Skala:</item>
+    </string-array>
+
+    <string-array name="bateria_status">
+        <item>mengisi daya</item>
+        <item>tidak mengisi daya</item>
+        <item>tidak mengisi</item>
+        <item>baterai terisi penuh</item>
+    </string-array>
+
+    <string-array name="bateria_conectado">
+        <item>AC adapter</item>
+        <item>USB</item>
+        <item>wireless charger</item>
+    </string-array>
+
+    <string-array name="bateria_saude">
+        <item>sehat</item>
+        <item>dingin</item>
+        <item>mati</item>
+        <item>panas</item>
+        <item>berlebihan voltase!</item>
+        <item>tidak diketahui</item>
+        <item>bermasalah</item>
+    </string-array>
+
+    <string-array name="perfis_lmk">
+        <item>Tidak diaktifkan</item>
+        <item>Moderasi</item>
+        <item>Multitasking</item>
+        <item>Free RAM</item>
+        <item>Gaming</item>
+    </string-array>
+
+</resources>
+
+<!--
+		Warm regard from me, Ezra Lazuardy. You can contact me at:
+		>> Email:		ezralucio@gmail.com
+		>> Telegram:	@lazuardy_ezra
+		
+		Cheers!
+-->

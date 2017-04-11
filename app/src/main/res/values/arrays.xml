@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="psfmc_array">
+        <item>Disabled</item>
+        <item>Medium</item>
+        <item>Maximum</item>
+    </string-array>
+
+    <string-array name="vip">
+        <item>Default</item>
+        <item>Medium</item>
+        <item>Extreme</item>
+        <item>Ultra extreme</item>
+    </string-array>
+
+    <string-array name="bateria">
+        <item>Status:</item>
+        <item>Charging via:</item>
+        <item>Health:</item>
+        <item>Technology:</item>
+        <item>Voltage:</item>
+        <item>Scale:</item>
+    </string-array>
+
+    <string-array name="bateria_status">
+        <item>charging</item>
+        <item>discharging</item>
+        <item>not charging</item>
+        <item>fully charged</item>
+    </string-array>
+
+    <string-array name="bateria_conectado">
+        <item>AC adapter</item>
+        <item>USB</item>
+        <item>wireless charger</item>
+    </string-array>
+
+    <string-array name="bateria_saude">
+        <item>healthy</item>
+        <item>cold</item>
+        <item>is no longer with us</item>
+        <item>overheat</item>
+        <item>over voltage!</item>
+        <item>unknown</item>
+        <item>unspecified failure</item>
+    </string-array>
+
+    <string-array name="perfis_lmk">
+        <item>@string/nenhum</item>
+        <item>Moderate</item>
+        <item>Multitasking</item>
+        <item>Free RAM</item>
+        <item>Gaming</item>
+    </string-array>
+
+</resources>

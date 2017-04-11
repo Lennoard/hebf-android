@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <string name="adblocker">Ad Blocker</string>
+    <!--<string name="adblocker">Ad Blocker</string>
     <string name="ad_sub">Blocks all the advertisements, including in-app ads.</string>
     <string name="ad_on">Adblocker activated :)</string>
-    <string name="ad_off">Adblocker deactivated :|</string>
+    <string name="ad_off">Adblocker deactivated :|</string>-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="hebf" translatable="false">Heart empty, battery full</string>
+    <string name="hebf_sub" translatable="false">\"Heart empty, battery full\"</string>
     <string name="play_services">Google Play Services drain fix (Master)</string>
     <string name="play_services_sub">Fixes the battery drain caused by some of the Google Play Services background services.\nWARNING: IT WILL DISABLE THE SERVICES, ENABLE THIS OPTION ONLY IF YOU ARE OK WITH IT AND IF YOU ARE EXPERIENCING DRAIN.</string>
     <string name="play_services_on">Ready to listen your choices</string>
@@ -85,8 +87,6 @@
         According to Google, interpret only would skip all compilation and relies on the interpreter to run code. This should cause:\n\n
         - Apps will load faster as dex2oat won\'t touch the code again, so, no more waste of storage too.\n
         - There will be less time to that screen \"Optimizing app X of X\".</string>
-    <string name="art_sub_aviso">ONLY FOR ANDROID 5.0+ LOLLIPOP</string>
-    <string name="art_sub_kk_toast">Only for Android 5.0+ (SDK21+)!</string>
     <string name="dpi">DPI Changer</string>
     <string name="dpi_sub">Changes the LCD density. Smaller values are equal to larger screen space. Long click for more information.</string>
     <string name="dpi_botao">CHANGE</string>
@@ -190,7 +190,10 @@
     <string name="root_fail_intro">This application requires root access which wasn\'t found.\nSometimes the superuser app may automatically deny access, please check it.\nIf you don\'t know what we are talking about please uninstall this application. Google has some quick references.</string>
     <string name="title_activity_sobre">About</string>
     <string name="wpp_cleaner">WhatsApp Cleaner</string>
+    <string name="gplus" translatable="false">GOOGLE+</string>
+    <string name="xda" translatable="false">XDA</string>
     <string name="lennoard_sub">Developer and designer</string>
+    <string name="lennoard_frase" translatable="false">\"He who makes a beast of himself gets rid of the pain of being a man\"</string>
     <string name="project">The project</string>
     <string name="empty">Empty heart?</string>
     <string name="title_activity_thanks">Thanks</string>
@@ -200,6 +203,7 @@
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
+    <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
     <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n▪ Wesley: Various tips and suggestions\n\n – We did not forget you.</string>
     <string name="contribuicoes">Important contributions</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
@@ -207,9 +211,12 @@
     <string name="dev">The developers</string>
     <string name="title_activity_versao">Version</string>
     <string name="changelog">Changelog:</string>
+    <string name="iv" translatable="false">Ivsom Emídio</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
+    <string name="lennoard" translatable="false">Lennoard Silva</string>
+    <string name="yahari" translatable="false">– Samuel Johnson</string>
     <string name="mascote">The mascot</string>
     <string name="force">Force connection type indicator</string>
     <string name="force_sub">Attempts to force the connection indicator to show (The 4G/LTE, H+, H, 3G, E or in some unfortunately cases, G icon on statusbar). This option also removes the no connectivity warning icon.</string>
@@ -293,8 +300,8 @@
     <string name="lmk_sub_recycler">Provides an option to manually tune your Low Memory Killer (LMK) values.</string>
     <string name="lmk_sub">LMK is a set of parameters that sets the limits at which applications are killed in order to free RAM. Set the value to the levels below in megabytes.</string>
     <string name="lmk_atual">Current values in pages (1 page = 4KB)</string>
-    <string name="lmk_botao">APPLY</string>
-    <string name="lmk_padrao">DEFAULT</string>
+    <string name="lmk_botao">Apply</string>
+    <string name="lmk_padrao">Default</string>
     <string name="medium">Medium</string>
     <string name="aggressive">Aggressive</string>
     <string name="resumo">Summary</string>
@@ -332,9 +339,9 @@
     <string name="escolher_pacote">Choose a package</string>
     <string name="sleeper_extra">Choose your own value to Wi-Fi Idle Wait</string>
     <string name="segundos">seconds</string>
-    <string name="lock">Lock apps in memory (Master)</string>
+    <string name="lock">App killing tendency</string>
     <string name="definido">Value has been set</string>
-    <string name="lock_sub">Select an application to be locked on the memory, preventing it to be killed.</string>
+    <string name="lock_sub">This option will decrease the tendency of a process to be killed by the system in OOM (Out of memory) cases. This can only be set to a RUNNING process, that means you need to open / wake it up in order to see it in the below list.</string>
     <string name="restaurando">Restoring</string>
     <string name="intro_desc">Options and descriptions</string>
     <string name="intro_desc_sub">The application provides you a description about what each option is doing.</string>
@@ -353,6 +360,7 @@
     <string name="which">Which?</string>
     <string name="iscustom_rom">Is it a custom ROM?</string>
     <string name="show_more">Show more</string>
+    <string name="show_less">Show less</string>
     <string name="enviar">SEND!</string>
     <string name="message">Message</string>
     <string name="vip_aviso">This option may slow down your device.</string>
@@ -391,7 +399,7 @@
     <string name="sair">Do you really want to close this application?</string>
     <string name="what_is_it">WHAT IS IT?</string>
     <string name="force_copy">FORCE COPY</string>
-    <string name="theme_sub">Change the application\'s theme</string>
+    <string name="theme_sub">Choose the application\'s theme</string>
     <string name="theme">Theme</string>
     <string name="fps_unlocker">FPS Unlocker</string>
     <string name="fps_sub">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another).</string>
@@ -444,4 +452,21 @@
     <string name="key">Key</string>
     <string name="command">Command</string>
     <string name="game_booster_sub">Improve your performance in games by setting the CPU governor before open the game.</string>
+    <string name="profiles_set">Profiles set</string>
+    <string name="battery_information">Battery information</string>
+    <string name="temperatura">Temperature: %1$s</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="intro_guia">Welcome! This guide will help you through the application setup process</string>
+    <string name="set">Set</string>
+    <string name="done">Done</string>
+    <string name="no_logs_found">No relevant logs were found</string>
+    <string name="tendency">Tendency</string>
+    <string name="tendency_sub">Higher values mean that the process will be killed first.</string>
+    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
+    <string name="atraso">Reapply interval</string>
+    <string name="stop_service">Stop service</string>
+    <string name="service_not_running">Service is not running</string>
+    <string name="service_stopped">Service stopped</string>
+
 </resources>

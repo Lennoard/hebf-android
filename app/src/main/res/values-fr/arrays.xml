@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="psfmc_array">
+        <item>Désactivé</item>
+        <item>Moyen</item>
+        <item>Maximum</item>
+    </string-array>
+
+    <string-array name="vip">
+        <item>Standart</item>
+        <item>Moyenne</item>
+        <item>Extrême</item>
+        <item>Ultra extrême</item>
+    </string-array>
+
+    <string-array name="bateria">
+        <item>Statut:</item>
+        <item>Chargement via:</item>
+        <item>Santé:</item>
+        <item>Technologie:</item>
+        <item>Tension:</item>
+        <item>Scale:</item>
+    </string-array>
+
+    <string-array name="bateria_status">
+        <item>charging</item>
+        <item>discharging</item>
+        <item>not charging</item>
+        <item>fully charged</item>
+    </string-array>
+
+    <string-array name="bateria_conectado">
+        <item>AC adapter</item>
+        <item>USB</item>
+        <item>chargeur sans fil</item>
+    </string-array>
+
+    <string-array name="bateria_saude">
+        <item>en bonne santé</item>
+        <item>du froid</item>
+        <item>n\'est plus parmi nous</item>
+        <item>overheat</item>
+        <item>over voltage!</item>
+        <item>inconnu</item>
+        <item>échec non spécifié</item>
+    </string-array>
+
+    <string-array name="perfis_lmk">
+        <item>@string/nenhum</item>
+        <item>Moderate</item>
+        <item>Multitasking</item>
+        <item>Free RAM</item>
+        <item>Gaming</item>
+    </string-array>
+</resources>
