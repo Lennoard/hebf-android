@@ -460,6 +460,7 @@
     <string name="intro_guia">Welcome! This guide will help you through the application setup process</string>
     <string name="set">Set</string>
     <string name="done">Done</string>
+<<<<<<< HEAD
     <string name="no_logs_found">No relevant logs were found</string>
     <string name="tendency">Tendency</string>
     <string name="tendency_sub">Higher values mean that the process will be killed first.</string>
@@ -468,5 +469,7 @@
     <string name="stop_service">Stop service</string>
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Service stopped</string>
+=======
+>>>>>>> origin/master
 
 </resources>
