@@ -14,10 +14,10 @@
 mount -o rw,remount /system
 mount -o rw,remount /data
 
-mkdir /data/data/com.androidvip.hebf/LMK
-mkdir /data/data/com.androidvip.hebf/limpador
-mkdir /data/data/com.androidvip.hebf/arquivos
-mkdir /data/data/com.androidvip.hebf/hebf_logs
+busybox mkdir /data/data/com.androidvip.hebf/LMK
+busybox mkdir /data/data/com.androidvip.hebf/limpador
+busybox mkdir /data/data/com.androidvip.hebf/arquivos
+busybox mkdir /data/data/com.androidvip.hebf/hebf_logs
 
 busybox touch /data/data/com.androidvip.hebf/hebf_logs/app.log
 
@@ -45,8 +45,7 @@ IN7=/data/data/com.androidvip.hebf/zipalign
 OUT7=/system/bin/zipalign
 dd if="$IN7" of="$OUT7"
 rm -f "$IN7"
-chmod 755 /system/bin/zipalign
-rm -f /system/xbin/zipalign
+busybox chmod 755 /system/bin/zipalign
 
 IN14=/data/data/com.androidvip.hebf/thumb
 OUT14=/data/data/com.androidvip.hebf/limpador/thumb
@@ -62,13 +61,11 @@ IN16=/data/data/com.androidvip.hebf/sqlite3
 OUT16=/system/bin/sqlite3
 dd if="$IN16" of="$OUT16"
 rm -f "$IN16"
-chmod 755 /system/bin/sqlite3
+busybox chmod 755 /system/bin/sqlite3
 
 busybox touch /data/data/com.androidvip.hebf/hebf.hebf
-busybox echo "" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf.hebf
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-busybox echo "" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf.hebf
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 mount -o rw,remount /data
 mount -o ro,remount /system
 

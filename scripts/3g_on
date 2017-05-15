@@ -11,21 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
-
-busybox sed -i '/ro.ril.hsxpa=2/d' /system/build.prop
-busybox sed -i '/ro.ril.hep=1/d' /system/build.prop
-busybox sed -i '/ro.ril.enable.dtm=1/d' /system/build.prop
-busybox sed -i '/ro.ril.hsdpa.category=10/d' /system/build.prop
-busybox sed -i '/ro.ril.enable.a53=1/d' /system/build.prop
-busybox sed -i '/ro.ril.enable.3g.prefix=1/d' /system/build.prop
-busybox sed -i '/ro.ril.gprsclass=10/d' /system/build.prop
-busybox sed -i '/ro.ril.hsupa.category=7/d' /system/build.prop
-busybox sed -i '/ro.ril.hsdpa.category=10/d' /system/build.prop
-busybox sed -i '/ro.ril.enable.a52=1/d' /system/build.prop
-busybox sed -i '/ro.ril.set.mtu1472=1/d' /system/build.prop
-busybox sed -i '/persist.cust.tel.eons=1/d' /system/build.prop
-
 setprop ro.ril.hsxpa 2
 setprop ro.ril.hep 1
 setprop ro.ril.enable.dtm 1
@@ -39,6 +24,4 @@ setprop ro.ril.enable.a52 1
 setprop ro.ril.set.mtu1472 1
 setprop persist.cust.tel.eons 1
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| 3G tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| 3G tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

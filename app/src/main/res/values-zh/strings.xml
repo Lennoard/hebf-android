@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF 优化</string>
-    <!--<string name="adblocker">Ad Blocker</string>
+    <string name="adblocker">Ad Blocker</string>
     <string name="ad_sub">拦截一切广告，包括应用内置的那种。</string>
-    <string name="ad_on">Adblocker 已激活(*^_^*)</string>
-    <string name="ad_off">Adblocker 取消激活(ㄒoㄒ)</string>-->
+    <string name="ad_on">Adblocker 已激活</string>
+    <string name="ad_off">Adblocker 取消激活</string>
     <string name="navigation_drawer_open">打开导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="play_services">Google Play 服务耗电修复（总开关）</string>
@@ -34,7 +34,7 @@
     <string name="principal">主页</string>
     <string name="tweaks">调教</string>
     <string name="outro">其他</string>
-    <string name="compartilhar">分享</string>
+    <string name="compartilhar">Share</string>
     <string name="sobre">关于</string>
     <string name="boot">加快开机</string>
     <string name="bootanim">禁用开机动画</string>
@@ -78,13 +78,6 @@
     <string name="calibrar">电量校正</string>
     <string name="calibrar_sub">删除batterystatus.bin文件（系统自己生成的电量信息记录文件，有时不准）一定要在电量充到100%的时候校准！</string>
     <string name="calibrar_botao">现在校准</string>
-    <string name="art">ART虚拟机修复</string>
-    <string name="art_sub">将dex2oat设为仅解释，令程序启动更快。\n更多信息请长按，需要重启。</string>
-    <string name="art_mais">此选项将dex2oat设为仅解释，即是说\n
-        dex2oat 是从棒棒糖 开始使用的全新运行环境，它直接翻译dex文件，使得处理器可以直接执行本地机器指令。OAT不仅包含有从DEX文件翻译而来的本地机器指令，还包含有原来的DEX文件内容。\n
-        根据Google的说明，仅解释会跳过所有汇编，依靠解释器来执行指令。这会导致：\n\n
-        - 程序运行会更快，毕竟 dex2oat 不会接触到指令了，因此存储空间也会得到节约。\n
-        - 所以开机时的画面\"正在优化应用第n个，共n个\"会更快。</string>
     <string name="dpi">DPI 调节</string>
     <string name="dpi_sub">改变 LCD 密度。数值越小，系统认为你的屏幕越大。长按更多信息。</string>
     <string name="dpi_botao">更改</string>
@@ -187,7 +180,6 @@
     <string name="do_not_be_evil">GOOGLE</string>
     <string name="root_fail_intro">此应用必需的 Root 权限尚未授予。\n有时 superuser 可能会自动拒绝请求，请检查一下。\n如果你看不懂这说的什么几把，赶紧卸载应用吧。百毒一下，你就知道。</string>
     <string name="title_activity_sobre">关于</string>
-    <string name="wpp_cleaner">WhatsApp 清理</string>
     <string name="lennoard_sub">开发和设计人员</string>
     <string name="project">关于这个项目</string>
     <string name="empty">操碎了心？</string>
@@ -204,16 +196,11 @@
     <string name="iv_sub">…And full battery, in a moment of a loving disillusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivsom Emídio</string>
     <string name="dev">开发者</string>
     <string name="title_activity_versao">版本</string>
-    <string name="changelog">更新日志</string>
+    <string name="changelog">Loading…</string>
     <string name="iv_frase">\"The blind lead the blind to self-destruction\"</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
     <string name="mascote">The mascot</string>
-    <string name="force">强制连接类型指示器</string>
-    <string name="force_sub">强制信号类型指示器显示（4G/LTE, H+, H, 3G, E 或者信号不好时的 G 标志） 该选项还会移除无连接的标志。</string>
-    <string name="force_on">破解已开(*￣▽￣*)</string>
-    <string name="force_off">破解已关</string>
-    <string name="force_botao">修复</string>
     <string name="force_snack">好，重启吧</string>
     <string name="thumbs_botao">隐藏的缩略图</string>
     <string name="lixo_botao">垃圾文件</string>
@@ -314,7 +301,7 @@
     <string name="desativando">正在禁用</string>
     <string name="play_aviso">请先把所有小选项都禁用了。</string>
     <string name="copiando">正在复制文件……</string>
-    <string name="carregando">正在加载……</string>
+    <string name="carregando">Loading…</string>
     <string name="core_sub">此 CPU 平衡器会尝试以最小数量的核心运行工作负载，并将其余核心保持更长的空闲，达到一核有难七核围观的节电效果。</string>
     <string name="entendi">得令~</string>
     <string name="misc_kernel_info">此特性需要第三方内核，如果你的内核不支持高级调节，那么不能用的选项将会隐藏。</string>
@@ -339,11 +326,11 @@
     <string name="tipo_usuario">你是哪种类型的用户？</string>
     <string name="normal_user">小白</string>
     <string name="expert_user">专家</string>
-    <string name="chuck_user">上帝</string>
+    <string name="chuck_user">Chuck Norris-style user</string>
     <string name="seila_user">无可奉告</string>
     <string name="normal_user_sub">OK，高风险的选项会隐藏起来。</string>
     <string name="expert_user_sub">您说一不二，指哪打哪。</string>
-    <string name="chuck_user_sub">兄弟这么屌，怎么不去看看xda版本？</string>
+    <string name="chuck_user_sub">Awesome dude, why not check out the XDA version?</string>
     <string name="seila_user_sub">这些设置将始终在设置屏幕上可用。</string>
     <string name="kernel">内核设置</string>
     <string name="title_activity_bug_report">Bug 报告</string>
@@ -363,7 +350,7 @@
     <string name="screen_overlay_sub">你可能打开了护目镜或者屏幕录制或者悬浮球……\n\n此时系统会因为检测到屏幕叠加层而拒绝我们的权限请求。试试关掉其他可见程序来解决问题。</string>
     <string name="request_permission">打开此设置之前，你需要允许存储访问权限。\n</string>
     <string name="screenshots">截屏</string>
-    <string name="total_size">总大小：</string>
+    <string name="total_size">总大小</string>
     <string name="open_now">现在打开</string>
     <string name="sim">YES</string>
     <string name="nao">NO!</string>
@@ -371,7 +358,6 @@
     <string name="busybox2">推荐国内用户上酷安搜索 Busybox installer 进行一键安装，当然也可以用此应用提供的离线版本。</string>
     <string name="install_now">现在安装</string>
     <string name="mk">自定义目标路径</string>
-    <string name="tele">Telegram 清理</string>
     <string name="low_ram_device_flag">小内存设备标志</string>
     <string name="low_ram_device_flag_sub">此选项将设备标记为小内存设备，关闭在特定的需要大内存的功能（状态栏着色，通知面板背景效果等）。\n\n如果关闭，您可能需要重启以应用更改。</string>
     <string name="copiado">文件已复制</string>
@@ -397,7 +383,7 @@
     <string name="apply_on_boot">开机时应用</string>
     <string name="on_boot_title">HEBF 优化</string>
     <string name="on_boot_finished">成功应用</string>
-    <string name="check_for_updates">检查更新</string>
+    <string name="check_for_updates">Check for updates</string>
     <string name="updating">正在更新……</string>
     <string name="updated">HEBF 已更新</string>
     <string name="rate_this_app">评分应用</string>
@@ -417,7 +403,7 @@
     <string name="app_intro_sub">重新打开初启动教程</string>
     <string name="show_notifications">显示通知</string>
     <string name="show_notifications_sub">选择是否显示警告通知</string>
-    <string name="clean_on_boot">开机时清理</string>
+    <string name="clean_on_boot">Clean on boot</string>
     <string name="advanced_toast_cont">You\'re %1$s steps away from unlocking advanced options</string>
     <string name="advanced_toast">您已解锁高级设定！</string>
     <string name="advanced_fail">抱歉，重新试试吧</string>
@@ -440,7 +426,7 @@
     <string name="dns_sub">自定义DNS可以提高速度，响应和安全性。 它还可以允许您访问被土啬的网站，并绕过审查过滤器，具体取决于您的位置。</string>
     <string name="value">值</string>
     <string name="key">键</string>
-    <string name="command">命令</string>
+    <string name="command">Command</string>
 	<string name="game_booster_sub">打开游戏之前设置CPU调速器可以提高游戏的性能。</string>
     <string name="profiles_set">属性已设置</string>
     <string name="battery_information">电池信息</string>
@@ -459,5 +445,39 @@
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Service stopped</string>
     <string name="stop_service">Stop service</string>
+    <string name="app_caches_android_data">App caches (Android/data)</string>
+    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="other_caches">Other caches</string>
+    <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
+    <string name="splash10">Created in the midst of a broken heart</string>
+    <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
+    <string name="splash12">Check out the XDA Thread</string>
+    <string name="splash2">The LMK Manager can be quite meaningful if you find a good balance for it</string>
+    <string name="splash3">\"Kernel Options\" will only be available if your kernel supports</string>
+    <string name="splash4">It is never recommended to turn everything on at once</string>
+    <string name="splash5">There is a hidden section…</string>
+    <string name="splash6">Hidden thumbnails are located in the \"DCIM\" folder</string>
+    <string name="splash7">The green theme is a tribute in support of the Brazilian football team Chapecoense</string>
+    <string name="splash8">Have you tried one of the widgets?</string>
+    <string name="splash9">Backups can be made</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
+    <string name="captive_portal">Captive portal detection</string>
+    <string name="captive_sub">Toggles the captive portal detection. If turned on, the system will try to check the connection quality in order to detect connectivity.\nIf turned off, the system will aways believe that the connection is healthy and will not draw the \"exclamation mark\" over the strength icon.</string>
+    <string name="compiler_filters">Compiler filters</string>
+    <string name="filter">Choose one filter</string>
+    <string name="title_activity_dex2oat_filter">ART Compiler Filter</string>
+    <string name="wipe_dalvik_now">Wipe dalvik-cache now?</string>
+    <string name="lmk_content_provider">Content provider</string>
+    <string name="lmk_empty_app">Empty app</string>
+    <string name="lmk_foreground_app">Foreground app</string>
+    <string name="lmk_hidden_app">Hidden app</string>
+    <string name="lmk_secondary_server">Secondary server</string>
+    <string name="lmk_visible_app">Visible app</string>
+    <string name="search">Search</string>
+    <string name="crash_info">Houston, we\'ve had a problem… It looks like the app crashed the last time it was run. You can notify the developers about this or ignore.</string>
+    <string name="free_space_available">Free space available</string>
+    <string name="junk_found">Junk found</string>
+    <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
 
 </resources>

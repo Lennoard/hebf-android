@@ -11,18 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
-
-busybox sed -i '/debug.composition.type=c2d/d' /system/build.prop
-busybox sed -i '/persist.sys.composition.type=c2d/d' /system/build.prop
-busybox sed -i '/debug.enabletr=true/d' /system/build.prop
-busybox sed -i '/debug.overlayui.enable=1/d' /system/build.prop
-busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
-busybox sed -i '/dev.pm.dyn_samplingrate=1/d' /system/build.prop
-busybox sed -i '/ro.fb.mode=1/d' /system/build.prop
-busybox sed -i '/ro.sf.compbypass.enable=0/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-
 setprop debug.composition.type c2d
 setprop persist.sys.composition.type c2d
 setprop debug.enabletr true
@@ -33,6 +21,4 @@ setprop ro.fb.mode 1
 setprop ro.sf.compbypass.enable 0
 setprop ro.vold.umsdirtyratio 20
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added rendering tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added rendering tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

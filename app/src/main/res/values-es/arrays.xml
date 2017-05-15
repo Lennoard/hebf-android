@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="psfmc_array">
-        <item>Inhabilitado</item>
+        <item>Deshabilitado</item>
         <item>Medio</item>
         <item>Máximo</item>
     </string-array>
@@ -14,42 +14,43 @@
     </string-array>
 
     <string-array name="bateria">
-        <item>Estado:</item>
-        <item>Carga a través de:</item>
-        <item>Salud:</item>
+        <item>Estatus:</item>
+        <item>Cargando vía:</item>
+        <item>Vida:</item>
         <item>Tecnología:</item>
-        <item>Voltaje:</item>
+        <item>Voltage:</item>
         <item>Escala:</item>
     </string-array>
 
     <string-array name="bateria_status">
         <item>cargando</item>
         <item>descargando</item>
-        <item>no está cargando</item>
-        <item>completamente cargada</item>
+        <item>no cargando</item>
+        <item>cargado</item>
     </string-array>
 
     <string-array name="bateria_conectado">
-        <item>AC</item>
+        <item>Adaptador AC</item>
         <item>USB</item>
         <item>cargador inalámbrico</item>
     </string-array>
 
     <string-array name="bateria_saude">
         <item>saludable</item>
-        <item>fría</item>
-        <item>muerta</item>
-        <item>sobrecalentada</item>
-        <item>sobretensión!</item>
-        <item>eesconocida</item>
-        <item>error no especificado</item>
+        <item>frío</item>
+        <item>ya no está con nosotros</item>
+        <item>sobrecalentado</item>
+        <item>¡sobre voltage!</item>
+        <item>desconocido</item>
+        <item>falla inespecificada</item>
     </string-array>
 
     <string-array name="perfis_lmk">
         <item>@string/nenhum</item>
-        <item>Moderate</item>
-        <item>Multitasking</item>
-        <item>Free RAM</item>
+        <item>Moderado</item>
+        <item>Multitarea</item>
+        <item>RAM libre</item>
         <item>Gaming</item>
     </string-array>
+
 </resources>

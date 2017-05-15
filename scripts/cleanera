@@ -1,5 +1,6 @@
 #!/system/bin/sh
 # HEBF
+# Credits to: Paget96 and CALIBAN666
 #=======================================================================#
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -11,18 +12,26 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
 mount -o remount,rw /data
 
-busybox sed -i '/debug.performance.tuning=1/d' /system/build.prop
-busybox sed -i '/persist.sys.use_dithering=0/d' /system/build.prop
-busybox sed -i '/ro.min.fling_velocity=8000/d' /system/build.prop
-busybox sed -i '/persist.sys.use_16bpp_alpha=1/d' /system/build.prop
-busybox sed -i '/ro.mot.eri.losalert.delay=1000/d' /system/build.prop
+rm -f /cache/*.apk 2> /dev/null
+rm -f /cache/*.tmp 2> /dev/null
+rm -f /cache/recovery/* 2> /dev/null
+rm -f /data/*.log 2> /dev/null
+rm -f /data/*.txt 2> /dev/null
+rm -f /data/anr/*.* 2> /dev/null
+rm -f /data/backup/pending/*.tmp 2> /dev/null
+rm -f /data/cache/*.* 2> /dev/null
+rm -f /data/dalvik-cache/*.apk 2> /dev/null
+rm -f /data/dalvik-cache/*.tmp 2> /dev/null
+rm -f /data/log/*.* 2> /dev/null
+rm -f /data/local/*.apk 2> /dev/null
+rm -f /data/local/*.log 2> /dev/null
+rm -f /data/local/tmp/*.* 2> /dev/null
+rm -f /data/tombstones/* 2> /dev/null
+rm -f /data/system/dropbox/* 2> /dev/null
+rm -f /data/system/usagestats/* 2> /dev/null
 
-rm -f /data/property/persist.sys.use_16bpp_alpha
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Junk cleaned" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed performance tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
-mount -o remount,ro /data
+mount -o ro,remount /data

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <!--<string name="adblocker">Pemblokir Iklan</string>
+    <string name="adblocker">Pemblokir Iklan</string>
     <string name="ad_sub">Memblokir semua iklan, termasuk yang ada di dalam semua aplikasi.</string>
     <string name="ad_on">Pemblokir iklan diaktifkan :)</string>
-    <string name="ad_off">Pemblokir iklan dimatikan :|</string>-->
+    <string name="ad_off">Pemblokir iklan dimatikan :|</string>
     <string name="navigation_drawer_open">Buka navigation drawer</string>
     <string name="navigation_drawer_close">Tutup navigation drawer</string>
     <string name="play_services">Pengoptimalan Layanan Google Play (Master)</string>
@@ -78,13 +78,6 @@
     <string name="calibrar">Kalibrasi Baterai</string>
     <string name="calibrar_sub">Mengkalibrasikan baterai anda dengan menghapus file \"batterystatus.bin\" yang dibuat oleh Android OS berisi tentang statisktik baterai (yang terkadang terjadi bug). ANDA HARUS MENGKALIBRASI BATERAI HANYA SAAT LEVEL BATERAI MENCAPAI LEVEL 100%.</string>
     <string name="calibrar_botao">KALIBRASI SEKARANG</string>
-    <string name="art">Perbaikan ART</string>
-    <string name="art_sub">Menyetel dex2oat sebagai \"interpret only\", membuat aplikasi lebih cepat saat dimuat.\nTekan disini untuk informasi lebih detail, reboot dibutuhkan.</string>
-    <string name="art_mais">Opsi ini menyetel dex2oat sebagai \"interpret only\", yang berarti:\n
-		Pertama, dex2oat adalah runtime baru sejak versi Lollipop, yang mengkompile file dex langsung, jadi prossesor Anda dapat mengeksekusi kode lebih cepat. Proses yang mengambil dex dan menyiapkan secara langsung disebut dengan OAT.\n
-		Merujuk kepada Google, \"interpret only\" hanya akan melewati semua kompilasi dan bergantung pada interpreter untuk menjalankan kode. Ini akan berdampak:\n\n]
-		- Aplikasi dapat dimuat lebih cepat karena dex2oat tidak menggunakan kode lagi. Jadi, tidak ada lagi pemborosan penyimpanan.
-		- Mengurangi waktu saat \"Mengoptimalkan Aplikasi X dari X\".</string>
     <string name="dpi">Pengubah DPI</string>
     <string name="dpi_sub">Mengubah ukuran LCD. Nilai kecil artinya lebih banyak ruang untuk layar. Tekan disini untuk informasi lebih lanjut.</string>
     <string name="dpi_botao">UBAH</string>
@@ -188,7 +181,6 @@
     <string name="do_not_be_evil">GOOGLE</string>
     <string name="root_fail_intro">Aplikasi ini membutuhkan akses root yang dimana tidak bisa ditemukan.\nTerkadang Aplikasi superuser dapat menolak akses secara otomatis, mohon cek kembali itu.\nJika tidak, Anda tidak bisa menggunakan Aplikasi ini. Anda dapat melihat referensi lainnya di Google.</string>
     <string name="title_activity_sobre">Tentang</string>
-    <string name="wpp_cleaner">Pembersih WhatsApp</string>
     <string name="lennoard_sub">Pengembang dan Pendesain:</string>
     <string name="project">Proyek</string>
     <string name="empty">Hati yang kosong?</string>
@@ -210,11 +202,6 @@
     <string name="iv_h1">Pencipta proyek, pengembang</string>
     <string name="mitch_sub">Dengan kasih sayang, dijuluki Mitch oleh para pengembang. Mitch melambangkan bangkitnya HEBF dari versi lama</string>
     <string name="mascote">Maskot</string>
-    <string name="force">Paksa tipe indikator koneksi</string>
-    <string name="force_sub">Memaksa indikator koneksi untuk menampilkan (ikon 4G/LTE, H+, H, 3G, E atau dalam beberapa kasus, ikon G di statusbar). Opsi ini juga menghilangkan ikon peringatan tidak ada konektifitas.</string>
-    <string name="force_on">Hack diaktifkan :v</string>
-    <string name="force_off">Hack dimatikan</string>
-    <string name="force_botao">PERBAIKI</string>
     <string name="force_snack">OK, reboot</string>
     <string name="thumbs_botao">Thumbnail tersembunyi</string>
     <string name="lixo_botao">File sampah</string>
@@ -351,7 +338,7 @@
     <string name="which">Apa namanya?</string>
     <string name="iscustom_rom">Apakah Anda menggunakan custom ROM?</string>
     <string name="show_more">Lebih lanjut</string>
-    <string name="enviar">KIRIM!</string>
+    <string name="enviar">Kirim</string>
     <string name="message">Pesan</string>
     <string name="vip_aviso">Opsi ini mungkin dapat membuat lambat perangkat Anda.</string>
     <string name="vip_aviso_fail">Terjadi kesalahan saat mengaktifkan opsi</string>
@@ -363,7 +350,7 @@
     <string name="screen_overlay_sub">Jika Anda menggunakan Aplkasi perekam layar…\n\nKetika diaktifkan, overlay layar bercampur dengan Aplikasi dan izin lainnya yang telah disetujui. Untuk memperbaiki, Anda harus mematikan overlay agar memperbaiki izin lainnya pada Aplikasi.</string>
     <string name="request_permission">Anda harus mengizinkan akses penyimpanan perangkat untuk membuka opsi ini.\n</string>
     <string name="screenshots">Tangkapan layar</string>
-    <string name="total_size">Ukuran total:</string>
+    <string name="total_size">Ukuran total</string>
     <string name="open_now">BUKA SEKARANG</string>
     <string name="sim">YA</string>
     <string name="nao">TIDAK!</string>
@@ -371,7 +358,6 @@
     <string name="busybox2">Kami merekomendasikan Anda untuk memasang Busybox dari Stricson BusyBox Installer di Play Store agar selalu mendapat pembaharuan. Pemasangan sangat mudah, hanya menekan tombol INSTALL. Kami juga menyediakan ops offline untuk pemasangan Busybox langsung.</string>
     <string name="install_now">PASANG SEKARANG</string>
     <string name="mk">Pilih tujuan Anda</string>
-    <string name="tele">Pembersih Telegram</string>
     <string name="low_ram_device_flag">Flag Perangkat RAM kecil</string>
     <string name="low_ram_device_flag_sub">Opsi ini memodifikasi perangkat yang mimiliki RAM kecil, mematikan fitur memory-intensive spesifik (tint status bar, efek latar belakang panel notifikasi, dsb.) yang tidak bekerja sempurna pada perangkat yang memiliki RAM kecil.\n\nJika dimatikan, Anda harus reboot untuk menerapkan perubahan.</string>
     <string name="copiado">File telah disalin</string>
@@ -460,5 +446,39 @@
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Service stopped</string>
     <string name="stop_service">Stop service</string>
+    <string name="app_caches_android_data">App caches (Android/data)</string>
+    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="other_caches">Other caches</string>
+    <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
+    <string name="splash10">Created in the midst of a broken heart</string>
+    <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
+    <string name="splash12">Check out the XDA Thread</string>
+    <string name="splash2">The LMK Manager can be quite meaningful if you find a good balance for it</string>
+    <string name="splash3">\"Kernel Options\" will only be available if your kernel supports</string>
+    <string name="splash4">It is never recommended to turn everything on at once</string>
+    <string name="splash5">There is a hidden section…</string>
+    <string name="splash6">Hidden thumbnails are located in the \"DCIM\" folder</string>
+    <string name="splash7">The green theme is a tribute in support of the Brazilian football team Chapecoense</string>
+    <string name="splash8">Have you tried one of the widgets?</string>
+    <string name="splash9">Backups can be made</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
+    <string name="captive_portal">Captive portal detection</string>
+    <string name="captive_sub">Toggles the captive portal detection. If turned on, the system will try to check the connection quality in order to detect connectivity.\nIf turned off, the system will aways believe that the connection is healthy and will not draw the \"exclamation mark\" over the strength icon.</string>
+    <string name="compiler_filters">Compiler filters</string>
+    <string name="filter">Choose one filter</string>
+    <string name="title_activity_dex2oat_filter">ART Compiler Filter</string>
+    <string name="wipe_dalvik_now">Wipe dalvik-cache now?</string>
+    <string name="lmk_content_provider">Content provider</string>
+    <string name="lmk_empty_app">Empty app</string>
+    <string name="lmk_foreground_app">Foreground app</string>
+    <string name="lmk_hidden_app">Hidden app</string>
+    <string name="lmk_secondary_server">Secondary server</string>
+    <string name="lmk_visible_app">Visible app</string>
+    <string name="search">Search</string>
+    <string name="crash_info">Houston, we\'ve had a problem… It looks like the app crashed the last time it was run. You can notify the developers about this or ignore.</string>
+    <string name="free_space_available">Free space available</string>
+    <string name="junk_found">Junk found</string>
+    <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
 
 </resources>

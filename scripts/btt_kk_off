@@ -11,36 +11,9 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
 mount -o remount,rw /data
-
-busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
-busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/persist.android.strictmode=0/d' /system/build.prop
-busybox sed -i '/persist.sys.purgeable_assets=1/d' /system/build.prop
-busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
-busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
-busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/dalvik.vm.checkjni=false/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=int:jit/d' /system/build.prop
-busybox sed -i '/profiler.force_disable_err_rpt=1/d' /system/build.prop
-busybox sed -i '/profiler.force_disable_ulog=1/d' /system/build.prop
-busybox sed -i '/ro.ril.disable.power.collapse=0/d' /system/build.prop
-busybox sed -i '/pm.sleep_mode=1/d' /system/build.prop
-busybox sed -i '/ro.com.google.networklocation=0/d' /system/build.prop
-busybox sed -i '/ro.kernel.android.checkjni=0/d' /system/build.prop
-busybox sed -i '/ro.config.nocheckin=1/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/com.qc.hardware=1/d' /system/build.prop
-busybox sed -i '/debug.qc.hardware=true/d' /system/build.prop
-busybox sed -i '/debug.qctwa.preservebuf=1/d' /system/build.prop
-busybox sed -i '/debug.qctwa.statusbar=1/d' /system/build.prop
 
 rm -f /data/property/persist.android.strictmode
 rm -f /data/property/persist.sys.purgeable_assets
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
 mount -o remount,ro /data

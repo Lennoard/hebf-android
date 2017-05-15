@@ -11,29 +11,10 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
 mount -o remount,rw /data
-
-busybox sed -i '/hw3d.force=1/d' /system/build.prop
-busybox sed -i '/ro.product.gpu.driver=1/d' /system/build.prop
-busybox sed -i '/persist.sampling_profiler=0/d' /system/build.prop
-busybox sed -i '/hwui.render_dirty_regions=false/d' /system/build.prop
-busybox sed -i '/persist.sampling_profiler=0/d' /system/build.prop
-busybox sed -i '/persist.sys.ui.hw=1/d' /system/build.prop
-busybox sed -i '/ro.config.disable.hw_accel=false/d' /system/build.prop
-busybox sed -i '/video.accelerate.hw=1/d' /system/build.prop
-busybox sed -i '/persist.sys.composition.type=gpu/d' /system/build.prop
-busybox sed -i '/debug.egl.profiler=1/d' /system/build.prop
-busybox sed -i '/debug.egl.hw=1/d' /system/build.prop
-busybox sed -i '/debug.composition.type=gpu/d' /system/build.prop
-busybox sed -i '/ro.vold.umsdirtyratio=20/d' /system/build.prop
-busybox sed -i '/hwui.disable_vsync=true/d' /system/build.prop
 
 rm -f /data/property/persist.sampling_profiler
 rm -f /data/property/persist.sys.ui.hw
 rm -f /data/property/persist.sys.composition.type
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Removed GPU tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
 mount -o remount,ro /data

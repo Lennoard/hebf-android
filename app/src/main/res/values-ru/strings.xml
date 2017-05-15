@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <!--<string name="adblocker">Блокировщик рекламы</string>
+    <string name="adblocker">Блокировщик рекламы</string>
     <string name="ad_sub">Блокирует всю рекламу, включая внутри приложений.</string>
     <string name="ad_on">Блокировщик рекламы включен :)</string>
-    <string name="ad_off">Блокировщик рекламы отключен :|</string>-->
+    <string name="ad_off">Блокировщик рекламы отключен :|</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
     <string name="play_services">Оптимизация приложения «Сервисы Google Play»</string>
@@ -78,9 +78,6 @@
     <string name="calibrar">Калибровка батареи</string>
     <string name="calibrar_sub">Калибровка батареи путем очистки файла batterystatus.bin, содержащего системную статистику батареи (которая иногда бывает повреждена).\nКАЛИБРОВКУ СЛЕДУЕТ ПРОВОДИТЬ ПРИ 100% ЗАРЯДЕ.</string>
     <string name="calibrar_botao">КАЛИБРОВАТЬ</string>
-    <string name="art">Оптимизация ART</string>
-    <string name="art_sub">Установка опции \"dex2oat\" в режим \"interpret-only\".\nУдерживайте для подробной информации.</string>
-    <string name="art_mais">Режим \"interpret-only\" пропускает компиляцию некоторых частей приложений, тем самым:\n- Приложения занимают меньше места в памяти устройства и загружаются быстрее\n- \"Оптимизация приложений\" проходит быстрее</string>
     <string name="dpi">Изменение DPI</string>
     <string name="dpi_sub">Меньшие значения DPI приводят к увеличению экранного места и уменьшению элементов интерфейса.\nУдерживайте для подробной информации.</string>
     <string name="dpi_botao">ИЗМЕНИТЬ</string>
@@ -170,7 +167,6 @@
     <string name="do_not_be_evil">GOOGLE</string>
     <string name="root_fail_intro">Этому приложению необходим root-доступ.\nПриложения для контроля root-доступа иногда автоматически запрещают его.\nЕсли вы не знаете, о чем речь, лучше удалите это приложение.</string>
     <string name="title_activity_sobre">О приложении</string>
-    <string name="wpp_cleaner">Очистка WhatsApp</string>
     <string name="lennoard_sub">Разработчик и дизайнер</string>
     <string name="project">Проект</string>
     <string name="empty">Empty heart?</string>
@@ -192,11 +188,6 @@
     <string name="iv_h1">Initial project, developer</string>
     <string name="mitch_sub">Affectionately nicknamed Mitch by the developers, it symbolizes the resurrection of an old version of HEBF</string>
     <string name="mascote">The mascot</string>
-    <string name="force">Фиксировать индикатор соединения</string>
-    <string name="force_sub">Попытаться зафиксировать индикатор соединения (4G/LTE, H+, H, 3G, E или G в статусбаре). This option also removes the no connectivity warning icon.</string>
-    <string name="force_on">Хак включен :v</string>
-    <string name="force_off">Хак выключен</string>
-    <string name="force_botao">ПРИМЕНИТЬ</string>
     <string name="force_snack">OK, перезагрузите устройство</string>
     <string name="thumbs_botao">Кэш эскизов</string>
     <string name="lixo_botao">Временные файлы</string>
@@ -346,7 +337,7 @@
     <string name="screen_overlay_sub">Если вы используете приложение для записи экрана…\n\nНаложение экрана конфликтует с другим приложением. Чтобы решить проблему, отключите наложение</string>
     <string name="request_permission">Необходимо предоставить разрешение на доступ к накопителю, чтобы использовать эту опцию.</string>
     <string name="screenshots">Снимки экрана</string>
-    <string name="total_size">Размер:</string>
+    <string name="total_size">Размер</string>
     <string name="open_now">ОТКРЫТЬ</string>
     <string name="sim">ДА</string>
     <string name="nao">НЕТ!</string>
@@ -354,7 +345,6 @@
     <string name="busybox2">Рекомендуется установить busybox. Просто воспользуйтесь поиском в Play Маркете, там есть множество простых установщиков.</string>
     <string name="install_now">УСТАНОВИТЬ</string>
     <string name="mk">Выбери свою судьбу</string>
-    <string name="tele">Очистка Telegram</string>
     <string name="low_ram_device_flag">Режим экономии оперативной памяти</string>
     <string name="low_ram_device_flag_sub">Отключение некоторых эффектов интерфейса, которые плохо работают на устройствах с малым количеством оперативной памяти.\nМожет понадобиться перезагрузка.</string>
     <string name="copiado">Файлы были скопированы</string>
@@ -442,4 +432,38 @@
     <string name="service_not_running">Служба не запущена</string>
     <string name="service_stopped">Служба остановлена</string>
     <string name="stop_service">Остановить службу</string>
+    <string name="app_caches_android_data">App caches (Android/data)</string>
+    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="other_caches">Other caches</string>
+    <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
+    <string name="splash10">Created in the midst of a broken heart</string>
+    <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
+    <string name="splash12">Check out the XDA Thread</string>
+    <string name="splash2">The LMK Manager can be quite meaningful if you find a good balance for it</string>
+    <string name="splash3">\"Kernel Options\" will only be available if your kernel supports</string>
+    <string name="splash4">It is never recommended to turn everything on at once</string>
+    <string name="splash5">There is a hidden section…</string>
+    <string name="splash6">Hidden thumbnails are located in the \"DCIM\" folder</string>
+    <string name="splash7">The green theme is a tribute in support of the Brazilian football team Chapecoense</string>
+    <string name="splash8">Have you tried one of the widgets?</string>
+    <string name="splash9">Backups can be made</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
+    <string name="captive_portal">Captive portal detection</string>
+    <string name="captive_sub">Toggles the captive portal detection. If turned on, the system will try to check the connection quality in order to detect connectivity.\nIf turned off, the system will aways believe that the connection is healthy and will not draw the \"exclamation mark\" over the strength icon.</string>
+    <string name="compiler_filters">Compiler filters</string>
+    <string name="filter">Choose one filter</string>
+    <string name="title_activity_dex2oat_filter">ART Compiler Filter</string>
+    <string name="wipe_dalvik_now">Wipe dalvik-cache now?</string>
+    <string name="lmk_content_provider">Content provider</string>
+    <string name="lmk_empty_app">Empty app</string>
+    <string name="lmk_foreground_app">Foreground app</string>
+    <string name="lmk_hidden_app">Hidden app</string>
+    <string name="lmk_secondary_server">Secondary server</string>
+    <string name="lmk_visible_app">Visible app</string>
+    <string name="search">Search</string>
+    <string name="crash_info">Houston, we\'ve had a problem… It looks like the app crashed the last time it was run. You can notify the developers about this or ignore.</string>
+    <string name="free_space_available">Free space available</string>
+    <string name="junk_found">Junk found</string>
+    <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
 </resources>

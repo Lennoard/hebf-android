@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <!--<string name="adblocker">Bloqueador de anúncios</string>
+    <string name="adblocker">Bloqueador de anúncios</string>
     <string name="ad_sub">Bloqueia todos os anúncios, incluindo os anúncios dentro dos aplicativos.</string>
     <string name="ad_off">Bloqueador de anúncios desativado :|</string>
-    <string name="ad_on">Bloqueador de anúncios ativado :)</string>-->
-    <string name="art">ART Fix</string>
-    <string name="art_sub">Define o dex2oat como somente interpretar, fazendo os aplicativos carregarem mais rápido.\nToque e segure para mais informações, reinício necessário.</string>
-    <string name="art_mais">Esta opção define o dex2oat como somente interpretar, o que significa:\n
-        Primeiro, o dex2oat é o novo runtime desde o Lollipop, ele compila o arquivo dex diretamente para que o seu processador possa executar o código nativamente. Este processo de pegar a dex e se preparar para um processo direto é chamado OAT.\n
-        Segundo o Google, o modo somente interpretar iria ignorar toda a compilação e conta com o interpretador para executar o código. Isso deve causar:\n\n
-        - Aplicativos irão carregar mais rápido, como o dex2oat não vai tocar o código de novo, então, não há mais desperdício de armazenamento também.\n
-        - Haverá menos tempo para que a tela \"Otimizando app X de X\".</string>
+    <string name="ad_on">Bloqueador de anúncios ativado :)</string>
     <string name="bateria">Bateria</string>
     <string name="bateria_kk">Melhora da bateria</string>
     <string name="bateria_kk_sub">Otimiza o intervalo de scan do Wi-Fi, ativa o modo de salvamento de bateria, desativa o envio de erros sem impactar na performance para melhorar a vida útil da sua bateria.</string>
@@ -184,7 +177,6 @@
     <string name="good_bye">FECHAR</string>
     <string name="root_fail_intro">Este aplicativo requer acesso root o qual não foi encontrado.\nSe você não sabe do que nós estamos falando por favor desinstale o aplicativo.\nGoogle tem algumas referências rápidas.</string>
     <string name="title_activity_sobre">Sobre</string>
-    <string name="wpp_cleaner">Limpador do WhatsApp</string>
     <string name="lennoard_sub">Desenvolvedor e designer</string>
     <string name="project">O projeto</string>
     <string name="empty">Coração vazio?</string>
@@ -206,11 +198,6 @@
     <string name="iv_h1">Projeto inicial, desenvolvedor</string>
     <string name="mitch_sub">Apelidado carinhosamente pelos desenvolvedores de Mitch, ele simboliza a ressureição de uma versão antiga da HEBF</string>
     <string name="mascote">O mascote</string>
-    <string name="force">Forçar indicador do tipo de conexão</string>
-    <string name="force_off">Hack desativado</string>
-    <string name="force_on">Hack ativado :v</string>
-    <string name="force_sub">Tenta forçar o indicador de conexão se mostrar (O ícone 4G/LTE, H+, H, 3G, E ou em alguns casos infelizes, G na statusbar). Esta opção também teta remover o ícone de aviso de ausência de conectividade.</string>
-    <string name="force_botao">CONSERTAR</string>
     <string name="force_snack">OK, reinicie</string>
     <string name="lixo_botao">Arquivos inúteis</string>
     <string name="thumb_snack">Miniaturas deletadas</string>
@@ -347,7 +334,7 @@
     <string name="chuck_user_sub">Impressionante cara, por que não verificar a versão do XDA?</string>
     <string name="kernel">Opções do kernel</string>
     <string name="br_sum">Se você encontrou um bug ou tem alguma sugestão, sinta-se livre para nos enviar (via email). Nós responderemos o mais rápido possível.</string>
-    <string name="enviar">ENVIAR!</string>
+    <string name="enviar">Enviar</string>
     <string name="iscustom_rom">É uma ROM personalizada?</string>
     <string name="show_more">Mostrar mais</string>
     <string name="title_activity_bug_report">Comunicar erros</string>
@@ -362,7 +349,7 @@
     <string name="screen_overlay">Problema de sobreposição de tela</string>
     <string name="request_permission">Você precisa conceder permissões de armazenamento para ter o poder de abrir esta opção.\n</string>
     <string name="screen_overlay_sub">Se você estiver usando um aplicativo gravador de tela…\n\nQuando ativada, a sobreposição de tela interfere com o aplicativo e outras permissões que foram concedidas. Para resolver o problema, é necessário desativar a sobreposição para corrigir as outras permissões.</string>
-    <string name="total_size">Tamanho total: </string>
+    <string name="total_size">Tamanho total</string>
     <string name="screenshots">Capturas de tela</string>
     <string name="open_now">ABRIR AGORA</string>
     <string name="nao">NÃO!</string>
@@ -372,7 +359,6 @@
     <string name="busybox1">O busybox nos assegura que todos os comandos serão executados em todas as versões do sistema, é um binário que reúne os comandos LINUX / UNIX mais comuns em um só, então, se um deles estiver faltando em seu sistema, ele estará presente no busybox.</string>
     <string name="busybox2">Recomendamos instalar o  instalador busybox do Stericson, pela Play Store para mantê-lo atualizado. A instalação é simples, basta tocar no botão INSTALAR e nada mais, mas também oferecemos uma opção offline.</string>
     <string name="mk">Escolha o seu destino</string>
-    <string name="tele">Limpador do Telegram</string>
     <string name="low_ram_device_flag">Marcador de pouca RAM</string>
     <string name="low_ram_device_flag_sub">Sinaliza o dispositivo como um com pouca RAM, desativando recursos específicos que exigem mais memória (coloração da barra de status, efeito de fundo do painel de notificações etc), os quais funcionam mal em dispositivos com pouca memória.\n\nSe desativado, talvez seja necessário REINICIAR para aplicar as alterações. </string>
     <string name="mais">More</string>
@@ -459,4 +445,38 @@
     <string name="atraso_sub">O atraso em segundos para o aplicativo reaplicar as alterações.</string>
     <string name="service_not_running">O serviço não está em execução</string>
     <string name="atraso">Intervalo de reaplicação</string>
+    <string name="other_caches">Outros caches</string>
+    <string name="app_caches_data">Cache dos apps (/data/data)</string>
+    <string name="app_caches_android_data">Cache dos apps (Android/data)</string>
+    <string name="splash1">A frequência recomendada para rodar o FStrim é de pelo menos uma vez por semana</string>
+    <string name="splash10">Criado em meio a um coração partido</string>
+    <string name="splash11">[LMK] Você pode tocar no valor atual para retornar rapidamente ao valor padrão / encontrado</string>
+    <string name="splash12">Confira o Thread no XDA</string>
+    <string name="splash2">O Gerenciador do LMK pode ser bastante significativo se você encontrar um bom equilíbrio para ele</string>
+    <string name="splash3">\"Opções do Kernel\" só estará disponível se o seu kernel suportar</string>
+    <string name="splash4">Nunca é recomendável ativar tudo de uma só vez</string>
+    <string name="splash6">As miniaturas ocultas estão localizadas na pasta \"DCIM\"</string>
+    <string name="splash5">Há uma seção oculta…</string>
+    <string name="splash7">O tema verde é uma homenagem em apoio ao time de futebol Chapecoense</string>
+    <string name="splash8">Você já experimentou um dos widgets?</string>
+    <string name="splash9">Backups podem ser feitos</string>
+    <string name="thank_you">Obrigado!</string>
+    <string name="title_activity_dex2oat_filter">Filtro do Compilador do ART</string>
+    <string name="wipe_dalvik_now">Limpar o dalvik-cache agora?</string>
+    <string name="filter">Escolha um filtro</string>
+    <string name="compiler_filters">Filtros do compilador</string>
+    <string name="captive_sub">Alterna a detecção do captive portal. Se estiver ativado, o sistema tentará verificar a qualidade da conexão para detectar conectividade.\nSe estiver desativado, o sistema sempre acreditará que a conexão é saudável e não desenhará o \"ponto de exclamação\" sobre o ícone de força de conexão.</string>
+    <string name="captive_portal">Detecção do captive portal</string>
+    <string name="art_sum">O Android Runtime (ART) usa a compilação ahead-of-time (AOT) para compilar o código dex em código nativo no momento da instalação, pré-otimizando-o usando a ferramenta dex2oat para que seu processador possa interpretar o código mais facilmente.\nEsta opção permite que você altere o filtro do compilador dex2oat para controlar como ele compila.</string>
+    <string name="lmk_content_provider">Provedores de conteúdo</string>
+    <string name="lmk_empty_app">Vazios</string>
+    <string name="lmk_foreground_app">Primeiro plano</string>
+    <string name="lmk_hidden_app">Escondidos</string>
+    <string name="lmk_secondary_server">Servidor secundário</string>
+    <string name="lmk_visible_app">Visíveis</string>
+    <string name="search">Pesquisar</string>
+    <string name="junk_found">Lixo encontrado</string>
+    <string name="free_space_available">Espaço livre disponível</string>
+    <string name="crash_info">Houston, tivemos um problema… Parece que o app travou na última vez que foi executado. Você pode notificar os desenvolvedores sobre isso ou ignorar.</string>
+    <string name="cleaner_dica">Use o botão flutuante para verificar seu armazenamento em busca de possíveis arquivos excluíveis. Após a conclusão da verificação, será fornecida uma lista de opções. Faça suas seleções e use o mesmo botão para limpar.</string>
 </resources>

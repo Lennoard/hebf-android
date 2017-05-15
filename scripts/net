@@ -12,21 +12,19 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /data
-
-echo "0" > /proc/sys/net/ipv4/tcp_timestamps
-echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse
-echo "1" > /proc/sys/net/ipv4/tcp_sack
-echo "1" > /proc/sys/net/ipv4/tcp_dsack
-echo "1" > /proc/sys/net/ipv4/tcp_tw_recycle
-echo "1" > /proc/sys/net/ipv4/tcp_window_scaling
-echo "1" > /proc/sys/net/ipv4/tcp_moderate_rcvbuf
-echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
-echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
-echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
-echo "5" > /proc/sys/net/ipv4/tcp_keepalive_probes
-echo "30" > /proc/sys/net/ipv4/tcp_keepalive_intvl
-echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
+busybox echo "0" > /proc/sys/net/ipv4/tcp_timestamps
+busybox echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse
+busybox echo "1" > /proc/sys/net/ipv4/tcp_sack
+busybox echo "1" > /proc/sys/net/ipv4/tcp_dsack
+busybox echo "1" > /proc/sys/net/ipv4/tcp_tw_recycle
+busybox echo "1" > /proc/sys/net/ipv4/tcp_window_scaling
+busybox echo "1" > /proc/sys/net/ipv4/tcp_moderate_rcvbuf
+busybox echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+busybox echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
+busybox echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
+busybox echo "5" > /proc/sys/net/ipv4/tcp_keepalive_probes
+busybox echo "30" > /proc/sys/net/ipv4/tcp_keepalive_intvl
+busybox echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
 
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| TCP tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| TCP tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

@@ -51,7 +51,7 @@ lmk11=$(($oom11*1024/4));
 lmk21=$(($oom21*1024/4));
 lmk31=$(($oom31*1024/4));
 lmk41=$(($oom41*1024/4));
-UVlmk51=$(($oom51*1024/4));
+lmk51=$(($oom51*1024/4));
 lmk61=$(($oom61*1024/4));
 
 #768
@@ -116,6 +116,6 @@ else
 	 echo "$lmk14,$lmk24,$lmk34,$lmk44,$lmk54,$lmk64" > /sys/module/lowmemorykiller/parameters/minfree
 fi
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Multitasking profile set" >> $HEBF
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Multitasking profile set" >> $HEBF
 
 mount -o remount,ro /data

@@ -11,27 +11,14 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw /system
-
-busybox sed -i '/net.tcp.buffersize.default/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.wifi/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.lte/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.hsdpa/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.hspa/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.umts/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.edge/d' /system/build.prop
-busybox sed -i '/net.tcp.buffersize.gprs/d' /system/build.prop
-
 setprop net.tcp.buffersize.default 6144,87380,1048576,6144,87380,524288
 setprop net.tcp.buffersize.wifi 524288,1048576,2097152,524288,1048576,2097152
 setprop net.tcp.buffersize.gprs 6144,87380,1048576,6144,87380,524288
 setprop net.tcp.buffersize.edge 6144,87380,524288,6144,16384,262144
-setprop net.tcp.buffersize.evdo 6144,87380,1048576,6144,87380,1048576
+setprop net.tcp.buffersize.evdo b=6144,87380,1048576,6144,87380,1048576
 setprop net.tcp.buffersize.umts 6144,87380,1048576,6144,87380,524288
 setprop net.tcp.buffersize.hspa 6144,87380,524288,6144,16384,262144
 setprop net.tcp.buffersize.lte 524288,1048576,2097152,524288,1048576,2097152
 setprop net.tcp.buffersize.hsdpa 6144,87380,1048576,6144,87380,1048576
 
-busybox echo "|$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M)| Added buffer tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-
-mount -o remount,ro /system
+busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added buffer tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
