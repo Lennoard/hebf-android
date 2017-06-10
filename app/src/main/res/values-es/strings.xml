@@ -7,14 +7,6 @@
     <string name="ad_off">Bloqueador de anuncios desactivado :|</string>
     <string name="navigation_drawer_open">Abrir el cajón de navegación</string>
     <string name="navigation_drawer_close">Cerrar el cajón de navegación</string>
-    <string name="play_services">Solución al drenaje por Google Play Services (Maestro)</string>
-    <string name="play_services_sub">Arregla el drenaje de batería causado por algún servicio de Google Play Services. \nADVERTENCIA: ESTO DESHABILITARÁ LOS SERVICIOS, HABILITA ESTA OPCIÓN SI ESTÁS SEGURO DE QUE PRESENTAS EXPERIENCIAS DE DRENAJE DE BATERÍA.</string>
-    <string name="play_services_on">Listo para escuhar tus elecciones</string>
-    <string name="play_services_off">Solución al drenaje por Google Play Services desactivado</string>
-    <string name="play_location_services">Servicios de localización</string>
-    <string name="play_checkin_services">Servicio de comprobación</string>
-    <string name="play_update_services">Sistema de actualización de servicios</string>
-    <string name="play_usage_report">Informes de uso</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Optimiza los archivos del paquete de Android (y sus datos sin comprimir) para reducir la cantidad de RAM consumida cuando se ejecuta una aplicación.</string>
     <string name="zipalign_on">Zipalign encendido</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Compartir</string>
     <string name="sobre">Acerca de</string>
     <string name="boot">Inicio rápido</string>
-    <string name="bootanim">Deshabilitar animación de inicio</string>
-    <string name="bootanim_sub">Reduce el tiempo de arranque dehabilitando la animación de inicio (Puede verse que el dispositivo no enciende correctamente pero sí lo hace, es normal).</string>
     <string name="boot_sub">Pone el modo de apagado a hibernar y habilita el encendido rápido, acelerando el tiempo de arranque.</string>
     <string name="boot_on">Animación de inicio deshabilitada, reiniciar</string>
     <string name="boot_off">Animación de inicio habilitada denuevo, reiniciar</string>
@@ -267,7 +257,7 @@
     <string name="forcar_parada">Forzar detención</string>
     <string name="forcar_parada_sub">Quitar la aplicación</string>
     <string name="gerenciador">Administrador de RAM</string>
-    <string name="title_activity_lmk">Low Memory Killer (asesino de memoria baja)</string>
+    <string name="title_activity_lmk">Low Memory Killer</string>
     <string name="atual">Actual</string>
     <string name="lmk_foreground_sub">Ésas aplicaciones actualmente en la pantalla.</string>
     <string name="lmk_visible_sub">Ésas aplicaciones que se están ejecutando en segundo plano y siguen haciendo algunas acciones.</string>
@@ -364,14 +354,8 @@
     <string name="user_sub">Cambia el tipo de usuario para mostrar / ocultar opciones riesgosas</string>
     <string name="user">Cambiar el tipo de usuario</string>
     <string name="mais">Más</string>
-    <string name="title_activity_set_user">Encuesta</string>
     <string name="fosure">SIN LUGAR A DUDA</string>
-    <string name="survey_root">El acceso root permite, entre otras cosas, modificar los archivos del sistema. Lo usamos para ajustar mejor algunos valores. ¿Eres capaz de cambiar manualmente alguno de esos valores?</string>
-    <string name="survey_custom">Las ROMs personalizadas son sistemas operativos (\"OS\") completamente personalizados (por ejemplo; CyanogenMod, Nexus Experience), usualmente basados en un código AOSP limpio, directamente desde Google. ¿Estás ejejucando una ROM personalizada?</string>
-    <string name="survey_kernel">El Kernel es el gran organizador de todo el sistema. Es el responsable de la interacción entre el software y hardware, administrandolo todo (la memoria RAM, por ejemplo). ¿Tu Kernel es estable?</string>
-    <string name="user_survey">Responde unas pocas preguntas para determinar el tipo de usuario. Basado en esto, decidiremos que opciones estarán disponibles para ti.</string>
     <string name="proximo">SIGUIENTE</string>
-    <string name="we_need_to_know_sub">El Bootloop es cuando el sistema falla al iniciar apropiadamente. ¿Puedes recuperarte de eso?</string>
     <string name="sair">¿Realmente deseas cerrar ésta aplicación?</string>
     <string name="what_is_it">¿QUÉ ES ESTO?</string>
     <string name="force_copy">FORZAR EL COPIADO</string>
@@ -418,7 +402,7 @@
     <string name="fsync_sub">Fsync sincroniza un archivo del estado dentro del núcleo con el almacenamiento del dispositivo así que toda la información cambiada puede ser recuperada incluso después de que el sistema se haya crasheado o reiniciado.\nPor seguridad, si lo deshabilitas, asegúrate de que tengas una copia de seguridad apropiada</string>
     <string name="title_activity_entropia">Entropía</string>
     <string name="entropy_sub">La entropíaes un medio de números aleatorios disponibles. Si la entropía disponible alcanza 0 en /desarrollo/aleatorio, luego Houston, tenemos un problema:\nEl sistema es incapaz de proporcionar más de esos números y todas la operaciones que esperan por la aleatoriedad se estancan hasta que haya más entropía disponible.</string>
-    <string name="poolsize_sub">El tamaño de la profundidad de la entropia, por ejemplo; el valor máximo alcanzable.</string>
+    <string name="poolsize_sub">El tamaño de la profundidad de la entropia, por ejemplo: el valor máximo alcanzable.</string>
     <string name="write_sub">El número de bits de la entropía que despierta procesos que el monitor de múltiples descriptores de archivos para tener acceso de escritura a /desarrollo/aleatorio (\"/dev/random\").</string>
     <string name="read_sub">El número de bits que la entropía requiere para los procesos de despertar que dormir en la espera para la entropía desde /dev/random.</string>
     <string name="read">Leer</string>
@@ -479,5 +463,13 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 
 </resources>

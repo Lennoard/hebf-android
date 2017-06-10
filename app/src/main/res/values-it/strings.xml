@@ -7,14 +7,6 @@
     <string name="ad_off">Adblocker disattivato :|</string>
     <string name="navigation_drawer_open">Apri menù di navigazione</string>
     <string name="navigation_drawer_close">Chiudi menù di navigazione</string>
-    <string name="play_services">Google Play Services drain fix (Master)</string>
-    <string name="play_services_sub">Riduce lo spreco di batteria causato da alcuni servizi in background di Google Play Services.\nATTENZIONE: QUESTO DISABILITERÀ DEL TUTTO I SERVIZI, ABILITA SOLO SE SAI COSA STAI FACENDO.</string>
-    <string name="play_services_on">Scegli i servizi da disattivare</string>
-    <string name="play_services_off">Google Play Services drain fix disattivato</string>
-    <string name="play_location_services">Servizi posizione</string>
-    <string name="play_checkin_services">Servizi check-in</string>
-    <string name="play_update_services">Servizi di aggiornamento sistema</string>
-    <string name="play_usage_report">Statistiche di utilizzo</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Ottimizza i file pacchetto di Android (e i dati non compressi) per ridurre la quantità di RAM utilizzata quando viene eseguita un\'applicazione.</string>
     <string name="zipalign_on">Zipalign attivato</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Condividi</string>
     <string name="sobre">Informazioni</string>
     <string name="boot">Avvio più veloce</string>
-    <string name="bootanim">Disabilita bootanimation</string>
-    <string name="bootanim_sub">Riduce il tempo di avvio disabilitando l\'animazione di boot (potrebbe sembrare che il dispositivo non si accenda, ma è normale)</string>
     <string name="boot_sub">Imposta la modalità di shutdown a \"ibernazione\" e abilita la funzione Quick Power On, velocizzando l\'avvio.</string>
     <string name="boot_on">Bootanimation disabilitata, riavvia</string>
     <string name="boot_off">Bootanimation abilitata, riavvia</string>
@@ -353,7 +343,6 @@
     <string name="screenshots">Screenshot</string>
     <string name="total_size">Dimensione totale</string>
     <string name="open_now">APRI ORA</string>
-    <string name="we_need_to_know_sub">Il bootloop è quando il sistema operativo non parte. Sai risolverlo?</string>
     <string name="what_is_it">COS\'È?</string>
     <string name="sair">Vuoi davvero chiudere questa applicazione?</string>
     <string name="sim">SI</string>
@@ -368,12 +357,7 @@
     <string name="user_sub">Cambia il tipo di utente per mostrare/nascondere le opzioni pericolose.</string>
     <string name="user">Cambia il tipo di utente</string>
     <string name="mais">Di più</string>
-    <string name="title_activity_set_user">Sondaggio</string>
     <string name="fosure">DI SICURO</string>
-    <string name="survey_root">L\'accesso di root permette di modificare file di sistema. Lo usiamo per impostare alcuni parametri. Sai cambiare questi parametri manualmente?</string>
-    <string name="survey_custom">Le custom ROM sono sistemi operativi modificati (e.g CyanogenMod, Nexus Experience), di solito basati su AOSP di Google. Hai una Custom ROM?</string>
-    <string name="survey_kernel">Il kernel organizza tutto il sistema. È responsabile dell\'interazione tra software e hardware, gestendo tutto. Hai un kernel stabile?</string>
-    <string name="user_survey">Rispondi a un paio di domande per determinare il tipo di utente. In base a questo, decideremo quali opzioni mostrarti.</string>
     <string name="proximo">AVANTI</string>
     <string name="theme_sub">Cambia il tema dell\'app</string>
     <string name="theme">Tema</string>
@@ -479,4 +463,12 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 </resources>

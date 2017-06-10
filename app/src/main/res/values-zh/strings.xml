@@ -7,14 +7,6 @@
     <string name="ad_off">Adblocker 取消激活</string>
     <string name="navigation_drawer_open">打开导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
-    <string name="play_services">Google Play 服务耗电修复（总开关）</string>
-    <string name="play_services_sub">修复由Google Play 后台服务造成的电量损耗。\n警告：这会禁用一部分服务。确定你的电量消耗异常，而且觉得无所谓，再打开开关噢。</string>
-    <string name="play_services_on">准备听令</string>
-    <string name="play_services_off">已取消激活 Google Play 服务耗电修复</string>
-    <string name="play_location_services">位置服务</string>
-    <string name="play_checkin_services">登记服务</string>
-    <string name="play_update_services">系统升级服务</string>
-    <string name="play_usage_report">使用情况报告</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">优化apk文件 (及其未压缩的数据) 以节约运行时的内存。</string>
     <string name="zipalign_on">Zipalign 已打开</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Share</string>
     <string name="sobre">关于</string>
     <string name="boot">加快开机</string>
-    <string name="bootanim">禁用开机动画</string>
-    <string name="bootanim_sub">你懂的。禁用开机动画会让开机快一些。但是开机的时候颜值不复存在。</string>
     <string name="boot_sub">用休眠代替关机，并启用快速启动特性，加快开机。</string>
     <string name="boot_on">开机动画阉掉了，重启吧</string>
     <string name="boot_off">开机动画又回来了，重启吧</string>
@@ -364,14 +354,8 @@
     <string name="user_sub">改变用户类型来显示/隐藏高风险设置。</string>
     <string name="user">改变用户类型</string>
     <string name="mais">更多</string>
-    <string name="title_activity_set_user">调查</string>
     <string name="fosure">肯定的</string>
-    <string name="survey_root">Root 权限允许修改系统文件。我们使用它来微调一些值。您有能力更改这些值吗？</string>
-    <string name="survey_custom">第三方 ROM 是完全自定义的操作系统（例如 CyanogenMod，Nexus Experience），通常基于 Google 的 AOSP 代码。 您正在运行第三方 ROM？</string>
-    <string name="survey_kernel">内核是整个系统的大型组织者。 它负责软件和硬件之间的交互，管理一切（例如RAM）。 你的内核稳定吗？</string>
-    <string name="user_survey">回答几个问题，以确定你是哪种类型的用户。我们将基于此决定为您提供哪些功能。</string>
     <string name="proximo">下一步</string>
-    <string name="we_need_to_know_sub">重启死循环是系统无法正常启动时造成的。你能从中恢复吗？</string>
     <string name="sair">您确定要关闭此应用程序吗？</string>
     <string name="what_is_it">这是什么？</string>
     <string name="force_copy">强制复制</string>
@@ -479,5 +463,13 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 
 </resources>

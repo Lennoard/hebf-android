@@ -7,14 +7,6 @@
     <string name="ad_off">Pemblokir iklan dimatikan :|</string>
     <string name="navigation_drawer_open">Buka navigation drawer</string>
     <string name="navigation_drawer_close">Tutup navigation drawer</string>
-    <string name="play_services">Pengoptimalan Layanan Google Play (Master)</string>
-    <string name="play_services_sub">Memperbaiki pemborosan baterai dikarenakan berjalannya Layanan Google Play di latar belakang.\nPERINGATAN: FITUR INI AKAN MENONAKTIFKAN LAYANAN YANG SEDANG BERJALAN, AKTIFKAN HANYA JIKA ANDA SANGAT BUTUH.</string>
-    <string name="play_services_on">Pilih opsi sesuai kebutuhan Anda</string>
-    <string name="play_services_off">Pengoptimalan Layanan Google Play dimatikan</string>
-    <string name="play_location_services">Layanan lokasi</string>
-    <string name="play_checkin_services">Layanan Check-in</string>
-    <string name="play_update_services">Layanan Pembaharuan sistem</string>
-    <string name="play_usage_report">Laporan penggunaan</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Mengoptimalkan file paket android (dan data yang tidak terkompresi) untuk mengurangi penggunaan RAM ketika menjalankan aplikasi.</string>
     <string name="zipalign_on">Zipalign diaktifkan</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Bagikan</string>
     <string name="sobre">Tentang</string>
     <string name="boot">Booting lebih cepat</string>
-    <string name="bootanim">Matikan Animasi Boot</string>
-    <string name="bootanim_sub">Mengurangi waktu booting dengan mematikan animasi boot (Perangkat anda akan terlihat blank saat booting, namun itu normal karena animasi boot telah dimatikan).</string>
     <string name="boot_sub">Mengubah mode matikan daya menjadi mode hibernasi dan mengaktifkan fitur Quick Power On, untuk mempercepat proses booting.</string>
     <string name="boot_on">Animasi Boot dimatikan, reboot</string>
     <string name="boot_off">Animasi Boot diaktifkan kembali, reboot</string>
@@ -364,14 +354,8 @@
     <string name="user_sub">Ubah tipe pengguna untuk menampilkan / menyembunyikan opsi yang bepotensi beresiko tinggi</string>
     <string name="user">Ubah tipe pengguna</string>
     <string name="mais">Selengkapnya</string>
-    <string name="title_activity_set_user">Survei</string>
     <string name="fosure">Tentunya</string>
-    <string name="survey_root">Akses root mengijinkan, mengatur, dan memodifikasi file sistem. Kami menggunakan itu untuk memodifikasi beberapa nilai agar menjadi lebih baik. Apakah Anda dapat mengubah nilai-nilai ini secara manual?</string>
-    <string name="survey_custom">Custom ROM adalah Sistem Operasi yang dikustomisasi penuh (contoh: CyanogenMod, Nexus Experience, dsb.), yang umumnya berdasarkan pada kode murni dan bersih dari AOSP, didapat langsung dari Google. Apakah Anda memakai Custom ROM?</string>
-    <string name="survey_kernel">Kernel adalah organisator utama pada semua rangkaian sistem. Kernel bertanggung jawab untuk interaksi antara software dengan hardware, dan memanajemen semuanya (RAM, dsb.). Apakah kernel Anda stabil?</string>
-    <string name="user_survey">Jawab pertanyaan dibawah untuk menentukan tipe pengguna. Berdasarkan jawaban Anda, Kami akan memutuskan mana opsi yang akan tersedia untuk Anda.</string>
     <string name="proximo">LANJUT</string>
-    <string name="we_need_to_know_sub">Bootloop adalah keadaan dimana sistem gagal untuk memulai secara normal. Dapatkah Anda memperbaiki itu?</string>
     <string name="sair">Apakah Anda yakin untuk keluar dari Aplikasi?</string>
     <string name="what_is_it">APA ITU?</string>
     <string name="force_copy">PAKSA SALIN</string>
@@ -480,5 +464,13 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 
 </resources>

@@ -58,10 +58,10 @@ dd if="$IN15" of="$OUT15"
 rm -f "$IN15"
 
 IN16=/data/data/com.androidvip.hebf/sqlite3
-OUT16=/system/bin/sqlite3
+OUT16=/system/xbin/sqlite3
 dd if="$IN16" of="$OUT16"
 rm -f "$IN16"
-busybox chmod 755 /system/bin/sqlite3
+busybox chmod 755 /system/xbin/sqlite3
 
 busybox touch /data/data/com.androidvip.hebf/hebf.hebf
 busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| HEBF has been updated / set up" >> /data/data/com.androidvip.hebf/hebf.hebf

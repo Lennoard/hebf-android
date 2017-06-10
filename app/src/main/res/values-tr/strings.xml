@@ -7,14 +7,6 @@
     <string name="ad_off">Reklam Engelleyici devre dışı bırakıldı :|</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
-    <string name="play_services">Google Play Servisleri pil optimizasyonu (Gelişmiş)</string>
-    <string name="play_services_sub">Bazı Google Play Servisleri arkaplan hizmetlerinin neden olduğu hızlı pil boşalmalarını engeller.\UYARI: SERVİSLER DEVRE DIŞI BIRAKILACAKTIR, EĞER SİZİN İÇİN SORUN TEŞKİL ETMİYORSA VE HIZLI PİL BOŞALMASI GÖZLEMLİYORSANIZ VE BU SEÇENEĞİ ETKİNLEŞTİRİN.</string>
-    <string name="play_services_on">Şimdi seçebilirsiniz</string>
-    <string name="play_services_off">Google Play Servisleri pil optimizasyonu devre dışı bırakıldı</string>
-    <string name="play_location_services">Konum servisleri</string>
-    <string name="play_checkin_services">Check-in hizmetleri</string>
-    <string name="play_update_services">Sistem güncellme hizmetleri</string>
-    <string name="play_usage_report">Kulanım raporu</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Bir uygulamayı çalıştırırken kullanılan RAM miktarını azaltmak için Android paket dosyalarını (ve sıkıştırılmamış verilerini) optimize eder.</string>
     <string name="zipalign_on">Zipalign açık</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Paylaş</string>
     <string name="sobre">Hakkında</string>
     <string name="boot">Hızlı açılış</string>
-    <string name="bootanim">Açılış animasyonunu devre dışı bırak</string>
-    <string name="bootanim_sub">Açılış animasyonunu devre dışı bırakarak başlangıç hızını arttırır. (Cihazınız düzgün başlatılamıyormuş gibi gözükebilir, ama bu normaldir).</string>
     <string name="boot_sub">Kapatma modunu uyku modu olarak ayarlar ve Hızlı Açılış özelliğini etkinleştirir, önyükleme süresini hızlandırır.</string>
     <string name="boot_on">Açılış animasyonu devre dışı bırakıldı, yeniden başlat</string>
     <string name="boot_off">Açılış animasyonu tekrar etkinleştirildi, yeniden başlat</string>
@@ -364,14 +354,8 @@
     <string name="user_sub">Riskli seçenekleri göstermek/gizlemek için kullanıcı türünü seçin</string>
     <string name="user">Kullanıcı türünü değiştir</string>
     <string name="mais">Daha</string>
-    <string name="title_activity_set_user">Anket</string>
     <string name="fosure">KESİNLİKLE</string>
-    <string name="survey_root">Root erişimi, diğer şeylerin yanı sıra sistem dosyalarını değiştirmenize izin verir. Biz root erişimini bazı değerlere ince ayar çekmek için kullanıyoruz, Bu değerlerden bazılarını manuel olarak değiştirebiliyor musunuz?</string>
-    <string name="survey_custom">Custom ROMlar genellikle, Google tarafından yayımlanan saf AOSP kodunu taban alan, tamamen özelleştirilmiş İşletim Sistemleridir (örneğin CyanogenMod, Nexus Experience). Custom ROM mu kullanıyorsunuz?</string>
-    <string name="survey_kernel">Kerne tüm sistemin büyük organizatörüdür. Yazılım ve donanım arasındaki etkileşimden sorumludur, her şeyi yönetir (örneğin RAM). Kullandığınız kernel stabil mi?</string>
-    <string name="user_survey">Kullanıcı türünü belirlemek için birkaç soruyu yanıtlayın. Buna dayanarak, hangi seçeneklerin sizin için mevcut olacağına karar vereceğiz.</string>
     <string name="proximo">İLERİ</string>
-    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
     <string name="sair">Uygulamadan çıkmak istediğine emin misin?</string>
     <string name="what_is_it">BU NE?</string>
     <string name="force_copy">ZORLA KOPYALA</string>
@@ -479,4 +463,12 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 </resources>

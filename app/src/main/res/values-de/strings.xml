@@ -7,10 +7,6 @@
     <string name="ad_off">AdBlocker deaktiviert :|</string>
     <string name="navigation_drawer_open">Öffne den Navigationsdrawer</string>
     <string name="navigation_drawer_close">Schließe den Navigationsdrawer</string>
-    <string name="play_services">Google Play Dienste Entladungs Fix</string>
-    <string name="play_services_sub">Behebt die zusätzlich auftretende Akku Entladung, die durch Google Play Hintergrunddienste hervorgerufen werden kann.\nACHTUNG: DIESE OPTION WIRD DIESE DIENSTE DEAKTIVIEREN. NUR AKTIVIEREN, WENN DU DAMIT EINVERSTANDEN BIST UND EINE AKKU ENTLEERUNG VERMUTEST.</string>
-    <string name="play_services_on">Bereit für Eingaben</string>
-    <string name="play_services_off">Google Play Dienste Entladungs Fix deaktiviert</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Optimiert die Android Paketdateienanpassung (und ihre unkomprimierten Dateien).</string>
     <string name="zipalign_on">Zipalign aktiviert</string>
@@ -32,8 +28,6 @@
     <string name="outro">Sonstiges</string>
     <string name="compartilhar">Teilen</string>
     <string name="sobre">Über</string>
-    <string name="bootanim">Bootanimation deaktivieren</string>
-    <string name="bootanim_sub">Reduziert die Boot-Zeit, indem Sie die Bootanimation deaktivieren (Es ist normal, dass die Bootanimation ein wenig anders aussehen kann).</string>
     <string name="boot_sub">Setzt den Shutdown-Modus auf "Ruhezustand" und ermöglicht so die Quick Power On-Funktion für eine Beschleunigung der Bootzeit.</string>
     <string name="faster_boot_on">Schnelleres Hochfahren aktiviert</string>
     <string name="faster_boot_off">Schnelleres Hochfahren deaktiviert</string>
@@ -292,10 +286,6 @@
     <string name="multi_core_on">Energiesparen aktiviert</string>
     <string name="mod_settings_dialog">Bitte erlauben Sie HEBF Einstellungen ändern zu dürfen. Dies wird zB benötigt, um die Helligkeit zu ändern.</string>
     <string name="psfmc">Energiesparer für Mehrkern CPUs</string>
-    <string name="play_checkin_services">Check-in Dienste</string>
-    <string name="play_location_services">Standort Dienste</string>
-    <string name="play_update_services">System Update Dienste</string>
-    <string name="play_usage_report">Nutzungsberichte</string>
     <string name="ativando">Aktivieren</string>
     <string name="desativando">Deaktivieren</string>
     <string name="espere">Bitte warten, es kann bis zu 1 Minute dauern</string>
@@ -365,11 +355,6 @@
     <string name="user">Ändere den Benutzertyp</string>
     <string name="user_sub">Ändert des Benutzertyp um experimentelle Optionen zu zeigen oder um sie zu verstecken</string>
     <string name="fosure">SICHER</string>
-    <string name="title_activity_set_user">Umfrage</string>
-    <string name="survey_root">Root Zugriff ermöglicht unter anderem das Ändern von Systemdateien. Wir benutzen es um bestimmte Werte zu optimieren. Kannst du einige von diesen Werten selbst verändern?</string>
-    <string name="survey_custom">Custom ROMs sind voll modifizierte Betriebssysteme (z.B CyanogenMod, Nexus Experience), meist basierend auf reinem AOSP code, direkt von Google. Benutz du eine Custom ROM?</string>
-    <string name="survey_kernel">Kernel verwaltet das ganze System. Er ist für die Interaktion zwischen Hardware und Software verantwortlich, verwaltet dabei alles (zum Beispiel RAM). Ist dein Kernel stabil?</string>
-    <string name="user_survey">Beantworte ein paar Fragen um den Benutzertyp festzulegen. Basierend darauf werden wir die Optionen der App freischalten.</string>
     <string name="proximo">WEITER</string>
     <string name="theme_sub">Ändere das Theme</string>
     <string name="theme">Theme</string>
@@ -413,7 +398,6 @@
     <string name="view_log">View the logs</string>
     <string name="force_copy">FORCE COPY</string>
     <string name="sair">Do you really want to close this application?</string>
-    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
     <string name="what_is_it">WHAT IS IT?</string>
     <string name="title_activity_dns">Manual DNS</string>
     <string name="fsync_sub">Fsync synchronizes a file\'s in-core state with the storage device so that all changed information can be retrieved even after the system crashed or was rebooted.\nFor safety, if you disable it, make sure you have a proper backup.</string>
@@ -480,4 +464,12 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 </resources>

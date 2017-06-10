@@ -14,7 +14,6 @@
     <string name="faster_boot_on">Boot mais rápido ativado</string>
     <string name="boot_off">Bootanimation ativada novamente, reinicie</string>
     <string name="boot_on">Bootanimation desativada, reinicie</string>
-    <string name="bootanim_sub">Reduz o tempo de inicialização por desativar a bootanimation. (Pode parecer que seu dispositivo não vai ligar corretamente, mas é normal).</string>
     <string name="calibrar">Calibração da bateria</string>
     <string name="calibrar_botao">CALIBRAR</string>
     <string name="calibrar_sub">Calibra a sua bateria por resetar o arquivo gerado automaticamente pelo sistema Android contendo informações sobre ela (que algumas vezes se corrompe). VOCÊ DEVE CALIBRAR SOMENTE COM O NÍVEL DA BATERIA EM 100%.</string>
@@ -62,14 +61,6 @@
     <string name="performance">Performance</string>
     <string name="performance_texto">Performance geral</string>
     <string name="performance_tweak">Tweak de performance</string>
-    <string name="play_services">Conserto de drenagem pelo Google Play Services (Controle)</string>
-    <string name="play_services_off">Conserto de drenagem pelo Google Play Services desativado</string>
-    <string name="play_services_on">Pronto para escutar suas escolhas</string>
-    <string name="play_usage_report">Relatório de uso</string>
-    <string name="play_checkin_services">Serviços de check-in</string>
-    <string name="play_location_services">Serviços de localização</string>
-    <string name="play_update_services">Serviços de atualização do sistema</string>
-    <string name="play_services_sub">Conserta a drenagem de bateria causada por alguns dos serviços em segundo plano do Google Play Services.\nAVISO: ISTO VAI DESATIVAR OS SERVIÇOS, ATIVE ESTA OPÇÃO SOMENTE SE VOCÊ ESTIVER DE ACORDO COM ISSO E ENFRENTANDO DRENAGEM.</string>
     <string name="power_off">DESLIGAR</string>
     <string name="principal">Principal</string>
     <string name="reboot">REINICIAR</string>
@@ -96,7 +87,7 @@
     <string name="zipalign_off">Zipalign desligado</string>
     <string name="zipalign_on">Zipalign ligado</string>
     <string name="zipalign_sub">Otimiza o alinhamento dos arquivos de pacotes do android (e seus dados descomprimidos).</string>
-    <string name="ultra_sub">Melhor economia de bateria por perfil, esta opção pode alterar o governador da CPU de acordo com o perfil selecionado e configurações básicas, tenha cuidado e esteja certo antes de ativar as opções Ultra Battery Saver e performace.</string>
+    <string name="ultra_sub">Melhor economia de bateria por perfil, esta opção pode alterar o governador da CPU de acordo com o perfil selecionado, tenha cuidado e esteja certo antes de ativar as opções Ultra Battery Saver.</string>
     <string name="liquid">Liquid smooth UI</string>
     <string name="bootloader">BOOTLOADER</string>
     <string name="dispensar">OK</string>
@@ -186,7 +177,7 @@
     <string name="special_sub_1">Guia: <a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Learn basic scripting, how to execute scripts, mod building</a>, de onde nós tiramos alguns conhecimentos iniciais. Obrigado, você está em algum lugar do nosso coração vazio.</string>
     <string name="contribuicoes">Contrubuições importantes</string>
     <string name="special_sub_2">Nós também usamos alguns scripts de código aberto feitos pelo próprio paget96 e com contribuições de vários membros da comunidade de desenvolvedores (verificar a licença em tais arquivos).</string>
-    <string name="honrra">▪ Jamiéric Gomes: Dica de cores, Material Design e layout\n▪ Guilherme Augusto: Sugestão e análise de cores, layout e imagens\n▪ Rivaldo Freitas: Sugestões de cores e layout\n▪ Gominha: Tijolos e sugestões de layout\n▪ Vinícius Nery (VinyX): Sugestões de cores, Brasil >>> All\n▪ Wesley: Várias dicas e sugestões\n\n – Não nos esquecemos de vocês.</string>
+    <string name="honrra">▪ Jamiéric Gomes: Dica de cores, Material Design e layout\n▪ Guilherme Augusto: Sugestão e análise de cores, layout e imagens\n▪ Rivaldo Freitas: Sugestões de cores e layout\n▪ Gominha: Tijolos e sugestões de layout\n▪ Vinícius Nery (VinyX): Sugestões de cores, Brasil >>> All\n▪ Wesley (pokedude): Várias dicas e sugestões\n\n – Não nos esquecemos de vocês.</string>
     <string name="adaway_1">Dominik Schürmann, 0-kaladin e Dāvis Mošenkovs pelo:</string>
     <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, de onde nós tiramos os hosts do bloqueador de anúncios.\n– AdAway está atualmente sendo mantido por 0-kaladin e Dāvis Mošenkovs. O autor original é Dominik Schürmann.</string>
     <string name="hebf_sobre_sub">HEBF Optimizer é um aplicativo que visa aumentar a performance do seu dispositivo, focando-se também no desempenho da bateria, não nos esquecemos dela.\nO aplicativo também possui uma útil e inteligente caixa de ferramentas que você pode usar sempre que quiser.</string>
@@ -222,7 +213,6 @@
     <string name="reset">Redefinir</string>
     <string name="todos">Tudo</string>
     <string name="yagami">Suave</string>
-    <string name="bootanim">Desativar a bootanimation</string>
     <string name="controles">Controles</string>
     <string name="desativar">DESATIVAR</string>
     <string name="kernel_panic">Kernel Panic</string>
@@ -365,12 +355,7 @@
     <string name="copiado">Os arquivos foram copiados</string>
     <string name="user">Alterar o tipo de usuário</string>
     <string name="user_sub">Alterar o tipo do usuário para mostrar / ocultar opções de risco</string>
-    <string name="title_activity_set_user">Pesquisa</string>
-    <string name="survey_root">O acesso root permite, entre outras coisas, modificar arquivos do sistema. Vamos utilizá-lo para afinar alguns valores. Você é capaz de alterar manualmente alguns desses valores?</string>
-    <string name="survey_kernel">Kernel é o grande organizador de todo o sistema. Ele é responsável pela interacção entre hardware e software, gerenciando tudo (RAM, por exemplo). O seu kernel é estável?</string>
-    <string name="survey_custom">ROMs personalizadas são Sistemas Operacionais totalmente customizados (por exemplo: CyanogenMod, Nexus Experience), geralmente baseados no código AOSP limpo, diretamente do Google. Você está executando uma ROM personalizada?</string>
     <string name="proximo">PRÓXIMO</string>
-    <string name="user_survey">Responda a algumas perguntas para determinar o tipo de usuário. Com base nisso, vamos decidir quais opções estarão disponíveis para você.</string>
     <string name="theme_sub">Escolha o tema do aplicativo</string>
     <string name="theme">Tema</string>
     <string name="fps_on">Você precisará bloquear e desbloquear o dispositivo para que isso seja ativado.</string>
@@ -413,7 +398,6 @@
     <string name="force_copy">FORÇAR A CÓPIA</string>
     <string name="sair">Deseja realmente fechar este aplicativo?</string>
     <string name="what_is_it">O QUE É ISSO?</string>
-    <string name="we_need_to_know_sub">Bootloop é quando o sistema não inicia corretamente. Você pode se recuperar disso?</string>
     <string name="title_activity_dns">DNS Manual</string>
     <string name="fsync_sub">O Fsync sincroniza o estado interno de um arquivo com o dispositivo de armazenamento para que todas as informações alteradas possam ser recuperadas mesmo depois de uma falha de sistema ou reinicialização.\nPor segurança, se você desabilitá-lo, certifique-se de ter um backup adequado.</string>
     <string name="read">Ler</string>
@@ -479,4 +463,12 @@
     <string name="free_space_available">Espaço livre disponível</string>
     <string name="crash_info">Houston, tivemos um problema… Parece que o app travou na última vez que foi executado. Você pode notificar os desenvolvedores sobre isso ou ignorar.</string>
     <string name="cleaner_dica">Use o botão flutuante para verificar seu armazenamento em busca de possíveis arquivos excluíveis. Após a conclusão da verificação, será fornecida uma lista de opções. Faça suas seleções e use o mesmo botão para limpar.</string>
+    <string name="title_activity_freeze">Desativar apps</string>
+    <string name="installed_apps">Apps instalados</string>
+    <string name="disabled_apps">Apps desativados</string>
+    <string name="disable">Desativar</string>
+    <string name="launch">Lançar</string>
+    <string name="uninstall_app">Desinstalar</string>
+    <string name="enable">Ativar</string>
+    <string name="package_disabled">Pacote desativado</string>
 </resources>

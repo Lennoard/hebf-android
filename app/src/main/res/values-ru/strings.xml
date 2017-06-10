@@ -7,14 +7,6 @@
     <string name="ad_off">Блокировщик рекламы отключен :|</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
-    <string name="play_services">Оптимизация приложения «Сервисы Google Play»</string>
-    <string name="play_services_sub">Может помочь устранить расход батареи фоновыми сервисами Google Play.\nВНИМАНИЕ: НЕКОТОРЫЕ ФУНКЦИИ СЕРВИСОВ GOOGLE PLAY БУДУТ НЕДОСТУПНЫ, ИСПОЛЬЗУЙТЕ ДАННУЮ ОПЦИЮ С ОСТОРОЖНОСТЬЮ.</string>
-    <string name="play_services_on">Выберите нужные опции</string>
-    <string name="play_services_off">Оптимизация сервисов Google Play отключена</string>
-    <string name="play_location_services">Сервисы местоположения</string>
-    <string name="play_checkin_services">Сервисы регистрации</string>
-    <string name="play_update_services">Сервисы обновлений</string>
-    <string name="play_usage_report">Сбор статистики</string>
     <string name="zipalign">Zipalign</string>
     <string name="zipalign_sub">Оптимизация работы с пакетными файлами приложений для уменьшения расхода оперативной памяти.</string>
     <string name="zipalign_on">Zipalign включен</string>
@@ -37,8 +29,6 @@
     <string name="compartilhar">Поделиться</string>
     <string name="sobre">О приложении</string>
     <string name="boot">Ускорение загрузки</string>
-    <string name="bootanim">Отключить загрузочную анимацию</string>
-    <string name="bootanim_sub">Ускорение загрузки устройства путем отключения загрузочной анимации.</string>
     <string name="boot_sub">Включение режима гибернации для ускорения загрузки.</string>
     <string name="boot_on">Загрузочная анимация отключена</string>
     <string name="boot_off">Загрузочная анимация включена</string>
@@ -352,11 +342,6 @@
     <string name="user">Изменить тип пользователя</string>
     <string name="mais">Больше</string>
     <string name="fosure">НАВЕРНЯКА</string>
-    <string name="title_activity_set_user">Опрос</string>
-    <string name="survey_root">The root access allows, among other things, modify system files. We use it to fine tune some values. Are you able to manually change some of these values?</string>
-    <string name="survey_custom">Custom ROMs are fully customized Operation Systems (e.g CyanogenMod, Nexus Experience), usually based on clean AOSP code, directly from Google. Are you running a Custom ROM?</string>
-    <string name="survey_kernel">Kernel is the big organizer of the whole system. It is responsible for the interaction between software and hardware, managing everything (RAM, for example). Is your Kernel stable?</string>
-    <string name="user_survey">Answer a few questions to determine the type of user. Based on that, we will decide which options will be available for you.</string>
     <string name="proximo">СЛЕДУЮЩИЙ</string>
     <string name="theme">Theme</string>
     <string name="theme_sub">Change the application\'s theme</string>
@@ -399,7 +384,6 @@
     <string name="view_log">View the logs</string>
     <string name="force_copy">FORCE COPY</string>
     <string name="sair">Do you really want to close this application?</string>
-    <string name="we_need_to_know_sub">Bootloop is when the system fails to start properly. Can you recover from it?</string>
     <string name="what_is_it">WHAT IS IT?</string>
     <string name="title_activity_dns">Manual DNS</string>
     <string name="fsync_sub">Fsync synchronizes a file\'s in-core state with the storage device so that all changed information can be retrieved even after the system crashed or was rebooted.\nFor safety, if you disable it, make sure you have a proper backup.</string>
@@ -466,4 +450,12 @@
     <string name="free_space_available">Free space available</string>
     <string name="junk_found">Junk found</string>
     <string name="cleaner_dica">Use the floating button to scan your storage for possible excludable files. After the scan is complete, a list of options will be provided. Make your selections and use the same button to clean</string>
+    <string name="disable">Disable</string>
+    <string name="disabled_apps">Disabled apps</string>
+    <string name="enable">Enable</string>
+    <string name="installed_apps">Installed apps</string>
+    <string name="launch">Launch</string>
+    <string name="package_disabled">Package disabled</string>
+    <string name="title_activity_freeze">Disable apps</string>
+    <string name="uninstall_app">Uninstall</string>
 </resources>
