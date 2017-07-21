@@ -1,0 +1,286 @@
+<resources>
+    <string name="app_name">HEBF Beta</string>
+
+    <string name="navigation_drawer_open">فتح ساحب التنقل</string>
+    <string name="navigation_drawer_close">اغلاق ساحب التنقل</string>
+
+    <string name="action_settings">المظهر.</string>
+    <string name="play_services">اصلاح الصرف الناتج عن خدمات غوغل بلاي</string>
+    <string name="play_services_sub">تقوم باصلاح صرف البطارية الناتج عن بعض خدمات غوغل بلاي التي تعمل في الخلفية.</string>
+    <string name="play_services_on">اصلاح خدمات غوغل بلاي مفعلة</string>
+    <string name="play_services_off">اصلاح خدمات غوغل بلاي معطلة</string>
+    <string name="zipalign">Zipalign</string>
+    <string name="zipalign_sub">تقوم بتحسين ملفات apk للتطبيقات (بالاضافة الى الملفات الغير مضغوطة داخلها)</string>
+    <string name="zipalign_on">Zipalign مفعل</string>
+    <string name="zipalign_off">Zipalign معطل</string>
+    <string name="net">تحسينات الانترنت</string>
+    <string name="net_sub">اجراءات خاصة تقوم بتحسين استجابة الانترنت عن طريق تحسين خادم DNS</string>
+    <string name="net_on">تحسينات الانترنت مفعلة</string>
+    <string name="net_off">تحسينات الانترنت معطلة</string>
+    <string name="gerais">تحسينات عامة</string>
+    <string name="fstrim">ترتيب وتحسين ملف النظام</string>
+    <string name="fstrim_sub">تنظيم الكتل الغير مستعملة في نظام الملف المدخل، تقلل تشنجات الذاكرة. ينصح بهذه العملية على الاقل مرة كل اسبوع.</string>
+    <string name="fstrim_on">تم تحسين ملف النظام</string>
+    <string name="fstrim_botao">تحسين الان</string>
+    <string name="performance">الاداء</string>
+    <string name="ferramentas">الادوات</string>
+    <string name="bateria">البطارية</string>
+    <string name="principal">الرئيسية</string>
+    <string name="tweaks">تحسينات</string>
+    <string name="outro">اخرى</string>
+    <string name="compartilhar">مشاركة</string>
+    <string name="sobre">حول البرنامج</string>
+    <string name="boot">اقلاع اسرع</string>
+    <string name="boot_sub">تقليص الوقت اللازم للاقلاع عن طريق تعطيل رسومات الاقلاع(قد تظن ان جهازك لايقوم بعملية الاقلاع بشكل جيد، لكن هذا شيء طبيعي)، كما تتم الاستفادة من بعض خصائص النظام من اجل تسريع عملية الاقلاع.</string>
+    <string name="boot_on">تم تعطيل رسومات الاقلاع، قم باعادة التشغيل</string>
+    <string name="boot_off">تم اعادة تفعيل رسومات الاقلاع، قم باعادة التشغيل.</string>
+    <string name="title_activity_performance">الاداء</string>
+    <string name="game">وضع الالعاب</string>
+    <string name="game_on">وضع الالعاب مفعل</string>
+    <string name="game_off">وضع الالعاب معطل</string>
+    <string name="game_sub">تحسين تشغيل الالعاب، عن طريق زيادة الحد الاقصى من عدد الاطارات في الثانية.</string>
+    <string name="performance_tweak">تحسين الاداء</string>
+    <string name="performance_sub">تحسينات الاداء، دون صرف زائد للبطارية.</string>
+    <string name="pf_on">تحسينات الاداء مفعلة</string>
+    <string name="pf_off">تحسينات الاداء معطلة</string>
+    <string name="multitasking">تعدد المهام الافضل</string>
+    <string name="multitasking_on">وضع تعدد المهام مفعل</string>
+    <string name="multitasking_off">وضع تعدد المهام معطل</string>
+    <string name="multitasking_sub">تعدد مهام ممتاز.\n
+ للذين يحبون تشغيل الكثير من التطبيقات في نفس الوقت دون استهلاك الكثير من البطارية.</string>
+    <string name="performance_texto">الاداء العام</string>
+    <string name="ui_tweaks">تحسينات واجهة المستخدم</string>
+    <string name="liquid">تحسين اداء واجهة المستخدم</string>
+    <string name="liquid_on">تحسين اداء واجهة المستخدم مفعل</string>
+    <string name="liquid_off">تحسين اداء واجهة المستخدم معطل</string>
+    <string name="liquid_sub">تقوم بتحسين عناصر واجهة المستخدم وتجعل التنقل اكثر سلاسة</string>
+    <string name="scroll">تنقل افضل</string>
+    <string name="scroll_on">وضع التنقل الافضل مفعل</string>
+    <string name="scroll_off">وضع التنقل الافضل معطل</string>
+    <string name="scroll_sub">تقوم بتحسين التنقل</string>
+    <string name="principal_fail">انت بالفعل تتصفح \"الرئيسية"</string>
+    <string name="performance_fail">انت بالفعل تتصفح \"الاداء"</string>
+    <string name="battery_fail">انت بالفعل في \"البطارية"</string>
+    <string name="ferramentas_fail">انت بالفعل تتصفح \"الادوات"</string>
+    <string name="title_activity_tools">ادوات</string>
+    <string name="adblocker">مانع الاعلانات.</string>
+    <string name="ad_sub">تعطيل كافة الاعلانات، بما فيها الاعلانات الموجودة في هذا التطبيق.</string>
+    <string name="misc">متنوع</string>
+    <string name="rebooter">معيد التشغيل</string>
+    <string name="reboot">اعادة تشغيل</string>
+    <string name="recovery">الاسترداد</string>
+    <string name="bootloader">البوتلودر</string>
+    <string name="sysui">اعادة تشغيل برنامج واجهة المستخدم SystemUI</string>
+    <string name="power_off">ايقاف التشغيل</string>
+    <string name="calibrar">تصفير معلومات استخدام البطارية</string>
+    <string name="calibrar_sub">تصفير عداد بطاريتك عن طريق حذف الملف batterystatus.bin الذي يقوم نظام اندرويد بانشاءه والذي يحوي معلومات استخدام البطارية(التي تتعرض للتلف احيانا)\n
+       يجب عليك القيام بالتصفير \"فقط\" عندما تكون نسبة البطارية 100%</string>
+    <string name="calibrar_botao">تصفير عداد استخدام البطارية الان</string>
+    <string name="art">تصحيح ART</string>
+    <string name="art_sub">مزيد من المساحة الحرة.\n
+       يجب اعادة التشغيل.</string>
+    <string name="art_sub_aviso">تعمل فقط على اندرويد لوليبوب والنسخ الاحدث</string>
+    <string name="art_sub_kk_toast">تعمل فقط على اندرويد لوليبوب والنسخ الاحدث</string>
+    <string name="dpi">تغيير قياسات شاشة العرض</string>
+    <string name="dpi_sub">تقوم بتغيير قياس الشاشة. قيم اقل تعني شاشة اوسع. اضغط مطولا لمعلومات اكثر.\n
+       تحذير: لاتقم بوضع قيم صغيرة جدا!\n
+       سوف يتسبب هذا بجعل الجهاز غير قابل للعمل!!!</string>
+    <string name="dpi_botao">تغيير</string>
+    <string name="dpi_edit">القيمة</string>
+    <string name="dpi_dialogo">هذه الميزة ماتزال تحت التجربة وهناك بعض الاعمال اللتي يجب القيام بها لتصبح جاهزة.\n
+       \n
+       المقاسات الافتراضية لبعض الشاشات:\n
+       \n
+       240x320(ldpi) - 120\n
+       320x480(mdpi) - 160\n
+       480x854(hdpi) - 240\n
+       540x960(hdpi) - 240\n
+       720x1280(xhdpi) - 320\n
+       1080x1920(xxhdpi) - 480\n
+       \n
+       تحذير: تجاهل كافة المعلومات اعلاه اذا كان جهازك من نوع تاب Tablet</string>
+    <string name="dpi_reboot">هناك احتمال ان يتسبب هذا في عدم اقلاع جهازك بعد الان!\n
+       اذا قمت بضبط قيمة غير مناسبة لجهازك سوف تمرر الى ملف الخصائص الان!</string>
+    <string name="dpi_valor">هي القيمة اللتي تم اختيارها لقياس الشاشة،استمرار؟</string>
+    <string name="reiniciar_aviso">سيتم اعادة تشغيل هاتفك</string>
+    <string name="cancelar">الغاء</string>
+    <string name="permissive">ضبط متساهل PERMISSIVE</string>
+    <string name="enforcing">ضبط الممانعة ENFORCING</string>
+    <string name="se">معدل SELinux</string>
+    <string name="se_aviso">الرجاء الانتباه الى ان تغيير  وضع SELinux لايعمل على جميع الاجهزة والانظمة.\n
+     تغيير على اي حال؟</string>
+    <string name="se_snack">تم تغيير وضع SELinux.\n
+     يجب اعادة التشغيل لتاخذ الاعدادات الجديدة مفعولها.</string>
+    <string name="se_sub">تغير وضع تحسينات الامان [SELinux]\n
+     على اندرويد كيتكات واعلى.\n
+     الوضع الافتراضي هو \"فرض\"\n
+     الا اذا تم تغييره بواسطة نواة معدلة.</string>
+    <string name="title_activity_bateria">البطارية</string>
+    <string name="bateria_kk">تحسين البطارية [كيتكات]</string>
+    <string name="bateria_kk_sub">التعديل الخاص باندرويد كيتكات من اجل زيادة عمر البطارية.</string>
+    <string name="bateria_kk_aviso">تعمل فقط على اندرويد كيتكات</string>
+    <string name="bateria_toast">...</string>
+    <string name="bateria_lp">تحسين البطارية [لوليبوب/مارشميلو]</string>
+    <string name="bateria_lp_sub">التعديل الخاص باندرويد لوليبوب من اجل زيادة عمر البطارية.</string>
+    <string name="bateria_lp_aviso">تعمل فقط على اندرويد لوليبوب والنسخ الاحدث</string>
+    <string name="ultra">وضع توفير البطارية المحسن [يعمل على كافة الاجهزة]</string>
+    <string name="ultra_sub">تحسينات اضافية لحفظ طاقة البطارية لكافة انواع الاجهزة.\n
+     التحسن ملحوظ.</string>
+    <string name="ultra_snack_on">وضع توفير الطاقة المحسن مفعل</string>
+    <string name="ultra_snack_off">وضع توفير الطاقة المحسن معطل</string>
+    <string name="geral">عام</string>
+    <string name="wifi">مخمد Wi-Fi</string>
+    <string name="wifi_sub">زيادة عمر البطارية عن طريق التحكم ومنع وتنظيم عملية تشغيل وايقاف Wi-Fi</string>
+    <string name="wifi_on">مخمد Wi-Fi مفعل</string>
+    <string name="wifi_off">مخمد Wi-Fi معطل</string>
+    <string name="root_fail">صلاحيات الروت غير ممنوحة، اصلح ذالك رجاء!</string>
+    <string name="sysui_aviso">سوف يتم اعادة تشغيل SystemUI وسوف يتم قفل هاتفك.</string>
+    <string name="recovery_aviso">سيتم اعادة تشغيل جهازك في وضع الاسترداد</string>
+    <string name="fastboot_aviso">سيتم اعادة تشغيل جهازك الى وضع البوتلودر.</string>
+    <string name="shut_aviso">سيتم ايقاف تشغيل جهازك.</string>
+    <string name="dispensar">OK</string>
+    <string name="fab">تم تحسن النظام.</string>
+    <string name="fab_dialogo">المسرع</string>
+    <string name="fab_dialogo_sub">تقوم بتسريع الجهاز، تتخلص من الملفات المؤقتة، وتزيد المساحة الحرة في RAM</string>
+    <string name="bem_vindo">المحسن HEBF</string>
+    <string name="manifest_armazenamento">نحتاج لنسخ بعض الملفات المهمة على جهازك، من اجل ذالك نحتاج اذونات التخزين (بالاضافة الى صلاحيات الروت)</string>
+    <string name="backup_sub">من اجل الامان، سوف نقوم باخذ نسخة احتياطية لبعض الملفات المهمة.</string>
+    <string name="final_sub">اضغط على الزر السفلي من اجل اكمال تهيئة البرنامج.</string>
+    <string name="finalizar">تم!</string>
+    <string name="backup">نسخ احتياطي/ استرجاع</string>
+    <string name="restaurar_botao">استرجاع</string>
+    <string name="backup_botao">نسخ احتياطي</string>
+    <string name="backup_sub_botao">عملية النسخ الاحتياطي للملفات اكتملت.</string>
+    <string name="restaurar_sub">تم استرجاع الملفات</string>
+    <string name="ad_on">مانع الاعلانات: مفعل.</string>
+    <string name="ad_off">مانع الاعلانات: معطل.</string>
+    <string name="calibrado">تم اعادة ضبط العدادات الى الصفر</string>
+    <string name="copia_falha">فشل في نسخ الملفات اللازمة، هل قمت باعطاء البرنامج صلاحيات الروت والتخزين؟</string>
+    <string name="eh_noyz">اهلا!</string>
+    <string name="procede">حسنا</string>
+    <string name="nao_procede">الغاء</string>
+    <string name="calibrar_aviso">يجب ان تقوم بتصفير عداد استخدام البطارية فقط عندما تكون نسبة البطارية 100%، اذا تمت عملية التصفير عند اي نسبة مغايرة، لن يتم تطبيق اي تغييرات.</string>
+    <string name="title_activity_mais">ادوات متنوعة</string>
+    <string name="log">تعطيل السجلات</string>
+    <string name="log_sub">ان كنت لاتريد من نظام اندرويد ان يسعى لتسجيل كل شيء يحدث مع التطبيقات، قم بتفعيل هذا الخيار.</string>
+    <string name="utilidades">الخدمات</string>
+    <string name="host">تغيير اسم المستقبل</string>
+    <string name="host_sub">تقوم بتغيير اسم المستقبل (اسم الهاتف عندما يتصل بشبكة الانترنت او بشبكة مكتبية)</string>
+    <string name="hostname">اسم المستقبل</string>
+    <string name="host_snack">تم تغيير اسم المستقبل</string>
+    <string name="diversos">ادوات متنوعة</string>
+    <string name="log_off">التسجيل معطل</string>
+    <string name="log_on">تم اعادة تفعيل التسجيل</string>
+    <string name="mais_trigger_sub">المس هنا للمزيد من الادوات المفيدة.</string>
+    <string name="cleaner_trigger_sub">المس هنا لفتح المنظف</string>
+    <string name="root_dialog_sub">هذا البرنامج لن يعمل من دون اعطاء صلاحيات الروت، امسح بيانات البرنامج، وقم بفتحه واعطاء صلاحيات الروت عندما يطلبها رجاء.\n
+   في حال لم يكن جهازك به صلاحيات الروت، يمكنك ايجاد المعلومات هنا\n
+   http://forum.xda-developers.com</string>
+    <string name="root_dialog">خطأ خطير</string>
+    <string name="root_fail_caos_header">اين صلاحيات الروت؟!!</string>
+    <string name="root_fail_caos_sub">لن يعمل البرنامج في هذه الحاله، قم باصلاح ذالك رجاء!\n
+     اولا، قم بمسح بيانات البرنامج وقم بعدها بتشغيله مجددا ولاتنسى منحه صلاحيات الروت!</string>
+    <string name="fail_huehue">ليس بهذه السرعة! قم باعطائي صلاحيات الروت اولا :)</string>
+    <string name="title_activity_opcoes">خيارات</string>
+    <string name="melhoras">تحسينات</string>
+    <string name="bateria_kk_snack">تحسين البطارية مفعل</string>
+    <string name="bateria_kk_snack_off">تحسين البطارية معطل</string>
+    <string name="encontrado">موجود</string>
+    <string name="nao_encontrado">غير موجود!</string>
+    <string name="backup_status">حالة النسخة الاحتياطية:</string>
+    <string name="backup_date">تاريخ النسخ الاحتياطي:</string>
+    <string name="apagar">حذف</string>
+    <string name="backup_intro">نسخ احتياطي</string>
+    <string name="aviso">تحذير!</string>
+    <string name="apagar_sub">لن تستطيع استرجاع هذه النسخة الاحتياطية، هل تريد المتابعة على اي حال؟</string>
+    <string name="apagado">حذفت النسخة الاحتياطية.</string>
+    <string name="title_activity_cleaner">منظف</string>
+    <string name="easy">انتبه الى ماتقوم به، انتبه لخطواتك يارجل...</string>
+    <string name="wpp_aviso">لايمكن التراجع عن ذالك، هل تريد المتابعة على اي حال؟</string>
+    <string name="limpo">تم حذف المهملات</string>
+    <string name="at_boot">تشغيل مع بدء الاقلاع</string>
+    <string name="erro">خطأ</string>
+    <string name="busybox">يبدو ان busybox غير موجود في اي مكان.\n
+       يتطلب عمل هذا البرنامج وجود Stericson\'s busybox، قم بتنزيله وتثبيته رجاء.</string>
+    <string name="play_store">متجر Play</string>
+    <string name="good_bye">اغلاق</string>
+    <string name="do_not_be_evil">GOOGLE</string>
+    <string name="root_fail_intro">هذا البرنامج يتطلب صلاحيات الروت التي لم يتم ايجادها.\n
+     انا كنت لاتعلم بما نتحدث عنه قم بمسح هذا البرنامج بسرعة.\n
+     Google يحوي معلومات وفيرة ابحث فيه.</string>
+    <string name="title_activity_sobre">حول</string>
+    <string name="wpp_cleaner">منظف ملفات واتساب</string>
+    <string name="lennoard_sub">المطور والمصمم</string>
+    <string name="project">المشروع</string>
+    <string name="empty">قلب فارغ؟</string>
+    <string name="title_activity_thanks">شكرا</string>
+    <string name="special">شكر خاص</string>
+    <string name="special_sub"><a href=\"http://forum.xda-developers.com/member.php?u=5514152\" >\\@paget96</a> من اجل:</string>
+    <string name="special_sub_1"><a href=\"http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180\" >Learn basic scripting, how to execute scripts, mod building</a>\n
+     الدرس الذي اعطانا الالهام والمعلومات القيمة الاساسية.\n
+     شكرا، انت في مكان ما في هذا القلب الفارغ.</string>
+    <string name="adaway_2">برنامج AdAway يتم ادارته عن طريق kaladin و Dāvis Mošenkovs. تم بناءه وتطويره عن طريق Dominik Schürmann.</string>
+    <string name="special_sub_2">ايضا استخدمنا بعض السكريبتات مفتوحة المصدر التي برمجها paget96 بنفسه.\n
+     وايضا بمساهمة من عدة اعضاء من جمعية المطورين (تفقد الشهادة في تلك الملفات)</string>
+    <string name="adaway_1">Dominik Schürmann, 0-kaladin و Dāvis Mošenkovs من اجل:</string>
+    <string name="honrra">▪ Jamiéric Gomes: Color, Material Design and layout tips\n
+   ▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n
+   ▪ Rivaldo Freitas: Color and layout suggestions\n
+   ▪ Gominha: Bricks and layout suggestions\n
+   ▪ Vinícius Nery (VinyX): Colors suggestions, Brasil >>> All\n
+   \n
+    – Não nos esquecemos de vocês.</string>
+    <string name="contribuicoes">مساهمات مهمة:</string>
+    <string name="hebf_sobre_sub">[قلب فارغ بطارية ممتلئة]\n
+     هو برنامج يهدف الى تحسين اداء جهازك، بالتركيز ايضا على اداء البطارية، نحن لم ننساها.\n
+     يتضمن البرنامج ايضا صندوق ذكي من الادوات المفيدة التي يمكنك استخدامها عندما تريد.</string>
+    <string name="iv_sub">...وبطارية ممتلئة، في لحظة من خيبة الامل، فوق كل ذالك، بطارية جهازي كانت تفرغ بسرعة، لذا قررت صناعة هذا البرنامج بقلب فارغ وبطارية ممتلئة.\n
+   – Ivsom Emídio</string>
+    <string name="dev">المطورون</string>
+    <string name="title_activity_versao">الاصدار</string>
+    <string name="changelog">سجل التغييرات:</string>
+    <string name="iv_frase">"The blind lead the blind to self-destruction"</string>
+    <string name="iv_h1">مشروع اولي، مطور</string>
+    <string name="mitch_sub">بكل محبة تم اطلاق لقب Mitch علي من قبل المطورين، وهي ترمز الى احياء اصدار قديم من هذا البرنامج.</string>
+    <string name="mascote">جالب الحظ</string>
+    <string name="force">فرض اظهار مؤشر نوع الاتصال</string>
+    <string name="force_sub">تقوم بفرض اظهار اشارة الاتصال للشبكات (4G/LTE, H+, H, 3G, E, و G عندما يكون حظك سيئا، على شريط الاشعارات)\n
+      لكي تعمل يجب ان تكون على روم معدل AOSP</string>
+    <string name="force_on">تم تفعيل الميزة :v</string>
+    <string name="force_off">تم تعطيل الميزة :v</string>
+    <string name="force_sub_2">في حال وجود اي مشاكل حتى بعد الغاء تفعيل هذه الاداة، جرب الزر في الاسفل وقم باعادة التشغيل</string>
+    <string name="force_botao">اصلاح</string>
+    <string name="force_snack">حسنا، اعد الاقلاع</string>
+    <string name="thumbs_botao">مسح المصغرات المخفية</string>
+    <string name="lixo_botao">تنظيف المهملات</string>
+    <string name="thumb_tamanho">حجم المصغرات:</string>
+    <string name="thumb_snack">تم حذف المصغرات</string>
+    <string name="desconhecido">مجهول</string>
+    <string name="big">(كبير)</string>
+    <string name="wtf">(ماهذا!!... يجب تنظيفه)</string>
+    <string name="wtff">(ماهذا!!!!...  خطر التدمير الذاتي!!)</string>
+    <string name="thumb_bug">ÿÌùä better üßø?û?üû??ü clean &amp;?üÀú?üUê it! þÿpþþ?ÿPý?üø</string>
+    <string name="arquivos_fail">هناك ملف او اكثر مفقود من الملفات الضرورية لتشغيل البرنامج. السبب الابرز لظهور هذا الخطأ هو اغلاق البرنامج بشكل مفاجئ بعد التشغيل الاول او ان نظام جهازك يستخدم مسارا اخر ل \"/data/\".\n
+       يمكنك محاولة محو بيانات البرنامج من اجل فرض اعادة نسخ الملفات المفقودة.</string>
+    <string name="config">الضبط</string>
+    <string name="thumb_over">المصغرات تاخذ الكثير من المساحة</string>
+    <string name="thumb_sub">تم ايجاد المصغرات التي قام نظام اندرويد بصناعتها بشكل اتوماتيكي.</string>
+    <string name="limpar">تنظيف</string>
+    <string name="on">مغعل</string>
+    <string name="off">معطل</string>
+    <string name="perm">الرجاء اعطاء صلاحيات التخزين</string>
+    <string name="art_aviso">من اجل ان يعمل هذا بشكل جيد، عليك محو ذاكرة الكاش \"cache\" واعادة التشغيل.\n
+       عند الضغط على OK سيتم اعادة تشغيل هاتفك.</string>
+    <string name="force_copy">فرض النسخ</string>
+    <string name="license">شهادة المصدر المفتوح</string>
+    <string name="app_ver">رقم اصدار البرنامج</string>
+    <string name="notices_title">الشهادات</string>
+    <string name="notices_close">اغلاق</string>
+    <string name="yagami">خفيف</string>
+    <string name="recomendado">ينصح به</string>
+    <string name="todos">الكل</string>
+    <string name="nenhum">بلا</string>
+    <string name="perfis">الاوضاع</string>
+    <string name="reset">اعادة تعيين</string>
+
+</resources>
