@@ -20,5 +20,3 @@ setprop dev.pm.dyn_samplingrate 1
 setprop ro.fb.mode 1
 setprop ro.sf.compbypass.enable 0
 setprop ro.vold.umsdirtyratio 20
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added rendering tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

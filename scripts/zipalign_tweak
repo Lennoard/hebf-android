@@ -114,5 +114,4 @@ for DIR in /system/framework; do
 done
 
 touch $ZIPALIGNDB
-echo "OK!" | busybox tee -a $HEBF
 mount -o ro,remount /system

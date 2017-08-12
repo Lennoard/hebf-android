@@ -1,6 +1,6 @@
 #!/system/bin/sh
 # HEBF
-# Credits to Page96 for this one
+# Credits to Page96
 #=======================================================================#
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -11,10 +11,6 @@
 #  GNU General Public License for more details.
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
-
-mount -o remount,rw /data
-
-HEBF=/data/data/com.androidvip.hebf/hebf_logs/app.log
 
 # ADJ Values
 chmod 644 /sys/module/lowmemorykiller/parameters/adj
@@ -115,7 +111,3 @@ else
 	 chmod 644 /sys/module/lowmemorykiller/parameters/minfree
 	 echo "$lmk14,$lmk24,$lmk34,$lmk44,$lmk54,$lmk64" > /sys/module/lowmemorykiller/parameters/minfree
 fi
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Multitasking profile set" >> $HEBF
-
-mount -o remount,ro /data

@@ -1,0 +1,33 @@
+#!/system/bin/sh
+# HEBF
+# Credits to: Paget96 and CALIBAN666
+#=======================================================================#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#=======================================================================#
+
+mount -o rw,remount /data
+
+rm -f /cache/*.apk
+rm -f /cache/*.tmp 2> /dev/null
+rm -f /cache/recovery/* 2> /dev/null
+rm -f /data/*.log 2> /dev/null
+rm -f /data/*.txt 2> /dev/null
+rm -f /data/dalvik-cache/*.apk 2> /dev/null
+rm -f /data/dalvik-cache/*.tmp 2> /dev/null
+if [ -d /data/tombstones ]; then rm -f /data/tombstones/*; fi
+if [ -d /data/system/dropbox ]; then rm -f /data/system/dropbox/*; fi
+if [ -d /data/system/usagestats ]; then rm -f /data/system/usagestats/*; fi
+if [ -d /data/anr ]; then rm -f /data/anr/*.*; fi
+if [ -d /data/backup/pending ]; then rm -f /data/backup/pending/*.tmp; fi
+if [ -d /data/cache ]; then rm -f /data/cache/*.*; fi
+if [ -d /data/log ]; then rm -f /data/log/*.*; fi
+if [ -d /data/local ]; then rm -f /data/local/*.apk && rm -f /data/local/tmp/*.* && rm -f /data/local/*.log; fi
+
+mount -o ro,remount /data

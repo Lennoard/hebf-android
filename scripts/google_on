@@ -14,7 +14,6 @@
 iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination 8.8.8.8:53
 iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination 8.8.8.8:53
 
-#No longer doing its job properly
 setprop net.dns1 8.8.8.8
 setprop net.dns2 8.8.4.4
 setprop net.rmnet0.dns1 8.8.8.8
@@ -27,5 +26,3 @@ setprop net.wlan0.dns1 8.8.8.8
 setprop net.wlan0.dns2 8.8.4.4
 setprop net.eth0.dns1 8.8.8.8
 setprop net.eth0.dns2 8.8.4.4
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added Google DNS tweak" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

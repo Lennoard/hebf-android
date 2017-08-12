@@ -18,5 +18,3 @@ setprop media.stagefright.enable-aac true
 setprop media.stagefright.enable-qcp true
 setprop media.stagefright.enable-scan true
 setprop media.stagefright.enable-record true
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added video streaming tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

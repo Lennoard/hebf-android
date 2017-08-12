@@ -20,6 +20,3 @@ setprop ro.kernel.android.checkjni 0
 setprop ro.vold.umsdirtyratio 20
 setprop dalvik.vm.checkjni false
 setprop dalvik.vm.execution-mode int:jit
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-

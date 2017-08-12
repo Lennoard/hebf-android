@@ -15,5 +15,3 @@ setprop debug.performance.tuning 1
 setprop persist.sys.use_dithering 0
 setprop persist.sys.use_16bpp_alpha 1
 setprop ro.min.fling_velocity 8000
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added performance tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

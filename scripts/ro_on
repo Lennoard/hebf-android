@@ -17,5 +17,3 @@ setprop persist.sys.scrollingcache 3
 setprop ro.securestorage.knox false
 setprop ro.max.fling_velocity 12000
 setprop ro.min.fling_velocity 8000
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Scrolling tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log

@@ -6,13 +6,6 @@
         <item>Máximo</item>
     </string-array>
 
-    <string-array name="vip">
-        <item>Padrão</item>
-        <item>Médio</item>
-        <item>Extremo</item>
-        <item>Ultra extremo</item>
-    </string-array>
-
     <string-array name="bateria">
         <item>Status:</item>
         <item>Carregando via:</item>
@@ -52,4 +45,40 @@
         <item>RAM livre</item>
         <item>Jogos</item>
     </string-array>
+
+    <string-array name="schedule_fstrim_values">
+        <item>@string/off</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+        <item>3 horas</item>
+        <item>5 horas</item>
+        <item>7 horas</item>
+        <item>10 horas</item>
+        <item>12 horas</item>
+        <item>15 horas</item>
+    </string-array>
+
+    <string-array name="screen_options">
+        <item>@string/off</item>
+        <item>25% menos</item>
+        <item>44% menos</item>
+        <item>50% menos</item>
+        <item>66% menos</item>
+    </string-array>
+
+    <string-array name="vip_auto_turn_on">
+        <item>@string/off</item>
+        <item>aos 40% de bateria</item>
+        <item>aos 30% de bateria</item>
+        <item>aos 15% de bateria</item>
+        <item>aos 10% de bateria</item>
+        <item>aos 5% de bateria</item>
+    </string-array>
+
+    <string-array name="user_profiles">
+        <item>@string/normal_user</item>
+        <item>@string/expert_user</item>
+        <item>@string/chuck_user</item>
+    </string-array>
+
 </resources>

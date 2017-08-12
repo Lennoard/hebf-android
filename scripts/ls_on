@@ -14,6 +14,3 @@
 setprop persist.service.lgospd.enable 0
 setprop persist.service.pcsync.enable 0
 setprop touch.pressure.scale 0.001
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added UI tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-

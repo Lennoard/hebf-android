@@ -11,9 +11,6 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-echo "500" > /proc/sys/vm/dirty_expire_centisecs;
-echo "1000" > /proc/sys/vm/dirty_writeback_centisecs
-
 setprop ro.mot.eri.losalert.delay 1000
 setprop pm.sleep_mode 1
 setprop wifi.supplicant_scan_interval 180
@@ -21,6 +18,3 @@ setprop power.saving.mode 1
 setprop ro.com.google.networklocation 0
 setprop ro.kernel.android.checkjni 0
 setprop ro.vold.umsdirtyratio 20
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| Added battery tweaks" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
-

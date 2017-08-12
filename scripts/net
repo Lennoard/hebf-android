@@ -1,6 +1,5 @@
 #!/system/bin/sh
 # HEBF
-# Ultra thanks to Paget96
 #=======================================================================#
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -25,6 +24,3 @@ busybox echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
 busybox echo "5" > /proc/sys/net/ipv4/tcp_keepalive_probes
 busybox echo "30" > /proc/sys/net/ipv4/tcp_keepalive_intvl
 busybox echo "30" > /proc/sys/net/ipv4/tcp_fin_timeout
-
-
-busybox echo "[I] |$(date +%Y/%m/%d) $(date +%A), $(date +%H:%M:%S)| TCP tweaks added" >> /data/data/com.androidvip.hebf/hebf_logs/app.log
