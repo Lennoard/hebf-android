@@ -39,7 +39,7 @@
     </string-array>
 
     <string-array name="perfis_lmk">
-        <item>@string/nenhum</item>
+        <item>@string/custom</item>
         <item>Moderate</item>
         <item>Multitasking</item>
         <item>Free RAM</item>
@@ -56,14 +56,7 @@
         <item>10 hours</item>
         <item>12 hours</item>
         <item>15 hours</item>
-    </string-array>
-
-    <string-array name="screen_options">
-        <item>@string/off</item>
-        <item>25% lower</item>
-        <item>44% lower</item>
-        <item>50% lower</item>
-        <item>66% lower</item>
+        <item>@string/custom</item>
     </string-array>
 
     <string-array name="vip_auto_turn_on">
@@ -79,6 +72,34 @@
         <item>@string/normal_user</item>
         <item>@string/expert_user</item>
         <item>@string/chuck_user</item>
+    </string-array>
+
+    <string-array name="entropy_profiles">
+        <item>@string/custom</item>
+        <item>Very low</item>
+        <item>Low</item>
+        <item>@string/medium</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <string-array name="doze_waiting_intervals">
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+    </string-array>
+
+    <string-array name="schedule_mediaserver_values">
+        <item>@string/off</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>9 hours</item>
+        <item>12 hours</item>
+        <item>16 hours</item>
+        <item>24 hours</item>
     </string-array>
 
 </resources>

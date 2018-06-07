@@ -6,19 +6,19 @@
         <item>Maximum</item>
     </string-array>
     <string-array name="bateria">
-        <item>Status:</item>
-        <item>Charging via:</item>
-        <item>Health:</item>
-        <item>Technology:</item>
-        <item>Voltage:</item>
-        <item>Scale:</item>
+        <item>状态:</item>
+        <item>通过充电:</item>
+        <item>健康:</item>
+        <item>技术:</item>
+        <item>电压:</item>
+        <item>规模:</item>
     </string-array>
 
     <string-array name="bateria_status">
-        <item>charging</item>
-        <item>discharging</item>
-        <item>not charging</item>
-        <item>fully charged</item>
+        <item>充电</item>
+        <item>放电</item>
+        <item>不收费</item>
+        <item>充满电</item>
     </string-array>
 
     <string-array name="bateria_conectado">
@@ -28,7 +28,7 @@
     </string-array>
 
     <string-array name="bateria_saude">
-        <item>healthy</item>
+        <item>健康</item>
         <item>cold</item>
         <item>is no longer with us</item>
         <item>overheat</item>
@@ -38,31 +38,24 @@
     </string-array>
 
     <string-array name="perfis_lmk">
-        <item>@string/nenhum</item>
-        <item>Moderate</item>
-        <item>Multitasking</item>
-        <item>Free RAM</item>
+        <item>@string/custom</item>
+        <item>中等</item>
+        <item>多任务处理</item>
+        <item>可用内存</item>
         <item>Gaming</item>
     </string-array>
 
     <string-array name="schedule_fstrim_values">
         <item>@string/off</item>
-        <item>1 hour</item>
-        <item>2 hours</item>
-        <item>3 hours</item>
-        <item>5 hours</item>
-        <item>7 hours</item>
-        <item>10 hours</item>
-        <item>12 hours</item>
-        <item>15 hours</item>
-    </string-array>
-
-    <string-array name="screen_options">
-        <item>@string/off</item>
-        <item>25% lower</item>
-        <item>44% lower</item>
-        <item>50% lower</item>
-        <item>66% lower</item>
+        <item>1小时</item>
+        <item>2小时</item>
+        <item>3小时</item>
+        <item>5个小时</item>
+        <item>7个小时</item>
+        <item>10个小时</item>
+        <item>12小时</item>
+        <item>15个小时</item>
+        <item>@string/custom</item>
     </string-array>
 
     <string-array name="vip_auto_turn_on">
@@ -78,6 +71,34 @@
         <item>@string/normal_user</item>
         <item>@string/expert_user</item>
         <item>@string/chuck_user</item>
+    </string-array>
+
+    <string-array name="entropy_profiles">
+        <item>@string/custom</item>
+        <item>非常低</item>
+        <item>低</item>
+        <item>@string/medium</item>
+        <item>高</item>
+        <item>很高</item>
+    </string-array>
+
+    <string-array name="doze_waiting_intervals">
+        <item>5分钟</item>
+        <item>10分钟</item>
+        <item>15分钟</item>
+        <item>20分钟</item>
+        <item>30分钟</item>
+        <item>45分钟</item>
+    </string-array>
+
+    <string-array name="schedule_mediaserver_values">
+        <item>@string/off</item>
+        <item>3小时</item>
+        <item>6个小时</item>
+        <item>9个小时</item>
+        <item>12小时</item>
+        <item>16小时</item>
+        <item>24小时</item>
     </string-array>
 
 </resources>

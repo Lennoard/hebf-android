@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backups_count">
+        <item quantity="one">%d backup encontrado</item>
+        <item quantity="other">%d backups encontrados</item>
+    </plurals>
+</resources>

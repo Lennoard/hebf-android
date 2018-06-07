@@ -9,8 +9,8 @@
     <string-array name="bateria">
         <item>Status:</item>
         <item>Charging via:</item>
-        <item>Health:</item>
-        <item>Technology:</item>
+        <item>Salute:</item>
+        <item>Tecnologia:</item>
         <item>Voltage:</item>
         <item>Scale:</item>
     </string-array>
@@ -39,8 +39,8 @@
     </string-array>
 
     <string-array name="perfis_lmk">
-        <item>@string/nenhum</item>
-        <item>Moderate</item>
+        <item>@string/custom</item>
+        <item>Moderare</item>
         <item>Multitasking</item>
         <item>Free RAM</item>
         <item>Gaming</item>
@@ -48,22 +48,15 @@
 
     <string-array name="schedule_fstrim_values">
         <item>@string/off</item>
-        <item>1 hour</item>
-        <item>2 hours</item>
-        <item>3 hours</item>
-        <item>5 hours</item>
-        <item>7 hours</item>
-        <item>10 hours</item>
-        <item>12 hours</item>
-        <item>15 hours</item>
-    </string-array>
-
-    <string-array name="screen_options">
-        <item>@string/off</item>
-        <item>25% lower</item>
-        <item>44% lower</item>
-        <item>50% lower</item>
-        <item>66% lower</item>
+        <item>1 ora</item>
+        <item>2 ore</item>
+        <item>3 ore</item>
+        <item>5 ore</item>
+        <item>7 ore</item>
+        <item>10 ore</item>
+        <item>12 ore</item>
+        <item>15 ore</item>
+        <item>@string/custom</item>
     </string-array>
 
     <string-array name="vip_auto_turn_on">
@@ -79,6 +72,34 @@
         <item>@string/normal_user</item>
         <item>@string/expert_user</item>
         <item>@string/chuck_user</item>
+    </string-array>
+
+    <string-array name="entropy_profiles">
+        <item>@string/custom</item>
+        <item>Molto basso</item>
+        <item>Basso</item>
+        <item>@string/medium</item>
+        <item>Alto</item>
+        <item>Molto alto</item>
+    </string-array>
+
+    <string-array name="doze_waiting_intervals">
+        <item>5 minuti</item>
+        <item>10 minuti</item>
+        <item>15 minuti</item>
+        <item>20 minuti</item>
+        <item>30 minuti</item>
+        <item>45 minuti</item>
+    </string-array>
+
+    <string-array name="schedule_mediaserver_values">
+        <item>@string/off</item>
+        <item>3 ore</item>
+        <item>6 ore</item>
+        <item>9 ore</item>
+        <item>12 ore</item>
+        <item>16 ore</item>
+        <item>24 ore</item>
     </string-array>
 
 </resources>
