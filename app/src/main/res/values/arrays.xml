@@ -86,6 +86,7 @@
         <item>AMOLED</item>
         <item>Green</item>
         <item>Dark green</item>
+        <item>White</item>
     </string-array>
 
     <string-array name="themes_values" translatable="false">
@@ -94,6 +95,7 @@
         <item>amoled</item>
         <item>green</item>
         <item>dark_green</item>
+        <item>white</item>
     </string-array>
 
     <string-array name="entropy_profiles">
@@ -111,7 +113,6 @@
     </string-array>
 
     <string-array name="doze_waiting_intervals">
-        <item>5 minutes</item>
         <item>10 minutes</item>
         <item>15 minutes</item>
         <item>20 minutes</item>

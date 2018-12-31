@@ -83,7 +83,6 @@
     </string-array>
 
     <string-array name="doze_waiting_intervals">
-        <item>5分钟</item>
         <item>10分钟</item>
         <item>15分钟</item>
         <item>20分钟</item>

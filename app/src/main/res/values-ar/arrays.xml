@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="psfmc_array">
-        <item>Disabled</item>
-        <item>Medium</item>
-        <item>Maximum</item>
+        <item>معاق</item>
+        <item>@string/medium</item>
+        <item>أقصى</item>
     </string-array>
 
     <string-array name="bateria">
-        <item>Status:</item>
+        <item>الحالة:</item>
         <item>Charging via:</item>
-        <item>Health:</item>
-        <item>Technology:</item>
-        <item>Voltage:</item>
-        <item>Scale:</item>
+        <item>الصحة:</item>
+        <item>تقنية:</item>
+        <item>الجهد االكهربى:</item>
+        <item>مقياس:</item>
     </string-array>
 
     <string-array name="bateria_status">
-        <item>charging</item>
+        <item>شحن</item>
         <item>discharging</item>
         <item>not charging</item>
         <item>fully charged</item>
@@ -29,13 +29,13 @@
     </string-array>
 
     <string-array name="bateria_saude">
-        <item>healthy</item>
-        <item>cold</item>
-        <item>is no longer with us</item>
-        <item>overheat</item>
-        <item>over voltage!</item>
-        <item>unknown</item>
-        <item>unspecified failure</item>
+        <item>صحي</item>
+        <item>البرد</item>
+        <item>لم يعد معنا</item>
+        <item>سخن</item>
+        <item>أكثر من الجهد!</item>
+        <item>غير معروف</item>
+        <item>فشل غير محدد</item>
     </string-array>
 
     <string-array name="perfis_lmk">
@@ -76,15 +76,14 @@
 
     <string-array name="entropy_profiles">
         <item>@string/custom</item>
-        <item>Very low</item>
+        <item>منخفظ جدا</item>
         <item>Low</item>
         <item>@string/medium</item>
         <item>High</item>
-        <item>Very High</item>
+        <item>عالي جدا</item>
     </string-array>
 
     <string-array name="doze_waiting_intervals">
-        <item>5 minutes</item>
         <item>10 minutes</item>
         <item>15 minutes</item>
         <item>20 minutes</item>
