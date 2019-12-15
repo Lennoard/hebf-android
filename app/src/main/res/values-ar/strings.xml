@@ -34,7 +34,7 @@
     <string name="multitasking_off">وضع تعدد المهام معطل</string>
     <string name="multitasking_sub">تعدد مهام ممتاز.\n
  للذين يحبون تشغيل الكثير من التطبيقات في نفس الوقت دون استهلاك الكثير من البطارية.</string>
-    <string name="performance_texto">الاداء العام</string>
+    <string name="general_performance">الاداء العام</string>
     <string name="ui_tweaks">تحسينات واجهة المستخدم</string>
     <string name="liquid">تحسين اداء واجهة المستخدم</string>
     <string name="liquid_on">تحسين اداء واجهة المستخدم مفعل</string>
@@ -58,18 +58,6 @@
        سوف يتسبب هذا بجعل الجهاز غير قابل للعمل!!!</string>
     <string name="dpi_botao">CHANGE</string>
     <string name="dpi_edit">القيمة</string>
-    <string name="dpi_dialogo">هذه الميزة ماتزال تحت التجربة وهناك بعض الاعمال اللتي يجب القيام بها لتصبح جاهزة.\n
-       \n
-       المقاسات الافتراضية لبعض الشاشات:\n
-       \n
-       240x320(ldpi) - 120\n
-       320x480(mdpi) - 160\n
-       480x854(hdpi) - 240\n
-       540x960(hdpi) - 240\n
-       720x1280(xhdpi) - 320\n
-       1080x1920(xxhdpi) - 480\n
-       \n
-       تحذير: تجاهل كافة المعلومات اعلاه اذا كان جهازك من نوع تاب Tablet</string>
     <string name="dpi_reboot">هناك احتمال ان يتسبب هذا في عدم اقلاع جهازك بعد الان!\n
        اذا قمت بضبط قيمة غير مناسبة لجهازك سوف تمرر الى ملف الخصائص الان!</string>
     <string name="dpi_valor">هي القيمة اللتي تم اختيارها لقياس الشاشة،استمرار؟</string>
@@ -86,10 +74,8 @@
     <string name="request_storage_permission_sum">Storage permission will be used to:\n\n- Backup files\n- Retrieve the wallpaper\n- Logging</string>
     <string name="final_sub">اضغط على الزر السفلي من اجل اكمال تهيئة البرنامج.</string>
     <string name="finalizar">تم!</string>
-    <string name="restaurar_sub">تم استرجاع الملفات</string>
     <string name="calibrado">تم اعادة ضبط العدادات الى الصفر</string>
     <string name="eh_noyz">اهلا!</string>
-    <string name="miscellaneous_tools">ادوات متنوعة</string>
     <string name="log">تعطيل السجلات</string>
     <string name="log_sub">ان كنت لاتريد من نظام اندرويد ان يسعى لتسجيل كل شيء يحدث مع التطبيقات، قم بتفعيل هذا الخيار.</string>
     <string name="utilidades">الخدمات</string>
@@ -100,7 +86,7 @@
     <string name="log_off">التسجيل معطل</string>
     <string name="log_on">تم اعادة تفعيل التسجيل</string>
     <string name="title_activity_opcoes">خيارات</string>
-    <string name="melhoras">تحسينات</string>
+    <string name="improvements">تحسينات</string>
     <string name="bateria_kk_snack">تحسين البطارية مفعل</string>
     <string name="bateria_kk_snack_off">تحسين البطارية معطل</string>
     <string name="apagar">حذف</string>
@@ -108,17 +94,13 @@
     <string name="cleaner">منظف</string>
     <string name="junk_cleaned">تم حذف المهملات</string>
     <string name="error">خطأ</string>
-    <string name="busybox_not_found">يبدو ان busybox غير موجود في اي مكان.\n
-       يتطلب عمل هذا البرنامج وجود Stericson\'s busybox، قم بتنزيله وتثبيته رجاء.</string>
     <string name="title_activity_sobre">حول</string>
     <string name="lennoard_sub">المطور والمصمم</string>
     <string name="empty">قلب فارغ؟</string>
     <string name="title_activity_thanks">شكرا</string>
     <string name="special">شكر خاص</string>
-    <string name="adaway_2">برنامج AdAway يتم ادارته عن طريق kaladin و Dāvis Mošenkovs. تم بناءه وتطويره عن طريق Dominik Schürmann.</string>
     <string name="special_sub_2">ايضا استخدمنا بعض السكريبتات مفتوحة المصدر التي برمجها paget96 بنفسه.\n
      وايضا بمساهمة من عدة اعضاء من جمعية المطورين (تفقد الشهادة في تلك الملفات)</string>
-    <string name="adaway_1">Dominik Schürmann, 0-kaladin و Dāvis Mošenkovs من اجل:</string>
     <string name="honrra">▪ Reiny Zamayuti (TjReiny): Tips, suggestions, testing, review\n▪ Jamiéric Gomes: Color, Material Design and layout tips\n
    ▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n
    ▪ Rivaldo Freitas: Color and layout suggestions\n
@@ -148,12 +130,10 @@
     <string name="license">شهادة المصدر المفتوح</string>
     <string name="app_ver">رقم اصدار البرنامج</string>
     <string name="close">اغلاق</string>
-    <string name="yagami">خفيف</string>
-    <string name="nenhum">بلا</string>
+    <string name="none">بلا</string>
     <string name="profiles">الاوضاع</string>
     <string name="reset">اعادة تعيين</string>
     <string name="add">إضافة</string>
-    <string name="add_from_presets">أضف من الإعدادات المسبقة</string>
     <string name="advanced_fail">عذرا حاول مرة أخرى</string>
     <string name="advanced_options">خيارات متقدمة</string>
     <string name="advanced_toast">You have unlocked the advanced options!</string>
@@ -168,15 +148,13 @@
     <string name="apply_on_boot">تطبيق عند بدء التشغيل</string>
     <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
     <string name="enabling">تمكين…</string>
-    <string name="atraso">Reapply interval</string>
-    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
     <string name="battery_information">معلومات البطارية</string>
     <string name="br_sum">إذا وجدت خطأ أو لديك أي اقتراحات فلا تتردد في إرسال لنا (عبر البريد الإلكتروني). سنرد في أقرب وقت ممكن.</string>
     <string name="browsing">تحسين سرعة التصفح</string>
     <string name="browsing_off">Buffer tweaks disabled</string>
     <string name="browsing_on">Buffer tweaks enabled</string>
     <string name="browsing_sub">Tweaks for the buffer size of the connection types, from LTE to GPRS. Results in a better browsing experience.</string>
-    <string name="busybox1">The busybox assures us that all commands will run on all versions of the system, it is a binary that gathers the most common LINUX / UNIX commands into one, so if one of them is missing on your system, it will be present in busybox.</string>
+    <string name="busybox_install_headline">لم يتم العثور على الملفات اللازمة لتشغيل التطبيق على نظامك.</string>
     <string name="captive_portal">كشف البوابة الأسير</string>
     <string name="captive_sub">يقوم بتبديل اكتشاف البوابة المقيدة. في حالة تشغيله ، سيحاول النظام التحقق من جودة الاتصال من أجل اكتشاف الاتصال.</string>
     <string name="loading">جار التحميل…</string>
@@ -191,15 +169,9 @@
     <string name="device">Device</string>
     <string name="device_info">معلومات الجهاز</string>
     <string name="disable">تعطيل</string>
-    <string name="disable_gp_services">تعطيل خدمات Google Play</string>
-    <string name="disable_gp_services_gms">خدمات Google Mobile و Cloud</string>
-    <string name="disable_gp_services_location">خدمات الموقع</string>
-    <string name="disable_gp_services_sub">تعطيل بعض خدمات تطبيق خدمات Google Play التي تعمل في الخلفية ، مما يساعد على توفير طاقة البطارية.</string>
     <string name="dns_off">جوجل DNS تعطيل</string>
     <string name="dns_on">تم تمكين Google DNS</string>
     <string name="dns_sum">يمكن لنظام أسماء النطاقات المخصص تحسين السرعة والاستجابة والأمان. كما يمكنها أيضًا السماح لك بالوصول إلى المواقع المحجوبة وتجاوز بعض فلاتر الرقابة في شبكتك ، وفقًا لموقعك.</string>
-    <string name="donate_sub">تبرع للمطورين</string>
-    <string name="donation_sub">هل يستحق هذا التطبيق احترامك؟</string>
     <string name="done">فعله</string>
     <string name="dynamic_fsync">Dynamic fsync</string>
     <string name="dynamic_fsync_sub">يضمن Fsync كتابة كافة البيانات إلى جهاز التخزين ، فإنه ينتظر حتى يبلغ الجهاز عن اكتمال النقل ، مما يمنع فقدان البيانات في حالة تعطل النظام. (مما قد يتسبب في تأخير).</string>
@@ -209,10 +181,9 @@
     <string name="send">إرسال</string>
     <string name="choose_package">اختر حزمة</string>
     <string name="please_wait">يرجى الانتظار ، قد يستغرق هذا ما يصل إلى دقيقة واحدة.</string>
-    <string name="estou_sem_dinheiro">I don\'t have money</string>
     <string name="expert_user">مستخدم خبير</string>
     <string name="expert_user_sub">أنت تأمر ، نحن نطيع. لن يتم إخفاء أي شيء.</string>
-    <string name="clean_caches">مخابئ نظيفة</string>
+    <string name="clear_caches">مخابئ نظيفة</string>
     <string name="kill_mediaserver">Kill media server</string>
     <string name="fab_media_sub">تفحص عملية Mediaserver جهازك بحثًا عن ملفات الوسائط. معظم الوقت فقط إعادة تشغيل الكمبيوتر كافية لإصلاح المشاكل معها.</string>
     <string name="fast_charge">USB Fast charge</string>
@@ -235,7 +206,6 @@
     <string name="gpu_off">GPU tweaks disabled</string>
     <string name="gpu_on">GPU tweaks enabled</string>
     <string name="gpu_sub">Enables the hardware accelerated UI, forces GPU screen composing and disables the vsync for a much better performance at the cost of battery.</string>
-    <string name="hebf_sobre_sub_2">Feeling heartbroken? Someone screwed up with you? Forget it. Your heart can be empty, do not let your battery get too!</string>
     <string name="info_restart_app">Restart the app (remove it from the Recent Apps) to apply changes</string>
     <string name="install_now">INSTALL NOW</string>
     <string name="intro_guia">أهلا بك! سيساعدك هذا الدليل خلال عملية إعداد التطبيق</string>
@@ -266,8 +236,6 @@
     <string name="lmk_sub">LMK is a set of parameters that sets the limits at which applications are killed in order to free RAM. Set the value to the levels below in megabytes.</string>
     <string name="lmk_visible_app">التطبيقات المرئية</string>
     <string name="lmk_visible_sum">تلك التطبيقات التي تعمل في الخلفية وما زالت تقوم ببعض الإجراءات.</string>
-    <string name="lock">App killing tendency</string>
-    <string name="lock_sub">This option will decrease the tendency of a process to be killed by the system in OOM (Out of memory) cases. This can only be set to a RUNNING process, that means you need to open / wake it up in order to see it in the below list.</string>
     <string name="low_ram_device_flag">Low RAM Device flag</string>
     <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.If disabled, you may need to reboot to revert back.</string>
     <string name="medium">متوسط</string>
@@ -348,9 +316,6 @@
     <string name="tap_sub">Wake up your device with a double tap on the screen, similar to Knock On of some LG devices.</string>
     <!-- keep the %1$s it wil be replaced by a number -->
     <string name="temperature">Temperature: %1$s</string>
-    <string name="tendency">Tendency</string>
-    <string name="tendency_sub">Higher values mean that the process will be killed first.</string>
-    <string name="thank_you">شكرا لكم!</string>
     <string name="theme">موضوع</string>
     <string name="theme_sub">اختر موضوع التطبيق</string>
     <string name="tipo_usuario">ما نوع المستخدم أنت؟</string>
@@ -359,9 +324,8 @@
     <string name="settings">إعدادات</string>
     <string name="title_activity_dex2oat_filter">ART Compiler Filter</string>
     <string name="title_activity_dns">دليل DNS</string>
-    <string name="donate">تبرع</string>
     <string name="entropy">غير قادر علي</string>
-    <string name="title_activity_lmk">Low Memory Killer</string>
+    <string name="low_memory_killer">Low Memory Killer</string>
     <string name="internet_tweaks">Internet Tweaks</string>
     <string name="toggle_ipv6">Toggle IPv6</string>
     <string name="vip_battery_saver">VIP Battery Saver</string>
@@ -374,7 +338,7 @@
     <string name="value">القيمة</string>
     <string name="view_log">View the logs</string>
     <string name="vip_android_default_saver">Android الافتراضي التوقف</string>
-    <string name="vip_auto_turn_on">تشغيل تلقائي</string>
+    <string name="auto_turn_on">تشغيل تلقائي</string>
     <string name="vip_aviso">هذا الخيار قد يبطئ جهازك</string>
     <string name="vip_disable_data">تعطيل شبكة Wi-Fi وبيانات الجوال</string>
     <string name="vip_disable_when_connecting">Turn off when connecting the charger</string>
@@ -393,7 +357,6 @@
     <string name="import_config_error">فشل استيراد ملف التكوين</string>
     <string name="import_config_success">تم بنجاح استيراد ملف التكوين</string>
     <string name="import_">استيراد</string>
-    <string name="select">تحديد</string>
     <string name="cpu_governor">محافظ حاكم</string>
     <string name="cpu_max_frequency">أقصى تردد</string>
     <string name="cpu_min_frequency">الحد الأدنى من التردد</string>
@@ -402,52 +365,29 @@
     <string name="aggressive_doze_off">Aggressive doze mode disabled</string>
     <string name="aggressive_doze_on">Aggressive doze mode enabled</string>
     <string name="aggressive_doze_sum">يفرض وضع Doze لتنشيط اللحظات بعد إيقاف تشغيل الشاشة.</string>
-    <string name="tap_target_battery_profiles">المس هنا لتعيين ملفات تعريف البطارية بسرعة</string>
-    <string name="tap_target_performance_profiles">المس هنا لتعيين ملفات تعريف الأداء بسرعة</string>
     <string name="minutes_scheduled_time">Service is scheduled to run every %1$s minutes</string>
     <string name="theme_dark_sum">للقلوب المكسور والباردة</string>
     <string name="theme_light_sum">لقلوب بهيجة ودافئة</string>
-    <string name="blank_value_warning">هل أنت متأكد من أنك تريد تعيين قيمة فارغة؟</string>
-    <string name="tap_target_sysctl_apply">المس هنا لتطبيق القيم التي عينتها باستخدام حقل الإدخال</string>
-    <string name="action">عمل</string>
-    <string name="insert">إدراج</string>
-    <string name="script_last_run">Last run: %1$s</string>
-    <string name="same_name_error">يوجد بالفعل ملف بهذا الاسم</string>
-    <string name="script_select_hint">يرجى تحديد ملف نصي .sh</string>
-    <string name="script_shebang_warning">يسمح فقط قذائف sh.</string>
-    <string name="view">اظهرها</string>
     <string name="apps_manager_3rd_party">Third-party apps</string>
     <string name="apps_manager_all_apps">كل التطبيقات</string>
     <string name="apps_manager_disabled_apps">التطبيقات المعطلة</string>
     <string name="apps_manager_system_apps">تطبيقات النظام</string>
     <string name="apps_manager">مدير التطبيقات</string>
-    <string name="scripts_runner">Scripts Runner</string>
     <string name="package_uninstalled">تم إلغاء تثبيت الحزمة</string>
     <string name="success">نجاح</string>
     <string name="storage">تخزين</string>
-    <string name="tap_target_scripts">استخدم هذا الزر لإضافة برنامج نصي shell من التخزين</string>
     <string name="clear_data">امسح البيانات</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="failed">فشل</string>
     <string name="fps_unlocker_sum">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another)</string>
-    <string name="script_no_script_added">لم يتم إضافة أي برنامج نصي</string>
     <string name="unsafe_operation">عملية غير آمنة</string>
-    <string name="create">خلق</string>
     <string name="hours_scheduled_time">Service is scheduled to run every %1$s hours</string>
     <string name="service_not_scheduled">الخدمة غير مجدولة</string>
     <string name="doze_master_switch">تمكين doze mode</string>
     <string name="doze_settings">إعدادات Doze</string>
     <string name="doze_whitelist">القائمة البيضاء</string>
-    <string name="behavior">سلوك</string>
-    <string name="doze_whitelist_suspending">Whitelist suspending</string>
-    <string name="doze_whitelist_suspending_sum">فرض قيود Doze على تطبيقات القائمة البيضاء لفترة معينة من الوقت</string>
-    <string name="doze_blacklist_suspending">Blacklist suspending</string>
-    <string name="doze_blacklist_suspending_sum">تعطيل قيود Doze على التطبيقات المدرجة في القائمة السوداء لفترة زمنية معينة</string>
     <string name="vip_disable_when_connecting_sum">قم بتعطيل الخدمة عند توصيل الشاحن</string>
-    <string name="doze_no_app_selected">لم يتم تحديد أي تطبيق</string>
     <string name="name">اسم</string>
-    <string name="tap_target_sysctl_cancel">سيؤدي النقر هنا الآن إلى الإلغاء والرجوع إلى /proc/sys</string>
-    <string name="script_timeout_error">استغرق السيناريو وقتا طويلا لإنجاز تنفيذه ، وبالتالي قتل</string>
     <string name="doze_whitelist_remove_app">هل تريد إزالة هذا التطبيق من القائمة البيضاء؟</string>
     <string name="doze_blacklist_gms">عذرًا ، لا يمكن إدراج هذا التطبيق في القائمة السوداء في الوقت الحالي …</string>
     <string name="doze_blacklist_app_added">%1$s has been added to the blacklist</string>
@@ -459,7 +399,7 @@
     <string name="doze_waiting_interval">الفاصل الزمني الاستعداد</string>
     <string name="doze_waiting_interval_sum">Wait approximately %1$s minutes before entering in %2$s mode</string>
     <string name="doze_idling_mode">وضع السكون</string>
-    <string name="cpu_core_status_online">Core %d @ %dMHz</string>
+    <string name="cpu_core_status_online">Core %1$d @ %2$dMHz</string>
     <string name="cpu_core_status_offline">Core %d (offline)</string>
     <string name="cpu_governor_tunables">Governor tunables values</string>
     <string name="login_failure">فشل تسجيل الدخول</string>
@@ -512,8 +452,6 @@
     <string name="dark_wallpaper">خلفية مظلمة</string>
     <string name="dark_wallpaper_sum">يمكن أن تساعد خلفية الشاشة الداكنة على توفير البطارية على شاشات AMOLED من خلال تقليل عدد وحدات البكسل قيد التشغيل</string>
     <string name="quick_settings">الإعدادات السريعة</string>
-    <string name="log_in_automatically">تسجيل الدخول تلقائيا</string>
-    <string name="log_in_automatically_sum">تسجيل الدخول تلقائيًا باستخدام آخر حساب تم العثور عليه عند فتح التطبيق</string>
     <string name="date">تاريخ</string>
     <string name="data_type">نوع البيانات</string>
     <string name="import_data">بيانات الاستيراد</string>
@@ -533,8 +471,6 @@
     <string name="my_public_configs">تشكيلاتي العامة</string>
     <string name="delete">حذف</string>
     <string name="public_configurations">التكوينات العامة</string>
-    <string name="sort">فرز</string>
-    <string name="vip_avisoless">and it works on improving his battery.</string>
     <string name="pro_feature">ميزة برو</string>
     <string name="pro_feature_sum">يرجى النظر في شراء HEBF Optimizer Pro لاستخدام هذه الميزة</string>
     <string name="delete_account_confirm">هل انت متأكد انك تريد حذف حسابك؟ لن يتم الحفاظ على البيانات الخاصة بك. بعد العملية ، سيتم قطع اتصالك.</string>
@@ -553,47 +489,30 @@
     <string name="update_available_sum">هناك إصدار أحدث من التطبيق</string>
     <string name="continue_alert">استمر</string>
     <string name="dont_show">لا تظهر</string>
-    <string name="vip_saver_less">سيؤدي ذلك إلى حفظ البطارية ، وإيقاف تشغيل الميزات غير الضرورية والحد من غيرها ، وإيقاف التطبيقات التي تستنزف البطارية لتوفر لك أفضل ما في جهازك.</string>
+    <string name="hibernate_apps_sum">سيؤدي ذلك إلى حفظ البطارية ، وإيقاف تشغيل الميزات غير الضرورية والحد من غيرها ، وإيقاف التطبيقات التي تستنزف البطارية لتوفر لك أفضل ما في جهازك.</string>
     <string name="accessibility_alert">نحتاج إلى إذنك لتنفيذ إجراءات توفير شحن البطارية وإغلاق التطبيقات غير النشطة. انقر فوق \"متابعة\" وستفتح شاشة الإعدادات ، وابحث عن شيء مشابه لما يوضحه البرنامج التعليمي أدناه:</string>
     <string name="charging_dialog">جارٍ شحن جهازك الآن ، هل تريد حقًا تمكين هذا الخيار؟</string>
-    <string name="wifi">واي فاي</string>
-    <string name="busybox_install_hint">يمكنك محاولة تنزيل وتثبيت busybox من خلال برنامج HEBF Optimizer أو تنزيل أي تطبيق BUSYBOX INSTALLER من متجر Google Play وتثبيته منه.</string>
+    <string name="busybox_install_hint">You can try to download any busybox installer app from the Google Play Store and install it from there.</string>
     <string name="optimize">تحسين</string>
     <string name="hibernate_apps">تطبيقات السبات</string>
     <string name="game_booster">لعبة الداعم</string>
     <string name="busybox_install_error_copy">فشل في نسخ busybox الثنائية</string>
-    <string name="busybox_installed">تم تثبيت Busybox ، انقر فوق موافق لإعادة تشغيل التطبيق.</string>
-    <string name="busybox_install_error_fnf">لم يتم العثور على الملف الذي تم تنزيله!</string>
     <string name="gamenews">زيادة أداء الألعاب</string>
-    <string name="busybox_install_error_integrity">عملية غير آمنة ، فشل اختبار النزاهة. حاول تنزيله مرة أخرى.</string>
     <string name="subgame_news">احصل على أفضل تجربة لعب الآن!</string>
     <string name="auto_optimize_sub">قم بتحسين اللعبة بعد 15 دقيقة ، وهو مفيد جدًا في الألعاب العالمية الثقيلة أو المفتوحة (قد يؤدي ذلك إلى تعكير اللعبة)</string>
     <string name="auto_optimizer">مُحسِّن تلقائي</string>
     <string name="game_booster_sub">تحسين أفضل لعبتك ، سيستخدم هذا الخيار كل ما في متناول يدنا ، لنمنحك لعبة بأكبر قدر ممكن من FPS لأفضل تجربة ممكنة</string>
     <string name="launch_games">إطلاق لعبة</string>
     <string name="other_games">Enhanced Games</string>
-    <string name="busybox_install_installing">تثبيت busybox…</string>
-    <string name="busybox_install_downloading">جارٍ تنزيل busybox…</string>
     <string name="optimize_now">تحسينه الآن</string>
     <string name="auto_optimize_performance">سيعمل هذا الخيار على تحسين جهازك تلقائيًا كل 15 دقيقة ، وسيمنحك هذا الخيار تجربة جديدة في أداء جهازك</string>
     <string name="accessibility_service">خدمة الوصول</string>
-    <string name="achievement_advanced_sum">العثور على القسم المخفي باستخدام الطريقة الخفية</string>
     <string name="achievement_backup">آمن أفضل من آسف</string>
-    <string name="achievement_backup_sum">قم بعمل نسخة احتياطية محلية</string>
-    <string name="achievement_command_line_sum">استخدام سطر الأوامر</string>
     <string name="achievement_help">ماذا يفعل هذا الشيء؟</string>
-    <string name="achievement_help_sum">طلب المساعدة</string>
     <string name="achievement_prop">خاصية</string>
-    <string name="achievement_prop_sum">إضافة prop باستخدام محرر Build.prop</string>
-    <string name="achievement_rootless">غير أصيل</string>
-    <string name="achievement_rootless_sum">استخدم الخيارات بدون جذور</string>
     <string name="achievement_sharing">مشاركة</string>
-    <string name="achievement_sharing_sum">مشاركة ملف التكوين عبر الإنترنت</string>
     <string name="achievement_tunable">الكون المثالى</string>
-    <string name="achievement_tunable_sum">تغيير معامل حاسب وحدة المعالجة المركزية</string>
     <string name="achievement_unlocked">الإنجاز غير مقفلة: %s</string>
-    <string name="achievements">الإنجازات</string>
-    <string name="achievements_format">%1$d/%2$d الإنجازات غير مقفلة</string>
     <string name="owned">مملوكة</string>
     <string name="premium_package">حزمة قسط</string>
     <string name="premium_package_ad">باقة بريميوم (مع إعلانات)</string>
@@ -626,10 +545,52 @@
     <string name="tips">نصائح</string>
     <string name="temp_package_expiration_message">انتهت صلاحية الحزمة المؤقتة الخاصة بك! اشترِ حزمة بريميوم الآن لمواصلة استخدام ميزاتها.</string>
     <string name="critical_failure_sum">حاول مرة أخرى بعد إعادة تشغيل التطبيق ، إذا استمر الخطأ ، اتصل بالدعم.</string>
-    <string name="cluster_gov_format">Cluster #%d governor</string>
-    <string name="cluster_freqs_format">Cluster #%d freqs</string>
-    <string name="cluster_cores_format">Cluster #%d cores</string>
+    <string name="cpu_frequencies">الترددات</string>
+    <string name="cpus">CPUs</string>
     <string name="translations_file_help">يحتوي ملف strings.xml على النص المستخدم في هذا التطبيق. يمكنك نسخ ملف الترجمة إلى وحدة التخزين الخاصة بك إذا كنت ترغب في ترجمته باستخدام هاتفك. بمجرد الانتهاء من الترجمة ، فقط أرسل لنا مرة أخرى من خلال دعم البريد الإلكتروني لدينا.</string>
     <string name="translations_github_help">إذا كنت تفضل ذلك ، يمكنك الحصول على نفس الملف على GitHub مع اختلاف إمكانية رؤية الملفات التي تم ترجمتها بالفعل. قم بتنزيل الملفات مباشرة من هناك أو تفرع المشروع ، ثم تحتاج فقط إلى فتح طلب سحب عند الانتهاء من الترجمة.</string>
     <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
+    <string name="busybox_install_subtitle">يؤكد Busybox أن جميع الأوامر ستعمل على جميع إصدارات Android.</string>
+    <string name="balanced">متوازن</string>
+    <string name="profile_battery_plus_sum">يقلل من استهلاك الطاقة قدر الإمكان ، مع تجاهل أي آثار جانبية</string>
+    <string name="profile_battery_sum">Attempts to save battery power with minimal effort</string>
+    <string name="profile_balanced_sum">Attempts to maintain a balance between performance and energy consumption with lightweight changes</string>
+    <string name="profile_performance_plus_sum">Increases performance where possible, ignoring any side effects</string>
+    <string name="profile_performance_sum">Attempts to increase performance and improve overall device feel</string>
+    <string name="profile_format">Profile: %s</string>
+    <string name="always_anonymous">مجهول دائما</string>
+    <string name="always_anonymous_sum">تجاهل شاشة تسجيل الدخول. تحذير: إذا كنت بحاجة إلى إجراء عمليات شراء داخل التطبيق أو التحقق من حسابك ، فستحتاج إلى تسجيل الدخول أولاً.</string>
+    <string name="announcements">تصريح</string>
+    <string name="announcements_prompt">الاستمرار في عرض هذه الإعلانات؟</string>
+    <string name="show_announcements">عرض الإعلانات</string>
+    <string name="show_announcements_sum">عرض الإعلانات في الشاشة الرئيسية</string>
+    <string name="tap_target_anonymous">انقر هنا إذا كنت لا تريد تسجيل الدخول الآن</string>
+    <string name="sign_out">Sign out</string>
+    <string name="skip">تخطى</string>
+    <string name="wm_warning">If set incorrectly, these settings can make onscreen content disproportionate or limit touch areas. Make sure you know what you are doing before applying any changes here.\nIf you lose screen access, you can execute this command in an ADB shell to reset everything: \"wm density reset &amp;&amp; wm size reset\".</string>
+    <string name="screen_density">كثافة الشاشة</string>
+    <string name="screen_density_sum">الكثافة المنطقية للعرض ، عامل قياس لوحدة DIP.</string>
+    <string name="screen_size">حجم الشاشة</string>
+    <string name="window_manager">مدير النافذة</string>
+    <string name="wm_keep_settings_prompt">Do you want to keep these changes? They will be automatically reverted back in %d seconds.</string>
+    <string name="screen_size_sum">حجم الشاشة (العرض × الارتفاع) بالبكسل.</string>
+    <string name="do_not_disturb_mode">وضع عدم الإزعاج</string>
+    <string name="toggle_ipv6_sum">تمكين أو تعطيل استخدام IPv6</string>
+    <string name="prefer_5ghz">Prefer 5GHz</string>
+    <string name="prefer_5ghz_sum">Set the preferred operational wifi frequency band to 5GHz. Can cause battery drain in some firmwares.</string>
+    <string name="busybox_not_found">Busybox غير موجود. بعض العمليات قد لا تعمل بشكل صحيح.</string>
+    <string name="vip_disable_sync">تعطيل المزامنة</string>
+    <string name="vip_brightness_level_when_enabled">مستوى السطوع عند التمكين</string>
+    <string name="vip_brightness_level_when_disabled">مستوى السطوع عند تعطيل</string>
+    <string name="grayscale">الرمادي</string>
+    <string name="vip_disable_bluetooth">تعطيل البلوتوث</string>
+    <string name="battery_checklist_sum">يساعدك على تتبع الميزات الأكثر استهلاكًا للبطارية في جهازك وتمكين ميزات توفير البطارية.</string>
+    <string name="battery_checklist">قائمة فحص البطارية</string>
+    <string name="check">Check</string>
+    <string name="hibernate">Hibernate</string>
+    <string name="tasker_plugin_available">البرنامج المساعد Tasker متاح!</string>
+    <string name="tasker_select_feature">حدد الميزة التي تريد تكوين Tasker بواسطتها</string>
+    <string name="tasker_settings">إعدادات تاسكر</string>
+    <string name="virtual_memory">ذاكرة افتراضية</string>
+    <string name="zram_sum">ينشئ جهاز كتلة مضغوط في ذاكرة الوصول العشوائي سيتم استخدامه للمبادلة بدلاً من قسم المبادلة الأبطأ ، مما يتيح تبادل أسرع للبيانات.</string>
 </resources>

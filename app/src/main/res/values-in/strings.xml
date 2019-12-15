@@ -35,7 +35,7 @@
     <string name="multitasking_on">Profil Multitasking diaktifkan</string>
     <string name="multitasking_off">Profil Multitasking dimatikan</string>
     <string name="multitasking_sub">Menyetel parameter \"Low memory killer\" untuk mendapatkan profil multitasking yang lebih baik, berdasarkan jumlah RAM yang tersedia.</string>
-    <string name="performance_texto">Performa Umum</string>
+    <string name="general_performance">Performa Umum</string>
     <string name="ui_tweaks">Tweak UI</string>
     <string name="liquid">Liquid smooth UI</string>
     <string name="liquid_on">Liquid smooth UI enabled</string>
@@ -57,20 +57,6 @@
     <string name="dpi_sub">Mengubah ukuran LCD. Nilai kecil artinya lebih banyak ruang untuk layar. Tekan disini untuk informasi lebih lanjut.</string>
     <string name="dpi_botao">UBAH</string>
     <string name="dpi_edit">Nilai</string>
-    <string name="dpi_dialogo">Fitur ini sedang dalam masa percobaan dan masih butuh pengerjaan lebih lanjut.\n
-        \n
-        DPI Default untuk beberapa resolusi layar:\n
-        \n
-        240x320(ldpi) - 120;\n
-        320x480(mdpi) - 160;\n
-        480x854(hdpi) - 240;\n
-        540x960(hdpi versi lain) - 240;\n
-        720x1280(xhdpi) - 320;\n
-        1080x1920(xxhdpi) - 480\n
-        \n
-		Peringatan: Informasi diatas tidak berlaku jika Anda menjalankan Aplikasi ini di Tablet.\n
-		Perngatan 2: Mohon hindari penggunaan opsi ini pada Stock ROMs.
-    </string>
     <string name="dpi_reboot">Opsi ini dapat menyebabkan bootloop di perangkat Anda!\nJika Anda mengisi nilai secara sembarang dan tidak benar, itu akan tetap ditulis ke file \"properties\"!
 	This has the potential to cause a bootloop on your device!\nIf you have set an absurd or inappropriate value for your device it will be passed to the properties file now!</string>
     <string name="dpi_valor"> adalah nilai dpi yang telah dipilih, lanjutkan?</string>
@@ -90,10 +76,8 @@
     <string name="request_storage_permission_sum">Izin penyimpanan akan digunakan untuk:\n  - Buat backup\n  - Ambil wallpaper\n  - Logging</string>
     <string name="final_sub">Tekan tombol dibawah untuk menyelesaikan setup Aplikasi.</string>
     <string name="finalizar">Semua telah siap!</string>
-    <string name="restaurar_sub">File telah dikembalikan</string>
     <string name="calibrado">Baterai telah dikalibrasi</string>
     <string name="eh_noyz">Selamat Datang!</string>
-    <string name="miscellaneous_tools">Alat Serbaneka</string>
     <string name="log">Matikan logging</string>
     <string name="log_sub">Jika Anda tidak ingin Android mencatat semua aktifitas di latar belakang pada semua aplikasi, aktifkan opsi ini.</string>
     <string name="utilidades">Utilitas</string>
@@ -104,7 +88,7 @@
     <string name="log_off">Logging dimatikan</string>
     <string name="log_on">Logging diaktifkan kembali</string>
     <string name="title_activity_opcoes">Pengaturan</string>
-    <string name="melhoras">Peningkatan</string>
+    <string name="improvements">Peningkatan</string>
     <string name="bateria_kk_snack">Peningkatan Baterai diaktifkan</string>
     <string name="bateria_kk_snack_off">Peningkatan Baterai dimatikan</string>
     <string name="apagar">Hapus</string>
@@ -112,7 +96,6 @@
     <string name="cleaner">Pembersih</string>
     <string name="junk_cleaned">Sampah telah dibersihkan</string>
     <string name="error">Error</string>
-    <string name="busybox_not_found">Sepertinya busybox belum diinstal.\nAplikasi ini membutuhkan Stericson\'s busybox untuk bekerja, mohon unduh dan pasang itu.</string>
     <string name="title_activity_sobre">Tentang</string>
     <string name="lennoard_sub">Pengembang dan Pendesain:</string>
     <string name="empty">Hati yang kosong?</string>
@@ -120,9 +103,7 @@
     <string name="special">Terima kasih kepada</string>
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> untuk:</string>
     <string name="special_sub_1">Langkah-langkah <a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">belajar scripting dasar, cara untuk mengeksekusi script, dan membuat modifikasi</a> dimana kita mengambil inspirasi dan beberapa pengetahuan baru. Terima kasih, Anda adalah sesuatu didalam hati Kami yang kosong.</string>
-    <string name="adaway_2">Aplikasi <a href="http://free-software-for-android.github.io/AdAway/">open source AdAway</a> dimana kita mengambil host pemblokir iklan.\n- AdAway sekarang dikembangkan oleh 0-kaladin dan Dāvis Mošenkovs. Pemilik asli dari AdAway adalah Dominik Schürmann.</string>
     <string name="special_sub_2">Kita juga menggunakan script open source yang dibuat sendiri oleh paget96 dan dengan kontribusi dari beberapa anggota dari komunitas pengembang (cek lisensi Aplikasi).</string>
-    <string name="adaway_1">Dominik Schürmann, 0-kaladin dan Dāvis Mošenkovs untuk:</string>
     <string name="honrra">▪ Reiny Zamayuti (TjReiny): Tips, suggestions, testing, review\n▪ Jamiéric Gomes: Warna, Desain Material dan tips layout\n▪ Guilherme Augusto: Warna, gambar, dan saran layout dan analisis\n▪ Rivaldo Freitas: Warana dan saran layout\n▪ Gominha: Bricks dan saran layout\n▪ Vinícius Nery (VinyX): Saran warna, dan Bahasa Brazil >>> (Semua)\n▪ Wesley: Berbagai macam tips dan saran\n\n – Kami tidak melupakan Anda.</string>
     <string name="contribuicoes">Kontribusi penting</string>
     <string name="hebf_sobre_sub">HEBF Optimizer adalah aplikasi yang bertujuan untuk meningkatkan performa perangkat Anda, dan juga untuk meningkatkan daya tahan baterai, kami tidak lupa itu.\nAplikasi ini juga memiliki berbagai macam fitur yang berguna juga toolbox yang pintar yang dapat Anda gunakan kapanpun.</string>
@@ -141,8 +122,7 @@
     <string name="license">Lisensi Open source</string>
     <string name="app_ver">Versi Aplikasi</string>
     <string name="close">Tutup</string>
-    <string name="yagami">Ringan</string>
-    <string name="nenhum">Tidak ada</string>
+    <string name="none">Tidak ada</string>
     <string name="profiles">Profil</string>
     <string name="reset">Reset</string>
     <string name="kernel_panic">Kernel Panic</string>
@@ -185,7 +165,7 @@
     <string name="force_stop">Paksa Berhenti</string>
     <string name="forcar_parada_sub">Matikan Aplikasi</string>
     <string name="ram_manager">Manajer RAM</string>
-    <string name="title_activity_lmk">Low Memory Killer</string>
+    <string name="low_memory_killer">Low Memory Killer</string>
     <string name="lmk_foreground_sum">Aplikasi yang sedang berjalan pada saat ini.</string>
     <string name="lmk_visible_sum">Aplikasi yang berjalan di latar belakang dan sedang melakukan beberapa aksi.</string>
     <string name="lmk_secondary_sum">Layanan yang dibutuhkan untuk beberapa Aplikasi. Android menjaga mereka tetap hidup dan tetap berada di RAM untuk berjaga-jaga jika mereka membutuhkan itu untuk melakukan sesuatu.</string>
@@ -204,7 +184,7 @@
     <string name="lmk_novo_valor">Nali baru Anda adalah</string>
     <string name="force_english_language">Paksa gunakan bahasa Inggris</string>
     <string name="force_english_language_sub">Memaksa Aplikasi untuk menggunakan Bahasa Inggris</string>
-    <string name="clean_caches">Bersihkan Cache</string>
+    <string name="clear_caches">Bersihkan Cache</string>
     <string name="kill_mediaserver">Matikan server media</string>
     <string name="fab_media_sub">Server media berfungsi memindai perangkat untuk file media. Umumnya, cara yang tepat untuk mengatasi permasalah dengan server media adalah dengan reboot.\nApakah Anda merasa Server media menghabiskan baterai Anda? Coba untuk mematikan itu (untuk sementara, Anda mungkin tidak akan mendapat output suara).</string>
     <string name="mod_settings_dialog">Mohon izinkan HEBF untuk memodifikasi pengaturan, ini dibutuhkan untuk melakukan beberapa hal, contohnya mengganti kecerahan layar.</string>
@@ -225,7 +205,6 @@
     <string name="kernel_fail2">Coba lagi dengan kernel kustom yang lain.</string>
     <string name="choose_package">Pilih paket</string>
     <string name="value_set">Nilai telah di terapkan</string>
-    <string name="lock_sub">This option will decrease the tendency of a process to be killed by the system in OOM (Out of memory) cases. This can only be set to a RUNNING process, that means you need to open / wake it up in order to see it in the below list.</string>
     <string name="tipo_usuario">Tipe pengguna seperti apakah Anda?</string>
     <string name="normal_user">Pengguna normal</string>
     <string name="expert_user">Pengguna ahli</string>
@@ -241,14 +220,10 @@
     <string name="send">Kirim</string>
     <string name="message">Pesan</string>
     <string name="vip_aviso">Opsi ini mungkin dapat membuat lambat perangkat Anda.</string>
-    <string name="donate">Donasi</string>
-    <string name="donation_sub">Apakah Aplikasi ini layak untuk mendapat rasa hormat dari Anda?\nJika Anda mau, Anda dapat berkontribusi disini untuk membantu pekerjaan kami melalui donasi.\nTekan salah satu tombol dibawah untuk lanjutkan.</string>
-    <string name="estou_sem_dinheiro">Saya tidak punya uang</string>
-    <string name="hebf_sobre_sub_2">Feeling heartbroken? Someone screwed up with you? Forget it. Your heart can be empty, do not let your battery get too!</string>
     <string name="screen_overlay">Permasalahan Overlay layar</string>
     <string name="screen_overlay_sub">Jika Anda menggunakan Aplkasi perekam layar…\n\nKetika diaktifkan, overlay layar bercampur dengan Aplikasi dan izin lainnya yang telah disetujui. Untuk memperbaiki, Anda harus mematikan overlay agar memperbaiki izin lainnya pada Aplikasi.</string>
     <string name="request_storage_permission_warning">Anda harus mengizinkan akses penyimpanan perangkat untuk membuka opsi ini.\n</string>
-    <string name="busybox1">Busybox menjamin bahwa semua perintah akan dijalankan pada semua versi sistem. Busybox adalah binary yang mengumpulkan perintah LINUX / UNIX yang umum dan banyak digunakan menjadi satu, jadi jika salah satu perintah tidak tersedia pada sistem Anda, perintah itu akan tetap tersedia di busybox.</string>
+    <string name="busybox_install_headline">File yang diperlukan untuk menjalankan aplikasi tidak ditemukan di sistem Anda.</string>
     <string name="install_now">PASANG SEKARANG</string>
     <string name="low_ram_device_flag">Flag Perangkat RAM kecil</string>
     <string name="low_ram_device_flag_sub">Opsi ini memodifikasi perangkat yang mimiliki RAM kecil, mematikan fitur memory-intensive spesifik (tint status bar, efek latar belakang panel notifikasi, dsb.) yang tidak bekerja sempurna pada perangkat yang memiliki RAM kecil.\n\nJika dimatikan, Anda harus reboot untuk menerapkan perubahan.</string>
@@ -264,7 +239,6 @@
     <string name="updated">HEBF telah diperbaharui</string>
     <string name="rate_this_app">Beri rating Aplikasi</string>
     <string name="rate_this_app_sub">Beri review Anda terhadap Aplikasi ini pada Google PLay Store</string>
-    <string name="donate_sub">Donasi untuk pengembang</string>
     <string name="application_preferences">Preferensi Aplikasi</string>
     <string name="advanced_toast_cont">Anda kurang %1$s langkah lagi untuk membuka opsi lanjutan</string>
     <string name="advanced_toast">Anda telah membuka opsi lanjutan!</string>
@@ -274,7 +248,6 @@
     <string name="edit">Edit</string>
     <string name="remove">Hapus</string>
     <string name="add">Tambah</string>
-    <string name="add_from_presets">Tambah dari preset</string>
     <string name="view_log">Lihat log</string>
     <string name="title_activity_dns">DNS manual</string>
     <string name="fsync_sub">Fsync menyinkronkan file dalam status in-core dengan penyimpanan perangakat, jadi semua informasi yang telah diubah dapat dikembaliken lagi jika sistem crash / reboot.\nUntuk keamanan, jika Anda mematikan itu, pastikan Anda mempunyai cadangan.</string>
@@ -299,11 +272,6 @@
     <string name="previous">Sebelumnya</string>
     <string name="less">Tampilkan lebih sedikit</string>
     <string name="set">Set</string>
-    <string name="tendency">Tendency</string>
-    <string name="tendency_sub">Higher values mean that tahe process will be killed first.</string>
-    <string name="lock">App killing tendency</string>
-    <string name="atraso">Reapply interval</string>
-    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Layanan berhenti</string>
     <string name="stop">Berhenti</string>
@@ -321,7 +289,6 @@
     <string name="splash7">Tema hijau adalah penghargaan untuk mendukung tim sepak bola Brasil, Chapecoensee</string>
     <string name="splash8">Sudahkah Anda mencoba salah satu widget?</string>
     <string name="splash9">Cadangan dapat dibuat</string>
-    <string name="thank_you">Terima kasih!</string>
     <string name="art_sum">Android Runtime (ART) uses future compilations to compile dex code into native code during installation, pre-optimize using dex2oat tool so your processor can interpret code more easily.</string>
     <string name="captive_portal">Deteksi portal tawanan</string>
     <string name="captive_sub">Mengaktifkan deteksi portal tawanan. Jika dihidupkan, sistem akan mencoba memeriksa kualitas koneksi untuk mendeteksi konektivitas.\nJika dimatikan, sistem akan awali bahwa koneksi tersebut sehat dan tidak akan menggambar \"tanda seru\" di atas ikon kekuatan.</string>
@@ -355,17 +322,13 @@
     <string name="gaming_lmk_profile">Profil Gaming LMK</string>
     <string name="custom">Adat</string>
     <string name="vip_android_default_saver">Android default saver</string>
-    <string name="vip_auto_turn_on">Hidupkan otomatis</string>
+    <string name="auto_turn_on">Hidupkan otomatis</string>
     <string name="vip_parameters_sub">Kontrol perilaku ekstra dari penghemat baterai VIP. Alihkan opsi di sini untuk menyesuaikan kebutuhan Anda.</string>
     <string name="vip_disable_data">Nonaktifkan Wifi dan data seluler</string>
     <string name="vip_sub">Tempatkan perangkat Anda ke mode hemat baterai yang dalam dengan mengatur gubernur CPU bersama dengan beberapa parameter pilihan Anda lainnya. Ini berguna ketika Anda ingin kehilangan tingkat baterai minimum dalam perjalanan pulang Anda, misalnya.</string>
     <string name="vip_disable_when_connecting">Nonaktifkan saat menghubungkan pengisi daya</string>
     <string name="start">Mulai</string>
     <string name="device">Device</string>
-    <string name="disable_gp_services">Nonaktifkan Layanan Google Play</string>
-    <string name="disable_gp_services_gms">Layanan Google Seluler / Awan</string>
-    <string name="disable_gp_services_location">Layanan lokasi</string>
-    <string name="disable_gp_services_sub">Menonaktifkan beberapa layanan aplikasi Layanan Google Play yang berjalan di latar belakang, membantu menghemat daya baterai.\nSelamat hati, opsi ini akan menolak aktivitas apa pun dari layanan tersebut, Anda mungkin mendapatkan hasil yang tidak diinginkan.</string>
     <string name="memory">Ingatan</string>
     <string name="info_restart_app">Mulai ulang aplikasi (hapus dari Aplikasi Terbaru) untuk menerapkan perubahan</string>
     <string name="reset_battery_statistics">Setel ulang statistik baterai</string>
@@ -379,42 +342,26 @@
     <string name="import_config_error">Gagal mengimpor file konfigurasi</string>
     <string name="import_config_success">Berhasil mengimpor file konfigurasi</string>
     <string name="import_">Impor</string>
-    <string name="select">Memilih</string>
     <string name="aggressive_doze">Doze agresif</string>
     <string name="aggressive_doze_off">Mode doze agresif dinonaktifkan</string>
     <string name="aggressive_doze_on">Mode doze agresif diaktifkan</string>
     <string name="aggressive_doze_sum">Memaksa Mode Doze untuk mengaktifkan beberapa saat setelah layar mati.</string>
-    <string name="tap_target_battery_profiles">Sentuh di sini untuk mengatur profil baterai dengan cepat</string>
-    <string name="tap_target_performance_profiles">Sentuh di sini untuk mengatur profil kinerja dengan cepat</string>
     <string name="minutes_scheduled_time">Layanan dijadwalkan untuk berjalan setiap %1$s menit</string>
     <string name="theme_dark_sum">Untuk hati yang hancur dan dingin</string>
     <string name="theme_light_sum">Untuk hati yang gembira dan hangat</string>
-    <string name="blank_value_warning">Anda yakin ingin menetapkan nilai kosong?</string>
-    <string name="tap_target_sysctl_apply">Sentuh di sini untuk menerapkan nilai yang Anda tetapkan menggunakan bidang masukan</string>
-    <string name="action">Tindakan</string>
-    <string name="insert">Memasukkan</string>
-    <string name="script_last_run">Lari terakhir: %1$s</string>
-    <string name="same_name_error">File dengan nama ini sudah ada</string>
-    <string name="script_select_hint">Silakan pilih file skrip .sh</string>
-    <string name="script_shebang_warning">Letakkan #!/system/bin/sh pada baris pertama. Hanya sh shells yang diizinkan.</string>
-    <string name="view">Melihat</string>
     <string name="apps_manager_3rd_party">Aplikasi pihak ketiga</string>
     <string name="apps_manager_all_apps">Semua aplikasi</string>
     <string name="apps_manager_disabled_apps">Aplikasi yang dinonaktifkan</string>
     <string name="apps_manager_system_apps">Aplikasi sistem</string>
     <string name="apps_manager">Manajer Aplikasi</string>
-    <string name="scripts_runner">Scripts Runner</string>
     <string name="package_uninstalled">Paket telah dicopot</string>
     <string name="success">Keberhasilan</string>
     <string name="storage">Penyimpanan</string>
-    <string name="tap_target_scripts">Gunakan tombol ini untuk menambahkan skrip shell dari penyimpanan</string>
     <string name="clear_data">Hapus data</string>
     <string name="failed">Gagal</string>
     <string name="fps_unlocker_sum">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another)</string>
-    <string name="script_no_script_added">Tidak ada script yang ditambahkan</string>
     <string name="hours_scheduled_time">Layanan dijadwalkan untuk menjalankan setiap %1$s jam</string>
     <string name="service_not_scheduled">Layanan tidak dijadwalkan</string>
-    <string name="doze_blacklist_suspending">Blacklist suspending</string>
     <string name="vip_disable_when_connecting_sum">Nonaktifkan layanan saat menghubungkan pengisi daya</string>
     <string name="unsafe_operation">Operasi tidak aman</string>
     <string name="doze_whitelist_remove_app">Hapus aplikasi ini dari daftar putih?</string>
@@ -430,7 +377,7 @@
     <string name="doze_waiting_interval_sum">Tunggu sekitar %1$s menit sebelum memasukkan dalam mode %2$s</string>
     <string name="doze_idling_mode">Mode pemalasan</string>
     <!-- Core 0 @ 800Mhz -->
-    <string name="cpu_core_status_online">Inti %d @ %dMHz</string>
+    <string name="cpu_core_status_online">Inti %1$d @ %2$dMHz</string>
     <string name="cpu_core_status_offline">Inti %d (offline)</string>
     <string name="cpu_governor_tunables">Governor tunables values</string>
     <string name="name">Nama</string>
@@ -486,8 +433,6 @@
     <string name="wallpaper_set">Kumpulan wallpaper</string>
     <string name="wallpaper_set_failure">Gagal menyetel wallpaper</string>
     <string name="wallpaper_restored">Wallpaper telah dipulihkan</string>
-    <string name="log_in_automatically_sum">Masuk secara otomatis dengan akun terakhir yang ditemukan saat membuka aplikasi</string>
-    <string name="log_in_automatically">Masuk secara otomatis</string>
     <string name="anonymous">Anonim</string>
     <string name="grant_permission">Memberikan ijin</string>
     <string name="request_permission">Kami butuh izin Anda</string>
@@ -501,7 +446,6 @@
     <string name="no_item_found">Tidak ada item yang ditemukan</string>
     <string name="you_are_offline">Anda sedang offline</string>
     <string name="delete">Menghapus</string>
-    <string name="sort">Menyortir</string>
     <string name="pro_feature">Fitur pro</string>
     <string name="pro_feature_sum">Please consider purchasing HEBF Optimizer Pro to be able to use this feature</string>
     <string name="input_error_email">Silakan isi alamat email</string>
@@ -512,19 +456,10 @@
     <string name="cpu_max_frequency">Max. frekuensi</string>
     <string name="cpu_min_frequency">Min. frekuensi</string>
     <string name="cpu_manager">Manajer CPU</string>
-    <string name="behavior">Tingkah laku</string>
-    <string name="create">Membuat</string>
-    <string name="doze_blacklist_suspending_sum">Nonaktifkan pembatasan Doze pada aplikasi daftar hitam untuk jangka waktu tertentu</string>
     <string name="doze_master_switch">Aktifkan mode doze</string>
-    <string name="doze_no_app_selected">Tidak ada aplikasi yang dipilih</string>
     <string name="doze_settings">Pengaturan doze</string>
     <string name="doze_whitelist">Whitelist</string>
-    <string name="doze_whitelist_suspending">Whitelist suspending</string>
-    <string name="doze_whitelist_suspending_sum">Terapkan pembatasan Doze pada aplikasi yang masuk daftar putih untuk jangka waktu tertentu</string>
-    <string name="script_timeout_error">Skripnya terlalu lama untuk menyelesaikan eksekusinya dan karenanya dibunuh</string>
     <string name="melhoras_less">Your battery will have a VIP treatment</string>
-    <string name="tap_target_sysctl_cancel">Tapping here now will cancel and return to /proc/sys</string>
-    <string name="vip_avisoless">and it works on improving your battery.</string>
     <string name="android_version">Versi Android</string>
     <string name="account_created">Akun telah dibuat</string>
     <string name="pass_recovery_message">Email untuk pemulihan kata sandi telah dikirim ke %s.</string>
@@ -540,10 +475,9 @@
     <string name="promo_warning">HEBF Optimizer Pro hanya tersedia untuk %s dalam waktu terbatas!</string>
     <string name="dont_show">Jangan tunjukkan</string>
     <string name="continue_alert">Terus</string>
-    <string name="vip_saver_less">Ini akan menghemat baterai Anda, mematikan fitur yang tidak perlu dan membatasi yang lain, menghentikan aplikasi yang menguras baterai Anda untuk memberikan yang terbaik dari perangkat Anda.</string>
+    <string name="hibernate_apps_sum">Ini akan menghemat baterai Anda, mematikan fitur yang tidak perlu dan membatasi yang lain, menghentikan aplikasi yang menguras baterai Anda untuk memberikan yang terbaik dari perangkat Anda.</string>
     <string name="accessibility_alert">Kami memerlukan izin Anda untuk melakukan tindakan hemat baterai dan menutup aplikasi yang tidak aktif. Klik lanjutkan dan layar pengaturan akan terbuka, cari sesuatu yang mirip dengan apa yang ditunjukkan di bawah ini:</string>
     <string name="hibernate_apps">Hibernate aplikasi</string>
-    <string name="wifi">Wifi</string>
     <string name="game_booster">Game Booster</string>
     <string name="game_booster_sub">Better optimization for your game, this option will use everything in our reach, to give you a game with less FPS drops for the best possible experience</string>
     <string name="charging_dialog">Perangkat Anda sedang diisi sekarang, apakah Anda benar-benar ingin mengaktifkan opsi ini?</string>
@@ -556,31 +490,15 @@
     <string name="auto_optimizer">Pengoptimal otomatis</string>
     <string name="optimize_now">Optimalkan SEKARANG</string>
     <string name="auto_optimize_performance">Otomatis optimalkan perangkat Anda setiap 15 menit, opsi ini akan memberi Anda pengalaman baru dalam kinerja perangkat Anda</string>
-    <string name="busybox_installed">Busybox telah diinstal, ketuk OK untuk memulai ulang aplikasi.</string>
-    <string name="busybox_install_error_integrity">Operasi tidak aman, pemeriksaan integritas gagal. Coba unduh lagi.</string>
-    <string name="busybox_install_error_fnf">File yang diunduh tidak ditemukan!</string>
     <string name="busybox_install_error_copy">Gagal menyalin binary busybox</string>
-    <string name="busybox_install_hint">Anda dapat mencoba mengunduh dan menginstal busybox melalui HEBF Optimizer atau mengunduh aplikasi pemasang busybox dari Google Play Store dan menginstalnya.</string>
-    <string name="busybox_install_installing">Memasang busybox…</string>
-    <string name="busybox_install_downloading">Mengunduh busybox…</string>
+    <string name="busybox_install_hint">You can try to download any busybox installer app from the Google Play Store and install it from there.</string>
     <string name="accessibility_service">Layanan Aksesibilitas</string>
-    <string name="achievement_advanced_sum">Temukan bagian tersembunyi menggunakan cara tersembunyi</string>
     <string name="achievement_backup">Lebih baik aman daripada menyesal</string>
-    <string name="achievement_backup_sum">Buat cadangan lokal</string>
-    <string name="achievement_command_line_sum">Gunakan baris perintah</string>
     <string name="achievement_help">Apa yang dilakukan benda ini?</string>
-    <string name="achievement_help_sum">Meminta bantuan</string>
     <string name="achievement_prop">Property</string>
-    <string name="achievement_prop_sum">Tambahkan prop menggunakan Editor Build.prop</string>
-    <string name="achievement_rootless">Rootless</string>
-    <string name="achievement_rootless_sum">Buka layar opsi tanpa akar</string>
     <string name="achievement_sharing">Berbagi</string>
-    <string name="achievement_sharing_sum">Bagikan file konfigurasi secara online</string>
     <string name="achievement_tunable">Mencari setelan</string>
-    <string name="achievement_tunable_sum">Ubah parameter gubernur CPU</string>
     <string name="achievement_unlocked">Pencapaian terbuka: %s</string>
-    <string name="achievements">Prestasi</string>
-    <string name="achievements_format">Prestasi %1$d/%2$d dibuka</string>
     <string name="owned">Diperoleh</string>
     <string name="premium_package">Paket premium</string>
     <string name="premium_package_ad">Paket Premium (dengan iklan)</string>
@@ -609,9 +527,8 @@
     <string name="purchase_premium">Beli peningkatan premium</string>
     <string name="invalid_promo_code">Kode promosi tidak valid!</string>
     <string name="checking_code">Memeriksa kode promosi…</string>
-    <string name="cluster_cores_format">Cluster #%d cores</string>
-    <string name="cluster_freqs_format">Cluster #%d frekuensi</string>
-    <string name="cluster_gov_format">Cluster #%d gobernur</string>
+    <string name="cpus">CPUs</string>
+    <string name="cpu_frequencies">Frekuensi</string>
     <string name="translations_github_help">Jika Anda suka, Anda bisa mendapatkan file yang sama di Git yang sudah diterjemahkan. Unduh file dari fork, maka Anda hanya perlu membuka permintaan tarik ketika Anda selesai menerjemahkan.</string>
     <string name="translations_file_help">File strings.xml berisi teks yang digunakan dalam aplikasi ini. Anda dapat menyalin file terjemahan ke penyimpanan Anda jika Anda ingin menerjemahkannya menggunakan ponsel Anda. Setelah selesai menerjemahkan, cukup kirimkan kembali melalui dukungan email kami.</string>
     <string name="tips">Tips</string>
@@ -619,5 +536,48 @@
     <string name="critical_failure_sum">Coba lagi setelah memulai ulang aplikasi, jika kesalahan berlanjut, hubungi dukungan.</string>
     <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
     <string name="temp_package_expiration_message">Paket sementara Anda telah kedaluwarsa! Beli paket premium sekarang untuk tetap menggunakan fitur-fiturnya.</string>
+    <string name="busybox_install_subtitle">Busybox meyakinkan kita bahwa semua perintah akan berjalan di semua versi Android.</string>
+    <string name="balanced">Seimbang</string>
+    <string name="profile_battery_plus_sum">Mengurangi konsumsi energi jika memungkinkan, mengabaikan efek samping</string>
+    <string name="profile_battery_sum">Attempts to save battery power with minimal effort</string>
+    <string name="profile_balanced_sum">Attempts to maintain a balance between performance and energy consumption with lightweight changes</string>
+    <string name="profile_performance_plus_sum">Increases performance where possible, ignoring any side effects</string>
+    <string name="profile_performance_sum">Attempts to increase performance and improve overall device feel</string>
+    <string name="profile_format">Profil: %s</string>
+    <string name="always_anonymous">Selalu anonim</string>
+    <string name="always_anonymous_sum">Abaikan layar masuk. Peringatan: Jika Anda perlu melakukan pembelian dalam aplikasi atau memverifikasi akun Anda, Anda harus masuk terlebih dahulu.</string>
+    <string name="announcements">Pengumuman</string>
+    <string name="announcements_prompt">Terus tampilkan pengumuman ini?</string>
+    <string name="show_announcements">Tampilkan pengumuman</string>
+    <string name="show_announcements_sum">Tampilkan pengumuman di layar utama</string>
+    <string name="tap_target_anonymous">Ketuk di sini jika Anda tidak ingin masuk sekarang</string>
+    <string name="sign_out">Sign out</string>
+    <string name="skip">Melewatkan</string>
+    <string name="wm_warning">If set incorrectly, these settings can make onscreen content disproportionate or limit touch areas. Make sure you know what you are doing before applying any changes here.\nIf you lose screen access, you can execute this command in an ADB shell to reset everything: \"wm density reset &amp;&amp; wm size reset\".</string>
+    <string name="screen_density">Kepadatan layar</string>
+    <string name="screen_density_sum">Kerapatan logis tampilan, faktor penskalaan untuk unit DIP.</string>
+    <string name="screen_size">Ukuran layar</string>
+    <string name="window_manager">Manajer jendela</string>
+    <string name="wm_keep_settings_prompt">Apakah Anda ingin menyimpan perubahan ini? Mereka akan secara otomatis dikembalikan dalam %d detik.</string>
+    <string name="screen_size_sum">Ukuran layar (lebar x tinggi) dalam piksel.</string>
+    <string name="do_not_disturb_mode">Mode jangan-ganggu</string>
+    <string name="toggle_ipv6_sum">Aktifkan atau nonaktifkan penggunaan IPv6</string>
+    <string name="prefer_5ghz">Prefer 5GHz</string>
+    <string name="prefer_5ghz_sum">Atur pita frekuensi wifi operasional yang disukai ke 5GHz. Dapat menyebabkan baterai terkuras di beberapa firmware.</string>
+    <string name="busybox_not_found">Busybox tidak ditemukan. Beberapa operasi mungkin tidak berfungsi dengan baik.</string>
+    <string name="vip_disable_sync">Nonaktifkan sinkronisasi</string>
+    <string name="vip_brightness_level_when_enabled">Tingkat kecerahan saat diaktifkan</string>
+    <string name="vip_brightness_level_when_disabled">Tingkat kecerahan saat dinonaktifkan</string>
+    <string name="grayscale">Skala abu-abu</string>
+    <string name="vip_disable_bluetooth">Nonaktifkan bluetooth</string>
+    <string name="hibernate">Hibernasi</string>
+    <string name="check">Periksa</string>
+    <string name="battery_checklist_sum">Membantu Anda melacak sebagian besar fitur yang menghabiskan baterai di perangkat Anda dan mengaktifkan yang hemat baterai.</string>
+    <string name="battery_checklist">Daftar periksa baterai</string>
+    <string name="tasker_plugin_available">Plugin Tasker tersedia!</string>
+    <string name="tasker_select_feature">Select the feature with which you want to configure Tasker</string>
+    <string name="tasker_settings">Pengaturan Tasker</string>
+    <string name="virtual_memory">Memori Virtual</string>
+    <string name="zram_sum">Membuat perangkat blok terkompresi dalam RAM yang akan digunakan untuk bertukar bukan partisi swap yang lebih lambat, memungkinkan pertukaran data lebih cepat.</string>
 
 </resources>

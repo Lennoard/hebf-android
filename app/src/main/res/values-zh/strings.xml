@@ -35,7 +35,7 @@
     <string name="multitasking_on">多任务配置已开</string>
     <string name="multitasking_off">多任务配置已关</string>
     <string name="multitasking_sub">调节LMK（低内存管理机制）参数令多任务能力增强。但还是要看内存剩下多少。</string>
-    <string name="performance_texto">全局性能</string>
+    <string name="general_performance">全局性能</string>
     <string name="ui_tweaks">UI 调教</string>
     <string name="liquid">丝般顺滑 UI</string>
     <string name="liquid_on">丝般顺滑 UI 已开</string>
@@ -57,20 +57,6 @@
     <string name="dpi_sub">改变 LCD 密度。数值越小，系统认为你的屏幕越大。长按更多信息。</string>
     <string name="dpi_botao">更改</string>
     <string name="dpi_edit">数值</string>
-    <string name="dpi_dialogo">这项特性还属于测试阶段，未完工。\n
-        \n
-        一些屏幕分辨率的常用DPI：\n
-        \n
-        240x320(ldpi) - 120;\n
-        320x480(mdpi) - 160;\n
-        480x854(hdpi) - 240;\n
-        540x960(hdpi as well) - 240;\n
-        720x1280(xhdpi) - 320;\n
-        1080x1920(xxhdpi) - 480\n
-        \n
-        警告：如果你在平板上用这个程序，请无视以上信息。\n
-        警告2：不要在原生系统上使用这个选项。
-    </string>
     <string name="dpi_reboot">这有可能在你的设备上引发开机死循环哦。\n如果你设置了不合适的值，改动会保存到配置文件。</string>
     <string name="dpi_valor"> 是目前所选的 dpi 值，应用吗？</string>
     <string name="reiniciar_aviso">汝的设备将会重启。</string>
@@ -89,10 +75,8 @@
     <string name="request_storage_permission_sum">存储权限将用于:\n\n进行备份\n检索壁纸\n生成日志</string>
     <string name="final_sub">点击底下的按钮完成向导。</string>
     <string name="finalizar">都搞定了！</string>
-    <string name="restaurar_sub">还原完成</string>
     <string name="calibrado">电池已校准</string>
     <string name="eh_noyz">欢迎光临！</string>
-    <string name="miscellaneous_tools">杂项工具</string>
     <string name="log">禁用日志</string>
     <string name="log_sub">如果你不想让系统拼命记录下鸡毛蒜皮的一切小事，请打开这个选项。</string>
     <string name="utilidades">实用工具</string>
@@ -103,7 +87,7 @@
     <string name="log_off">日志记录禁用了</string>
     <string name="log_on">日志记录复活了</string>
     <string name="title_activity_opcoes">选项</string>
-    <string name="melhoras">改进</string>
+    <string name="improvements">改进</string>
     <string name="bateria_kk_snack">续航改进已开</string>
     <string name="bateria_kk_snack_off">续航改进已关</string>
     <string name="apagar">删掉</string>
@@ -111,7 +95,6 @@
     <string name="cleaner">清理</string>
     <string name="junk_cleaned">清掉辣鸡了</string>
     <string name="error">错误</string>
-    <string name="busybox_not_found">似乎没找到 Busybox。\n此应用要求要有 Busybox 才能正常工作，请下载并安装。推荐酷市场的 Busybox 安装器。</string>
     <string name="title_activity_sobre">关于</string>
     <string name="lennoard_sub">开发和设计人员</string>
     <string name="empty">操碎了心？</string>
@@ -119,9 +102,7 @@
     <string name="special">特别鸣谢</string>
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> for the:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Learn basic scripting, how to execute scripts, mod building</a> guide, where we took inspiration and some initial knowledge. Thanks, you are somewhere in our empty heart.</string>
-    <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
-    <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs for the:</string>
     <string name="honrra">▪ Reiny Zamayuti (TjReiny): Tips, suggestions, testing, review\n▪ Jamiéric Gomes: Color, Material Design and layout tips\n▪ Guilherme Augusto: Color, images and layout suggestions and analysis \n▪ Rivaldo Freitas: Color and layout suggestions\n▪ Gominha: Bricks and layout suggestions\n▪ Vinícius Nery (VinyX): Colors suggestions, Brazil >>> All\n▪ Wesley: Various tips and suggestions\n\n – We did not forget you.</string>
     <string name="contribuicoes">重要贡献</string>
     <string name="hebf_sobre_sub">HEBF 优化器着眼于提升您设备的性能，同时不忘续航表现。\n这款应用还提供了各种实用智能的工具，随时方便使用。</string>
@@ -140,8 +121,7 @@
     <string name="license">开源证书</string>
     <string name="app_ver">应用版本</string>
     <string name="close">关闭</string>
-    <string name="yagami">Light</string>
-    <string name="nenhum">None</string>
+    <string name="none">None</string>
     <string name="profiles">Profiles</string>
     <string name="reset">重置</string>
     <string name="kernel_panic">Kernel Panic</string>
@@ -184,7 +164,7 @@
     <string name="force_stop">强行停止</string>
     <string name="forcar_parada_sub">杀掉本程序</string>
     <string name="ram_manager">内存管理</string>
-    <string name="title_activity_lmk">低内存管理机制</string>
+    <string name="low_memory_killer">低内存管理机制</string>
     <string name="lmk_foreground_sum">前台程序，当前屏幕显示的程序。</string>
     <string name="lmk_visible_sum">不可见的，在后台搞小动作的进程。</string>
     <string name="lmk_secondary_sum">某些应用程序需要的服务。系统让他们在内存中拥有一席之地，以防不时之需。</string>
@@ -203,7 +183,7 @@
     <string name="lmk_novo_valor">新的设定值为</string>
     <string name="force_english_language">Force English language</string>
     <string name="force_english_language_sub">Force the use of English language in application</string>
-    <string name="clean_caches">清空缓存</string>
+    <string name="clear_caches">清空缓存</string>
     <string name="kill_mediaserver">终止媒体进程</string>
     <string name="fab_media_sub">媒体服务进程扫描设备的媒体文件。大多数时候只有重新启动才能解决它造成的问题。\n媒体服务进程是否耗电巨大？ 试试终止它吧（可能造成没有声音输出）。</string>
     <string name="mod_settings_dialog">请允许 HEBF 写入系统设置，这是必需的（比如调节亮度）。</string>
@@ -223,9 +203,7 @@
     <string name="kernel_fail1">似乎没有选项能开。</string>
     <string name="kernel_fail2">试试其他的第三方内核吧！</string>
     <string name="choose_package">选取一个包</string>
-    <string name="lock">App killing tendency</string>
     <string name="value_set">已设置数值</string>
-    <string name="lock_sub">This option will decrease the tendency of a process to be killed by the system in OOM (Out of memory) cases. This can only be set to a RUNNING process, that means you need to open / wake it up in order to see it in the below list.</string>
     <string name="tipo_usuario">你是哪种类型的用户？</string>
     <string name="normal_user">小白</string>
     <string name="expert_user">专家</string>
@@ -241,14 +219,10 @@
     <string name="send">发送</string>
     <string name="message">信息</string>
     <string name="vip_aviso">此选项可能会拖慢你的设备。</string>
-    <string name="donate">捐赠</string>
-    <string name="donation_sub">喜欢这款应用吗？\n您可以通过捐赠鞭策我们。\n点击下面任意一个按钮继续。</string>
-    <string name="estou_sem_dinheiro">穷啊</string>
-    <string name="hebf_sobre_sub_2">操碎了心，续航尿崩？而现在，身体可以被掏空，电池绝不会！</string>
     <string name="screen_overlay">屏幕叠加层问题</string>
     <string name="screen_overlay_sub">你可能打开了护目镜或者屏幕录制或者悬浮球……\n\n此时系统会因为检测到屏幕叠加层而拒绝我们的权限请求。试试关掉其他可见程序来解决问题。</string>
     <string name="request_storage_permission_warning">打开此设置之前，你需要允许存储访问权限。\n</string>
-    <string name="busybox1">Busybox 确保我们所有的命令都将在安卓上运行，它是一个二进制文件，将最常见的 LINUX/UNIX 命令集成到系统中。所以如果你的系统上缺少其中一个命令，它将呈现在 busybox 中。</string>
+    <string name="busybox_install_headline">在您的系统上找不到运行该应用程序所需的文件。</string>
     <string name="install_now">现在安装</string>
     <string name="low_ram_device_flag">小内存设备标志</string>
     <string name="low_ram_device_flag_sub">此选项将设备标记为小内存设备，关闭在特定的需要大内存的功能（状态栏着色，通知面板背景效果等）。\n\n如果关闭，您可能需要重启以应用更改。</string>
@@ -264,7 +238,6 @@
     <string name="updated">HEBF 已更新</string>
     <string name="rate_this_app">评分应用</string>
     <string name="rate_this_app_sub">在 Google Play 撰写评论</string>
-    <string name="donate_sub">捐赠开发者</string>
     <string name="application_preferences">应用偏好</string>
     <string name="advanced_toast_cont">You\'re %1$s steps away from unlocking advanced options</string>
     <string name="advanced_toast">您已解锁高级设定！</string>
@@ -274,7 +247,6 @@
     <string name="edit">编辑</string>
     <string name="remove">移除</string>
     <string name="add">添加</string>
-    <string name="add_from_presets">从现有添加</string>
     <string name="view_log">查看日志</string>
     <string name="title_activity_dns">手动 DNS</string>
     <string name="fsync_sub">Fsync 会将文件的内核状态与存储设备同步，即使在系统崩溃或重新启动后，也可以检索所有更改的信息。\n为了安全起见，如果禁用它，请确保您具有正确的备份。</string>
@@ -299,10 +271,6 @@
     <string name="done">完</string>
     <string name="less">显示较少</string>
     <string name="no_logs_found">没有找到相关的日志</string>
-    <string name="tendency_sub">Higher values mean that the process will be killed first.</string>
-    <string name="tendency">Tendency</string>
-    <string name="atraso">Reapply interval</string>
-    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
     <string name="service_not_running">服务未运行</string>
     <string name="service_stopped">服务停止了</string>
     <string name="stop">停止</string>
@@ -320,7 +288,6 @@
     <string name="splash7">The green theme is a tribute in support of the Brazilian football team Chapecoense</string>
     <string name="splash8">Have you tried one of the widgets?</string>
     <string name="splash9">Backups can be made</string>
-    <string name="thank_you">Thank you!</string>
     <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
     <string name="captive_portal">Captive portal detection</string>
     <string name="captive_sub">Toggles the captive portal detection. If turned on, the system will try to check the connection quality in order to detect connectivity.\nIf turned off, the system will aways believe that the connection is healthy and will not draw the \"exclamation mark\" over the strength icon.</string>
@@ -354,18 +321,14 @@
     <string name="gaming_lmk_profile">Gaming LMK profile</string>
     <string name="custom">Custom</string>
     <string name="vip_android_default_saver">Android default saver</string>
-    <string name="vip_auto_turn_on">Auto turn on</string>
+    <string name="auto_turn_on">Auto turn on</string>
     <string name="vip_parameters_sub">Control extra behavior of the VIP battery saver. Toggle options here to match your needs.</string>
     <string name="vip_disable_data">Disable Wi-Fi and mobile data</string>
     <string name="start">开始</string>
     <string name="vip_sub">Put your device into a deep battery saving mode by setting the CPU governor along with several other parameters of your choice. This is useful when you want to lose the minimum battery level on your way home, for instance.</string>
     <string name="vip_disable_when_connecting">Disable when connecting the charger</string>
     <string name="device">设备</string>
-    <string name="disable_gp_services">Disable Google Play Services</string>
-    <string name="disable_gp_services_gms">Google Mobile &amp; Cloud services</string>
-    <string name="disable_gp_services_sub">Disables some Google Play Services app services that run in the background, helping to save battery power.\nCareful, this option will deny any activity of those services, you might get unwanted results.</string>
     <string name="memory">记忆</string>
-    <string name="disable_gp_services_location">Location services</string>
     <string name="info_restart_app">Restart the app (remove it from the Recents Apps) to apply changes</string>
     <string name="reset_battery_statistics">Reset battery statistics</string>
     <string name="reset_battery_statistics_sum">Resets the battery statistics and makes the system recreate them, Try this if the behavior of the system in relation to the battery seem strange.</string>
@@ -378,7 +341,6 @@
     <string name="import_config_error">Failed to import configuration file</string>
     <string name="import_config_success">Successfully imported the configuration file</string>
     <string name="import_">Import</string>
-    <string name="select">Select</string>
     <string name="cpu_governor">Governor</string>
     <string name="cpu_max_frequency">Max. frequency</string>
     <string name="cpu_min_frequency">Min. frequency</string>
@@ -387,48 +349,27 @@
     <string name="aggressive_doze_off">Instant doze mode disabled</string>
     <string name="aggressive_doze_on">Instant doze mode enabled</string>
     <string name="aggressive_doze_sum">Forces the Doze Mode to activate moments after the screen turns off.</string>
-    <string name="tap_target_battery_profiles">Touch here to quickly set battery profiles</string>
-    <string name="tap_target_performance_profiles">Touch here to quickly set performance profiles</string>
     <string name="minutes_scheduled_time">Service is scheduled to run every %1$s minutes</string>
     <string name="theme_dark_sum">For broken and cold hearts</string>
     <string name="theme_light_sum">For joyful and hot hearts</string>
-    <string name="blank_value_warning">你确定要设置一个空值吗？</string>
-    <string name="tap_target_sysctl_apply">Touch here to apply the values you set using the input field</string>
-    <string name="action">行动</string>
-    <string name="insert">插入</string>
-    <string name="view">查看</string>
-    <string name="script_last_run">Last run: %1$s</string>
-    <string name="same_name_error">There is already a file with this name</string>
-    <string name="script_select_hint">Please select a .sh script file</string>
-    <string name="script_shebang_warning">Place #!/system/bin/sh on the first line. Only sh shells are allowed.</string>
     <string name="apps_manager">Apps Manager</string>
     <string name="apps_manager_3rd_party">Third-party apps</string>
     <string name="apps_manager_all_apps">All apps</string>
     <string name="apps_manager_disabled_apps">Disabled apps</string>
     <string name="apps_manager_system_apps">System apps</string>
-    <string name="scripts_runner">Scripts Runner</string>
     <string name="package_uninstalled">Package has been uninstalled</string>
     <string name="success">Success</string>
     <string name="storage">存储</string>
-    <string name="tap_target_scripts">Use this button to add a shell script from the storage</string>
     <string name="clear_data">清除数据</string>
     <string name="failed">Failed</string>
     <string name="fps_unlocker_sum">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another)</string>
-    <string name="script_no_script_added">没有添加 script</string>
     <string name="hours_scheduled_time">Service is scheduled to run every %1$s hours</string>
     <string name="service_not_scheduled">Service is not scheduled</string>
     <string name="doze_master_switch">Enable doze mode</string>
     <string name="doze_settings">Doze settings</string>
     <string name="doze_whitelist">Whitelist</string>
-    <string name="behavior">Behavior</string>
-    <string name="doze_whitelist_suspending">Whitelist suspending</string>
-    <string name="doze_whitelist_suspending_sum">Enforce Doze restrictions on whitelisted applications for a certain period of time</string>
-    <string name="doze_blacklist_suspending">Blacklist suspending</string>
-    <string name="doze_blacklist_suspending_sum">Disable Doze restrictions on blacklisted applications for a certain period of time</string>
     <string name="vip_disable_when_connecting_sum">Disable the service when connecting the charger</string>
-    <string name="doze_no_app_selected">No app selected</string>
     <string name="unsafe_operation">不安全的操作</string>
-    <string name="create">创建</string>
     <string name="create_new_account">创建您的帐户</string>
     <string name="username">用户名</string>
     <string name="input_error_confirm_pass">密码不匹配</string>
@@ -449,8 +390,6 @@
     <string name="dark_wallpaper">黑暗的壁纸</string>
     <string name="dark_wallpaper_sum">通过减少打开的像素数量，黑色壁纸可以帮助在AMOLED屏幕上节省电量</string>
     <string name="quick_settings">快速设置</string>
-    <string name="log_in_automatically">自动登录</string>
-    <string name="log_in_automatically_sum">使用打开应用程序时找到的最后一个帐户自动登录</string>
     <string name="date">日期</string>
     <string name="data_type">数据类型</string>
     <string name="import_data">导入数据</string>
@@ -470,13 +409,9 @@
     <string name="my_public_configs">我的公共配置</string>
     <string name="delete">删除</string>
     <string name="public_configurations">公共配置</string>
-    <string name="sort">分类</string>
-    <string name="vip_avisoless">and is working on improving his battery.</string>
     <string name="pro_feature">Pro功能</string>
     <string name="pro_feature_sum">请考虑购买HEBF Optimizer Pro以使用此功能</string>
     <string name="name">名称</string>
-    <string name="tap_target_sysctl_cancel">现在点击此处将取消并返回到 /proc/sys</string>
-    <string name="script_timeout_error">剧本花了很长时间才能完成它的执行并因此被杀死</string>
     <string name="doze_whitelist_remove_app">从白名单中删除此应用程序？</string>
     <string name="doze_blacklist_gms">抱歉，此应用暂时无法列入黑名单…</string>
     <string name="doze_blacklist_app_added">%1$s 已被添加到黑名单</string>
@@ -488,7 +423,7 @@
     <string name="doze_waiting_interval">等待间隔</string>
     <string name="doze_idling_mode">Idling mode</string>
     <string name="doze_waiting_interval_sum">在进入%2$s模式之前等待大约%1$s分钟</string>
-    <string name="cpu_core_status_online">核心 %d @ %dMHz</string>
+    <string name="cpu_core_status_online">核心 %1$d @ %2$dMHz</string>
     <string name="cpu_core_status_offline">核心 %d (offline)</string>
     <string name="cpu_governor_tunables">Governor tunables values</string>
     <string name="login_failure">登录失败</string>
@@ -535,25 +470,19 @@
     <string name="update_available_sum">有一个更新版本的应用程序</string>
     <string name="update_available">可用更新</string>
     <string name="promo_warning">HEBF Optimizer Pro仅在有限的时间内提供%s！</string>
-    <string name="vip_saver_less">这样可以节省电池电量，关闭不必要的功能并限制其他功能，停止耗尽电池的应用程序，为您提供最好的设备。</string>
+    <string name="hibernate_apps_sum">这样可以节省电池电量，关闭不必要的功能并限制其他功能，停止耗尽电池的应用程序，为您提供最好的设备。</string>
     <string name="continue_alert">继续</string>
     <string name="dont_show">不要显示</string>
     <string name="accessibility_alert">我们需要您的许可才能执行节电操作并关闭不活动的应用程序。 点击继续，设置屏幕将打开，寻找类似于下面的教程显示的内容：</string>
     <string name="gamenews">提高游戏性能</string>
     <string name="subgame_news">立即获得最佳游戏体验！</string>
     <string name="auto_optimizer">自动优化工具</string>
-    <string name="busybox_install_error_fnf">找不到下载的文件！</string>
     <string name="auto_optimize_sub">15分钟后自动优化您的游戏，在重型或开放式世界游戏中非常有用（这可能会弄乱您的游戏，只有在您确定的情况下才能激活它）</string>
-    <string name="busybox_installed">已安装Busybox，点击确定以重新启动应用程序。</string>
     <string name="busybox_install_error_copy">无法复制busybox二进制文件</string>
     <string name="game_booster">游戏助推器</string>
     <string name="hibernate_apps">Hibernate应用程序</string>
-    <string name="busybox_install_error_integrity">操作不安全，完整性检查失败。 尝试再次下载。</string>
     <string name="charging_dialog">您的设备目前正在充电，您真的想要启用此选项吗？</string>
-    <string name="busybox_install_hint">您可以尝试通过HEBF Optimizer下载和安装busybox，或从Google Play商店下载任何busybox安装程序应用程序并从中进行安装。</string>
-    <string name="wifi">Wi-Fi</string>
-    <string name="busybox_install_installing">安装busybox…</string>
-    <string name="busybox_install_downloading">正在下载busybox…</string>
+    <string name="busybox_install_hint">You can try to download any busybox installer app from the Google Play Store and install it from there.</string>
     <string name="auto_optimize_performance">每15分钟自动优化您的设备，此选项将为您提供设备性能的全新体验</string>
     <string name="optimize_now">立即优化</string>
     <string name="optimize">优化</string>
@@ -561,23 +490,12 @@
     <string name="other_games">Games optimizer</string>
     <string name="game_booster_sub">Better optimization for your game, this option will use everything in our reach, to give you a game with less FPS drops for the best possible experience</string>
     <string name="accessibility_service">無障礙服務</string>
-    <string name="achievement_advanced_sum">使用隱藏方式查找隱藏的部分</string>
     <string name="achievement_backup">Safer than sorry</string>
-    <string name="achievement_backup_sum">進行本地備份</string>
-    <string name="achievement_command_line_sum">使用命令行</string>
     <string name="achievement_help">這件事做什麼用的？</string>
-    <string name="achievement_help_sum">請求幫忙</string>
     <string name="achievement_prop">屬性</string>
-    <string name="achievement_prop_sum">使用Build.prop編輯器添加prop</string>
-    <string name="achievement_rootless">無根</string>
-    <string name="achievement_rootless_sum">打開無根選項屏幕</string>
     <string name="achievement_sharing">分享</string>
-    <string name="achievement_sharing_sum">在線共享配置文件</string>
     <string name="achievement_tunable">微調</string>
-    <string name="achievement_tunable_sum">更改CPU調控器參數</string>
     <string name="achievement_unlocked">成就解鎖：%s</string>
-    <string name="achievements">成就</string>
-    <string name="achievements_format">%1$d/%2$d成就解鎖</string>
     <string name="owned">國有</string>
     <string name="premium_package">高級套餐</string>
     <string name="premium_package_ad">高級套餐（附廣告）</string>
@@ -606,9 +524,8 @@
     <string name="promo_code">促销代码</string>
     <string name="checking_code">检查促销代码</string>
     <string name="invalid_promo_code">促销代码无效！</string>
-    <string name="cluster_cores_format">Cluster #%d 核心</string>
-    <string name="cluster_freqs_format">Cluster #%d 频率</string>
-    <string name="cluster_gov_format">Cluster #%d governor</string>
+    <string name="cpus">CPUs</string>
+    <string name="cpu_frequencies">频率</string>
     <string name="translations_github_help">如果您愿意，可以在GitHub上获取相同的文件，但不同的是能够查看已翻译的文件。 直接从那里下载文件或分叉项目，然后你只需要在完成翻译时打开一个pull-request。</string>
     <string name="translations_file_help">strings.xml文件包含此应用程序中使用的文本。如果要使用手机进行翻译，可以将翻译文件复制到存储中。完成翻译后，请通过我们的电子邮件支持向我们发送回复。</string>
     <string name="tips">提示</string>
@@ -616,4 +533,47 @@
     <string name="critical_failure_sum">重新启动应用后再试一次，如果错误仍然存​​在，请联系支持人员。</string>
     <string name="temp_package_expiration_message">您的临时套餐已过期！立即购买高级套餐以继续使用其功能。</string>
     <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
+    <string name="busybox_install_subtitle">Busybox向我们保证所有命令都将在所有Android版本上运行。</string>
+    <string name="balanced">均衡</string>
+    <string name="profile_battery_plus_sum">尽可能减少能量消耗，忽略任何副作用</string>
+    <string name="profile_battery_sum">Attempts to save battery power with minimal effort</string>
+    <string name="profile_balanced_sum">Attempts to maintain a balance between performance and energy consumption with lightweight changes</string>
+    <string name="profile_performance_plus_sum">Increases performance where possible, ignoring any side effects</string>
+    <string name="profile_performance_sum">Attempts to increase performance and improve overall device feel</string>
+    <string name="profile_format">简介: %s</string>
+    <string name="always_anonymous">永远是匿名的</string>
+    <string name="always_anonymous_sum">忽略登录屏幕。 警告：如果您需要进行应用内购买或验证自己的帐户，则需要先登录。</string>
+    <string name="announcements">通告</string>
+    <string name="announcements_prompt">继续显示这些公告？</string>
+    <string name="show_announcements">显示公告</string>
+    <string name="show_announcements_sum">在主屏幕中显示公告</string>
+    <string name="tap_target_anonymous">如果您现在不想登录，请点击此处</string>
+    <string name="sign_out">Sign out</string>
+    <string name="skip">跳跃</string>
+    <string name="wm_warning">If set incorrectly, these settings can make onscreen content disproportionate or limit touch areas. Make sure you know what you are doing before applying any changes here.\nIf you lose screen access, you can execute this command in an ADB shell to reset everything: \"wm density reset &amp;&amp; wm size reset\".</string>
+    <string name="screen_density">屏幕密度</string>
+    <string name="screen_density_sum">显示器的逻辑密度，DIP单元的缩放系数。</string>
+    <string name="screen_size">屏幕尺寸</string>
+    <string name="window_manager">窗口管理器</string>
+    <string name="wm_keep_settings_prompt">你想保留这些变化吗？它们将在%d秒内自动恢复。</string>
+    <string name="screen_size_sum">屏幕尺寸（宽x高），以像素为单位。</string>
+    <string name="do_not_disturb_mode">请勿打扰模式</string>
+    <string name="toggle_ipv6_sum">启用或禁用IPv6使用</string>
+    <string name="prefer_5ghz">Prefer 5GHz</string>
+    <string name="prefer_5ghz_sum">Set the preferred operational wifi frequency band to 5GHz. Can cause battery drain in some firmwares.</string>
+    <string name="busybox_not_found">找不到Busybox。 某些操作可能无法正常工作。</string>
+    <string name="vip_disable_sync">停用同步</string>
+    <string name="vip_brightness_level_when_enabled">启用时的亮度等级</string>
+    <string name="vip_brightness_level_when_disabled">禁用时的亮度等级</string>
+    <string name="grayscale">灰阶</string>
+    <string name="vip_disable_bluetooth">禁用蓝牙</string>
+    <string name="battery_checklist">电池清单</string>
+    <string name="battery_checklist_sum">帮助您跟踪设备中最耗电的功能并启用省电功能。</string>
+    <string name="check">Check</string>
+    <string name="hibernate">Hibernate</string>
+    <string name="tasker_settings">Tasker设置</string>
+    <string name="tasker_select_feature">选择您要配置Tasker的功能</string>
+    <string name="tasker_plugin_available">Tasker插件可用！</string>
+    <string name="virtual_memory">虚拟内存</string>
+    <string name="zram_sum">在RAM中创建一个压缩块设备，该设备将用于交换而不是较慢的交换分区，从而实现更快的数据交换。</string>
 </resources>

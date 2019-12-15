@@ -35,7 +35,7 @@
     <string name="multitasking_on">Perfil de multitarea habilitado</string>
     <string name="multitasking_off">Perfil de multitarea deshabilitado</string>
     <string name="multitasking_sub">Afina los parámetros del Asesino de Memoria Baja para un mejor perfil de multitarea,basado en la cantidad de RAM disponible.</string>
-    <string name="performance_texto">Rendimiento general</string>
+    <string name="general_performance">Rendimiento general</string>
     <string name="ui_tweaks">Ajustes de la interfaz de usuario</string>
     <string name="liquid">Interfaz Líquida Ligera</string>
     <string name="liquid_on">Interfaz Líquida Ligera habilitada</string>
@@ -57,20 +57,6 @@
     <string name="dpi_sub">Cambía la densidad de la pantalla LCD. Los valores pequeños son iguales al espacio de pantalla más grande. Mantén presionado para más información.</string>
     <string name="dpi_botao">CAMBIAR</string>
     <string name="dpi_edit">Valor</string>
-    <string name="dpi_dialogo">Esta característica está en pruebas actualmente y todavía tiene trabajo por hacer.\n
-        \n
-        Resoluciones predeterminadas de DPI para algunas pantallas:\n
-        \n
-        240x320(ldpi) - 120;\n
-        320x480(mdpi) - 160;\n
-        480x854(hdpi) - 240;\n
-        540x960(hdpi también) - 240;\n
-        720x1280(xhdpi) - 320;\n
-        1080x1920(xxhdpi) - 480\n
-        \n
-        ADVERTENCIA: Por favor, ignore la información anterior si está ejecutando esta aplicación en una Tablet.\n
-        ADVERTENCIA 2: Por favor, evite utilizar ésta opción en ROMs predeterminadas (ROM stocks). Se recomienda utilizar ésta función en caso de usar una ROM personalizada (Custom ROMs).
-    </string>
     <string name="dpi_reboot">¡Esto tiene el potencial de causar un bucle de arranque (bootloop) en tu dispositivo!\nSi ha establecido un valor absurdo o inadecuado para tu dispositivo, ¡se pasará al archivo de propiedades ahora!</string>
     <string name="dpi_valor"> Fue el valor de DPI elegido, ¿proceder?</string>
     <string name="reiniciar_aviso">Tu dispositivo se reiniciará.</string>
@@ -89,10 +75,8 @@
     <string name="request_storage_permission_sum">Storage permission will be used to:\n  - Hacer copias de seguridad\n  - Recuperar el fondo de pantalla\n  - Registros (logs)</string>
     <string name="final_sub">Pulsa el fondo del botón para completar el inicio de la aplicación.</string>
     <string name="finalizar">¡Todo establecido!</string>
-    <string name="restaurar_sub">Los archivos fueron restaurados</string>
     <string name="calibrado">La batería ha sido calibrada</string>
     <string name="eh_noyz">¡Bienvenido!</string>
-    <string name="miscellaneous_tools">Herramientas Diversas</string>
     <string name="log">Deshabilitar Registros</string>
     <string name="log_sub">Si no deseas que Android se esfuerce en recopilar todo lo que pasa en todas las aplicaciones, habilita ésta opción.</string>
     <string name="utilidades">Utilidades</string>
@@ -103,7 +87,7 @@
     <string name="log_off">Registro deshabilitado</string>
     <string name="log_on">Registro habilitado denuevo</string>
     <string name="title_activity_opcoes">Opciones</string>
-    <string name="melhoras">Mejoras</string>
+    <string name="improvements">Mejoras</string>
     <string name="bateria_kk_snack">Mejoras de batería habilitadas</string>
     <string name="bateria_kk_snack_off">Mejoras de batería deshabilitadas</string>
     <string name="apagar">Borrar</string>
@@ -111,7 +95,6 @@
     <string name="cleaner">Limpiador</string>
     <string name="junk_cleaned">Basura eliminada</string>
     <string name="error">Error</string>
-    <string name="busybox_not_found">Parece que busybox no se ha encontrado en ninguna parte.\nÉsta aplicación requiere de la app BusyBox de Stephen (Stericson) para funcionar, por favor descárgalo e instálalo (puedes hacerlo desde Google Play Store).</string>
     <string name="title_activity_sobre">Acerca de</string>
     <string name="lennoard_sub">Desarrollador y diseñador</string>
     <string name="empty">¿Corazón vacío?</string>
@@ -119,9 +102,7 @@
     <string name="special">Agradecimientos Especiales</string>
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> por la guía:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Guía para aprender scripts básicos, cómo ejecutar los escripts, y construcción de modificación</a>, de donde tomamos inspiración y algunos conocimientos iniciales. Gracias, estás en algún lugar de nuestro corazón vacío.</string>
-    <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">Aplicación de código abierto AdAway</a>, de donde tomamos los anfitriones de bloqueador de anuncios.\n AdAway está en mantenimiento actualmente por 0-kaladin y Dāvis Mošenkovs. El autor original es Dominik SchÃ¼rmann.</string>
     <string name="special_sub_2">También utilizamos algunos scripts de código abierto hechos por nuestro paget96 y con varios miembros de la comunidad de desarrolladores (verifique la licencia en tales archivos).</string>
-    <string name="adaway_1">Dominik Schürmann, 0-kaladin and Dāvis Mošenkovs por la:</string>
     <string name="honrra">▪ Reiny Zamayuti (TjReiny): Tips, suggestions, testing, review\n▪ Jamiéric Gomes: color, material de diseño y consejos de diseño.\n▪ Guilherme Augusto: anáñisis y sugerencias de color, imágenes y diseño.\n▪ Rivaldo Freitas: sugerencias de color y diseño.\n▪ Gominha: bloques y sugerencias de diseño.\n▪ Vinícius Nery (VinyX): sugerencias de color, Brasil >>> Todos\n▪ Wesley: varios consejos y sugerencias.\n\n- No te hemos olvidado.</string>
     <string name="contribuicoes">Contribuciones importantes:</string>
     <string name="hebf_sobre_sub">HEBF Optimizer es iuna aplicación que tiene como objetivo incrementar el rendimiento de tu dispositivo, concentrándose en el rendimiento de la batería, no olvidándola.\nLa aplicación también ofrece una caja de herramientas útil e inteligente el cual puedes utilizar cuando quieras.</string>
@@ -140,8 +121,7 @@
     <string name="license">Licencias de código abierto</string>
     <string name="app_ver">Versión de la aplicación</string>
     <string name="close">Cerrar</string>
-    <string name="yagami">Ligero</string>
-    <string name="nenhum">Ninguno</string>
+    <string name="none">Ninguno</string>
     <string name="profiles">Perfiles</string>
     <string name="reset">Reiniciar</string>
     <string name="kernel_panic">Kernel Panic</string>
@@ -184,7 +164,7 @@
     <string name="force_stop">Forzar detención</string>
     <string name="forcar_parada_sub">Quitar la aplicación</string>
     <string name="ram_manager">Administrador de RAM</string>
-    <string name="title_activity_lmk">Low Memory Killer</string>
+    <string name="low_memory_killer">Low Memory Killer</string>
     <string name="lmk_foreground_sum">Ésas aplicaciones actualmente en la pantalla.</string>
     <string name="lmk_visible_sum">Ésas aplicaciones que se están ejecutando en segundo plano y siguen haciendo algunas acciones.</string>
     <string name="lmk_secondary_sum">Servicios requeridos por algunas aplicaciones. Android los mantiene activos en un espacio de la RAM en caso de que sean necesarios para hacer algo.</string>
@@ -203,7 +183,7 @@
     <string name="lmk_novo_valor">Tus nuevos valores son</string>
     <string name="force_english_language">Forzar el lenguaje Inglés</string>
     <string name="force_english_language_sub">Forzar el uso del lenguaje Inglés en la aplicación</string>
-    <string name="clean_caches">Limpiar cachés</string>
+    <string name="clear_caches">Limpiar cachés</string>
     <string name="kill_mediaserver">Eliminar servidor multimedia</string>
     <string name="fab_media_sub">El proceso Multimedia escanea tu dispositivo para buscar archivos multimedia. La mayoría de las veces es suficiente un reinicio, solamente, para arreglar problemas con ésto.\n¿El servidor multimedia está drenando tu batería? Intenta eliminarlo. (Es posible que no puedas utilizar las salidas de audio).</string>
     <string name="mod_settings_dialog">Por favor, permite que HEBF modifique los ajustes, es necesario para, por ejemeplo; cambiar el brillo.</string>
@@ -223,9 +203,7 @@
     <string name="kernel_fail1">Parece que no tienes opciones para habilitar.</string>
     <string name="kernel_fail2">Intenta de nuevo con otro kernel personalizado.</string>
     <string name="choose_package">Escoge un paquete</string>
-    <string name="lock">Bloquear apps en la memoria (Maestro)</string>
     <string name="value_set">El valor ha sido ajustado</string>
-    <string name="lock_sub">Selecciona una aplicación para que sea bloqueada en la memoria, impidiendo su eliminación.</string>
     <string name="tipo_usuario">¿Qué tipo de usuario eres?</string>
     <string name="normal_user">Usuario normal</string>
     <string name="expert_user">Usuario experto</string>
@@ -241,14 +219,10 @@
     <string name="send">Enviar</string>
     <string name="message">Mensaje</string>
     <string name="vip_aviso">Ésta opción podría alentar tu dispositivo.</string>
-    <string name="donate">Donar</string>
-    <string name="donation_sub">¿Esta aplicación merece tu respeto?\nSi quieres, puedes contribuir desde aquí a mejorar nuestro trabajo a través mediante una donación.\n Has click en uno de los botones de abajo para continuar.</string>
-    <string name="estou_sem_dinheiro">No tengo dinero</string>
-    <string name="hebf_sobre_sub_2">¿Te sientes con el corazón roto? ¿Alguien ha cortado contigo? ¡Olvídalo! Tu corazón puede estar vacío, ¡no dejes que tu batería también lo esté!</string>
     <string name="screen_overlay">Problema de sobreposición de la pantalla</string>
     <string name="screen_overlay_sub">Si estás usando una app grabadora de pantallaâ€¦\n\nCuando está activada, la sobreposición de la pantalla interfiere con la aplicación y otros permisos que fueron concedidos. Para resolver el problema, necesitas deshabilitar la sobreposición (\"overlay\") en orden para arreglar los otros permisos.</string>
     <string name="request_storage_permission_warning">Necesitas conceder los permisos de almacenamiento en orden para abrir ésta opción.\n</string>
-    <string name="busybox1">El BusyBox nos asegura que todos los comandos se ejecutan en todas las versiones del sistema, es un binario que reune o recopila los comandos más comunes de LINUX / UNIX en uno, así si uno de ellos está perdido en el sistema o simplemente no lo tiene, estará presente en el BusyBox.</string>
+    <string name="busybox_install_headline">Los archivos necesarios para ejecutar la aplicación no se encontraron en su sistema.</string>
     <string name="install_now">INSTALAR AHORA</string>
     <string name="low_ram_device_flag">Indicador de dispositivo de RAM baja</string>
     <string name="low_ram_device_flag_sub">Ésta opción indica al dispositivo con una RAM baja, desactivando características específicas intensivas para la memoria (cambio de color de la barra de estado, efecto del fondo del panel de notificación, etc) que trabaja pobremente en dispositivos con baja memoria.\n\nSi se deshabilita, necesitarías REINICIAR para aplicar los cambios.</string>
@@ -264,7 +238,6 @@
     <string name="updated">HEBF ha sido actualizado</string>
     <string name="rate_this_app">Califica esta aplicación</string>
     <string name="rate_this_app_sub">Deja tu crítica en la tienda de Google Play Store</string>
-    <string name="donate_sub">Donar a los desarrolladores</string>
     <string name="application_preferences">Prioridades de la aplicación</string>
     <string name="advanced_toast_cont">Estás a %1$s paso de distancia para desbloquear las opciones avanzadas.</string>
     <string name="advanced_toast">¡Has desbloqueado las opciones avanzadas!</string>
@@ -274,7 +247,6 @@
     <string name="edit">Editar</string>
     <string name="remove">Remover</string>
     <string name="add">Añadir</string>
-    <string name="add_from_presets">Añadir desde los programas</string>
     <string name="view_log">Mirar los registros</string>
     <string name="title_activity_dns">Manual DNS</string>
     <string name="fsync_sub">Fsync sincroniza un archivo del estado dentro del núcleo con el almacenamiento del dispositivo así que toda la información cambiada puede ser recuperada incluso después de que el sistema se haya crasheado o reiniciado.\nPor seguridad, si lo deshabilitas, asegúrate de que tengas una copia de seguridad apropiada</string>
@@ -311,16 +283,11 @@
     <string name="splash9">Se puede hacer copias de seguridad</string>
     <string name="app_caches_android_data">App caches (Android/data)</string>
     <string name="app_caches_data">App caches (/data/data)</string>
-    <string name="atraso">Reapply interval</string>
-    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
     <string name="service_not_running">El servicio no se está ejecutando</string>
     <string name="service_stopped">Servicio detenido</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Creado en medio de un corazón roto</string>
     <string name="stop">Parar</string>
-    <string name="tendency">Tendencia</string>
-    <string name="tendency_sub">Valores más altos significan que el proceso se matará primero.</string>
-    <string name="thank_you">¡Gracias!</string>
     <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
     <string name="captive_portal">Detección de portal cautivo</string>
     <string name="captive_sub">Alterna la detección del portal cautivo. Si se enciende, el sistema intentará verificar la calidad de la conexión para detectar la conectividad.\nSi se apaga, el sistema siempre creerá que la conexión es saludable y no dibujará el \"signo de exclamación\" sobre el ícono de la fuerza.</string>
@@ -355,16 +322,12 @@
     <string name="custom">Personalizado</string>
     <string name="vip_disable_data">Disable Wi-Fi and mobile data</string>
     <string name="vip_parameters_sub">Control extra behavior of the VIP battery saver. Toggle options here to match your needs.</string>
-    <string name="vip_auto_turn_on">Auto turn on</string>
+    <string name="auto_turn_on">Auto turn on</string>
     <string name="start">Iniciar</string>
     <string name="vip_sub">Ponga su dispositivo en un modo de ahorro de batería profunda configurando el gobernador de la CPU junto con varios otros parámetros de su elección. Esto es útil cuando quiere perder el nivel mínimo de batería en su camino a casa, por ejemplo.</string>
     <string name="vip_disable_when_connecting">Desactivar al conectar el cargador</string>
     <string name="vip_android_default_saver">Android default saver</string>
     <string name="device">Dispositivo</string>
-    <string name="disable_gp_services">Desactivar Servicios del Google Play</string>
-    <string name="disable_gp_services_gms">Google Mobile &amp; Cloud services</string>
-    <string name="disable_gp_services_location">Servicios de localización</string>
-    <string name="disable_gp_services_sub">Inhabilita algunos servicios de la aplicación Google Play Servicios que se ejecutan en segundo plano, lo que ayuda a ahorrar energía de la batería.\nCuidado, esta opción negará cualquier actividad de esos servicios, es posible que obtenga resultados no deseados.</string>
     <string name="memory">Memoria</string>
     <string name="info_restart_app">Reinicie la aplicación (quítela de las Aplicaciones Recientes) para aplicar los cambios</string>
     <string name="reset_battery_statistics">Restablecer estadísticas de la batería</string>
@@ -378,7 +341,6 @@
     <string name="import_config_error">Error al importar el archivo de configuración</string>
     <string name="import_config_success">Se importó correctamente el archivo de configuración.</string>
     <string name="import_">Importar</string>
-    <string name="select">Seleccionar</string>
     <string name="cpu_governor">Regulador</string>
     <string name="cpu_max_frequency">Frecuencia máxima</string>
     <string name="cpu_min_frequency">Frecuencia mínima</string>
@@ -387,51 +349,28 @@
     <string name="aggressive_doze">Doze instantáneo</string>
     <string name="aggressive_doze_off">Modo Doze Instantáneo desactivado</string>
     <string name="aggressive_doze_on">Modo Doze Instantáneo activado</string>
-    <string name="tap_target_battery_profiles">Toque aquí para configurar rápidamente los perfiles de batería</string>
-    <string name="tap_target_performance_profiles">Toque aquí para configurar rápidamente los perfiles de rendimiento</string>
     <string name="minutes_scheduled_time">El servicio está programado para ejecutar cada %1$s minutos</string>
     <string name="theme_light_sum">Para los corazones alegres y calientes</string>
     <string name="theme_dark_sum">Para los corazones rotos y fríos</string>
-    <string name="blank_value_warning">¿Está seguro de que desea establecer un valor en blanco?</string>
-    <string name="tap_target_sysctl_apply">Haga clic aquí para aplicar los valores que ha establecido mediante el campo de entrada</string>
-    <string name="action">Acción</string>
-    <string name="insert">Insertar</string>
-    <string name="view">Ver</string>
-    <string name="script_shebang_warning">Coloque #!/system/bin/sh en la primera línea. Sólo se permiten sh shells.</string>
-    <string name="script_select_hint">Por favor, seleccione un archivo de script .sh</string>
-    <string name="same_name_error">Ya hay un archivo con este nombre</string>
-    <string name="script_last_run">Última ejecución: %1$s</string>
     <string name="apps_manager_3rd_party">Aplicaciones de terceros</string>
     <string name="apps_manager_all_apps">Todas las aplicaciones</string>
     <string name="apps_manager_disabled_apps">Aplicaciones deshabilitadas</string>
     <string name="apps_manager_system_apps">Aplicaciones del sistema</string>
     <string name="apps_manager">Administrador de aplicaciones</string>
-    <string name="scripts_runner">Scripts Runner</string>
     <string name="success">Éxito</string>
     <string name="package_uninstalled">El paquete se ha desinstalado</string>
     <string name="storage">Almacenamiento</string>
-    <string name="tap_target_scripts">Use este botón para agregar un script de shell desde el almacenamiento</string>
     <string name="clear_data">Borrar datos</string>
     <string name="failed">Failed</string>
     <string name="fps_unlocker_sum">Ajusta el número mínimo de frames por cada intercambio de búfer para evitar la \"partición del frame\" (cuando ves la mitad de un frame y la mitad de otro).</string>
-    <string name="script_no_script_added">No se agregó ningún script</string>
     <string name="name">Nombre</string>
-    <string name="create">Crear</string>
-    <string name="tap_target_sysctl_cancel">Al hacer clic aquí ahora se cancelará y volverá a /proc/sys</string>
     <string name="hours_scheduled_time">El servicio está programado para ejecutarse cada %1$s horas</string>
-    <string name="script_timeout_error">El script tardó demasiado en terminar su ejecución y por lo tanto fue cerrado</string>
     <string name="service_not_scheduled">El servicio no está programado</string>
     <string name="doze_master_switch">Habilitar el modo doze</string>
     <string name="doze_settings">Configuración de Doze</string>
     <string name="doze_whitelist">Lista blanca</string>
-    <string name="behavior">Comportamiento</string>
     <string name="vip_disable_when_connecting_sum">Deshabilitar el servicio al conectar el cargador</string>
-    <string name="doze_no_app_selected">Ninguna aplicación seleccionada</string>
-    <string name="doze_whitelist_suspending">Suspensión de la lista blanca</string>
-    <string name="doze_whitelist_suspending_sum">Hacer cumplir las restricciones de Doze en aplicaciones incluidas en la lista blanca durante un determinado período de tiempo</string>
     <string name="doze_whitelist_remove_app">¿Eliminar esta aplicación de la lista blanca?</string>
-    <string name="doze_blacklist_suspending">Suspensión de la lista negra</string>
-    <string name="doze_blacklist_suspending_sum">Inhabilite las restricciones de Doze en aplicaciones incluidas en la lista negra durante un determinado período de tiempo</string>
     <string name="doze_blacklist_gms">Lo sentimos, esta aplicación no puede aparecer en la lista negra por ahora…</string>
     <string name="doze_blacklist_app_added">%1$s ha sido agregado a la lista negra</string>
     <string name="doze_record_type_normal">Normal (despierto)</string>
@@ -442,7 +381,7 @@
     <string name="doze_waiting_interval">Intervalo de espera</string>
     <string name="doze_waiting_interval_sum">Espere aproximadamente %1$s minutos antes de ingresar en el modo %2$s</string>
     <string name="doze_idling_mode">Modo de inactividad</string>
-    <string name="cpu_core_status_online">Núcleo %d @ %dMHz</string>
+    <string name="cpu_core_status_online">Núcleo %1$d @ %2$dMHz</string>
     <string name="cpu_core_status_offline">Núcleo %d (offline)</string>
     <string name="cpu_governor_tunables">Val. ajustables del gobernador</string>
     <string name="unsafe_operation">Operación insegura</string>
@@ -496,8 +435,6 @@
     <string name="dark_wallpaper_sum">Un fondo de pantalla oscuro puede ayudar a ahorrar batería en las pantallas AMOLED al reducir la cantidad de píxeles encendidos</string>
     <string name="dark_wallpaper">Fondo de pantalla oscuro</string>
     <string name="quick_settings">Ajustes rápidos</string>
-    <string name="log_in_automatically">Inicia sesión automáticamente</string>
-    <string name="log_in_automatically_sum">Iniciar sesión automáticamente con la última cuenta encontrada al abrir la aplicación</string>
     <string name="date">Fecha</string>
     <string name="data_type">Tipo de datos</string>
     <string name="import_data">Importacion de datos</string>
@@ -517,8 +454,6 @@
     <string name="my_public_configs">Mis configuraciones públicas</string>
     <string name="delete">Borrar</string>
     <string name="public_configurations">Configuraciones públicas</string>
-    <string name="sort">Ordenar</string>
-    <string name="vip_avisoless">y funciona para mejorar tu batería.</string>
     <string name="pro_feature">Función Pro</string>
     <string name="pro_feature_sum">Considere comprar HEBF Optimizer Pro para poder utilizar esta función</string>
     <string name="delete_account_confirm">¿Seguro que quieres eliminar tu cuenta? Tus datos no serán preservados. Después de la operación, serás desconectado.</string>
@@ -535,49 +470,32 @@
     <string name="update_available_sum">Hay una versión actualizada de la aplicación</string>
     <string name="update_available">Actualización disponible</string>
     <string name="promo_warning">¡HEBF Optimizer Pro está disponible solo por %s por tiempo limitado!</string>
-    <string name="vip_saver_less">Esto salvará su batería, desactivará las funciones innecesarias y limitará otras, y detendrá las aplicaciones que agotan la batería para brindarle lo mejor de su dispositivo.</string>
+    <string name="hibernate_apps_sum">Esto salvará su batería, desactivará las funciones innecesarias y limitará otras, y detendrá las aplicaciones que agotan la batería para brindarle lo mejor de su dispositivo.</string>
     <string name="continue_alert">Continuar</string>
     <string name="dont_show">No mostrar</string>
     <string name="accessibility_alert">Necesitamos su permiso para realizar acciones de ahorro de batería y cerrar aplicaciones inactivas. Haga clic en continuar y se abrirá la pantalla de configuración, busque algo similar a lo que muestra el siguiente tutorial:</string>
     <string name="auto_optimize_sub">Optimice automáticamente su juego después de 15 minutos, muy útil en juegos de mundo abiertos o pesados (esto puede arruinar su juego, actívelo solo si está seguro)</string>
     <string name="auto_optimizer">Optimizador automático</string>
     <string name="busybox_install_error_copy">Error al copiar el binario de busybox</string>
-    <string name="busybox_install_error_fnf">¡No se encontró el archivo descargado!</string>
-    <string name="busybox_install_error_integrity">Operación insegura, falla en la verificación de integridad. Intenta descargarlo de nuevo.</string>
-    <string name="busybox_install_hint">Puede intentar descargar e instalar busybox a través de HEBF Optimizer o descargar cualquier aplicación de instalación de busybox de Google Play Store e instalar desde allí.</string>
-    <string name="busybox_installed">Busybox ha sido instalado, toque OK para reiniciar la aplicación.</string>
+    <string name="busybox_install_hint">Puede intentar descargar cualquier aplicación de instalación de busybox desde Google Play Store e instalarla desde allí.</string>
     <string name="charging_dialog">Su dispositivo se está cargando en este momento, ¿realmente desea habilitar esta opción?</string>
     <string name="hibernate_apps">Hibernate applications</string>
     <string name="game_booster">Game Booster</string>
     <string name="gamenews">Incrementa el rendimiento del juego</string>
     <string name="optimize">Optimizar</string>
     <string name="subgame_news">¡Obtén la mejor experiencia de juego ahora!</string>
-    <string name="wifi">Wi-Fi</string>
     <string name="game_booster_sub">Mejor optimización para su juego, esta opción usará todo lo que esté a nuestro alcance, para darle un juego con menos caídas de FPS para la mejor experiencia posible</string>
     <string name="launch_games">LANZAR UN JUEGO</string>
     <string name="other_games">Optimizador de juegos</string>
-    <string name="busybox_install_installing">Instalando busybox…</string>
-    <string name="busybox_install_downloading">Descargando busybox…</string>
     <string name="optimize_now">Optimiza ahora</string>
     <string name="auto_optimize_performance">Auto optimize your device every 15 minutes, this option will give you a new experience in the performance of your device</string>
     <string name="accessibility_service">Servicio de accesibilidad</string>
-    <string name="achievement_advanced_sum">Encuentra la sección oculta usando la forma oculta</string>
     <string name="achievement_backup">Más vale prevenir que curar</string>
-    <string name="achievement_backup_sum">Haga una copia de seguridad local</string>
-    <string name="achievement_command_line_sum">Usa la línea de comando</string>
     <string name="achievement_help">¿Qué hace esto?</string>
-    <string name="achievement_help_sum">Pedir ayuda</string>
     <string name="achievement_prop">Propiedad</string>
-    <string name="achievement_prop_sum">Agregue una prop utilizando el Editor Build.prop</string>
-    <string name="achievement_rootless">Desarraigado</string>
-    <string name="achievement_rootless_sum">Abra la pantalla de opciones sin root</string>
     <string name="achievement_sharing">Compartir</string>
-    <string name="achievement_sharing_sum">Comparte un archivo de configuración en línea</string>
     <string name="achievement_tunable">Sintonia Fina</string>
-    <string name="achievement_tunable_sum">Cambiar un parámetro de gobernador de CPU</string>
     <string name="achievement_unlocked">Logro desbloqueado: %s</string>
-    <string name="achievements">Logros</string>
-    <string name="achievements_format">%1$d/%2$d logros desbloqueados</string>
     <string name="owned">Adquirido</string>
     <string name="premium_package">Paquete Premium</string>
     <string name="premium_package_ad">Paquete Premium (con anuncios)</string>
@@ -606,9 +524,8 @@
     <string name="promo_code">Codigo promocional</string>
     <string name="checking_code">Comprobando código promocional…</string>
     <string name="invalid_promo_code">Código promocional inválido!</string>
-    <string name="cluster_cores_format">Cluster #%d núcleos</string>
-    <string name="cluster_freqs_format">Cluster #%d frecuencias</string>
-    <string name="cluster_gov_format">Cluster #%d gobernador</string>
+    <string name="cpus">Núcleos</string>
+    <string name="cpu_frequencies">Frecuencias</string>
     <string name="translations_github_help">Si lo prefiere, puede obtener el mismo archivo en GitHub con la diferencia de poder ver los archivos ya traducidos. Descargue los archivos directamente desde allí o bifurque el proyecto, luego solo necesita abrir una solicitud de extracción cuando termine de traducir.</string>
     <string name="translations_file_help">El archivo strings.xml contiene el texto utilizado en esta aplicación. Puede copiar el archivo de traducción a su almacenamiento si desea traducirlo usando su teléfono. Una vez que haya terminado de traducir, simplemente envíenoslo por correo electrónico.</string>
     <string name="tips">Consejos</string>
@@ -616,5 +533,48 @@
     <string name="critical_failure_sum">Vuelva a intentarlo después de reiniciar la aplicación; si el error persiste, póngase en contacto con el servicio de asistencia.</string>
     <string name="temp_package_expiration_message">Su paquete temporal ha caducado! Compra el paquete premium ahora para seguir usando sus características.</string>
     <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
+    <string name="busybox_install_subtitle">Busybox nos asegura que todos los comandos se ejecutarán en todas las versiones de Android.</string>
+    <string name="profile_battery_sum">Intenta ahorrar energía de la batería con un mínimo esfuerzo</string>
+    <string name="profile_balanced_sum">Intenta mantener un equilibrio entre el rendimiento y el consumo de energía con cambios ligeros</string>
+    <string name="profile_performance_plus_sum">Aumenta el rendimiento donde sea posible, ignorando cualquier efecto secundario.</string>
+    <string name="profile_performance_sum">Intenta aumentar el rendimiento y mejorar la sensación general del dispositivo</string>
+    <string name="profile_format">Perfil :%s</string>
+    <string name="balanced">Equilibrado</string>
+    <string name="profile_battery_plus_sum">Disminuye el consumo de energía donde sea posible, ignorando cualquier efecto secundario</string>
+    <string name="always_anonymous">Siempre anonimo</string>
+    <string name="always_anonymous_sum">Ignorar la pantalla de inicio de sesión. Advertencia: Esto no lo iniciará la sesión, si necesita realizar compras dentro de la aplicación o verificar su cuenta, primero deberá iniciar sesión.</string>
+    <string name="announcements">Anuncios y avisos</string>
+    <string name="announcements_prompt">¿Sigues mostrando estos anuncios?</string>
+    <string name="show_announcements">Mostrar anuncios</string>
+    <string name="show_announcements_sum">Mostrar anuncios en la pantalla principal</string>
+    <string name="tap_target_anonymous">Toca aquí si no quieres iniciar sesión ahora</string>
+    <string name="sign_out">Desconectar</string>
+    <string name="skip">Saltar</string>
+    <string name="wm_warning">Si se configura incorrectamente, estas configuraciones pueden hacer que el contenido en pantalla sea desproporcionado o limitar las áreas táctiles. Asegúrese de saber lo que está haciendo antes de aplicar cualquier cambio aquí.\nSi pierde el acceso a la pantalla, puede ejecutar este comando en un shell de ADB para restablecer todo: "wm density reset &amp;&amp; wm size reset".</string>
+    <string name="screen_density">Densidad de pantalla</string>
+    <string name="screen_density_sum">La densidad lógica de la pantalla, un factor de escala para la unidad DIP.</string>
+    <string name="screen_size">Tamaño de pantalla</string>
+    <string name="window_manager">Gestor de ventanas</string>
+    <string name="wm_keep_settings_prompt">¿Quieres mantener estos cambios? Se revertirán automáticamente en %d segundos.</string>
+    <string name="screen_size_sum">El tamaño de la pantalla (ancho x alto) en píxeles.</string>
+    <string name="do_not_disturb_mode">Modo no molestar</string>
+    <string name="toggle_ipv6_sum">Habilitar o deshabilitar el uso de IPv6</string>
+    <string name="prefer_5ghz">Preferir 5GHz</string>
+    <string name="prefer_5ghz_sum">Establecer la banda de frecuencia wifi operativa preferida a 5 GHz. Puede provocar el agotamiento de la batería en algunos firmwares.</string>
+    <string name="busybox_not_found">Busybox no encontrado. Algunas operaciones pueden no funcionar correctamente.</string>
+    <string name="vip_disable_sync">Desactivar sincronización</string>
+    <string name="vip_brightness_level_when_enabled">Nivel de brillo cuando está habilitado</string>
+    <string name="vip_brightness_level_when_disabled">Nivel de brillo cuando está deshabilitado</string>
+    <string name="grayscale">Escala de grises</string>
+    <string name="battery_checklist">Lista de verificación de la batería</string>
+    <string name="battery_checklist_sum">Le ayuda a rastrear las funciones de su dispositivo que consumen más batería y permite ahorrar batería.</string>
+    <string name="check">Verificar</string>
+    <string name="hibernate">Hibernar</string>
+    <string name="vip_disable_bluetooth">Deshabilitar bluetooth</string>
+    <string name="tasker_plugin_available">¡Complemento Tasker disponible!</string>
+    <string name="tasker_select_feature">Seleccione la función con la que desea configurar Tasker</string>
+    <string name="tasker_settings">Configuración de Tasker</string>
+    <string name="virtual_memory">Memoria virtual</string>
+    <string name="zram_sum">Crea un dispositivo de bloque comprimido en RAM que se utilizará para el intercambio en lugar de la partición de intercambio más lenta, lo que permite un intercambio de datos más rápido.</string>
 
 </resources>

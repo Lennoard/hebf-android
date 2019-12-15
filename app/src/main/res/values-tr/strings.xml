@@ -35,7 +35,7 @@
     <string name="multitasking_on">Çoklu görev profili etkin</string>
     <string name="multitasking_off">Çoklu görec profili devre dışı</string>
     <string name="multitasking_sub">Daha iyi bir çoklu görev profili için düşük hafıza öldürücü (LMK) parametrelerini, kullanılabilir RAM miktarına dayanarak ayarlar.</string>
-    <string name="performance_texto">Genel</string>
+    <string name="general_performance">Genel</string>
     <string name="ui_tweaks">Kullanıcı arayüzü düzenlemeleri</string>
     <string name="liquid">Akıcı kullanıcı arayüz</string>
     <string name="liquid_on">Akıcı arayüz etkin</string>
@@ -57,20 +57,6 @@
     <string name="dpi_sub">LCD yopunluğunu değiştirir. Daha küçük değerler daha büyük ekran alanına eşittir. Daha fazla bilgi için basılı tutun.</string>
     <string name="dpi_botao">DEĞİŞTİR</string>
     <string name="dpi_edit">Değer</string>
-    <string name="dpi_dialogo">Bu özellik  şu anda test aşamasındandır ve hâlâ yapılması gereken düzenlemeler vardır.\n
-        \n
-        Bazı ekran çözünürlükleri için varsayılan DPI değerleri:\n
-        \n
-        240x320(ldpi) - 120;\n
-        320x480(mdpi) - 160;\n
-        480x854(hdpi) - 240;\n
-        540x960(hdpi as well) - 240;\n
-        720x1280(xhdpi) - 320;\n
-        1080x1920(xxhdpi) - 480\n
-        \n
-        Uyarı: Eğer bu uygulamayı Tablette kullanıyorsanız lütfen alttaki uyarıyı gözardı edin.\n
-        Uyarı 2: Lütfen bu seçeneği stock ROM\'larda kullanmayın.
-</string>
     <string name="dpi_reboot">Bu seçenek, cihazında bir bootloop\'a neden olma potansiyeline sahiptir!\nEğer cihazınız için uygunsuz veya saçma bir değer girerseniz, şimdi özellikler dosyasına işlenecektir!</string>
     <string name="dpi_valor"> seçilen dpi değeri, devam edilsin mi?</string>
     <string name="reiniciar_aviso">Cihazınız yeniden başlatılacak.</string>
@@ -89,10 +75,8 @@
     <string name="request_storage_permission_sum">Storage permission will be used to:\n\n- Make backups\n- Retrieve the wallpaper\n- Generate logs</string>
     <string name="final_sub">Uygulama kurulumunu tamamlamak için alttaki düğmeye dokunun.</string>
     <string name="finalizar">Her şey tamam!</string>
-    <string name="restaurar_sub">Dosyalar geri yüklendi</string>
     <string name="calibrado">Pil kalibre edildi</string>
     <string name="eh_noyz">Hoşgeldiniz!</string>
-    <string name="miscellaneous_tools">Çeşitli Araçlar</string>
     <string name="log">Günlüğe kaydetmeyi devre dışı bırak</string>
     <string name="log_sub">If you don\'t want to see the Android striving to record everything that is happening in all applications, enable this option</string>
     <string name="utilidades">Araçlar</string>
@@ -103,7 +87,7 @@
     <string name="log_off">Günlük kaydedici dever dışı</string>
     <string name="log_on">Günlük kaydedici tekrar etkin</string>
     <string name="title_activity_opcoes">Seçenekler</string>
-    <string name="melhoras">İyileştirmeler</string>
+    <string name="improvements">İyileştirmeler</string>
     <string name="bateria_kk_snack">Pil iyileştirmeleri etkin</string>
     <string name="bateria_kk_snack_off">Pil iyileştirmeleri devre dışı</string>
     <string name="apagar">Delete</string>
@@ -111,7 +95,6 @@
     <string name="cleaner">Temizleyici</string>
     <string name="junk_cleaned">Ivır zıvırlar kaldırıldı</string>
     <string name="error">Hata</string>
-    <string name="busybox_not_found">Busybox hiçbir yerde bulunamadı.\nBu uygulama çalışmak için Stericson\'ın busybox\'ına ihtiyaç duyar, lütfen onu yükleyin</string>
     <string name="title_activity_sobre">Hakkında</string>
     <string name="lennoard_sub">Developer and designer</string>
     <string name="empty">Empty heart?</string>
@@ -119,9 +102,7 @@
     <string name="special">Özel teşekkür</string>
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> for the:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Learn basic scripting, how to execute scripts, mod building</a> guide, where we took inspiration and some initial knowledge. Thanks, you are somewhere in our empty heart.</string>
-    <string name="adaway_2"><a href="http://free-software-for-android.github.io/AdAway/">AdAway open source</a> app, where we took adblocker hosts.\n– AdAway is currently maintained by 0-kaladin and Dāvis Mošenkovs. The original author is Dominik Schürmann.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community (check the license in such files).</string>
-    <string name="adaway_1">Dominik Schürmann, 0-kaladin vr Dāvis Mošenkovs :</string>
     <string name="honrra">▪ Reiny Zamayuti (TjReiny): Tips, suggestions, testing, review\n▪ Jamiéric Gomes: Renk, Metaryal Tasarım ve sayfa düzeni ipuçları\n▪ Guilherme Augusto: Renk, görüntüler, sayfa düzeni önerileri ve analizi \n▪ Rivaldo Freitas: Renk ve sayfa düzeni önerileri\n▪ Gominha: Çerçeve ve sayfa düzeni\n▪ Vinícius Nery (VinyX): Renk önerileri, Brazil >>> All\n▪ Wesley: Çeşitli ipuçları ve öneriler\n\n – Sizi unutmadık.</string>
     <string name="contribuicoes">Önemli katkılar</string>
     <string name="hebf_sobre_sub">HEBF Optimizer is an application that aims to increase the performance of your device, also by focusing on battery performance, we didn\'t forget it.\nThe application also features a useful and intelligent toolbox that you can use whenever you want.</string>
@@ -140,8 +121,7 @@
     <string name="license">Açık kaynak lisansları</string>
     <string name="app_ver">Uygulama versiyonu</string>
     <string name="close">Kapat</string>
-    <string name="yagami">Hafif</string>
-    <string name="nenhum">Hiçbiri</string>
+    <string name="none">Hiçbiri</string>
     <string name="profiles">Profiller</string>
     <string name="reset">Sıfırla</string>
     <string name="kernel_panic">Kernel Panic</string>
@@ -184,7 +164,7 @@
     <string name="force_stop">Zorla durdur</string>
     <string name="forcar_parada_sub">Uygulamayı sonlandır</string>
     <string name="ram_manager">RAM Yöneticisi</string>
-    <string name="title_activity_lmk">Düşük Hafıza Temizleyicisi</string>
+    <string name="low_memory_killer">Düşük Hafıza Temizleyicisi</string>
     <string name="lmk_foreground_sum">Şu anda ekrandaki uygulamalar.</string>
     <string name="lmk_visible_sum">Arka planda çalışan ve hala bazı işlemler yapan uygulamalar.</string>
     <string name="lmk_secondary_sum">Services needed by some applications. The Android keeps them alive in a space in RAM in case they are needed to do something.</string>
@@ -203,7 +183,7 @@
     <string name="lmk_novo_valor">Yeni değerleriniz </string>
     <string name="force_english_language">İngilizce dilini kulanmaya zorla</string>
     <string name="force_english_language_sub">Uygulama içerisinde İngilizce dilini kullanmaya zorla</string>
-    <string name="clean_caches">Önbelleği temizle</string>
+    <string name="clear_caches">Önbelleği temizle</string>
     <string name="kill_mediaserver">Kill media server</string>
     <string name="fab_media_sub">Medyasunucusu işlemi aygıtınızı ortam dosyaları için tarar. Çoğu zaman yeniden başlatmak sorunları düzeltmek için yeterlidir.\nMedyasunucusu pilinizi mi boşaltıyor? İşlemi sonlandırmayı deneyin (ses çıkışı alamayabilirsiniz).</string>
     <string name="mod_settings_dialog">Please allow HEBF modify settings, it is needed to e.g, change the brightness.</string>
@@ -223,9 +203,7 @@
     <string name="kernel_fail1">Öyle görünüyor ki, etkinleştirmek için seçeneğiniz yok.</string>
     <string name="kernel_fail2">Başka bir özel kernel ile tekrar deneyin</string>
     <string name="choose_package">Bir paket seçin</string>
-    <string name="lock">App killing tendency</string>
     <string name="value_set">Değer kaydedildi</string>
-    <string name="lock_sub">This option will decrease the tendency of a process to be killed by the system in OOM (Out of memory) cases. This can only be set to a RUNNING process, that means you need to open / wake it up in order to see it in the below list.</string>
     <string name="tipo_usuario">Ne tür bir kullanıcısınız?</string>
     <string name="normal_user">Normal kullanıcı</string>
     <string name="expert_user">Uzman kullanıcı</string>
@@ -241,14 +219,10 @@
     <string name="send">Gönder</string>
     <string name="message">Mesaj</string>
     <string name="vip_aviso">Bu seçenek cihazınızı yavaşlatabilir.</string>
-    <string name="donate">Bağış yap</string>
-    <string name="donation_sub">Bu uygulama saygıyı hak ediyor mu?\nEğer isterseniz, çalışmalarımızı geliştirmemiz için bağış yoluyla katkıda bulunabilirsiniz.\n Devam etmek için aşağıdaki düğmelerden birine dokunun.</string>
-    <string name="estou_sem_dinheiro">Param yok</string>
-    <string name="hebf_sobre_sub_2">Feeling heartbroken? Someone screwed up with you? Forget it. Your heart can be empty, do not let your battery get too!</string>
     <string name="screen_overlay">Screen overlay problem</string>
     <string name="screen_overlay_sub">If you are using a screen recorder app…\n\nWhen activated, the screen overlay interferes with the app and other permissions that were granted. To solve the problem you need to disable the overlay in order to fix other permissions.</string>
     <string name="request_storage_permission_warning">You need to grant storage permissions in order to open this option.\n</string>
-    <string name="busybox1">The busybox assures us that all commands will run on all versions of the system, it is a binary that gathers the most common LINUX / UNIX commands into one, so if one of them is missing on your system, it will be present in busybox.</string>
+    <string name="busybox_install_headline">Uygulamayı çalıştırmak için gereken dosyalar sisteminizde bulunamadı.</string>
     <string name="install_now">ŞİMDİ KUR</string>
     <string name="low_ram_device_flag">Düşük RAM\'li cihaz</string>
     <string name="low_ram_device_flag_sub">Bu seçenek, cihazı düşük bir RAM birimi olarak işaretler, düşük bellekli cihazlarda kötü çalışan belirli yoğun bellek kullanan özellikleri (durum cubuğu renklendirmesi, bildirim paneli arkaplanı efekti, vb.) kapatır.\n\nDevre dışı bırakıldığında değişikliklerin uygulanması için yeniden başlatma gerekebilir.</string>
@@ -264,7 +238,6 @@
     <string name="updated">HEBF güncellendi</string>
     <string name="rate_this_app">Bu uygulamayı değerlendir</string>
     <string name="rate_this_app_sub">Leave your review on the Google Play Store</string>
-    <string name="donate_sub">Geliştiricilere bağışta bulun</string>
     <string name="application_preferences">Uygulama tercihleri</string>
     <string name="advanced_toast_cont">You\'re %1$s steps away from unlocking advanced options</string>
     <string name="advanced_toast">Gelişmiş seçenekleri açtınız!</string>
@@ -274,7 +247,6 @@
     <string name="edit">Düzenle</string>
     <string name="remove">Kaldır</string>
     <string name="add">Ekle</string>
-    <string name="add_from_presets">Add from presets</string>
     <string name="view_log">Günlükleri görüntüle</string>
     <string name="title_activity_dns">Manuel DNS</string>
     <string name="fsync_sub">Fsync synchronizes a file\'s in-core state with the storage device so that all changed information can be retrieved even after the system crashed or was rebooted.\nFor safety, if you disable it, make sure you have a proper backup.</string>
@@ -299,13 +271,9 @@
     <string name="intro_guia">Hoşgeldiniz! Bu kılavuz, uygulama kurulum sürecinde size yardımcı olacaktır</string>
     <string name="done">Done</string>
     <string name="no_logs_found">Günlük bulunamadı</string>
-    <string name="tendency_sub">Daha yüksek değerler, işlemin önce öldürülmesi anlamına gelir.</string>
-    <string name="tendency">Tendency</string>
     <string name="stop">Stop</string>
     <string name="service_stopped">Hizmet durdu</string>
     <string name="service_not_running">Hizmet çalışmıyor</string>
-    <string name="atraso">Reapply interval</string>
-    <string name="atraso_sub">The delay in seconds for the application to reapply changes.</string>
     <string name="app_caches_android_data">App caches (Android/data)</string>
     <string name="app_caches_data">App caches (/data/data)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
@@ -320,7 +288,6 @@
     <string name="splash7">The green theme is a tribute in support of the Brazilian football team Chapecoense</string>
     <string name="splash8">Have you tried one of the widgets?</string>
     <string name="splash9">Backups can be made</string>
-    <string name="thank_you">Thank you!</string>
     <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.</string>
     <string name="captive_portal">Captive portal detection</string>
     <string name="captive_sub">Toggles the captive portal detection. If turned on, the system will try to check the connection quality in order to detect connectivity.\nIf turned off, the system will aways believe that the connection is healthy and will not draw the \"exclamation mark\" over the strength icon.</string>
@@ -354,17 +321,13 @@
     <string name="gaming_lmk_profile">Gaming LMK profile</string>
     <string name="custom">Custom</string>
     <string name="vip_android_default_saver">Android default saver</string>
-    <string name="vip_auto_turn_on">Auto turn on</string>
+    <string name="auto_turn_on">Auto turn on</string>
     <string name="vip_parameters_sub">Control extra behavior of the VIP battery saver. Toggle options here to match your needs.</string>
     <string name="vip_disable_data">Disable Wi-Fi and mobile data</string>
     <string name="start">Start</string>
     <string name="vip_sub">Put your device into a deep battery saving mode by setting the CPU governor along with several other parameters of your choice. This is useful when you want to lose the minimum battery level on your way home, for instance.</string>
     <string name="vip_disable_when_connecting">Disable when connecting the charger</string>
     <string name="device">Device</string>
-    <string name="disable_gp_services">Disable Google Play Services</string>
-    <string name="disable_gp_services_gms">Google Mobile &amp; Cloud services</string>
-    <string name="disable_gp_services_location">Location services</string>
-    <string name="disable_gp_services_sub">Disables some Google Play Services app services that run in the background, helping to save battery power.\nCareful, this option will deny any activity of those services, you might get unwanted results.</string>
     <string name="memory">Memory</string>
     <string name="info_restart_app">Restart the app (remove it from the Recents Apps) to apply changes</string>
     <string name="reset_battery_statistics">Reset battery statistics</string>
@@ -378,7 +341,6 @@
     <string name="import_config_error">Failed to import configuration file</string>
     <string name="import_config_success">Successfully imported the configuration file</string>
     <string name="import_">Import</string>
-    <string name="select">Select</string>
     <string name="cpu_governor">Governor</string>
     <string name="cpu_max_frequency">Max. frequency</string>
     <string name="cpu_min_frequency">Min. frequency</string>
@@ -387,46 +349,26 @@
     <string name="aggressive_doze_off">Instant doze mode disabled</string>
     <string name="aggressive_doze_on">Instant doze mode enabled</string>
     <string name="aggressive_doze_sum">Forces the Doze Mode to activate moments after the screen turns off.</string>
-    <string name="tap_target_battery_profiles">Touch here to quickly set battery profiles</string>
-    <string name="tap_target_performance_profiles">Touch here to quickly set performance profiles</string>
     <string name="minutes_scheduled_time">Service is scheduled to run every %1$s minutes</string>
     <string name="theme_dark_sum">For broken and cold hearts</string>
     <string name="theme_light_sum">For joyful and hot hearts</string>
-    <string name="blank_value_warning">Are you sure you want to set a blank value?</string>
-    <string name="tap_target_sysctl_apply">Touch here to apply the values you set using the input field</string>
-    <string name="action">Aksiyon</string>
-    <string name="insert">Ekle</string>
-    <string name="script_last_run">Last run: %1$s</string>
-    <string name="same_name_error">There is already a file with this name</string>
-    <string name="script_select_hint">Please select a .sh script file</string>
-    <string name="script_shebang_warning">Place #!/system/bin/sh on the first line. Only sh shells are allowed.</string>
-    <string name="view">View</string>
     <string name="apps_manager">Apps Manager</string>
     <string name="apps_manager_3rd_party">Third-party apps</string>
     <string name="apps_manager_all_apps">All apps</string>
     <string name="apps_manager_disabled_apps">Disabled apps</string>
     <string name="apps_manager_system_apps">System apps</string>
-    <string name="scripts_runner">Scripts Runner</string>
     <string name="package_uninstalled">Package has been uninstalled</string>
     <string name="success">Success</string>
     <string name="storage">Depolama</string>
-    <string name="tap_target_scripts">Use this button to add a shell script from the storage</string>
     <string name="clear_data">Net veriler</string>
     <string name="failed">Failed</string>
     <string name="fps_unlocker_sum">Adjusts the minimum number of video frame periods per buffer swap to prevent the \"frame tearing\" (when you see half of one frame and half of another)</string>
-    <string name="script_no_script_added">Eklenen script yok</string>
     <string name="hours_scheduled_time">Service is scheduled to run every %1$s hours</string>
     <string name="service_not_scheduled">Service is not scheduled</string>
     <string name="doze_master_switch">Enable doze mode</string>
     <string name="doze_settings">Doze settings</string>
     <string name="doze_whitelist">Whitelist</string>
-    <string name="behavior">Behavior</string>
-    <string name="doze_whitelist_suspending">Whitelist suspending</string>
-    <string name="doze_whitelist_suspending_sum">Enforce Doze restrictions on whitelisted applications for a certain period of time</string>
-    <string name="doze_blacklist_suspending">Blacklist suspending</string>
-    <string name="doze_blacklist_suspending_sum">Disable Doze restrictions on blacklisted applications for a certain period of time</string>
     <string name="unsafe_operation">Güvensiz çalışma</string>
-    <string name="create">yaratmak</string>
     <string name="doze_whitelist_remove_app">Remove this app from whitelist?</string>
     <string name="doze_blacklist_gms">Sorry, this app cannot be blacklisted for now…</string>
     <string name="doze_blacklist_app_added">%1$s has been added to the blacklist</string>
@@ -440,7 +382,7 @@
     <string name="doze_waiting_interval_sum">Wait approximately %1$s minutes before entering in %2$s mode</string>
     <string name="doze_idling_mode">Idling mode</string>
     <!-- Core 0 @ 800Mhz -->
-    <string name="cpu_core_status_online">Core %d @ %dMHz</string>
+    <string name="cpu_core_status_online">Core %1$d @ %2$dMHz</string>
     <string name="cpu_core_status_offline">Core %d (offline)</string>
     <string name="cpu_governor_tunables">Governor tunables values</string>
     <string name="name">Name</string>
@@ -496,8 +438,6 @@
     <string name="wallpaper_set">Wallpaper set</string>
     <string name="wallpaper_set_failure">Failed to set wallpaper</string>
     <string name="wallpaper_restored">Wallpaper restored</string>
-    <string name="log_in_automatically_sum">Uygulamayı açarken bulunan son hesapla otomatik olarak oturum aç</string>
-    <string name="log_in_automatically">Log in automatically</string>
     <string name="anonymous">Anonymous</string>
     <string name="grant_permission">Grant permission</string>
     <string name="request_permission">We need your permission</string>
@@ -511,17 +451,12 @@
     <string name="no_item_found">No item found</string>
     <string name="you_are_offline">You are offline</string>
     <string name="delete">Delete</string>
-    <string name="sort">Sort</string>
     <string name="pro_feature">Pro feature</string>
     <string name="pro_feature_sum">Please consider purchasing HEBF Optimizer Pro in order to user this feature</string>
     <string name="input_error_email">Please enter a valid email address</string>
     <string name="create_new_account">Create a new account</string>
     <string name="disconnection_warning">You\'ll be disconnected</string>
     <string name="device_name">Device name</string>
-    <string name="doze_no_app_selected">Uygulama seçilmedi</string>
-    <string name="script_timeout_error">The script took too long to finish its execution and thus it was killed</string>
-    <string name="tap_target_sysctl_cancel">Şimdi buraya dokunmak iptal edilecek ve /proc/sys\'e dönecek</string>
-    <string name="vip_avisoless">and it works on improving your battery.</string>
     <string name="vip_disable_when_connecting_sum">Disable the service when connecting the charger</string>
     <string name="melhoras_less">Your battery will have a VIP treatment</string>
     <string name="android_version">Android sürümü</string>
@@ -540,46 +475,29 @@
     <string name="accessibility_alert">Pil tasarrufu eylemlerini gerçekleştirmek ve etkin olmayan uygulamaları kapatmak için izninize ihtiyacımız var. Devam\'a tıklayın ve ayarlar ekranı açılacak, aşağıdaki öğreticinin neye benzediğine benzer bir şey arayın:</string>
     <string name="dont_show">Gösterme</string>
     <string name="continue_alert">Devam et</string>
-    <string name="vip_saver_less">This will save your battery, turning off unnecessary features and limiting others, stopping applications that drain your battery to give you the best of your device.</string>
+    <string name="hibernate_apps_sum">This will save your battery, turning off unnecessary features and limiting others, stopping applications that drain your battery to give you the best of your device.</string>
     <string name="auto_optimize_sub">Oyununuzu 15 dakika sonra otomatik olarak optimize edin, ağır veya açık dünya oyunlarında çok faydalıdır (bu, olumsuz etkilere neden olabilir, ancak emin olduğunuzda etkinleştirin)</string>
     <string name="auto_optimizer">Otomatik iyileştirici</string>
     <string name="busybox_install_error_copy">Busybox ikili kurulu yüklenemedi</string>
-    <string name="busybox_install_error_fnf">İndirilen dosya bulunamadı!</string>
-    <string name="busybox_install_error_integrity">Güvenli olmayan çalışma, bütünlük kontrolü başarısız oldu. Tekrar indirmeyi deneyin.</string>
-    <string name="busybox_install_hint">HEBF Optimizer aracılığıyla busybox indirip yükleyebilir veya herhangi bir busybox yükleyici uygulamasını Google Play Store\'dan indirip yükleyebilirsiniz.</string>
-    <string name="busybox_installed">Busybox kuruldu, uygulamayı yeniden başlatmak için Tamam\'a dokunun.</string>
+    <string name="busybox_install_hint">You can try to download any busybox installer app from the Google Play Store and install it from there.</string>
     <string name="charging_dialog">Cihazınız şimdi şarj oluyor, bu seçeneği etkinleştirmek istiyor musunuz?</string>
     <string name="hibernate_apps">Hazırda bekleme uygulamaları</string>
     <string name="game_booster">Oyun yükseltici</string>
     <string name="gamenews">Oyun performansını artırın</string>
     <string name="optimize">Optimize</string>
     <string name="subgame_news">Şimdi en iyi oyun deneyimini yaşayın!</string>
-    <string name="wifi">Kablosuz internet</string>
     <string name="game_booster_sub">Better optimization for your game, this option will use everything in our reach, to give you a game with less FPS drops for the best possible experience</string>
     <string name="launch_games">LAUNCH A GAME</string>
     <string name="other_games">Оптимизатор игр</string>
-    <string name="busybox_install_installing">Loading the busy box ...</string>
-    <string name="busybox_install_downloading">Downloading busybox…</string>
     <string name="optimize_now">Şimdi optimize Et</string>
     <string name="auto_optimize_performance">Cihazınızı her 15 dakikada bir otomatik olarak optimize edin; bu seçenek, cihazınızın performansında size yeni bir deneyim sunar.</string>
     <string name="accessibility_service">Erişilebilirlik Hizmeti</string>
-    <string name="achievement_advanced_sum">Gizli yolu gizli yolu kullanarak bulun</string>
     <string name="achievement_backup">Eşeği sağlam kazığa bağlamak</string>
-    <string name="achievement_backup_sum">Yerel bir yedekleme yap</string>
-    <string name="achievement_command_line_sum">Komut satırını kullan</string>
     <string name="achievement_help">Bu şey ne yapar?</string>
-    <string name="achievement_help_sum">Yardım isteyin</string>
     <string name="achievement_prop">Property</string>
-    <string name="achievement_prop_sum">Add a prop using the Build.prop Editor</string>
-    <string name="achievement_rootless">Rootless</string>
-    <string name="achievement_rootless_sum">Open the rootless options screen</string>
     <string name="achievement_sharing">Sharing</string>
-    <string name="achievement_sharing_sum">Share a configuration file online</string>
     <string name="achievement_tunable">İnce ayar</string>
-    <string name="achievement_tunable_sum">CPU valör parametresini değiştirme</string>
     <string name="achievement_unlocked">Achievement unlocked: %s</string>
-    <string name="achievements">Başarılar</string>
-    <string name="achievements_format">%1$d/%2$d achievements unlocked</string>
     <string name="owned">Owned</string>
     <string name="premium_package">Premium paket</string>
     <string name="premium_package_ad">Premium Paket (reklamlar ile)</string>
@@ -614,10 +532,52 @@
     <string name="translations_github_help">If you prefer, you can get the same file on GitHub with the difference of being able to see the files already translated. Download the files directly from there or fork the project, then you just need to open a pull-request when you finish translating.</string>
     <string name="tips">Tips</string>
     <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
-    <string name="cluster_gov_format">Cluster #%d governor</string>
-    <string name="cluster_freqs_format">Cluster #%d freqs</string>
-    <string name="cluster_cores_format">Cluster #%d cores</string>
+    <string name="cpu_frequencies">Frekansları</string>
+    <string name="cpus">CPUs</string>
     <string name="critical_failure_sum">Try again after restarting the app, if the error persists, contact the support.</string>
+    <string name="busybox_install_subtitle">Busybox, tüm komutların tüm Android sürümlerinde çalışacağını garanti eder.</string>
+    <string name="balanced">Dengeli</string>
+    <string name="profile_battery_plus_sum">Herhangi bir yan etkiyi göz ardı ederek, mümkün olduğunda enerji tüketimini azaltır</string>
+    <string name="profile_battery_sum">Attempts to save battery power with minimal effort</string>
+    <string name="profile_balanced_sum">Attempts to maintain a balance between performance and energy consumption with lightweight changes</string>
+    <string name="profile_performance_plus_sum">Increases performance where possible, ignoring any side effects</string>
+    <string name="profile_performance_sum">Attempts to increase performance and improve overall device feel</string>
+    <string name="profile_format">Profil: %s</string>
+    <string name="always_anonymous">Her zaman adsız</string>
+    <string name="always_anonymous_sum">Giriş ekranını yoksay. Uyarı: Uygulama içi satın alımlar yapmanız veya hesabınızı doğrulamanız gerekiyorsa, önce oturum açmanız gerekir.</string>
+    <string name="announcements">Duyurular</string>
+    <string name="announcements_prompt">Bu duyuruları göstermeye devam et?</string>
+    <string name="show_announcements">Duyuruları göster</string>
+    <string name="show_announcements_sum">Ana ekranda duyuruları göster</string>
+    <string name="tap_target_anonymous">Şimdi oturum açmak istemiyorsanız buraya dokunun.</string>
+    <string name="sign_out">Sign out</string>
+    <string name="skip">Atlamak</string>
+    <string name="wm_warning">If set incorrectly, these settings can make onscreen content disproportionate or limit touch areas. Make sure you know what you are doing before applying any changes here.\nIf you lose screen access, you can execute this command in an ADB shell to reset everything: \"wm density reset &amp;&amp; wm size reset\".</string>
+    <string name="screen_density">Ekran yoğunluğu</string>
+    <string name="screen_density_sum">The logical density of the display, a scaling factor for the DIP unit.</string>
+    <string name="screen_size">Ekran boyutu</string>
+    <string name="window_manager">Pencere yöneticisi</string>
+    <string name="wm_keep_settings_prompt">Bu değişiklikleri korumak ister misiniz? %d saniye içinde otomatik olarak geri döndürülürler.</string>
+    <string name="screen_size_sum">Ekran boyutu (genişlik x yükseklik) piksel cinsinden.</string>
+    <string name="do_not_disturb_mode">Rahatsız etmeyin modu</string>
+    <string name="toggle_ipv6_sum">IPv6 kullanımını etkinleştirme veya devre dışı bırakma</string>
+    <string name="prefer_5ghz">Prefer 5GHz</string>
+    <string name="prefer_5ghz_sum">Set the preferred operational wifi frequency band to 5GHz. Can cause battery drain in some firmwares.</string>
+    <string name="busybox_not_found">Busybox bulunamadı. Bazı işlemler düzgün çalışmayabilir.</string>
+    <string name="vip_disable_sync">Senkronizasyonu devre dışı bırak</string>
+    <string name="vip_brightness_level_when_enabled">Etkinleştirildiğinde parlaklık seviyesi</string>
+    <string name="vip_brightness_level_when_disabled">Devre dışı bırakıldığında parlaklık seviyesi</string>
+    <string name="grayscale">Gri tonlama</string>
+    <string name="vip_disable_bluetooth">Bluetooth\'u devre dışı bırak</string>
+    <string name="battery_checklist">Akü kontrol listesi</string>
+    <string name="battery_checklist_sum">Helps you track the most battery consuming features of your device and enable battery saving ones.</string>
+    <string name="check">Check</string>
+    <string name="hibernate">Hibernate</string>
+    <string name="tasker_settings">Tasker ayarları</string>
+    <string name="tasker_plugin_available">Tasker plugin available!</string>
+    <string name="tasker_select_feature">Tasker\'ı yapılandırmak istediğiniz özelliği seçin.</string>
+    <string name="virtual_memory">Sanal bellek</string>
+    <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
 
 
 </resources>

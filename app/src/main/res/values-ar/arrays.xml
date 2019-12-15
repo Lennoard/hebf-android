@@ -38,7 +38,7 @@
         <item>فشل غير محدد</item>
     </string-array>
 
-    <string-array name="perfis_lmk">
+    <string-array name="lmk_profiles">
         <item>@string/custom</item>
         <item>Moderate</item>
         <item>Multitasking</item>
@@ -61,6 +61,7 @@
 
     <string-array name="vip_auto_turn_on">
         <item>@string/off</item>
+        <item>at 50% battery</item>
         <item>at 40% battery</item>
         <item>at 30% battery</item>
         <item>at 15% battery</item>

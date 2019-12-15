@@ -38,7 +38,7 @@
         <item>falha não especificada</item>
     </string-array>
 
-    <string-array name="perfis_lmk">
+    <string-array name="lmk_profiles">
         <item>@string/custom</item>
         <item>Moderado</item>
         <item>Multitarefa</item>
@@ -61,6 +61,7 @@
 
     <string-array name="vip_auto_turn_on">
         <item>@string/off</item>
+        <item>aos 50% de bateria</item>
         <item>aos 40% de bateria</item>
         <item>aos 30% de bateria</item>
         <item>aos 15% de bateria</item>
