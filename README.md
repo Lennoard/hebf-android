@@ -2,6 +2,8 @@
 HEBF Optimizer Repository.
 *"Heart empty battery full."*
 
+[![Translate - with Stringlate](https://img.shields.io/badge/translate%20with-stringlate-green.svg)](https://lonami.dev/stringlate/translate?git=https://github.com/Lennoard/)
+
 ## Whats is HEBF?
 HEBF Optimizer is an Android application that aims to increase the performance of your device, also by focusing on battery performance, we didn't forget it.
 
