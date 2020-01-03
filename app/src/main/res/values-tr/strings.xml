@@ -21,10 +21,6 @@
     <string name="tweaks">Düzeltmeler</string>
     <string name="outro">Diğer</string>
     <string name="sobre">Hakkında</string>
-    <string name="boot">Hızlı açılış</string>
-    <string name="boot_sub">Kapatma modunu uyku modu olarak ayarlar ve Hızlı Açılış özelliğini etkinleştirir, önyükleme süresini hızlandırır.</string>
-    <string name="faster_boot_on">Hızlı açılış etkinleştirildi</string>
-    <string name="faster_boot_off">Hızlı açılış devre dışı bırakıldı</string>
     <string name="game_on">Oyun modu etkinleştirildi</string>
     <string name="game_off">Oyun modu devre dışı bırakıldı</string>
     <string name="performance_tweak">Performans düzenlemesi</string>
@@ -90,7 +86,7 @@
     <string name="improvements">İyileştirmeler</string>
     <string name="bateria_kk_snack">Pil iyileştirmeleri etkin</string>
     <string name="bateria_kk_snack_off">Pil iyileştirmeleri devre dışı</string>
-    <string name="apagar">Delete</string>
+    <string name="apagar">Sil</string>
     <string name="warning">Uyarı!</string>
     <string name="cleaner">Temizleyici</string>
     <string name="junk_cleaned">Ivır zıvırlar kaldırıldı</string>
@@ -274,8 +270,8 @@
     <string name="stop">Stop</string>
     <string name="service_stopped">Hizmet durdu</string>
     <string name="service_not_running">Hizmet çalışmıyor</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">Uygulama önbellekleri</string>
+    <string name="app_caches_data">Uygulama önbellekleri (dahili)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -353,10 +349,10 @@
     <string name="theme_dark_sum">For broken and cold hearts</string>
     <string name="theme_light_sum">For joyful and hot hearts</string>
     <string name="apps_manager">Apps Manager</string>
-    <string name="apps_manager_3rd_party">Third-party apps</string>
-    <string name="apps_manager_all_apps">All apps</string>
-    <string name="apps_manager_disabled_apps">Disabled apps</string>
-    <string name="apps_manager_system_apps">System apps</string>
+    <string name="apps_manager_3rd_party">Üçüncü taraf uygulamalar</string>
+    <string name="apps_manager_all_apps">Tüm uygulamalar</string>
+    <string name="apps_manager_disabled_apps">Engelli uygulamalar</string>
+    <string name="apps_manager_system_apps">Sistem uygulamaları</string>
     <string name="package_uninstalled">Package has been uninstalled</string>
     <string name="success">Success</string>
     <string name="storage">Depolama</string>
@@ -404,7 +400,7 @@
     <string name="register_accept_terms">I\'ve read and accept the terms and conditions</string>
     <string name="register_error_email_in_use">This email address is already in use</string>
     <string name="terms_and_conditions">Terms and conditions</string>
-    <string name="account_options">Account options</string>
+    <string name="account_options">Hesap seçenekleri</string>
     <string name="change_password">Change password</string>
     <string name="password_changed">Password changed</string>
     <string name="delete_account">Delete account</string>
@@ -438,7 +434,7 @@
     <string name="wallpaper_set">Wallpaper set</string>
     <string name="wallpaper_set_failure">Failed to set wallpaper</string>
     <string name="wallpaper_restored">Wallpaper restored</string>
-    <string name="anonymous">Anonymous</string>
+    <string name="anonymous">Anonim</string>
     <string name="grant_permission">Grant permission</string>
     <string name="request_permission">We need your permission</string>
     <string name="import_data">Import data</string>
@@ -578,6 +574,7 @@
     <string name="tasker_select_feature">Tasker\'ı yapılandırmak istediğiniz özelliği seçin.</string>
     <string name="virtual_memory">Sanal bellek</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 
 
 </resources>

@@ -11,36 +11,7 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-mount -o remount,rw / 2>/dev/null
-mount -o remount,rw / / 2>/dev/null
-mount -o remount,rw rootfs 2>/dev/null
-mount -o remount,rw /system 2>/dev/null
-mount -o remount,rw /system /system 2>/dev/null
-
-mount -o remount,rw / 2>/dev/null
-mount -o remount,rw / / 2>/dev/null
-mount -o remount,rw rootfs 2>/dev/null
-mount -o remount,rw /system 2>/dev/null
-mount -o remount,rw /system /system 2>/dev/null
-
-setprop ro.ril.hsxpa 3
 setprop ro.ril.gprsclass 32
-setprop ro.ril.hsdpa.category 28
-setprop ro.ril.hsupa.category 9
-setprop ro.ril.enable.sdr 1
-setprop ro.ril.enable.gea3 1
-setprop ro.ril.enable.fd.plmn.prefix 23402,23410,23411
-setprop ro.ril.enable.a52 0
-setprop ro.ril.enable.a53 1
+setprop ro.ril.enable.fd.plmn.prefix
 setprop ro.ril.enable.dtm 1
-setprop ro.ril.hep 1
-setprop net.tcp.buffersize.default 6144,87380,110208,6144,16384,110208
-setprop net.tcp.buffersize.wifi 262144,524288,1048576,262144,524288,1048576
-setprop net.tcp.buffersize.lte 262144,524288,3145728,262144,524288,3145728
-setprop net.tcp.buffersize.hsdpa 6144,262144,1048576,6144,262144,1048576
-setprop net.tcp.buffersize.evdo_b 6144,262144,1048576,6144,262144,1048576
-setprop net.tcp.buffersize.umts 6144,87380,110208,6144,16384,110208
-setprop net.tcp.buffersize.hspa 6144,87380,262144,6144,16384,262144
-setprop net.tcp.buffersize.gprs 6144,8760,11680,6144,8760,11680
-setprop net.tcp.buffersize.edge 6144,26280,35040,6144,16384,35040
 

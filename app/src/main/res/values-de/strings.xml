@@ -21,10 +21,6 @@
     <string name="tweaks">Optimierungen</string>
     <string name="outro">Sonstiges</string>
     <string name="sobre">Über</string>
-    <string name="boot_sub">Setzt den Shutdown-Modus auf "Ruhezustand" und ermöglicht so die Quick Power On-Funktion für eine Beschleunigung der Bootzeit.</string>
-    <string name="faster_boot_on">Schnelleres Hochfahren aktiviert</string>
-    <string name="faster_boot_off">Schnelleres Hochfahren deaktiviert</string>
-    <string name="boot">Schnelleres Hochfahren</string>
     <string name="game_on">Gaming Modus aktiviert</string>
     <string name="game_off">Gaming Modus deaktiviert</string>
     <string name="performance_tweak">Performance Optimierung</string>
@@ -89,7 +85,7 @@
     <string name="improvements">Verbesserungen</string>
     <string name="bateria_kk_snack">Akku Verbesserungen aktiviert</string>
     <string name="bateria_kk_snack_off">Akku Verbesserungen deaktiviert</string>
-    <string name="apagar">Delete</string>
+    <string name="apagar">Löschen</string>
     <string name="warning">Warnung!</string>
     <string name="cleaner">Reiniger</string>
     <string name="junk_cleaned">Müll entfernt</string>
@@ -275,8 +271,8 @@
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Service stopped</string>
     <string name="stop">Stop</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">App caches</string>
+    <string name="app_caches_data">App caches (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -577,4 +573,5 @@
     <string name="tasker_select_feature">Wählen Sie die Funktion aus, mit der Sie Tasker konfigurieren möchten</string>
     <string name="virtual_memory">Virtueller Speicher</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 </resources>

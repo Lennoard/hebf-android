@@ -21,10 +21,6 @@
     <string name="tweaks">Ajustes</string>
     <string name="outro">Otros</string>
     <string name="sobre">Acerca de</string>
-    <string name="boot">Inicio rápido</string>
-    <string name="boot_sub">Pone el modo de apagado a hibernar y habilita el encendido rápido, acelerando el tiempo de arranque.</string>
-    <string name="faster_boot_on">Inicio rápido habilitado</string>
-    <string name="faster_boot_off">Inicio rápido deshabilitado</string>
     <string name="game_on">Modo Gaming activado</string>
     <string name="game_off">Modo Gaming deshabilitado</string>
     <string name="performance_tweak">Ajustes de rendimiento</string>
@@ -281,8 +277,8 @@
     <string name="splash7">El tema verde es un tributo en apoyo del equipo de fútbol brasileño Chapecoense</string>
     <string name="splash8">Have you tried one of the widgets?</string>
     <string name="splash9">Se puede hacer copias de seguridad</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">Cachés de aplicaciones</string>
+    <string name="app_caches_data">Cachés de aplicaciones (interno)</string>
     <string name="service_not_running">El servicio no se está ejecutando</string>
     <string name="service_stopped">Servicio detenido</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
@@ -576,5 +572,6 @@
     <string name="tasker_settings">Configuración de Tasker</string>
     <string name="virtual_memory">Memoria virtual</string>
     <string name="zram_sum">Crea un dispositivo de bloque comprimido en RAM que se utilizará para el intercambio en lugar de la partición de intercambio más lenta, lo que permite un intercambio de datos más rápido.</string>
+    <string name="vip_force_device_idle">Forzar inactividad (Doze)</string>
 
 </resources>

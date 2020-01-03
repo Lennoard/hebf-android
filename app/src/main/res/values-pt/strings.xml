@@ -2,10 +2,6 @@
 <resources>
     <string name="app_name">HEBF Optimizer</string>
     <string name="bateria">Bateria</string>
-    <string name="boot">Boot mais rápido</string>
-    <string name="boot_sub">Define o modo de desligamento como hibernar e ativa a função Quick Power On, acelerando o tempo de boot.</string>
-    <string name="faster_boot_off">Boot mais rápido desativado</string>
-    <string name="faster_boot_on">Boot mais rápido ativado</string>
     <string name="cancelar">CANCELAR</string>
     <string name="dpi">Alterador de DPI</string>
     <string name="dpi_botao">ALTERAR</string>
@@ -274,8 +270,8 @@
     <string name="stop">Parar</string>
     <string name="service_stopped">Serviço interrompido</string>
     <string name="service_not_running">O serviço não está em execução</string>
-    <string name="app_caches_data">Cache dos apps (/data/data)</string>
-    <string name="app_caches_android_data">Cache dos apps (Android/data)</string>
+    <string name="app_caches_data">Cache dos apps (interno)</string>
+    <string name="app_caches_android_data">Cache dos apps</string>
     <string name="splash1">A frequência recomendada para rodar o FStrim é de pelo menos uma vez por semana</string>
     <string name="splash10">Criado em meio a um coração partido</string>
     <string name="splash11">[LMK] Você pode tocar no valor atual para retornar rapidamente ao valor padrão / encontrado</string>
@@ -377,7 +373,7 @@
     <string name="doze_record_type_normal">Normal (acordado)</string>
     <string name="doze_record_type_deep">Inatividade profunda</string>
     <string name="doze_record_type_light">Inatividade leve</string>
-    <string name="doze_record_type_light_maint">Manutenção suave</string>
+    <string name="doze_record_type_light_maint">Manutenção leve</string>
     <string name="doze_record_type_deep_maint">Manutenção profunda</string>
     <string name="doze_waiting_interval">Intervalo de espera</string>
     <string name="doze_idling_mode">Modo de inatividade</string>
@@ -576,4 +572,5 @@
     <string name="tasker_plugin_available">Plug-in Tasker disponível!</string>
     <string name="virtual_memory">Memória virtual</string>
     <string name="zram_sum">Cria um dispositivo de bloco compactado na RAM que será usado para swap em vez da partição de swap, que é mais lenta, permitindo uma troca de dados mais rápida.</string>
+    <string name="vip_force_device_idle">Forçar inatividade (Doze)</string>
 </resources>

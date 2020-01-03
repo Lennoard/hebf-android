@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <string name="build_date" translatable="false">Codename: Francisca\n2019/12/10</string>
-    <string name="build_version" translatable="false">v2.3.6 (154)</string>
-    <string name="build_changelog" translatable="false">
+    <string name="build_date" translatable="false">Codename: Francisca\n2019/12/28</string>
+    <string name="build_version" translatable="false">v2.3.8 (155)</string>
+    <string name="build_changelog" translatable="false">\n
+        ▪ Removed faster boot\n
+        ▪ Launch games with Game Booster (root)\n
+        ▪ Added force idle option to VIP Battery Saver (root)\n
         ▪ Design updates\n
-        ▪ Bug fixes\n
+        ▪ Profiles fixed\n
+        ▪ Other bug fixes\n
     </string>
     <string name="accessibility_alert">We need your permission to perform battery-saving actions and close inactive applications. Click on continue and the settings screen will open, look for something similar to what the tutorial below shows:</string>
     <string name="accessibility_service">Accessibility Service</string>
@@ -37,8 +41,8 @@
     <string name="announcements_prompt">Keep showing these announcements?</string>
     <string name="anonymous">Anonymous</string>
     <string name="apagar">Delete</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">App caches</string>
+    <string name="app_caches_data">App caches (internal)</string>
     <string name="app_ops_sum">Manage application operations and permissions</string>
     <string name="app_ver">Application version</string>
     <string name="appbar_scrolling_view_behavior_local" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
@@ -76,8 +80,6 @@
     <string name="battery_information">Battery information</string>
     <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
     <string name="bluetooth">Bluetooth</string>
-    <string name="boot">Faster boot</string>
-    <string name="boot_sub">Sets the shutdown mode to hibernate and enables the Quick Power On feature, speeding up the boot time.</string>
     <string name="bootloader">BOOTLOADER</string>
     <string name="br_sum">If you found a bug or have any suggestions please feel free to send us (via email). We will respond as soon as possible.</string>
     <string name="browsing">Improve browsing speed</string>
@@ -195,8 +197,6 @@
     <string name="fast_charge">USB Fast charge</string>
     <string name="fast_charge_sub">Speeds up battery charging via USB when connected to a PC or notebook.</string>
     <string name="fastboot_aviso">Your device will be rebooted into bootloader mode.</string>
-    <string name="faster_boot_off">Faster boot disabled</string>
-    <string name="faster_boot_on">Faster boot enabled</string>
     <string name="ferramentas">Tools</string>
     <string name="final_sub">Tap the bottom button to complete the application setup.</string>
     <string name="finalizar">All set!</string>
@@ -591,5 +591,6 @@
     <string name="tasker_settings">Tasker settings</string>
     <string name="virtual_memory">Virtual Memory</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 
 </resources>

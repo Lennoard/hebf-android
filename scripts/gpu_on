@@ -11,17 +11,7 @@
 #  You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #=======================================================================#
 
-setprop hw3d.force 1
-setprop ro.product.gpu.driver 1
-setprop persist.sampling_profiler 0
 setprop hwui.render_dirty_regions false
-setprop persist.sampling_profiler 0
 setprop persist.sys.ui.hw 1
-setprop ro.config.disable.hw_accel false
-setprop video.accelerate.hw 1
-setprop persist.sys.composition.type gpu
-setprop debug.egl.profiler 1
 setprop debug.egl.hw 1
 setprop debug.composition.type gpu
-setprop ro.vold.umsdirtyratio 20
-setprop hwui.disable_vsync true

@@ -21,10 +21,6 @@
     <string name="tweaks"> बदलाव </string>
     <string name="outro"> अन्य </string>
     <string name="sobre">About</string>
-    <string name="boot"> तेजी से बूट </string>
-    <string name="boot_sub">Sets the shutdown mode to hibernate and enables the Quick Power On feature, speeding up the boot time.</string>
-    <string name="faster_boot_on"> तेजी से बूट सक्षम </string>
-    <string name="faster_boot_off"> तेजी से बूट अक्षम </string>
     <string name="game_on"> गेमिंग मोड सक्रिय </string>
     <string name="game_off"> गेमिंग मोड निष्क्रिय  </string>
     <string name="performance_tweak"> प्रदर्शन tweak </string>
@@ -274,8 +270,8 @@
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Service stopped</string>
     <string name="stop">Stop</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">App caches</string>
+    <string name="app_caches_data">App caches (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -578,4 +574,5 @@
     <string name="tasker_settings">Tasker सेटिंग्स</string>
     <string name="virtual_memory">अप्रत्यक्ष स्मृति</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 </resources>

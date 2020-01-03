@@ -21,10 +21,6 @@
     <string name="tweaks">调教</string>
     <string name="outro">其他</string>
     <string name="sobre">关于</string>
-    <string name="boot">加快开机</string>
-    <string name="boot_sub">用休眠代替关机，并启用快速启动特性，加快开机。</string>
-    <string name="faster_boot_on">启用快速开机</string>
-    <string name="faster_boot_off">禁用快速开机</string>
     <string name="game_on">游戏模式激活</string>
     <string name="game_off">游戏模式未激活</string>
     <string name="performance_tweak">性能调整</string>
@@ -274,8 +270,8 @@
     <string name="service_not_running">服务未运行</string>
     <string name="service_stopped">服务停止了</string>
     <string name="stop">停止</string>
-    <string name="app_caches_android_data">应用程序缓存 (Android/data)</string>
-    <string name="app_caches_data">应用程序缓存 (/data/data)</string>
+    <string name="app_caches_android_data">应用程序缓存</string>
+    <string name="app_caches_data">应用程序缓存 (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">创造在一颗破碎的心中</string>
     <string name="splash11">[LMK] 您可以点击当前值以快速返回默认/找到的值</string>
@@ -576,4 +572,5 @@
     <string name="tasker_plugin_available">Tasker插件可用！</string>
     <string name="virtual_memory">虚拟内存</string>
     <string name="zram_sum">在RAM中创建一个压缩块设备，该设备将用于交换而不是较慢的交换分区，从而实现更快的数据交换。</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 </resources>

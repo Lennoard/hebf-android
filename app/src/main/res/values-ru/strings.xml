@@ -21,10 +21,6 @@
     <string name="tweaks">Оптимизация</string>
     <string name="outro">Другое</string>
     <string name="sobre">О приложении</string>
-    <string name="boot">Ускорение загрузки</string>
-    <string name="boot_sub">Включение режима гибернации для ускорения загрузки.</string>
-    <string name="faster_boot_on">Ускорение загрузки включено</string>
-    <string name="faster_boot_off">Ускорение загрузки отключено</string>
     <string name="game_on">Игровой режим включен</string>
     <string name="game_off">Игровой режим отключен</string>
     <string name="performance_tweak">Режим производительности</string>
@@ -271,8 +267,8 @@
     <string name="service_not_running">Служба не запущена</string>
     <string name="service_stopped">Служба остановлена</string>
     <string name="stop">Stop</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">App caches</string>
+    <string name="app_caches_data">App caches (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -578,4 +574,5 @@
     <string name="tasker_settings">Настройки Tasker</string>
     <string name="virtual_memory">Виртуальная память</string>
     <string name="zram_sum">Создает сжатое блочное устройство в ОЗУ, которое будет использоваться для замены вместо более медленного раздела подкачки, что позволяет быстрее обмениваться данными.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 </resources>

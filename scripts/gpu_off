@@ -13,8 +13,6 @@
 
 mount -o remount,rw /data
 
-rm -f /data/property/persist.sampling_profiler
 rm -f /data/property/persist.sys.ui.hw
-rm -f /data/property/persist.sys.composition.type
 
 mount -o remount,ro /data

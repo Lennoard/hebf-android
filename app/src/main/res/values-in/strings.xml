@@ -21,10 +21,6 @@
     <string name="tweaks">Tweak</string>
     <string name="outro">Lainnya</string>
     <string name="sobre">Tentang</string>
-    <string name="boot">Booting lebih cepat</string>
-    <string name="boot_sub">Mengubah mode matikan daya menjadi mode hibernasi dan mengaktifkan fitur Quick Power On, untuk mempercepat proses booting.</string>
-    <string name="faster_boot_on">Booting lebih cepat diaktifkan</string>
-    <string name="faster_boot_off">Booting lebih cepat dimatikan</string>
     <string name="game_on">Mode Gaming diaktifkan</string>
     <string name="game_off">Mode Gaming dimatikan</string>
     <string name="performance_tweak">Tweak Performa</string>
@@ -275,8 +271,8 @@
     <string name="service_not_running">Service is not running</string>
     <string name="service_stopped">Layanan berhenti</string>
     <string name="stop">Berhenti</string>
-    <string name="app_caches_android_data">Cache aplikasi (Android/data)</string>
-    <string name="app_caches_data">Cache aplikasi (/data/data)</string>
+    <string name="app_caches_android_data">Cache aplikasi</string>
+    <string name="app_caches_data">Cache aplikasi (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Dibuat di tengah patah hati</string>
     <string name="splash11">[LMK] Anda dapat mengetuk nilai saat ini untuk kembali dengan cepat ke default / yang ditemukan</string>
@@ -579,5 +575,6 @@
     <string name="tasker_settings">Pengaturan Tasker</string>
     <string name="virtual_memory">Memori Virtual</string>
     <string name="zram_sum">Membuat perangkat blok terkompresi dalam RAM yang akan digunakan untuk bertukar bukan partisi swap yang lebih lambat, memungkinkan pertukaran data lebih cepat.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 
 </resources>

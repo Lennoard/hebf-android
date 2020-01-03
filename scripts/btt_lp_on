@@ -13,9 +13,7 @@
 
 setprop ro.mot.eri.losalert.delay 1000
 setprop pm.sleep_mode 1
-setprop wifi.supplicant_scan_interval 180
-setprop power.saving.mode 1
-setprop ro.com.google.networklocation 0
+setprop ro.com.google.locationfeatures 0
 setprop ro.kernel.android.checkjni 0
 setprop ro.vold.umsdirtyratio 20
 setprop dalvik.vm.checkjni false

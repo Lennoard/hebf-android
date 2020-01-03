@@ -21,10 +21,6 @@
     <string name="tweaks">Ottimizzazioni</string>
     <string name="outro">Altros</string>
     <string name="sobre">Informazioni</string>
-    <string name="boot">Avvio più veloce</string>
-    <string name="boot_sub">Imposta la modalità di shutdown a \"ibernazione\" e abilita la funzione Quick Power On, velocizzando l\'avvio.</string>
-    <string name="faster_boot_on">Boot più veloce attivato</string>
-    <string name="faster_boot_off">Boot più veloce disattivato</string>
     <string name="game_on">Modalità gaming attivata</string>
     <string name="game_off">Modalità gaming disattivata</string>
     <string name="performance_tweak">Performance tweak</string>
@@ -272,8 +268,8 @@
     <string name="service_not_running">Il servizio non è in esecuzione</string>
     <string name="service_stopped">Servizio interrotto</string>
     <string name="stop">Fermare</string>
-    <string name="app_caches_android_data">App caches (Android/data)</string>
-    <string name="app_caches_data">App caches (/data/data)</string>
+    <string name="app_caches_android_data">App caches</string>
+    <string name="app_caches_data">App caches (internal)</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -578,4 +574,5 @@
     <string name="tasker_settings">Impostazioni tasker</string>
     <string name="virtual_memory">Memoria virtuale</string>
     <string name="zram_sum">Crea un dispositivo a blocchi compressi nella RAM che verrà utilizzato per lo swap anziché la partizione di swap più lenta, consentendo uno scambio di dati più veloce.</string>
+    <string name="vip_force_device_idle">Force device-idle (Doze)</string>
 </resources>
