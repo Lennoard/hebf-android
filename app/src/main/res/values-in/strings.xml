@@ -576,5 +576,7 @@
     <string name="virtual_memory">Memori Virtual</string>
     <string name="zram_sum">Membuat perangkat blok terkompresi dalam RAM yang akan digunakan untuk bertukar bukan partisi swap yang lebih lambat, memungkinkan pertukaran data lebih cepat.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="you_are_not_logged_in">Anda belum login</string>
+    <string name="toolbox">Kotak Alat</string>
 
 </resources>

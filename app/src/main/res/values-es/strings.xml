@@ -573,5 +573,8 @@
     <string name="virtual_memory">Memoria virtual</string>
     <string name="zram_sum">Crea un dispositivo de bloque comprimido en RAM que se utilizará para el intercambio en lugar de la partición de intercambio más lenta, lo que permite un intercambio de datos más rápido.</string>
     <string name="vip_force_device_idle">Forzar inactividad (Doze)</string>
+    <string name="not_logged_in_sum">Si anteriormente compró la antigua aplicación \"HEBF Optimizer Pro\", debe iniciar sesión para verificar su compra y desbloquear todas las funciones. Inicie sesión ahora para aprovechar las funciones de uso compartido de la aplicación y todo lo demás que ofrecemos.</string>
+    <string name="toolbox">Caja de herramientas</string>
+    <string name="you_are_not_logged_in">Usted no se ha identificado</string>
 
 </resources>

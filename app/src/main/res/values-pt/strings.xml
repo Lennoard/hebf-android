@@ -15,7 +15,7 @@
     <string name="fstrim_sub">Descarta (\"apara\") blocos não usados em um sistema de arquivos montado, reduzindo o lag. É recomendado que você faça esta operação pelo menos uma vez na semana.</string>
     <string name="geral">Geral</string>
     <string name="liquid_sub">Otimiza a escala de pressão do toque e a duração das animações para melhorar os elementos da interface do usuário.</string>
-    <string name="misc">Miscelânea</string>
+    <string name="misc">Diversos</string>
     <string name="multitasking">Melhor multitarefa</string>
     <string name="multitasking_sub">Afina os parâmetros do Low Memory Killer para um melhor perfil multitarefa, baseado na quantidade de RAM disponível.</string>
     <string name="navigation_drawer_close">Fechar a navegação</string>
@@ -55,7 +55,7 @@
     <string name="eh_noyz">Bem-vindo!</string>
     <string name="final_sub">Toque no botão inferior para finalizar esta configuração inicial do aplicativo.</string>
     <string name="finalizar">Tudo pronto!</string>
-    <string name="request_storage_permission_sum">A permissão de armazenamento será usada para:\n  - Fazer backups\n  - Recuperar o papel de parede\n  - Registros (logs)</string>
+    <string name="request_storage_permission_sum">A permissão de armazenamento será usada para:\n - Liberar armazenamento\n - Fazer backups\n  - Recuperar o papel de parede\n  - Registros (logs)</string>
     <string name="dpi_reboot">Isto tem potencial de causar bootloop no seu dispositivo!\nSe você tiver definido um valor absurdo ou inapropriado para o seu dispositivo ele será passado ao arquivo de propriedades agora!</string>
     <string name="host">Alterador do Hostname</string>
     <string name="host_sub">Muda o hostname (o nome dado ao dispositivo quando conectado a uma rede Wi-Fi ou Ethernet).</string>
@@ -573,4 +573,7 @@
     <string name="virtual_memory">Memória virtual</string>
     <string name="zram_sum">Cria um dispositivo de bloco compactado na RAM que será usado para swap em vez da partição de swap, que é mais lenta, permitindo uma troca de dados mais rápida.</string>
     <string name="vip_force_device_idle">Forçar inatividade (Doze)</string>
+    <string name="toolbox">Caixa de ferramentas</string>
+    <string name="you_are_not_logged_in">Você não fez login</string>
+    <string name="not_logged_in_sum">Se você comprou  anteriormente o antigo aplicativo \"HEBF Optimizer Pro\", faça login para verificar sua compra e desbloquear todos os recursos. Faça login agora para aproveitar as funções de compartilhamento do aplicativo e tudo o mais que oferecemos.</string>
 </resources>

@@ -575,4 +575,6 @@
     <string name="virtual_memory">Виртуальная память</string>
     <string name="zram_sum">Создает сжатое блочное устройство в ОЗУ, которое будет использоваться для замены вместо более медленного раздела подкачки, что позволяет быстрее обмениваться данными.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="toolbox">Ящик для инструментов</string>
+    <string name="you_are_not_logged_in">вы не авторизованы</string>
 </resources>

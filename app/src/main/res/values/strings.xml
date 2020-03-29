@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <string name="build_date" translatable="false">Codename: Francisca\n2019/12/28</string>
-    <string name="build_version" translatable="false">v2.3.8 (155)</string>
-    <string name="build_changelog" translatable="false">\n
-        ▪ Removed faster boot\n
-        ▪ Launch games with Game Booster (root)\n
-        ▪ Added force idle option to VIP Battery Saver (root)\n
-        ▪ Design updates\n
-        ▪ Profiles fixed\n
-        ▪ Other bug fixes\n
-    </string>
     <string name="accessibility_alert">We need your permission to perform battery-saving actions and close inactive applications. Click on continue and the settings screen will open, look for something similar to what the tutorial below shows:</string>
     <string name="accessibility_service">Accessibility Service</string>
     <string name="accessibility_service_description">This service will automatically force stop an application at its details screen once you invoke it (through HEBF only).</string>
@@ -264,7 +254,7 @@
     <string name="kill_mediaserver">Kill</string>
     <string name="ksm_sub">Crucial for low RAM devices, the KSM merges two kernel pages if they are found to have same data, helping the user to get more free space for the applications.</string>
     <string name="launch">Launch</string>
-    <string name="launch_games">LAUNCH A GAME</string>
+    <string name="launch_games">Launch games</string>
     <string name="lennoard" translatable="false">Lennoard Silva</string>
     <string name="lennoard_sub">Developer, designer, codekid</string>
     <string name="less">Less</string>
@@ -592,5 +582,8 @@
     <string name="virtual_memory">Virtual Memory</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="not_logged_in_sum">If you previously bought the old \"HEBF Optimizer Pro\" app, you must sign in to verify your purchase and unlock all the features. Sign in now to take advantage of the app\'s sharing functions and everything else the we offer. </string>
+    <string name="you_are_not_logged_in">You are not logged in</string>
+    <string name="toolbox">Toolbox</string>
 
 </resources>

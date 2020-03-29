@@ -590,4 +590,6 @@
     <string name="virtual_memory">ذاكرة افتراضية</string>
     <string name="zram_sum">ينشئ جهاز كتلة مضغوط في ذاكرة الوصول العشوائي سيتم استخدامه للمبادلة بدلاً من قسم المبادلة الأبطأ ، مما يتيح تبادل أسرع للبيانات.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="toolbox">صندوق الأدوات</string>
+    <string name="you_are_not_logged_in">لم يتم دخولك</string>
 </resources>

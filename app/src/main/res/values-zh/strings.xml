@@ -573,4 +573,6 @@
     <string name="virtual_memory">虚拟内存</string>
     <string name="zram_sum">在RAM中创建一个压缩块设备，该设备将用于交换而不是较慢的交换分区，从而实现更快的数据交换。</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="toolbox">工具箱</string>
+    <string name="you_are_not_logged_in">你没有登录</string>
 </resources>

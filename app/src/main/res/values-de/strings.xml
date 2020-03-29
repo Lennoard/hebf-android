@@ -574,4 +574,6 @@
     <string name="virtual_memory">Virtueller Speicher</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="toolbox">Werkzeugkasten</string>
+    <string name="you_are_not_logged_in">Du bist nicht eingeloggt</string>
 </resources>

@@ -575,4 +575,6 @@
     <string name="virtual_memory">Memoria virtuale</string>
     <string name="zram_sum">Crea un dispositivo a blocchi compressi nella RAM che verrà utilizzato per lo swap anziché la partizione di swap più lenta, consentendo uno scambio di dati più veloce.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="toolbox">Cassetta degli attrezzi</string>
+    <string name="you_are_not_logged_in">Non sei loggato</string>
 </resources>
