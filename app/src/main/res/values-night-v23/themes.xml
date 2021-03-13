@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.DayNight" parent="Base.AppTheme">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Base.HebfOptimizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AppTheme.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AppTheme.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AppTheme.LargeComponent</item>
+
+        <!--Component styles-->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AppTheme.BottomSheetDialog</item>
+        <item name="navigationViewStyle">@style/Widget.AppTheme.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+
+        <item name="materialCardStyle">@style/MaterialCardViewStyle</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <style name="Base.AppTheme" parent="Base.HebfOptimizer">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorAccentLighter">@color/colorAccentLighter</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <item name="materialCardStyle">@style/MaterialCardViewStyle</item>
+        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
+        <item name="toolbarBackgroundColor">@color/darkness_action</item>
+        <item name="appStatusBarColor">@color/black</item>
+    </style>
+
+    <style name="Base.AppTheme.Dark" parent="Base.AppTheme">
+        <item name="materialCardStyle">@style/MaterialCardViewStyleDark</item>
+    </style>
+
+    <style name="Base.AppTheme.Green" parent="Base.HebfOptimizer">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary_green</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_green</item>
+        <item name="colorSecondary">@color/color_secondary_green</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_green</item>
+        <item name="colorAccentLighter">@color/colorAccentGreenLighter</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <item name="materialCardStyle">@style/MaterialCardViewStyleDark</item>
+        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
+        <item name="toolbarBackgroundColor">@color/darkness_action</item>
+        <item name="appStatusBarColor">@color/black</item>
+    </style>
+
+    <style name="Base.AppTheme.White" parent="Base.HebfOptimizer">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary_white</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_white</item>
+        <item name="colorSecondary">@color/color_secondary_white</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_white</item>
+        <item name="colorAccentLighter">@color/colorAccentWhiteLighter</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <item name="materialCardStyle">@style/MaterialCardViewStyleDark</item>
+        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
+        <item name="toolbarBackgroundColor">@color/darkness_action</item>
+        <item name="appStatusBarColor">@color/black</item>
+    </style>
+</resources>

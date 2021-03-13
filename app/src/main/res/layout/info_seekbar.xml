@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@id/infoSeekbarStatusFrame"
+        android:layout_toLeftOf="@id/infoSeekbarStatusFrame"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoSeekbarTitle"
+            style="@style/SingleLineText"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="bottom"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            app:fontFamily="@font/asap_medium" />
+
+        <SeekBar
+            android:id="@+id/infoSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-6dp"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:max="100"
+            android:progress="0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoSeekbarDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="8dp"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/infoSeekbarStatusFrame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="?attr/toolBarBackgroundColorLighter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoSeekbarStatusText"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="@font/rambla" />
+    </FrameLayout>
+
+
+</RelativeLayout>

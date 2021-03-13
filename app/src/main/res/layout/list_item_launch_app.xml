@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/launchAppItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@android:drawable/sym_def_app_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appName"
+        style="@style/SingleLineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+        android:textColor="?attr/colorOnSurface" />
+
+</LinearLayout>

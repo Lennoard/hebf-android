@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <ProgressBar
+        android:id="@+id/dozeProgressSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:id="@+id/dozeScrollSettings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="?attr/toolBarBackgroundColorLighter"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/dozeMasterSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:padding="16dp"
+                    android:text="@string/doze_master_switch"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp"
+                    android:theme="@style/Switch" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/default_margin"
+                android:paddingRight="@dimen/default_margin">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/doze_aggressive_doze_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/aggressive_doze"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textColor="?attr/colorPrimary" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/aggressiveDozeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/doze_aggressive_doze_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@id/doze_info_instant_doze"
+                    android:layout_toLeftOf="@id/doze_info_instant_doze"
+                    android:checked="false"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/enable"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/doze_info_instant_doze"
+                    style="@style/SelectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/aggressiveDozeSwitch"
+                    android:layout_alignBottom="@id/aggressiveDozeSwitch"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/ic_info_outline"
+                    app:tint="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/dozeChargerSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aggressiveDozeSwitch"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@id/doze_info_turn_off_charger"
+                    android:layout_toLeftOf="@id/doze_info_turn_off_charger"
+                    android:checked="false"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/vip_disable_when_connecting"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/doze_info_turn_off_charger"
+                    style="@style/SelectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/dozeChargerSwitch"
+                    android:layout_alignBottom="@id/dozeChargerSwitch"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/ic_info_outline"
+                    app:tint="?attr/colorOnSurface" />
+
+                <LinearLayout
+                    android:id="@+id/doze_layout_idling_mode"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_below="@id/dozeChargerSwitch"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="12dp"
+                        android:text="@string/doze_idling_mode"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dozeIdlingModeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingBottom="8dp"
+                        android:text="@string/doze_record_type_deep"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/doze_layout_waiting_interval"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/doze_layout_idling_mode"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="12dp"
+                        android:text="@string/doze_waiting_interval"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dozeWaitingIntervalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:paddingBottom="8dp"
+                        android:text="@string/doze_waiting_interval_sum"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/dozeUnforceButton"
+                    style="@style/MaterialButtonFlatColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/doze_layout_waiting_interval"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:enabled="false"
+                    android:text="Unforce" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

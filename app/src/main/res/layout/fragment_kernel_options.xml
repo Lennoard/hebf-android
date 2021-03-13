@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/kernelOptionsProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/kernelOptionsMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="?attr/toolBarBackgroundColorLighter"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/kernelOptionsApplyOnBoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/apply_on_boot"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp"
+                    android:theme="@style/Switch" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/default_card_margin"
+                android:paddingRight="@dimen/default_card_margin"
+                android:paddingBottom="12dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_fsync_main"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/fsync_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:checked="false"
+                            android:paddingTop="24dp"
+                            android:paddingBottom="16dp"
+                            android:text="Fsync"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/fsync_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_tap"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/tap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:checked="false"
+                            android:paddingTop="24dp"
+                            android:paddingBottom="16dp"
+                            android:text="DoubleTap2Wake"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/tap"
+                            android:layout_alignStart="@+id/tap"
+                            android:layout_alignLeft="@+id/tap"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/tap_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_dyn_fsync"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/fsync"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:checked="false"
+                            android:paddingTop="24dp"
+                            android:paddingBottom="16dp"
+                            android:text="@string/dynamic_fsync"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/fsync"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/dynamic_fsync_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_ksm"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/ksm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:checked="false"
+                            android:paddingTop="24dp"
+                            android:paddingBottom="16dp"
+                            android:text="KSM (Kernel Same Page Merging)"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/ksm"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/ksm_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_charge"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/charge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:checked="false"
+                            android:paddingTop="24dp"
+                            android:paddingBottom="16dp"
+                            android:text="@string/fast_charge"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/charge"
+                            android:layout_alignStart="@+id/charge"
+                            android:layout_alignLeft="@+id/charge"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/fast_charge_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/kernel_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=":("
+            android:textAppearance="@style/TextAppearance.AppTheme.Headline1"
+            android:textColor="?attr/colorAccent"
+            android:textSize="74sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/kernel_fail1"
+            android:textColor="?attr/colorOnSurface" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/kernel_fail2"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+</FrameLayout>

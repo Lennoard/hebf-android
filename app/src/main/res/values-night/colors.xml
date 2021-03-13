@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff8a80</color>
+    <color name="colorAccentLight">#ff8a80</color>
+    <color name="colorAccentLighter">#1fff8a80</color>
+    <color name="colorAccentGreen">#00c853</color>
+    <color name="colorAccentGreenLight">#64DD17</color>
+    <color name="colorAccentGreenLighter">#1f00c853</color>
+    <color name="colorAccentWhite">#4db6ab</color>
+    <color name="colorAccentWhiteLight">#4db6ab</color>
+    <color name="colorAccentWhiteLighter">#1f4db6ab</color>
+
+
+    <!--DARK COLOR THEME-->
+
+    <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
+    <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
+    <!--selection controls.-->
+    <color name="color_primary">#ff8a80</color>
+    <color name="color_primary_variant">#ff5252</color>
+    <color name="color_secondary">#ff8a80</color>
+    <color name="color_secondary_variant">#ff5252</color>
+
+    <color name="color_primary_green">#00c853</color>
+    <color name="color_primary_variant_green">#00a300</color>
+    <color name="color_secondary_green">#64DD17</color>
+    <color name="color_secondary_variant_green">#00a300</color>
+
+    <color name="color_primary_white">#4db6ab</color>
+    <color name="color_primary_variant_white">#00897a</color>
+    <color name="color_secondary_white">#4db6ab</color>
+    <color name="color_secondary_variant_white">#00897a</color>
+
+    <!--colorBackground appears behind scrollable content and is used for the default window-->
+    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+    <!--and menus. colorError is used to indicate an error state for components such as-->
+    <!--text fields.-->
+    <color name="color_background">#000000</color>
+    <color name="shortcut_background">#323232</color>
+    <color name="color_surface">#000000</color>
+    <color name="color_error">#cf6679</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+    <!--on which they appear.-->
+    <color name="color_on_primary">#000000</color>
+    <color name="color_on_secondary">#B3000000</color>
+    <color name="color_on_background">#DEFFFFFF</color>
+    <color name="color_on_surface">#ffffff</color>
+    <color name="color_on_error">#000000</color>
+
+    <color name="color_on_primary_green">#000000</color>
+    <color name="color_on_secondary_green">#000000</color>
+    <color name="color_on_background_green">#ffffff</color>
+    <color name="color_on_surface_green">#ffffff</color>
+
+    <color name="color_on_primary_white">#000000</color>
+    <color name="color_on_secondary_white">#000000</color>
+    <color name="color_on_background_white">#ffffff</color>
+    <color name="color_on_surface_white">#ffffff</color>
+
+</resources>

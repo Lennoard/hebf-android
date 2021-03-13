@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:right="8dp">
+        <shape android:shape="rectangle">
+            <corners android:topRightRadius="24dp" android:bottomRightRadius="24dp" />
+            <solid android:color="?attr/colorAccentLighter" />
+        </shape>
+    </item>
+</layer-list>

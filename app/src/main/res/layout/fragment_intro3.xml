@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_intro_bottom">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="System Default"
+                        android:checked="true"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:padding="8dp"
+                        android:id="@+id/radio_system_default"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:padding="8dp"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:text="Theme defined by the system" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:text="Light"
+                        android:padding="8dp"
+                        android:id="@+id/radio_light"
+                        android:textSize="16sp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:layout_height="match_parent"
+                        android:text="@string/theme_light_sum"
+                        android:padding="8dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dark"
+                        android:checked="false"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:padding="8dp"
+                        android:id="@+id/radio_dark"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:padding="8dp"
+                        android:text="@string/theme_dark_sum" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RadioGroup>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_intro_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+    </LinearLayout>
+
+</RelativeLayout>

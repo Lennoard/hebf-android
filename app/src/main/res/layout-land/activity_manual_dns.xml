@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.advanced.ManualDnsActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/ToolbarStyle"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/default_card_margin"
+            android:paddingRight="@dimen/default_card_margin"
+            android:baselineAligned="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary"
+                            android:id="@+id/dns_sum"
+                            style="@style/CardTitle"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dns_sum"
+                            android:layout_below="@id/dns_sum"
+                            android:id="@+id/dns_sub"
+                            android:layout_marginLeft="16dp"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_external_link"
+                            android:id="@+id/dnsUrlButton"
+                            app:tint="?attr/colorOnSurface"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_below="@+id/dns_sub"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="16dp"
+                            style="@style/SelectableItemBackgroundBorderless"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_info_outline"
+                            android:id="@+id/dnsInfoButton"
+                            app:tint="?attr/colorOnSurface"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:layout_alignTop="@+id/dnsUrlButton"
+                            android:layout_toLeftOf="@+id/dnsUrlButton"
+                            android:layout_toStartOf="@+id/dnsUrlButton"
+                            style="@style/SelectableItemBackgroundBorderless"/>
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dnsPresetsSpinner"
+                            android:spinnerMode="dialog"
+                            android:layout_alignTop="@+id/dnsInfoButton"
+                            android:layout_toLeftOf="@+id/dnsInfoButton"
+                            android:layout_toStartOf="@+id/dnsInfoButton"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="4dp"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="?attr/materialCardStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/apply_on_boot"
+                                android:id="@+id/dnsApplyOnBoot"
+                                android:paddingStart="16dp"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                                android:paddingEnd="16dp"
+                                android:paddingTop="22dp"
+                                android:paddingBottom="16dp"
+                                android:textSize="16sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#ccc"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/CardTitle"
+                                android:text="DNS 1" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns1_1"
+                                    android:hint="254"
+                                    android:layout_marginStart="16dp"
+                                    android:imeOptions="actionNext"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:nextFocusForward="@+id/dns1_2"
+                                    android:layout_width="48dp"
+                                    android:layout_marginLeft="16dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns1_2"
+                                    android:hint="254"
+                                    android:imeOptions="actionNext"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:nextFocusForward="@+id/dns1_3"
+                                    android:layout_width="48dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns1_3"
+                                    android:hint="254"
+                                    android:nextFocusDown="@+id/dns1_4"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:layout_width="48dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns1_4"
+                                    android:hint="254"
+                                    android:nextFocusDown="@+id/dns2_1"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:layout_width="48dp" />
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:srcCompat="@drawable/ic_close"
+                                    app:tint="@color/red"
+                                    android:id="@+id/dns1Checker"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="end" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="?attr/materialCardStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DNS 2"
+                                style="@style/CardTitle" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns2_1"
+                                    android:hint="254"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:nextFocusDown="@+id/dns2_2"
+                                    android:gravity="center_vertical|center_horizontal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns2_2"
+                                    android:hint="254"
+                                    android:nextFocusDown="@+id/dns2_3"
+                                    android:gravity="center_vertical|center_horizontal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns2_3"
+                                    android:nextFocusDown="@+id/dns2_4"
+                                    android:hint="254"
+                                    android:gravity="center_vertical|center_horizontal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:layout_marginTop="8dp" />
+
+                                <EditText
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:id="@+id/dns2_4"
+                                    android:hint="254"
+                                    android:gravity="center_vertical|center_horizontal" />
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:srcCompat="@drawable/ic_close"
+                                    app:tint="@color/red"
+                                    android:id="@+id/dns2Checker"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="end" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/dnsApplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_check"
+            android:contentDescription="@string/done"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginBottom="16dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

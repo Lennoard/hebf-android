@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#80f5f5f5">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:padding="4dp"
+        android:gravity="center_vertical"
+        android:layout_margin="6dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="4dp"
+            android:tint="#616161"
+            android:background="#e9e9e9"
+            android:src="@drawable/ic_vip_battery_saver"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:id="@+id/widget_vip_on"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ON"
+            android:textAllCaps="true"
+            android:textColor="#212121" />
+
+        <TextView
+            android:id="@+id/widget_vip_off"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="OFF"
+            android:textAllCaps="true"
+            android:textColor="#212121" />
+
+    </LinearLayout>
+
+</LinearLayout>

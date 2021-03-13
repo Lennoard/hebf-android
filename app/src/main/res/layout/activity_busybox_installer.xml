@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/busybox_installer_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            tools:ignore="HardcodedText"
+            android:layout_marginTop="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:srcCompat="@drawable/ic_build_outline"
+                app:tint="?attr/colorOnSurface"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/busybox_install_headline"
+                android:textAppearance="@style/TextAppearance.AppTheme.Headline5"
+                android:layout_marginTop="36dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/busybox_install_subtitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:background="#000000"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="android:/ $ su"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="root@android:/ # busybox"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="sh: busybox: not found"
+                    android:textColor="#e53935"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="root@android:/ # |"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:gravity="center_horizontal"
+                android:text="@string/busybox_install_hint"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/MaterialButtonFlatColored"
+            android:id="@+id/busyboxButtonGooglePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google Play" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

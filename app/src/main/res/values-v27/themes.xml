@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.HebfOptimizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">?colorControlHighlight</item>
+    </style>
+
+    <style name="Base.HebfOptimizer.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">?colorControlHighlight</item>
+    </style>
+</resources>

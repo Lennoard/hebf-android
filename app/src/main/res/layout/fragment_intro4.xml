@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_intro_bottom"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/check_result"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ohyeah"
+                app:tint="?attr/colorOnSurface" />
+
+            <ProgressBar
+                android:id="@+id/progress_checking"
+                android:layout_width="72dp"
+                android:layout_height="72dp" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/checking_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="@string/checking_the_environment"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_intro_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/intoRootDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/root_access_sub"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/toolBarBackgroundColorLighter"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/gameBoosterSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/off"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="16sp"
+                android:theme="@style/Switch" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_card_margin"
+            android:paddingRight="@dimen/default_card_margin">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/taskerSuggestionCard"
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="?attr/colorAccentLighter">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Tasker icon"
+                        app:srcCompat="@drawable/ic_performance"
+                        app:tint="?attr/colorAccent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/tasker_plugin_available"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textColor="?attr/colorAccent" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/perfbanner"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/summary"
+                        android:textColor="#ffffff" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:maxLines="3"
+                        android:text="@string/game_booster_sum"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textColor="#ffffff" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/subgame_news"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parameters" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/game_booster_parameters_sub"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/force_stop_game"
+                            style="@style/CardTitleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="@string/force_stop" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/selectAppsForceStopButton"
+                            style="@style/SelectableItemBackgroundBorderless"
+                            android:layout_width="42dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:padding="8dp"
+                            app:srcCompat="@drawable/ic_settings"
+                            app:tint="?attr/colorOnSurface" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/gameBoosterDnd"
+                        style="@style/CardTitleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/do_not_disturb_mode" />
+
+                    <CheckBox
+                        android:id="@+id/caches_game"
+                        style="@style/RightLeadCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/clear_caches" />
+
+                    <CheckBox
+                        android:id="@+id/gameBoosterLmk"
+                        style="@style/RightLeadCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/low_memory_killer" />
+
+                    <LinearLayout
+                        android:id="@+id/gameBoosterLmkLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/profiles"
+                            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                        <Spinner
+                            android:id="@+id/gameBoosterLmkSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:entries="@array/game_booster_lmk_profiles" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/gbChangeBrightness"
+                        style="@style/RightLeadCheckBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/change_brightness" />
+
+                    <LinearLayout
+                        android:id="@+id/gbBrightnessLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp"
+                            android:text="@string/vip_brightness_level_when_enabled"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <SeekBar
+                                android:id="@+id/gbSeekBrightnessEnabled"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-condensed"
+                                android:max="255"
+                                android:progress="240" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/gbSeekBrightnessEnabledSum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="240"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textColor="?attr/colorOnSurface" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="8dp"
+                            android:text="@string/vip_brightness_level_when_disabled"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <SeekBar
+                                android:id="@+id/gbSeekBrightnessDisabled"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:max="255"
+                                android:progress="144" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/gbSeekBrightnessDisabledSum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="144"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textColor="?attr/colorOnSurface" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/gameBoosterLaunchGames"
+                style="@style/BorderedMaterialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/launch_games"
+                app:icon="@drawable/ic_play_arrow"
+                app:iconTint="?attr/colorAccent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

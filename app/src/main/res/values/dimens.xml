@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="rv_margin">0dp</dimen>
+    <dimen name="larger_margin">24dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_card_margin">8dp</dimen>
+    <dimen name="short_margin">8dp</dimen>
+
+    <dimen name="mtrl_shape_corner_size_small_component">4dp</dimen>
+    <dimen name="mtrl_shape_corner_size_medium_component">4dp</dimen>
+    <dimen name="mtrl_shape_corner_size_large_component">0dp</dimen>
+    <dimen name="seekbar_thumb_width">24dp</dimen>
+
+</resources>

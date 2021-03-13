@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:paddingLeft="@dimen/default_card_margin"
+    android:paddingRight="@dimen/default_card_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/lmkTriggerCard"
+            style="?attr/materialCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_toStartOf="@+id/go_lmk"
+                    android:layout_toLeftOf="@+id/go_lmk"
+                    android:gravity="start"
+                    android:text="@string/low_memory_killer"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/go_lmk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_chevron_right"
+                    app:tint="?attr/colorOnSurface" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/vmTriggerCard"
+            style="?attr/materialCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:layout_weight="1"
+                    android:text="@string/virtual_memory"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_chevron_right"
+                    app:tint="?attr/colorOnSurface" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

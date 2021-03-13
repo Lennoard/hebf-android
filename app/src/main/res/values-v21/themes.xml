@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Base.HebfOptimizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+    </style>
+
+    <style name="Base.HebfOptimizer.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+    </style>
+
+</resources>

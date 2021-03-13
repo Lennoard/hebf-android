@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/ToolbarStyle"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|snap" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical"
+            android:background="?attr/toolbarBackgroundColor"
+            android:theme="@style/Base.AppTheme.Darkness">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.AppTheme.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="[DEPRECATED]" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spkm"
+                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:text="@string/spmk" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/cpuTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/toolbarBackgroundColor"
+            app:tabMode="fixed"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+            app:tabGravity="fill"
+            app:tabTextColor="?attr/colorOnPrimary"
+            app:tabSelectedTextColor="?attr/colorAccent"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/cpuViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local"  />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cpuProgress"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cpuErrorText"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/error"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">72dp</dimen>
+    <dimen name="larger_margin">96dp</dimen>
+    <dimen name="default_margin">72dp</dimen>
+    <dimen name="short_margin">72dp</dimen>
+    <dimen name="default_card_margin">68dp</dimen>
+    <dimen name="app_bar_intro">200dp</dimen>
+</resources>

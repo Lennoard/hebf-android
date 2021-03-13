@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/directory_cleaner_layout"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:id="@+id/app_icon_layout"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="?attr/toolBarBackgroundColorLighter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/directory_cleaner_size"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="2"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/directory_cleaner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/directory_cleaner_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/directory_cleaner_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:checked="false" />
+
+</LinearLayout>

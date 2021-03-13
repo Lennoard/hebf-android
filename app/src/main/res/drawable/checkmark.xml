@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportHeight="24.0"
+    android:viewportWidth="24.0">
+    <group android:name="background">
+        <path
+            android:name="circle"
+            android:pathData="M12,12m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    </group>
+    <group android:name="check">
+        <path
+            android:name="tick"
+            android:pathData="M6,11 l0,0 l0,0"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="1" />
+    </group>
+
+</vector>

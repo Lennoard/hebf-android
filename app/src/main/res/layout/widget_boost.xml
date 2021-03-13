@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/circulo_branco"
+        android:id="@+id/boost_widget"
+        android:src="@drawable/widget_boost" />
+
+</LinearLayout>
+

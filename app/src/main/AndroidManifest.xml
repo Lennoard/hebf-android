@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.androidvip.hebf">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+
+    <uses-sdk tools:overrideLibrary="io.karn.notify" />
+
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    
+    <application
+        android:name=".helpers.HebfApp"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="internalOnly"
+        android:label="@string/app_name"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme.DayNight">
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".activities.ImportDataActivity"
+            android:label="@string/import_data"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <intent-filter
+                android:icon="@mipmap/ic_launcher"
+                android:label="@string/import_data"
+                android:priority="1">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.hebf" />
+                <data android:pathPattern=".*\\..*\\.hebf" />
+                <data android:pathPattern=".*\\..*\\..*\\.hebf" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.hebf" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.DayNight.NoActionBar"
+            android:hardwareAccelerated="true"/>
+        <activity
+            android:name=".activities.internal.AboutActivity"
+            android:label="@string/title_activity_sobre"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.internal.ThanksActivity"
+            android:label="@string/title_activity_thanks"
+            android:parentActivityName=".activities.internal.AboutActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.internal.AboutActivity" />
+        </activity>
+        <activity
+            android:name=".activities.internal.VersionActivity"
+            android:label="@string/title_activity_versao"
+            android:parentActivityName=".activities.internal.AboutActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.internal.AboutActivity" />
+        </activity>
+        <activity
+            android:name=".widgets.WidgetReboot"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name=".widgets.WidgetGameBooster"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".widgets.WidgetVipBatterySaver"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".widgets.WidgetFstrim"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".widgets.WidgetLMK"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".widgets.WidgetBoost"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".activities.LmkActivity"
+            android:label="@string/low_memory_killer"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity android:name=".activities.VmActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar"
+            android:label="@string/virtual_memory"/>
+        <activity
+            android:name=".activities.internal.TranslateActivity"
+            android:label="@string/translations"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activities.internal.BusyboxInstallerActivity"
+            android:label="Busybox"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.advanced.BuildPropActivity"
+            android:label="@string/title_activity_build_prop"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.advanced.ManualDnsActivity"
+            android:label="@string/title_activity_dns"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.advanced.EntropyActivity"
+            android:label="@string/entropy"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.advanced.WindowManagerActivity"
+            android:label="@string/window_manager"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.internal.LogActivity"
+            android:label="Logs"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".appintro.AppIntroActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.advanced.ArtCompilerFilter"
+            android:label="@string/title_activity_dex2oat_filter"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.CleanerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/cleaner"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.apps.AppsManagerActivity"
+            android:label="@string/apps_manager"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.WiFiTweaksActivity"
+            android:label="@string/wifi_tweaks"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.apps.AppDetailsActivity"
+            android:label="Details"
+            android:parentActivityName=".activities.apps.AppsManagerActivity"
+            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.apps.AppsManagerActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CpuManagerActivity"
+            android:label="@string/cpu_manager"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.DozeActivity"
+            android:label="@string/doze_settings"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.CpuTunerActivity"
+            android:label="CPU Tuner"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.LaunchGamesActivity"
+            android:label="@string/launch_games"
+            android:theme="@style/AppTheme.DayNight.NoActionBar"
+            />
+        <activity
+            android:name=".activities.apps.AppOpsActivity"
+            android:label="AppOps"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.apps.AutoStartDisablerActivity"
+            android:label="@string/auto_start_disabler"
+            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+
+        <activity android:name=".activities.internal.CommandLineActivity"
+            android:label="HEBF Terminal"
+            android:theme="@style/Base.AppTheme.Black"/>
+
+        <receiver android:name=".services.mediaserver.MediaserverAlarm" />
+        <receiver android:name=".services.doze.DozeAlarm" />
+        <receiver
+            android:name=".widgets.RebootWidgetProvider"
+            android:label="@string/rebooter">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="reboot" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_reboot_metadata" />
+        </receiver>
+        <receiver
+            android:name=".widgets.FstrimWidgetProvider"
+            android:label="@string/fstrim">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="trim" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_fstrim_metadata" />
+        </receiver>
+        <receiver
+            android:name=".widgets.BoostWidgetProvider"
+            android:label="@string/clear_caches">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="boost" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_boost_metadata" />
+        </receiver>
+        <receiver
+            android:name=".widgets.LMKWidgetProvider"
+            android:label="@string/low_memory_killer">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="minfree" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_lmk_metadata" />
+        </receiver>
+        <receiver
+            android:name=".widgets.GameBoosterWidgetProvider"
+            android:label="Game booster">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="ON" />
+                <action android:name="OFF" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_game_metadata" />
+        </receiver>
+        <receiver
+            android:name=".widgets.VipWidgetProvider"
+            android:label="@string/vip_battery_saver">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="ON" />
+                <action android:name="OFF" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_vip_metadata" />
+        </receiver>
+        <receiver
+            android:name=".receivers.NotificationButtonReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:priority="2147483">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.PackageReplacedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.RootShellService"
+            android:enabled="true"
+            android:stopWithTask="true" />
+
+        <service
+            android:name=".services.mediaserver.MediaserverService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <service
+            android:name=".services.mediaserver.MediaserverJobService"
+            android:label="Mediaserver kill"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name=".services.gb.QSTGame"
+            android:icon="@drawable/ic_game_booster"
+            android:label="Game booster"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".services.QSTProfiles"
+            android:icon="@drawable/ic_perfis_1"
+            android:label="@string/profiles"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.vip.QSTVip"
+            android:icon="@drawable/ic_vip_battery_saver"
+            android:label="@string/vip_battery_saver"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".services.gb.GameBoosterOverlayService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <!-- Tasker stuff -->
+        <activity android:name=".activities.TaskerPluginActivity" android:label="@string/tasker_settings">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receivers.TaskerReceiver">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

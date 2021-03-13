@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.internal.ThanksActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/special"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/special_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/special_sub"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textIsSelectable="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/special_sub_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/special_sub_1"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textIsSelectable="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/special_sub_2"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textIsSelectable="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Weazie, Alekss Ro, VenityZ, Christof Schäfer, Nitorac, Hanabish Recca, TheGatorade, Umut TURUNÇ and of course Sohamsen for the translations and revisions."
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/beta"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                    android:textColor="?attr/colorPrimarySurface" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:text="▪ Alef\n▪ Matheus Rosa\n▪ Gominha\n▪ Anderson Chimiloski\n▪ H4nd4niel"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textIsSelectable="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/contribuicoes"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                    android:textColor="?attr/colorPrimarySurface" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/honrra"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textIsSelectable="true" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

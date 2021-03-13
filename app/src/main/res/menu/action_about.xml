@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_libraries" android:title="@string/license"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_version" android:title="@string/app_ver"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_thanks" android:title="@string/title_activity_thanks"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_translate" android:icon="@drawable/ic_translate" android:title="Translate this app"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
+</menu>

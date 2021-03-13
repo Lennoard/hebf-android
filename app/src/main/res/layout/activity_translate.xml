@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/default_card_margin"
+            android:paddingEnd="@dimen/default_card_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:text="Strings.xml"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/translations_file_help"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/translationsGetXmlFile"
+                            style="@style/BorderedMaterialButtonColored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="8dp"
+                            android:text="Strings.xml"
+                            app:icon="@drawable/ic_download_app"
+                            app:iconTint="?attr/colorAccent"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:text="GitHub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/translations_github_help"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/translationsGitHub"
+                            style="@style/BorderedMaterialButtonColored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="8dp"
+                            android:text="GitHub"
+                            app:icon="@drawable/ic_github"
+                            app:iconTint="?attr/colorAccent"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:text="@string/tips"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/translation_tips"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#ccc"/>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="8dp"
+                            android:text="Current translations"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"/>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="https://github.com/weazie"
+                                android:text="Weazie (en review)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="http://hebfoptimizer.androidvip.com.br/"
+                                android:text="HEBF Team (pt_BR)"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="https://forum.xda-developers.com/member.php?u=7715829"
+                                android:text="Nitorac (fr)"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:text="NeronGuns/Alekss Ro (es)" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="https://github.com/VenityZ"
+                                android:text="VenityZ/Christof Schäfer (de)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:text="TheGatorade (it)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="https://github.com/008exe"
+                                android:text="008exe (zh_CN)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:text="Hüseyin Küpeli (andheartman) / Umut TURUNÇ (tr)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:text="Ezra Lazuardy (in)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:text="Sohamsen (hi)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="openTranslatorPage"
+                                android:tag="https://forum.xda-developers.com/member.php?u=4551009"
+                                android:text="Hanabish Recca (ru)"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

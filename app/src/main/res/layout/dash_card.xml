@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/dashCard"
+    style="?attr/materialCardStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/dashCardLayout"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dashCardTitle"
+            style="@style/SingleLineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textColor="?attr/colorOnSurface" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dashCardValue"
+            style="@style/TextAppearance.AppTheme.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/colorOnSurface"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/dashCardChart"
+            android:visibility="gone"
+            android:layout_marginEnd="-16dp"
+            android:layout_marginStart="-16dp"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dashCardSubText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

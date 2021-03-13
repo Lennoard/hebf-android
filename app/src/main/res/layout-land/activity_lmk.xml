@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lmkRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lmkErrorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingTop="8dp"
+        android:paddingRight="@dimen/default_margin"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:srcCompat="@drawable/ic_warning"
+            app:tint="?attr/colorOnSurface" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Failed to read LMK parameters: Immutable file."
+            android:textAppearance="?attr/textAppearanceHeadline5" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/lmkScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/default_card_margin"
+        android:paddingRight="@dimen/default_card_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/lmkSummaryCard"
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/CardTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/lmk_sub"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/lmkOnBootSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="@string/apply_on_boot"
+                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lmkProfilesText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:paddingTop="24dp"
+                                android:paddingBottom="16dp"
+                                android:text="@string/profiles"
+                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textColor="?attr/colorOnSurface" />
+
+                            <Spinner
+                                android:id="@+id/lmkProfilesSpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/lmkInfoButton"
+                                android:layout_toLeftOf="@+id/lmkInfoButton"
+                                android:layout_toEndOf="@+id/lmkProfilesText"
+                                android:layout_toRightOf="@+id/lmkProfilesText"
+                                android:entries="@array/lmk_profiles" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/lmkInfoButton"
+                                style="@style/SelectableItemBackgroundBorderless"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:tint="?attr/colorOnSurface"
+                                app:srcCompat="@drawable/ic_info_outline" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/lmkAdaptive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Adaptive LMK"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkContentProviderInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_content_provider_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_content_provider" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkEmptyInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_empty_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_empty_app" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkForegroundInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_foreground_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_foreground_app" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkVisibleInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_visible_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_visible_app" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkHiddenInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_hidden_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_hidden_app" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="8dp">
+
+                    <com.androidvip.hebf.views.InfoSeekBar
+                        android:id="@+id/lmkSecondaryInfoSeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        app:descriptionText="@string/lmk_secondary_sum"
+                        app:seekbarProgress="1"
+                        app:statusText="1MB"
+                        app:titleText="@string/lmk_secondary_server" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/lmkFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/done"
+        app:srcCompat="@drawable/ic_check" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

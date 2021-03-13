@@ -1,2 +1,13 @@
-app/src/main/res/values/play-store-description.html
-app/src/main/res/values/play-store-description.html
+local.properties
+.gradle/*
+.idea/*
+app/app.iml
+app/release/*
+build/*
+web/testing/*
+lib/*
+app/src/main/gen/*
+app/src/main/main.iml
+HEBFOptimizer.iml
+.vs/*
+.idea/gradle.xml

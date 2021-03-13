@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:paddingLeft="@dimen/default_card_margin"
+    android:paddingRight="@dimen/default_card_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/public_card_public_configs"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/public_configurations"
+                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textColor="?attr/colorOnSurface"
+                        style="@style/SingleLineText"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/go"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_chevron_right"
+                        app:tint="?attr/colorOnSurface" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Run command" app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/action_hebf_cmd" android:title="HEBF command-line"/>
+            <item android:id="@+id/action_run_as_root" android:title="Root shell"/>
+        </menu>
+    </item>
+</menu>

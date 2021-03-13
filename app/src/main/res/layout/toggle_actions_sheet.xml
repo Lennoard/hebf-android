@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="180dp">
+
+    <View
+        android:layout_width="36dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sheet_drag_indicator" />
+
+    <ProgressBar
+        android:id="@+id/toggleActionsSheetProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:id="@+id/toggleActionsSheetScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/disable"
+                android:textColor="?attr/colorOnSurface" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggleActionsSheetWiFi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Wi-Fi"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggleActionsSheetBluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/bluetooth"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggleActionsSheetSync"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/sync"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggleActionsSheetGps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/location"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/enable"
+                android:textColor="?attr/colorOnSurface" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toggleActionsSheetDoze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Doze mode"
+                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textColor="?attr/colorOnSurface" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

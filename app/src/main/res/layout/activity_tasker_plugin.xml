@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/ToolbarStyle"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskerDoneButton"
+        android:layout_gravity="bottom|end"
+        android:text="@string/done"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp"
+        android:visibility="invisible"
+        app:icon="@drawable/ic_check" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/taskerSelectFeatureLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textColor="?attr/colorAccent"
+            android:text="@string/tasker_select_feature" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/BorderedMaterialButton"
+                android:layout_width="0dp"
+                android:layout_height="114dp"
+                android:layout_weight="1"
+                android:id="@+id/taskerSelectFeatureGameBooster"
+                app:drawableTopCompat="@drawable/ic_game_booster"
+                app:drawableTint="?attr/colorOnSurface"
+                android:text="@string/game_booster"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/BorderedMaterialButton"
+                android:layout_width="0dp"
+                android:layout_height="114dp"
+                android:layout_weight="1"
+                android:id="@+id/taskerSelectFeatureVip"
+                app:drawableTopCompat="@drawable/ic_battery_full"
+                app:drawableTint="?attr/colorOnSurface"
+                android:text="@string/vip_battery_saver"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/gameBoosterTaskerScroll"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/SingleLineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:textColor="?attr/colorAccent"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disable"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gameBoosterTaskerActionSwitch"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:checked="true"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enable"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/gameBoosterTaskerActionlayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/parameters"
+                    style="@style/CardTitle"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/game_booster_parameters_sub"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp" />
+
+                <CheckBox
+                    style="@style/RightLeadCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gameBoosterTaskerCaches"
+                    android:text="@string/clear_caches"
+                    android:checked="true" />
+
+                <CheckBox
+                    style="@style/RightLeadCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gameBoosterTaskerLmk"
+                    android:text="@string/low_memory_killer"
+                    android:checked="false" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    style="@style/CardTitleSmall"
+                    android:id="@+id/gameBoosterTaskerDnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/do_not_disturb_mode"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        style="@style/CardTitleSmall"
+                        android:id="@+id/gameBoosterTaskerForceStop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/force_stop"
+                        android:checked="false" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/gameBoosterTaskerSelectAppsButton"
+                        style="@style/SelectableItemBackgroundBorderless"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="@string/settings"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_settings"
+                        app:tint="?attr/colorOnSurface" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vipTaskerScroll"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/SingleLineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:textColor="?attr/colorAccent"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disable"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vipTaskerActionSwitch"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:checked="true"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enable"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/vipTaskerActionlayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/parameters"
+                    style="@style/CardTitle"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/vip_parameters_sub"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_android_default_saver"
+                    android:id="@+id/vipTaskerDefaultSaver"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_disable_data"
+                    android:id="@+id/vipTaskerDisableData"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_disable_sync"
+                    android:id="@+id/vipTaskerDisableSync"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_disable_bluetooth"
+                    android:id="@+id/vipTaskerDisableBluetooth"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grayscale"
+                    android:id="@+id/vipTaskerGrayScale"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_force_device_idle"
+                    android:id="@+id/vipTaskerForceDoze"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/force_stop"
+                        android:id="@+id/vipTaskerForceStop"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="24dp"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/vipTaskerSelectAppsButton"
+                        style="@style/SelectableItemBackgroundBorderless"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="@string/settings"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/ic_settings"
+                        app:tint="?attr/colorOnSurface" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

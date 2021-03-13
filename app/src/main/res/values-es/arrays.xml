@@ -61,12 +61,11 @@
 
     <string-array name="vip_auto_turn_on">
         <item>@string/off</item>
-        <item>50% de la batería</item>
-        <item>40% de la batería</item>
-        <item>30% de la batería</item>
-        <item>15% de la batería</item>
-        <item>10% de la batería</item>
-        <item>5% de la batería</item>
+        <item>Screen Off</item>
+        <item>at 50% battery</item>
+        <item>at 40% battery</item>
+        <item>at 30% battery</item>
+        <item>at 15% battery</item>
     </string-array>
 
     <string-array name="user_profiles">

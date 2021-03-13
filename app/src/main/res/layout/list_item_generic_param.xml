@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="4dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="4dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/paramName"
+        style="@style/SingleLineText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+        android:textColor="?attr/colorOnSurface" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/paramValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/paramInfo"
+        style="@style/SelectableItemBackgroundBorderless"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:padding="4dp"
+        android:tint="?attr/colorOnSurface"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_info_outline" />
+
+</LinearLayout>

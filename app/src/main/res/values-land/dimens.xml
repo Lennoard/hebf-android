@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="activity_vertical_margin">6dp</dimen>
+    <dimen name="margem">14dp</dimen>
+    <dimen name="lmk">32dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="activity_horizontal_margin">32dp</dimen>
+    <dimen name="app_bar_intro">180dp</dimen>
+    <dimen name="rv_margin">32dp</dimen>
+    <dimen name="larger_margin">32dp</dimen>
+    <dimen name="default_margin">22dp</dimen>
+    <dimen name="short_margin">24dp</dimen>
+    <dimen name="default_card_margin">18dp</dimen>
+</resources>

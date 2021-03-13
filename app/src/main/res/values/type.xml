@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.AppTheme.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_bold</item>
+        <item name="android:fontFamily">@font/asap_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_bold</item>
+        <item name="android:fontFamily">@font/asap_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_bold</item>
+        <item name="android:fontFamily">@font/asap_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_medium</item>
+        <item name="android:fontFamily">@font/asap_medium</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_medium</item>
+        <item name="android:fontFamily">@font/asap_medium</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">@font/asap_medium</item>
+        <item name="android:fontFamily">@font/asap_medium</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/asap_medium</item>
+        <item name="android:fontFamily">@font/rambla</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/rambla</item>
+        <item name="android:fontFamily">@font/rambla</item>
+    </style>
+</resources>

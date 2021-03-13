@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.HebfOptimizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+    </style>
+
+    <style name="Base.HebfOptimizer.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">?attr/appStatusBarColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+    </style>
+
+    <style name="Base.AppTheme.White" parent="Base.HebfOptimizer">
+        <!--Material color attributes -->
+        <item name="colorPrimary">@color/color_primary_white</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_white</item>
+        <item name="colorSecondary">@color/color_secondary_white</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_white</item>
+        <item name="colorAccentLighter">@color/colorAccentWhiteLighter</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@color/color_on_error</item>
+
+        <item name="toolBarBackgroundColorLighter">@color/ice</item>
+        <item name="toolbarBackgroundColor">@color/color_background</item>
+        <item name="appStatusBarColor">@color/ice</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

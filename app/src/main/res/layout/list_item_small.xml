@@ -1,0 +1,9 @@
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/listItemText"
+    android:layout_alignParentStart="true"
+    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+    android:layout_alignParentLeft="true"
+    android:padding="8dp" />

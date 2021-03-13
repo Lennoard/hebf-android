@@ -1,0 +1,105 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/application_preferences">
+
+        <ListPreference
+            android:key="user_type"
+            android:title="@string/user"
+            android:summary="@string/user_sub"
+            android:entries="@array/user_profiles"
+            android:entryValues="@array/user_profiles_values"
+            android:dialogTitle="@string/tipo_usuario" />
+
+        <ListPreference
+            android:key="theme"
+            android:title="@string/theme"
+            android:summary="@string/theme_sub"
+            android:entries="@array/themes"
+            android:defaultValue="system_default"
+            android:entryValues="@array/themes_values"
+            android:dialogTitle="@string/theme" />
+
+        <SwitchPreferenceCompat
+            android:key="english_language"
+            android:title="@string/force_english_language"
+            android:summary="@string/force_english_language_sub" />
+
+        <SwitchPreferenceCompat
+            android:key="extended_logging_enabled"
+            android:title="Enable extended logging"
+            android:summary="Helps tracking bugs and misbehaviors (for the support channels).\nThis can cause instability and performance issues." />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/application_settings">
+
+        <PreferenceScreen
+            android:title="@string/application_settings"
+            android:summary="@string/application_settings_sub">
+
+            <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+                android:data="package:com.androidvip.hebf" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="notification_settings"
+            android:title="@string/notification_settings">
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="Logs"
+            android:summary="@string/view_log">
+
+            <intent android:action="android.intent.action.VIEW"
+                android:targetPackage="com.androidvip.hebf"
+                android:targetClass="com.androidvip.hebf.activities.internal.LogActivity" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="@string/rate_this_app"
+            android:summary="@string/rate_this_app_sub">
+
+            <intent android:action="android.intent.action.VIEW"
+                android:data="market://details?id=com.androidvip.hebf" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="@string/force_stop"
+            android:key="force_stop"
+            android:persistent="false"
+            android:summary="@string/forcar_parada_sub">
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Info">
+
+        <PreferenceScreen
+            android:title="@string/app_ver"
+            android:key="app_ver"
+            android:summary="@string/build_version">
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="Busybox path"
+            android:key="busybox_path"
+            android:summary="">
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:title="Su path"
+            android:key="su_path"
+            android:summary="">
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
