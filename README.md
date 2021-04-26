@@ -38,6 +38,7 @@ HEBF provides a nice interface for power users to tweak their device. There are 
 
 ## License  
 Copyright (c) 2016-2019 Ivsom Emídio
+
 Copyright (c) 2016-2021 Lennoard
 
 Licensed under the Apache License, Version 2.0 (the "License");
