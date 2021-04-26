@@ -3,20 +3,20 @@
  ![]( https://img.shields.io/github/license/Lennoard/hebf-android)     ![](https://img.shields.io/badge/requires-root-red) ![](https://img.shields.io/github/languages/count/Lennoard/hebf-android) ![](https://img.shields.io/github/languages/top/Lennoard/hebf-android) ![](https://img.shields.io/github/contributors/Lennoard/hebf-android) ![](https://img.shields.io/github/last-commit/Lennoard/hebf-android)
 
  
-Originally created by [Ivsom  Emidio](http://forum.xda-developers.com/member.php?u=5968361/),  HEBF  Optimizer is an Android application that aims to improve hos your device performs and focuses on battery saving by adjusting Android system and/or kernel parameters using superuser privileges.
+Originally created by [Ivsom  Emidio](http://forum.xda-developers.com/member.php?u=5968361/),  HEBF Optimizer is an Android application that aims to improve hos your device performs and focuses on battery saving by adjusting Android system and/or kernel parameters using superuser privileges.
 
 The application also features a useful and intelligent toolbox that you can use  whenever  you want.
 
 ```
 ❗ **Disclaimer**
-This application can and will modify system and kernel paramenters in order to achieve desired results. 
+This application can and will modify system and kernel parameters in order to achieve desired results. 
 I am not responsible for any side effects (if any) or damages (if any) caused by this application. 
 This is not a 100% systemless app. If you are having problems, please just uninstall it then reboot.
 ```
 
 ## Features
 ### 🔋 VIP Battery Saver
-VIP Battery Saver puts your device into a deep battery saving mode by setting the CPU governor along with several other  parameters  of your choice such as force-stopping apps ("hibernating"), forcing the device into idle state (doze) and disabling checked features (WiFi, bluetooth, etc). VIP  can be  used with [Tasker](https://tasker.joaoapps.com/) to be  triggered in certain events or scheduled within the app itself. It is a very useful option if want to keep your device alive as longer as possible.
+VIP Battery Saver puts your device into a deep battery saving mode by setting the CPU governor along with several other parameters  of your choice such as force-stopping apps ("hibernating"), forcing the device into idle state (doze) and disabling checked features (WiFi, bluetooth, etc). VIP  can be  used with [Tasker](https://tasker.joaoapps.com/) to be  triggered in certain events or scheduled within the app itself. It is a very useful option if want to keep your device alive as longer as possible.
 
 ### [](https://github.com/Lennoard/hebf-android#-game-booster)
   
