@@ -11,15 +11,6 @@
             android:entryValues="@array/user_profiles_values"
             android:dialogTitle="@string/tipo_usuario" />
 
-        <ListPreference
-            android:key="theme"
-            android:title="@string/theme"
-            android:summary="@string/theme_sub"
-            android:entries="@array/themes"
-            android:defaultValue="system_default"
-            android:entryValues="@array/themes_values"
-            android:dialogTitle="@string/theme" />
-
         <SwitchPreferenceCompat
             android:key="english_language"
             android:title="@string/force_english_language"

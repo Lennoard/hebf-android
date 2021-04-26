@@ -5,8 +5,8 @@
     style="@style/SelectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/controlSwitch"
@@ -25,22 +25,21 @@
             android:id="@+id/controlSwitchTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="54dp"
-            android:layout_marginRight="54dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="4dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body1"
-            android:textColor="?attr/colorOnSurface"
-            android:textSize="16sp" />
+            android:layout_marginEnd="@dimen/huge_margin_alt"
+            android:layout_marginRight="@dimen/huge_margin_alt"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/tiny_margin"
+            android:textAppearance="@style/TextAppearance.HEBF.Body1"
+            android:textColor="@color/colorOnSurface" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/controlSwitchDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:layout_marginEnd="54dp"
-            android:layout_marginRight="54dp"
-            android:paddingBottom="16dp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:layout_marginEnd="@dimen/huge_margin_alt"
+            android:layout_marginRight="@dimen/huge_margin_alt"
+            android:paddingBottom="@dimen/default_margin" />
 
     </LinearLayout>
 

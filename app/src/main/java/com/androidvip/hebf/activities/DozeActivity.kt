@@ -13,6 +13,8 @@ import com.androidvip.hebf.R
 import com.androidvip.hebf.fragments.doze.DozeInfoFragment
 import com.androidvip.hebf.fragments.doze.DozeSettingsFragment
 import com.androidvip.hebf.fragments.doze.DozeWhitelistFragment
+import com.androidvip.hebf.helpers.HebfApp
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.Logger
 import kotlinx.android.synthetic.main.activity_doze.*
 

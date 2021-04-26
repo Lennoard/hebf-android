@@ -1,10 +1,4 @@
 <resources>
-    <attr name="colorAccentLighter" format="reference|color" />
-    <attr name="toolbarBackgroundColor" format="reference|color" />
-    <attr name="toolBarBackgroundColorLighter" format="reference|color" />
-    <attr name="appStatusBarColor" format="reference|color" />
-    <attr name="materialCardStyle" format="reference" />
-
     <declare-styleable name="InfoSeekBar">
         <attr name="titleText" format="reference|string"/>
         <attr name="descriptionText" format="reference|string"/>
@@ -15,6 +9,13 @@
     <declare-styleable name="ControlSwitch">
         <attr name="title" format="reference|string"/>
         <attr name="description" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ServiceState">
+        <attr name="android:text" format="reference|string" />
+        <attr name="android:enabled" format="reference|boolean" />
+        <attr name="android:checked" format="reference|boolean" />
+        <attr name="serviceIcon" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="DashCard">

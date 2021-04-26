@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="MaterialCardViewStyle" parent="CardViewStyle">
-        <!--<item name="cardBackgroundColor">?android:attr/colorBackgroundFloating</item>-->
-    </style>
-
-</resources>

@@ -23,6 +23,7 @@ import com.androidvip.hebf.R
 import com.androidvip.hebf.findNearestPositiveMultipleOf
 import com.androidvip.hebf.goAway
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import kotlinx.android.synthetic.main.activity_lmk.toolbar
 import kotlinx.android.synthetic.main.activity_vm.*
@@ -234,7 +235,7 @@ class VmActivity : BaseActivity() {
 
     class VmParamAdapter(
         private val paramList: MutableList<VmParam>,
-        private val activity: BaseActivity
+        private val activity: BaseActivity,
     ) : RecyclerView.Adapter<VmParamAdapter.ViewHolder>() {
         val prefs: Prefs by lazy { Prefs(activity.applicationContext) }
 

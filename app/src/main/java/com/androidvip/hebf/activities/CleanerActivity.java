@@ -1,6 +1,5 @@
 package com.androidvip.hebf.activities;
 
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,24 +15,20 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.androidvip.hebf.ExtensionsKt;
 import com.androidvip.hebf.R;
 import com.androidvip.hebf.adapters.DirectoryCleanerAdapter;
-import com.androidvip.hebf.helpers.HebfApp;
 import com.androidvip.hebf.models.Directory;
+import com.androidvip.hebf.ui.base.BaseActivity;
 import com.androidvip.hebf.utils.FileUtils;
-import com.androidvip.hebf.utils.K;
 import com.androidvip.hebf.utils.Logger;
 import com.androidvip.hebf.utils.RootUtils;
-import com.androidvip.hebf.utils.Themes;
-import com.androidvip.hebf.utils.UserPrefs;
 import com.androidvip.hebf.utils.Utils;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -48,7 +43,6 @@ import kotlin.Unit;
 
 import static android.view.animation.AnimationUtils.loadAnimation;
 
-// FIXME: Legacy
 public class CleanerActivity extends BaseActivity {
     FloatingActionButton fab;
     RecyclerView rv;
@@ -68,17 +62,6 @@ public class CleanerActivity extends BaseActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        if (getUserPrefs().getString(K.PREF.THEME, Themes.LIGHT).equals(Themes.WHITE)) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite));
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness));
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme);
-
-            CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_app_bar_layout);
-            collapsingToolbarLayout.setCollapsedTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite));
-            collapsingToolbarLayout.setExpandedTitleColor(ContextCompat.getColor(this, R.color.colorAccentWhite));
-        }
 
         bindViews();
 
@@ -308,10 +291,9 @@ public class CleanerActivity extends BaseActivity {
             tv.setTextSize(14);
             tv.setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
 
-            if (new UserPrefs(getApplicationContext()).getString(K.PREF.THEME, Themes.LIGHT).equals(Themes.WHITE))
-                tv.setTextColor(Color.BLACK);
-            else
-                tv.setTextColor(Color.WHITE);
+            tv.setTextColor(ExtensionsKt.getColorFromAttr(
+                    this, R.attr.colorOnBackground, new TypedValue(), false)
+            );
             return tv;
         });
 

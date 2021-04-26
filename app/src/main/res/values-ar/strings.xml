@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
+    <string name="accessibility_alert">نحتاج إلى إذنك لتنفيذ إجراءات توفير البطارية وإغلاق التطبيقات غير النشطة. انقر فوق "متابعة" وستفتح شاشة الإعدادات ، وابحث عن شيء مشابه لما يظهره البرنامج التعليمي أدناه:</string>
+    <string name="accessibility_service">خدمة الوصول</string>
+    <string name="accessibility_service_description">ستفرض هذه الخدمة إيقاف التطبيق تلقائيًا على شاشة التفاصيل الخاصة به بمجرد استدعاءه (عبر HEBF فقط).</string>
+    <string name="accessibility_service_label">HEBF Optimizer - البطارية التوقف</string>
+    <string name="account_created">تم إنشاء الحساب</string>
+    <string name="account_options">خيارات الحساب</string>
     <string name="achievement_backup">أفضل آمنة من آسف</string>
     <string name="achievement_help">ماذا يفعل هذا الشيء؟</string>
     <string name="achievement_prop">خاصية</string>
@@ -17,6 +23,8 @@
     <string name="aggressive_doze_off">الغفوة العدوانية تعطيل</string>
     <string name="aggressive_doze_on">الغفوة العدوانية تمكين</string>
     <string name="aggressive_doze_sum">فرض تنشيط Doze Mode على بعد لحظات من إيقاف تشغيل الشاشة ، مما يضع الجهاز في وضع السكون العميق بغض النظر عن الحالة السابقة الأخرى.</string>
+    <string name="always_anonymous">مجهول دائما</string>
+    <string name="always_anonymous_sum">تجاهل شاشة تسجيل الدخول. تحذير: هذا لن يقوم بتسجيل الدخول ، إذا كنت بحاجة إلى إجراء عمليات شراء داخل التطبيق أو التحقق من حسابك ، فستحتاج إلى تسجيل الدخول أولاً.</string>
     <string name="android_version">نسخة أندرويد</string>
     <string name="announcements">الإعلانات</string>
     <string name="anonymous">مجهول</string>
@@ -37,6 +45,10 @@
     <string name="art_cache_warning">لكي تعمل هذه الوظيفة بسلاسة ، يلزمك مسح ذاكرة التخزين المؤقت وإعادة التشغيل. \n عند الضغط على "موافق" ، سيعيد تشغيل الجهاز.</string>
     <string name="art_sum">يستخدم Android Runtime (ART) تجميعًا مُسبقًا لتجميع شفرة dex إلى رمز أصلي في وقت التثبيت ، مع تحسينه مسبقًا باستخدام أداة dex2oat حتى يتمكن المعالج من تفسير الشفرة بطريقة أسهل. \n يتيح لك هذا الخيار تغيير مرشح برنامج التحويل البرمجي dex2oat للتحكم في كيفية تجميعه.</string>
     <string name="art_warning_not_found">لم يتم العثور على خيارات مرشح برنامج التحويل البرمجي ART على نظامك ، يمكنك إغلاق هذه النافذة أو تمكينها على مسؤوليتك الخاصة.</string>
+    <string name="auth_failure">فشل المصادقة</string>
+    <string name="auto_optimize_performance">التحسين التلقائي لجهازك كل 15 دقيقة ، سيمنحك هذا الخيار تجربة جديدة في أداء جهازك</string>
+    <string name="auto_optimize_sub">قم بتحسين لعبتك تلقائيًا بعد 15 دقيقة ، وهي مفيدة جدًا في الألعاب العالمية الثقيلة أو المفتوحة (قد ينتج عن ذلك آثار سلبية ، قم بتنشيطها فقط إذا كنت متأكدًا)</string>
+    <string name="auto_optimizer">محسن التلقائي</string>
     <string name="auto_start_disabler">بدء تشغيل disabler</string>
     <string name="auto_start_disabler_sum">استخدم هذا الخيار للتحكم في التطبيقات التي يمكن تنفيذها عند بدء التشغيل. بشكل افتراضي ، ستتلقى جميع التطبيقات التي تحمل إذن RECEIVE_BOOT_COMPLETED بثًا يشير إلى انتهاء النظام من التشغيل.</string>
     <string name="backup">دعم</string>
@@ -53,6 +65,7 @@
     <string name="battery_information">معلومات البطارية</string>
     <string name="bluetooth">تقنية البلوتوث</string>
     <string name="bootloader">BOOTLOADER</string>
+    <string name="br_sum">إذا وجدت خطأ أو لديك أي اقتراحات ، فلا تتردد في إرسالنا (عبر البريد الإلكتروني). سنرد في أسرع وقت ممكن.</string>
     <string name="browsing">تحسين سرعة التصفح</string>
     <string name="browsing_off">القرص العازلة تعطيل</string>
     <string name="browsing_on">القرص العازلة تمكين</string>
@@ -110,11 +123,15 @@
     <string name="default_">إفتراضي</string>
     <string name="default_username">مستخدم HEBF</string>
     <string name="delete">حذف</string>
+    <string name="delete_account">حذف الحساب</string>
+    <string name="delete_account_confirm">هل انت متأكد انك تريد حذف حسابك؟ لن يتم حفظ بياناتك. بعد العملية ، سيتم قطع اتصالك.</string>
+    <string name="delete_account_sum">حذف حسابك</string>
     <string name="device">جهاز</string>
     <string name="device_info">معلومات الجهاز</string>
     <string name="device_model">طراز الجهاز</string>
     <string name="device_name">اسم الجهاز</string>
     <string name="disable">تعطيل</string>
+    <string name="disconnection_warning">سيتم قطع الاتصال</string>
     <string name="dns_off">تم تعطيل Google DNS</string>
     <string name="dns_on">تم تمكين Google DNS</string>
     <string name="dns_sum">يستطيع DNS المخصص تحسين السرعة والاستجابة والأمان. كما يمكن أن يسمح لك بالوصول إلى المواقع المحجوبة وتجاوز بعض مرشحات الرقابة على شبكتك ، اعتمادًا على موقعك.</string>
@@ -186,6 +203,7 @@
     <string name="game_booster_sum">حسن أدائك في الألعاب من خلال تعيين حاكم وحدة المعالجة المركزية قبل فتح اللعبة.</string>
     <string name="game_off">تم تعطيل وضع اللعب</string>
     <string name="game_on">وضع اللعب مفعل</string>
+    <string name="gamenews">زيادة أداء الألعاب</string>
     <string name="gaming_lmk_profile">الألعاب الشخصي LMK</string>
     <string name="general">جنرال لواء</string>
     <string name="google_dns">استخدم Google DNS</string>
@@ -217,6 +235,7 @@
     <string name="iscustom_rom">هل هو ROM مخصص؟</string>
     <string name="iv_h1">المشروع الأولي ، المطور</string>
     <string name="iv_sub">… وبطارية ممتلئة ، في لحظة من الوهم المحب ، علاوة على ذلك ، كانت بطارية الجهاز تفريغها بسرعة ، لذلك بدأت العمل على HEBF بقلب فارغ وبطارية كاملة. \n– Ivson Emídio</string>
+    <string name="join_club">ننسى الماضي والانضمام إلى النادي</string>
     <string name="junk_cleaned">الزباله إزالتها</string>
     <string name="kernel">خيارات النواة</string>
     <string name="kernel_fail1">يبدو أنه ليس لديك خيار للتمكين.</string>
@@ -250,6 +269,10 @@
     <string name="log_off">تسجيل المعوقين</string>
     <string name="log_on">تم تمكين التسجيل مرة أخرى</string>
     <string name="log_sub">إذا كنت لا تريد أن ترى أندرويد يسعى لتسجيل كل ما يحدث في جميع التطبيقات ، فقم بتمكين هذا الخيار</string>
+    <string name="login_failure">فشل تسجيل الدخول</string>
+    <string name="login_failure_no_user">لا يوجد مستخدم لديه عنوان البريد الإلكتروني هذا</string>
+    <string name="login_failure_password">البريد الالكتروني او كلمة المرور غير صحيحة</string>
+    <string name="login_with_email">تسجيل الدخول مع البريد الإلكتروني</string>
     <string name="low_ram_device_flag">جهاز ذاكرة RAM منخفضة</string>
     <string name="low_ram_device_flag_sub">يقوم هذا الخيار بوضع علامة على الجهاز باعتباره ذاكرة RAM منخفضة ، وإيقاف تشغيل ميزات محددة تستهلك ذاكرة كبيرة (صبغ شريط الحالة ، وتأثير خلفية لوحة الإشعارات ، إلخ) الذي يعمل بشكل سيئ على أجهزة الذاكرة المنخفضة. \n \n إذا تم تعطيله ، فقد تحتاج إلى إعادة تشغيل تطبيق التغييرات.</string>
     <string name="mascote">التميمة</string>
@@ -269,6 +292,9 @@
     <string name="multitasking_off">تم تعطيل ملف تعريف تعدد المهام</string>
     <string name="multitasking_on">تم تمكين ملف تعريف تعدد المهام</string>
     <string name="multitasking_sub">ضبط معلمات قاتل الذاكرة المنخفضة للحصول على ملف تعريف تعدد المهام بشكل أفضل ، استنادًا إلى مقدار ذاكرة الوصول العشوائي المتاحة.</string>
+    <string name="my_account">حسابي</string>
+    <string name="my_public_configs">التكوينات العامة الخاصة بي</string>
+    <string name="my_public_configs_sum">إدارة التكوينات العامة الخاصة بك</string>
     <string name="name">اسم</string>
     <string name="navigation_drawer_close">أغلق درج التنقل</string>
     <string name="navigation_drawer_open">فتح درج التنقل</string>
@@ -292,6 +318,7 @@
     <string name="optimize_now">تحسين الآن</string>
     <string name="other_games">ألعاب محسن</string>
     <string name="outro">الآخرين</string>
+    <string name="owned">مملوكة</string>
     <string name="package_disabled">تم تعطيل الحزمة</string>
     <string name="package_uninstalled">تم إلغاء تثبيت الحزمة</string>
     <string name="panic_off">نواة الذعر تعطيل</string>
@@ -309,7 +336,14 @@
     <string name="please_log_in">يرجى تسجيل الدخول باستخدام حسابك</string>
     <string name="please_wait">يرجى الانتظار ، قد يستغرق هذا ما يصل إلى دقيقة واحدة.</string>
     <string name="power_off">السلطة قبالة</string>
+    <string name="premium_package">حزمة قسط</string>
+    <string name="premium_package_ad">باقة مميزة (مع الإعلانات)</string>
+    <string name="premium_package_ad_sum">تذوق باقة مميزة مع نفس الميزات الإضافية ولكن مع عرض الإعلانات</string>
+    <string name="premium_package_sum">يوفر هذا الشراء الفريد ميزات إضافية لاستخدامها في مُحسِّن HEBF ، مثل اختيارات غير محدودة للتطبيق للتوقف الفوري وجدولة الخدمة المخصصة وإدارة AppOps</string>
+    <string name="premium_package_sum_header">شراء حزمة HEBF Optimizer Premium</string>
     <string name="previous">السابق</string>
+    <string name="pro_feature">ميزة برو</string>
+    <string name="pro_feature_sum">يرجى النظر في شراء HEBF Optimizer Pro لاستخدام هذه الميزة</string>
     <string name="profiles">مظهر</string>
     <string name="profiles_set">مجموعة الملامح</string>
     <string name="profile_format">Profile: %s</string>
@@ -318,8 +352,16 @@
     <string name="profile_battery_plus_sum">يقلل من استهلاك الطاقة عند الإمكان ، مع تجاهل أي آثار جانبية</string>
     <string name="profile_performance_sum">محاولات لزيادة الأداء وتحسين المظهر العام للجهاز</string>
     <string name="profile_performance_plus_sum">يزيد من الأداء حيثما أمكن ، مع تجاهل أي آثار جانبية</string>
+    <string name="promo_warning">تتوفر حزمة HEBF Optimizer Premium لمدة %s فقط لفترة محدودة!</string>
     <string name="psfmc">توفير الطاقة لوحدات المعالجة المركزية متعددة النواة</string>
     <string name="public_configurations">التكوينات العامة</string>
+    <string name="purchase">عملية الشراء</string>
+    <string name="purchase_error_billing_unavailable">إصدار API الحالي للفوترة غير معتمد للنوع المطلوب</string>
+    <string name="purchase_error_fatal">تم الكشف عن عدم الاتساق والإجهاض …</string>
+    <string name="purchase_error_feature_not_supported">الميزة المطلوبة غير مدعومة من متجر Google Play على هذا الجهاز الحالي</string>
+    <string name="purchase_error_item_already_owned">أخفق الشراء نظرًا لأن العنصر مملوك بالفعل</string>
+    <string name="purchase_error_item_unavailable">المنتج المطلوب غير متاح للشراء</string>
+    <string name="purchase_error_service_disconnected">أخفق إنشاء اتصال ، يرجى المحاولة مرة أخرى</string>
     <string name="quick_settings">إعدادات سريعة</string>
     <string name="ram_manager">مدير RAM</string>
     <string name="rate_this_app">قيم هذا التطبيق</string>
@@ -350,12 +392,15 @@
     <string name="reset_password">إعادة تعيين كلمة المرور</string>
     <string name="restore">استعادة</string>
     <string name="restore_confirmation">هل أنت متأكد من أنك تريد استبدال جميع البيانات الخاصة بك عن طريق استعادة هذه النسخة الاحتياطية؟</string>
+    <string name="restore_purchases">استعادة المشتريات</string>
+    <string name="restore_purchases_sum">انقر لاسترداد المشتريات من الخادم</string>
     <string name="ring">تقليل التأخير في المكالمة</string>
     <string name="ring_off">في المكالمة تأخير القرص تعطيل</string>
     <string name="ring_on">تم تخفيض التأخير أثناء المكالمة</string>
     <string name="ring_sub">يقلل من التأخير في تلقي أو إنهاء مكالمة.</string>
     <string name="root_access">الوصول إلى الجذر</string>
     <string name="root_access_sub">HEBF يحتاج إلى الوصول إلى الجذر من أجل العمل. يرجى التأكد من أن لديك امتيازات المستخدم الخارق والنقر على الزر \"التالي \"</string>
+    <string name="rootless_intro_sub">ستدخل وضع غير الجذر</string>
     <string name="running">ادارة</string>
     <string name="sair">هل تريد حقًا إغلاق هذا التطبيق؟</string>
     <string name="schedule">جدول</string>
@@ -384,7 +429,12 @@
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php؟u=5514152"> \ @ paget96 </a> لـ:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180"> تعرف على البرمجة النصية الأساسية ، وكيفية تنفيذ البرامج النصية ، وتعديل مبنى </a> دليل ، حيث أخذنا الإلهام وبعض المعرفة الأولية. شكرا ، أنت في مكان ما في قلبنا فارغ.</string>
     <string name="special_sub_2">نستخدم أيضًا بعض البرامج النصية مفتوحة المصدر التي أعدتها صفحة paget96 الخاصة وبمساهمات من العديد من أعضاء مجتمع المطورين.</string>
+    <string name="splash_less_1">يجب أن يستمر العرض</string>
+    <string name="splash_less_2">VIP Battery Saver يمكن أن ينقذ الأرواح</string>
     <string name="splash_less_3">قبل اللعب ، افتح لعبتك من هنا</string>
+    <string name="splash_less_4">دعمنا تحت تصرفكم</string>
+    <string name="splash_less_6">نعتقد وقتك هو قيمة</string>
+    <string name="splash_less_7">يمكننا أن نشعر قلبك</string>
     <string name="splash1">التردد الموصى به لتقليص نظام الملفات هو مرة واحدة في الأسبوع</string>
     <string name="splash10">تم إنشاؤه في خضم قلب مكسور</string>
     <string name="splash11">[LMK] يمكنك النقر فوق القيمة الحالية للعودة بسرعة إلى القيمة الافتراضية / التي تم العثور عليها</string>
@@ -473,12 +523,18 @@
     <string name="zipalign_off">تم إيقاف تشغيل Zipalign</string>
     <string name="zipalign_on">تحول Zipalign</string>
     <string name="zipalign_sub">يعمل على تحسين ملفات حزم android (وبياناتها غير المضغوطة) لتقليل مقدار ذاكرة الوصول العشوائي المستهلكة عند تشغيل تطبيق ما.</string>
+    <string name="purchase_premium">شراء ترقية قسط</string>
+    <string name="promo_code">شفرة تخفيض</string>
+    <string name="checking_code">التحقق من الشفرة الترويجية …</string>
+    <string name="invalid_promo_code">شفرة ترويجية غير صالحة!</string>
+    <string name="temp_package_expiration_message">انتهت صلاحية الحزمة المؤقتة الخاصة بك! اشترِ باقة مميزة الآن للاستمرار في استخدام ميزاتها.</string>
     <string name="translations">ترجمة</string>
     <string name="translations_file_help">يحتوي ملف strings.xml على النص المستخدم في هذا التطبيق. يمكنك نسخ ملف الترجمة إلى التخزين الخاص بك إذا كنت ترغب في ترجمته باستخدام هاتفك. بمجرد الانتهاء من الترجمة ، أرسل إلينا مرة أخرى من خلال دعم البريد الإلكتروني لدينا.</string>
     <string name="translations_github_help">إذا كنت تفضل ذلك ، يمكنك الحصول على الملف نفسه على GitHub مع اختلاف القدرة على رؤية الملفات المترجمة بالفعل. قم بتنزيل الملفات مباشرة من هناك أو تفرع من المشروع ، ثم تحتاج فقط إلى فتح طلب سحب عندما تنتهي من الترجمة.</string>
     <string name="tips">نصائح</string>
     <string name="translation_tips">شكرًا لك على اهتمامك بترجمة هذا التطبيق ، وإليك بعض النصائح: - إذا كنت بحاجة إلى استخدام علامات الاقتباس ، ضع شرطة مائلة عكسية قبل كل - \\n يعني فاصل أسطر ، ضع في اعتبارك - لا تترجم s ، %1$s ،%2$d وما إلى ذلك. تمثل البيانات المتغيرة التي سيتم عرضها عند تشغيل التطبيق.</string>
     <string name="balanced">متوازن</string>
+    <string name="sign_out">خروج</string>
     <string name="skip">تخطى</string>
     <string name="window_manager">مدير النافذة</string>
     <string name="screen_density">كثافة الشاشة</string>

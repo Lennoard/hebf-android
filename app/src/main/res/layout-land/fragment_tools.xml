@@ -11,8 +11,8 @@
         android:id="@+id/toolsScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin"
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt"
         android:visibility="gone"
         tools:visibility="visible">
 
@@ -36,13 +36,11 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:gravity="center_horizontal"
                     android:text="@string/utilidades"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline4"
                     android:textColor="?attr/colorPrimary" />
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -74,7 +72,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="12dp"
                             android:text="@string/fab_media_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -101,7 +99,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/hours_scheduled_time"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                         </LinearLayout>
@@ -119,14 +117,14 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/scheduleMediaServeButton"
-                                style="@style/MaterialButtonFlatColored"
+                                style="@style/AppMaterialButtonFlatColored"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="@string/schedule" />
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/killMediaServerButton"
-                                style="@style/MaterialButtonFlatColored"
+                                style="@style/AppMaterialButtonFlatColored"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="@string/kill_mediaserver" />
@@ -152,7 +150,7 @@
                                 android:layout_margin="24dp"
                                 android:layout_weight="1"
                                 android:text="@string/apps_manager"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp" />
 
@@ -184,7 +182,7 @@
                                 android:layout_margin="24dp"
                                 android:layout_weight="1"
                                 android:text="@string/auto_start_disabler"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp" />
 
@@ -216,13 +214,11 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:gravity="center_horizontal"
                     android:text="@string/misc"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline4"
                     android:textColor="?attr/colorPrimary" />
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"

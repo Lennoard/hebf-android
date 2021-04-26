@@ -34,7 +34,7 @@
     <item android:title="@string/tweaks">
         <menu>
             <group android:checkableBehavior="single">
-                <item android:id="@+id/nav_bateria" android:icon="@drawable/ic_battery_full"
+                <item android:id="@+id/nav_bateria" android:icon="@drawable/ic_battery"
                     android:title="@string/bateria" />
                 <item android:id="@+id/nav_performance" android:icon="@drawable/ic_performance"
                     android:title="@string/performance" />
@@ -60,8 +60,16 @@
     <item android:title="@string/outro">
         <menu>
             <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_my_account" android:icon="@drawable/ic_user"
+                    android:title="@string/my_account" />
+                <item android:id="@+id/nav_public" android:icon="@drawable/ic_public"
+                    android:title="Network" />
                 <item android:id="@+id/nav_settings" android:icon="@drawable/ic_settings"
                     android:title="@string/settings" />
+                <item android:id="@+id/nav_purchase_premium" android:icon="@drawable/ic_pro"
+                    android:title="@string/purchase_premium" />
+                <item android:id="@+id/nav_bug" android:icon="@drawable/ic_bug_report"
+                    android:title="@string/bug_report" />
                 <item android:id="@+id/nav_about_less" android:icon="@drawable/ic_info_outline"
                     android:title="@string/sobre" />
             </group>

@@ -12,8 +12,8 @@ import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
-import com.androidvip.hebf.toast
+import com.androidvip.hebf.helpers.HebfApp
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.androidvip.hebf.utils.K.PREF.DNS_SPINNER_SELECTION
 import com.google.android.material.snackbar.Snackbar
@@ -154,7 +154,7 @@ class ManualDnsActivity : BaseActivity() {
             val achievementsSet = userPrefs.getStringSet(K.PREF.ACHIEVEMENT_SET, HashSet())
             if (!achievementsSet.contains("help")) {
                 Utils.addAchievement(applicationContext, "help")
-                toast(getString(R.string.achievement_unlocked, getString(R.string.achievement_help)))
+                Toast.makeText(this, getString(R.string.achievement_unlocked, getString(R.string.achievement_help)), Toast.LENGTH_LONG).show()
             }
             val dialog = Dialog(this).apply {
                 setContentView(R.layout.dialog_log)
@@ -287,17 +287,17 @@ class ManualDnsActivity : BaseActivity() {
             runSafeOnUiThread {
                 if (validDns1) {
                     dns1Checker.setImageResource(R.drawable.ic_check)
-                    dns1Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.success))
+                    dns1Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.colorSuccess))
                 } else {
                     dns1Checker.setImageResource(R.drawable.ic_close)
-                    dns1Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.red))
+                    dns1Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.colorError))
                 }
                 if (validDns2) {
                     dns2Checker.setImageResource(R.drawable.ic_check)
-                    dns2Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.success))
+                    dns2Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.colorSuccess))
                 } else {
                     dns2Checker.setImageResource(R.drawable.ic_close)
-                    dns2Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.red))
+                    dns2Checker.setColorFilter(ContextCompat.getColor(this@ManualDnsActivity, R.color.colorError))
                 }
                 if (validDns1 && validDns2)
                     dnsApplyButton.show()

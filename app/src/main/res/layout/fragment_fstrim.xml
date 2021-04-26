@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin">
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -20,12 +20,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/general"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
             android:textColor="?attr/colorPrimarySurface" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/busyboxNotFoundCard"
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -45,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_warning"
-                    app:tint="@color/warning" />
+                    app:tint="@color/colorWarning" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,7 +67,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/busyboxInstallButton"
-                        style="@style/MaterialButtonFlatColored"
+                        style="@style/AppMaterialButtonFlatColored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -82,7 +81,6 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -127,7 +125,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="8dp"
                     android:text="@string/fstrim_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -144,7 +142,7 @@
                         android:checked="true"
                         android:padding="8dp"
                         android:text="/system"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface" />
 
                     <CheckBox
@@ -154,7 +152,7 @@
                         android:checked="true"
                         android:padding="8dp"
                         android:text="/data"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface" />
 
                     <CheckBox
@@ -164,12 +162,12 @@
                         android:checked="true"
                         android:padding="8dp"
                         android:text="/cache"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/fstrim_botao"
-                        style="@style/MaterialButtonFlatColored"
+                        style="@style/AppMaterialButtonFlatColored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -190,11 +188,10 @@
             android:layout_marginTop="4dp"
             android:layout_marginBottom="12dp"
             android:text="@string/title_activity_opcoes"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
             android:textColor="?attr/colorPrimarySurface" />
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -221,7 +218,7 @@
                     android:layout_below="@id/fstrim_apply_on_boot"
                     android:padding="16dp"
                     android:text="@string/schedule"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <Spinner
@@ -256,7 +253,7 @@
                         android:layout_weight="1"
                         android:hint="Minutes"
                         android:inputType="number"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <Button
                         android:id="@+id/set_custom_schedule_time"

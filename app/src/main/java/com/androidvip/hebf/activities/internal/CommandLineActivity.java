@@ -3,10 +3,6 @@ package com.androidvip.hebf.activities.internal;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-
 import android.text.Editable;
 import android.text.Selection;
 import android.text.TextWatcher;
@@ -18,10 +14,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.androidvip.hebf.helpers.HebfCommandLine;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.androidvip.hebf.R;
+import com.androidvip.hebf.helpers.HebfCommandLine;
 import com.androidvip.hebf.utils.K;
-import com.androidvip.hebf.utils.Themes;
 import com.androidvip.hebf.utils.UserPrefs;
 import com.androidvip.hebf.utils.Utils;
 
@@ -43,12 +41,6 @@ public class CommandLineActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        if (new UserPrefs(getApplicationContext()).getString(K.PREF.THEME, Themes.LIGHT).equals(Themes.WHITE)) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite));
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness));
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme);
-        }
 
         input = findViewById(R.id.command_line_input);
         input.setSelection(input.getText().length());

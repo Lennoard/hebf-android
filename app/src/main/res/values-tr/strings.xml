@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
+    <string name="accessibility_alert">Pil tasarrufu eylemlerini gerçekleştirmek ve etkin olmayan uygulamaları kapatmak için izninize ihtiyacımız var. Devam et\'e tıklayın ve ayarlar ekranı açılacak, aşağıdaki öğreticinin gösterdiğine benzer bir şey arayın:</string>
+    <string name="accessibility_service">Erişilebilirlik Hizmeti</string>
+    <string name="accessibility_service_description">Bu hizmet, bir uygulamayı başlattığınızda ayrıntılar ekranında bir uygulamayı otomatik olarak durdurmaya zorlayacak bi hizmettir (sadece HEBF aracılığıyla).</string>
+    <string name="accessibility_service_label">HEBF Optimizer - Pil Tasarrufu</string>
+    <string name="account_created">Hesap oluşturuldu</string>
+    <string name="account_options">Hesap seçenekleri</string>
     <string name="achievement_backup">Üzgün olmaktansa güvende olmak daha iyidir</string>
     <string name="achievement_help">Bu şey ne işe yarıyor?</string>
     <string name="achievement_prop">Özellik</string>
@@ -17,6 +23,8 @@
     <string name="aggressive_doze_off">Agresif uyku devre dışı bırakıldı</string>
     <string name="aggressive_doze_on">Aggressive uyku etkinleştirildi</string>
     <string name="aggressive_doze_sum">Ekran kapandıktan birkaç dakika sonra Uyku Modu\'nu etkinleştirmeye zorlayarak, cihazı önceki diğer durumdan bağımsız olarak derin bir uykuya geçirir.</string>
+    <string name="always_anonymous">Her zaman anonim</string>
+    <string name="always_anonymous_sum">Giriş ekranını göz ardı edin. Uyarı: Bu işem oturumunuzu açmayacaktır, uygulama içi satın alımlar yapmanız veya hesabınızı doğrulamanız gerekiyorsa, önce oturum açmanız gerekir.</string>
     <string name="android_version">Android sürümü</string>
     <string name="announcements">Duyurular</string>
     <string name="anonymous">Anonim</string>
@@ -38,6 +46,10 @@
     <string name="art_cache_warning">Bu işlevin sorunsuz çalışması için önbelleği temizlemeniz ve yeniden başlatmanız gerekir.\nTamam düğmesine bastığınızda cihaz yeniden başlatılacaktır.</string>
     <string name="art_sum">Android Çalışma Zamanı (ART), dex kodunu kurulum sırasında yerel koda derlemek için önceden derlemeyi kullanır ve işlemcinizin kodu daha kolay yorumlayabilmesi için dex2oat aracını kullanarak önceden optimize eder.\nBu seçenek, nasıl derleneceğini kontrol etmek için dex2oat derleyici filtresini değiştirmenize izin verir.</string>
     <string name="art_warning_not_found">ART derleyici filtre seçenekleri sisteminizde bulunamadı, bu pencereyi kapatabilir veya riski size ait olmak üzere etkinleştirebilirsiniz.</string>
+    <string name="auth_failure">Kimlik doğrulama hatası</string>
+    <string name="auto_optimize_performance">Cihazınızı her 15 dakikada bir otomatik olarak optimize edin, bu seçenek size cihazınızın performansında yeni bir deneyim sağlayacaktır.</string>
+    <string name="auto_optimize_sub">Oyununuzu 15 dakika sonra otomatik olarak optimize edin, ağır veya açık dünya oyunlarında çok kullanışlıdır (bu, olumsuz etkiler yaratabilir, yalnızca eminseniz etkinleştirin)</string>
+    <string name="auto_optimizer">Auto optimizer</string>
     <string name="auto_start_disabler">Auto start disabler</string>
     <string name="auto_start_disabler_sum">Başlangıçta hangi uygulamaların çalıştırılabileceğini kontrol etmek için bu seçeneği kullanın. Varsayılan olarak, RECEIVE_BOOT_COMPLETED(ÖNYÜKLEME TAMAMLANDI) iznine sahip tüm uygulamalar, sistemin önyüklemeyi tamamladığını gösteren bir yayın alır.</string>
     <string name="backup">Yedekle</string>
@@ -54,6 +66,7 @@
     <string name="battery_information">Pil bilgileri</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="bootloader">ÖNYÜKLEME</string>
+    <string name="br_sum">Bir hata bulduysanız veya herhangi bir öneriniz varsa, lütfen bize göndermekten çekinmeyin (e-posta yoluyla). En kısa sürede cevap vereceğiz.</string>
     <string name="browsing">Tarama hızını arttırın</string>
     <string name="browsing_off">Arabellek ayarlamaları devre dışı</string>
     <string name="browsing_on">Arabellek ayarlamaları etkinleştirildi</string>
@@ -111,11 +124,15 @@
     <string name="default_">Varsayılan</string>
     <string name="default_username">Bir HEBF kullanıcısı</string>
     <string name="delete">Sil</string>
+    <string name="delete_account">Hesabı sil</string>
+    <string name="delete_account_confirm">Hesabınızı silmek istediğinizden emin misiniz? Verileriniz korunmayacaktır. İşlemden sonra bağlantınız kesilecektir.</string>
+    <string name="delete_account_sum">Hesabınız silindi</string>
     <string name="device">Cihaz</string>
     <string name="device_info">Cihaz bilgisi</string>
     <string name="device_model">Cihaz modeli</string>
     <string name="device_name">Cihaz adı</string>
     <string name="disable">Devre dışı bırak</string>
+    <string name="disconnection_warning">Bağlantınız kesilecek</string>
     <string name="dns_off">Google DNS devre dışı</string>
     <string name="dns_on">Google DNS etkin</string>
     <string name="dns_sum">Özel bir DNS, hızı, yanıtı ve güvenliği artırabilir. Ayrıca, engellenen web sitelerine erişmenize ve bulunduğunuz yere bağlı olarak ağınızdaki bazı sansür filtrelerini atlamanıza da olanak tanır.</string>
@@ -187,6 +204,7 @@
     <string name="game_booster_sum">Oyunu açmadan önce CPU düzenleyiciyi ayarlayarak, oyunlarda performansınızı artırın.</string>
     <string name="game_off">Oyun modu devre dışı bırakıldı</string>
     <string name="game_on">Oyun modu etkinleştirildi</string>
+    <string name="gamenews">Oyun performansını arttırın</string>
     <string name="gaming_lmk_profile">Oyun LMK profili</string>
     <string name="general">Genel</string>
     <string name="google_dns">Google DNS Kullan</string>
@@ -218,6 +236,7 @@
     <string name="iscustom_rom">Özel bir ROM mu?</string>
     <string name="iv_h1">İlk proje, geliştirici</string>
     <string name="iv_sub">…Vee dolu bir pil, bir hayal kırıklığı… bunun da ötesinde cihazımın pili hızla boşalıyordu! bu yüzden boş bir kalple ve dolu bir pille sevgi dolu hayallerimle HEBF üzerinde çalışmaya başladım. \n– Ivson Emídio</string>
+    <string name="join_club">Geçmişi unut ve kulübe katıl aşkım</string>
     <string name="junk_cleaned">Önemsiz öğe kaldırıldı</string>
     <string name="kernel">Çekirdek Seçenekleri</string>
     <string name="kernel_fail1">Etkinleştirmek için hiçbir seçeneğiniz yok gibi görünüyor.</string>
@@ -257,6 +276,10 @@
     <string name="log_off">Günlük kaydı devre dışı bırakıldı</string>
     <string name="log_on">Günlük kaydı yeniden etkinleştirildi</string>
     <string name="log_sub">Android\'in tüm uygulamalarda olan her şeyi kaydetmeye çalıştığını görmek istemiyorsanız, bu seçeneği etkinleştirin.</string>
+    <string name="login_failure">Giriş başarısız</string>
+    <string name="login_failure_no_user">Bu eposta adresine sahip kullanıcı yok</string>
+    <string name="login_failure_password">Eposta veya şifre yanlış</string>
+    <string name="login_with_email">Eposta ile giriş yap</string>
     <string name="low_ram_device_flag">Düşük RAM Cihazı bayrağı</string>
     <string name="low_ram_device_flag_sub">Bu seçenek, düşük bellekli cihazlarda kötü çalışan belirli bellek yoğun özellikleri (durum çubuğu renklendirme, bildirim paneli, arka plan efekti vb.) kapatarak cihazı düşük RAM olarak işaretler.\n\nDevre dışı bırakılırsa, değişiklikleri uygulamak için YENİDEN BAŞLATMANIZ gerekebilir.</string>
     <string name="mascote">Maskot</string>
@@ -276,6 +299,9 @@
     <string name="multitasking_off">Çoklu görev profili devre dışı</string>
     <string name="multitasking_on">Çoklu görev profili etkin</string>
     <string name="multitasking_sub">Mevcut RAM miktarına bağlı olarak, daha iyi bir çoklu görev profili için Düşük bellek sonlandırıcı parametrelerini ayarlar.</string>
+    <string name="my_account">Hesabım</string>
+    <string name="my_public_configs">Genel yapılandırmalarım</string>
+    <string name="my_public_configs_sum">Genel yapılandırmalarınızı yönetin</string>
     <string name="name">İsim</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
@@ -299,6 +325,7 @@
     <string name="optimize_now">Şimdi Optimize et</string>
     <string name="other_games">Oyun optimize edici</string>
     <string name="outro">Diğerleri</string>
+    <string name="owned">Sahipli</string>
     <string name="package_disabled">Paket devre dışı bırakıldı</string>
     <string name="package_uninstalled">Paket kaldırıldı</string>
     <string name="panic_off">Çekirdek paniği devre dışı bırakıldı</string>
@@ -316,7 +343,14 @@
     <string name="please_log_in">Lütfen hesabınızla giriş yapın</string>
     <string name="please_wait">Lütfen bekleyin, bu 1 dakika kadar sürebilir.</string>
     <string name="power_off">GÜÇ KAPALI</string>
+    <string name="premium_package">Premium paket</string>
+    <string name="premium_package_ad">Premium Paket (reklamlı)</string>
+    <string name="premium_package_ad_sum">Tam olarak aynı ekstra özelliklere sahip ancak reklam sunumu ile premium paketin tadı</string>
+    <string name="premium_package_sum">Bu benzersiz satın alma, HEBF Optimizer\'da kullanılmak üzere, zorla durdurmaya yönelik sınırsız uygulama seçimi, özel hizmet planlaması ve Uygulama İşlemleri Yöneticisi gibi ekstra özellikler sunar</string>
+    <string name="premium_package_sum_header">HEBF Optimizer Premium Paketi satın alın</string>
     <string name="previous">Önceki</string>
+    <string name="pro_feature">Pro özelliği</string>
+    <string name="pro_feature_sum">Bu özelliği kullanmak için lütfen HEBF Optimizer Pro satın almayı düşünün</string>
     <string name="profiles">Profiller</string>
     <string name="profiles_set">Profiller seti</string>
     <string name="profile_format">Profil: %s</string>
@@ -325,8 +359,16 @@
     <string name="profile_battery_plus_sum">Herhangi bir yan etkiyi göz ardı ederek mümkün olan her yerde enerji tüketimini azaltır</string>
     <string name="profile_performance_sum">Performansı artırmaya ve genel cihaz hissini iyileştirmeye çalışır</string>
     <string name="profile_performance_plus_sum">Herhangi bir yan etkiyi göz ardı ederek mümkün olan her yerde performansı arttırır</string>
+    <string name="promo_warning">HEBF Optimizer Premium paketi sınırlı bir süre için sadece %s için kullanılabilir!</string>
     <string name="psfmc">Çok çekirdekli CPU\'lar için güç tasarrufu</string>
     <string name="public_configurations">Genel yapılandırmalar</string>
+    <string name="purchase">Satın al</string>
+    <string name="purchase_error_billing_unavailable">Mevcut Faturalandırma API sürümü, istenen tür için desteklenmiyor</string>
+    <string name="purchase_error_fatal">Tutarsızlık algılandı, iptal ediliyor…</string>
+    <string name="purchase_error_feature_not_supported">İstenen özellik, mevcut cihazınızda Google Play Store tarafından desteklenmiyor</string>
+    <string name="purchase_error_item_already_owned">Ürüne zaten sahip olduğun için satın alınamadı</string>
+    <string name="purchase_error_item_unavailable">İstenen ürün satın alınamıyor</string>
+    <string name="purchase_error_service_disconnected">Bağlantı kurulamadı, lütfen tekrar deneyin</string>
     <string name="quick_settings">Hızlı ayarlar</string>
     <string name="ram_manager">RAM Yöneticisi</string>
     <string name="rate_this_app">Bu uygulamayı oyla</string>
@@ -357,12 +399,15 @@
     <string name="reset_password">Parolayı sıfırla</string>
     <string name="restore">Geri yükle</string>
     <string name="restore_confirmation">Bu yedeği geri yükleyerek tüm verilerinizi değiştirmek istediğinizden emin misiniz?</string>
+    <string name="restore_purchases">Satın alımları geri yükle</string>
+    <string name="restore_purchases_sum">Satın alımları sunucudan almak için dokunun</string>
     <string name="ring">Görüşmedeki gecikmeyi azaltın</string>
     <string name="ring_off">Görüşmede gecikme ince ayarı devre dışı bırakıldı</string>
     <string name="ring_on">Görüşmede gecikme azaltıldı</string>
     <string name="ring_sub">Bir aramayı alma veya sonlandırma gecikmesini azaltır.</string>
     <string name="root_access">Kök Erişimi</string>
     <string name="root_access_sub">HEBF\'in çalışması için kök erişimine ihtiyacı var. Lütfen süper kullanıcı ayrıcalıklarına sahip olduğunuzdan emin olun ve  \"İleri\" düğmesini tıklayın</string>
+    <string name="rootless_intro_sub">Kök olmayan moda gireceksiniz</string>
     <string name="running">Çalışıyor</string>
     <string name="sair">Bu uygulamayı gerçekten kapatmak istiyor musunuz?</string>
     <string name="schedule">Program</string>
@@ -391,7 +436,12 @@
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> için:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Temel komut dosyası oluşturmayı, komut dosyalarının nasıl çalıştırılacağını, mod oluşturmayı öğrenin</a> ilham aldığımız ve bazı ilk bilgileri aldığımız bir rehber. Teşekkürler, kalbimizde bir yerdesiniz.</string>
     <string name="special_sub_2">Ayrıca, paget96 tarafından ve geliştirici topluluğunun birkaç üyesinin katkılarıyla yapılan bazı açık kaynaklı komut dosyalarını da kullanıyoruz.</string>
+    <string name="splash_less_1">Şov devam etmeli</string>
+    <string name="splash_less_2">VIP Pil Tasarrufu hayat kurtarabilir</string>
     <string name="splash_less_3">Oynamadan önce oyununuzu buradan açın</string>
+    <string name="splash_less_4">Desteğimiz hizmetinizdedir</string>
+    <string name="splash_less_6">Zamanınızın çok değerli olduğuna inanıyoruz</string>
+    <string name="splash_less_7">Kalbini hissedebiliriz.</string>
     <string name="splash1">Dosya sistemini düzenlemek için önerilen sıklık haftada birdir</string>
     <string name="splash10">Kırık bir kalbin ortasında yaratıldı</string>
     <string name="splash11">[LMK] varsayılan / bulunan değere hızlı bir şekilde geri dönmek için mevcut değere dokunabilirsiniz</string>
@@ -480,12 +530,18 @@
     <string name="zipalign_off">Zip hizalama kapatı</string>
     <string name="zipalign_on">Zip hizalama açık</string>
     <string name="zipalign_sub">Bir uygulamayı çalıştırırken tüketilen RAM miktarını azaltmak için android paket dosyalarını (ve sıkıştırılmamış verilerini) optimize eder.</string>
+    <string name="purchase_premium">Premium yükseltme satın alın</string>
+    <string name="promo_code">Promosyon kodu</string>
+    <string name="checking_code">Promosyon kodu kontrol ediliyor…</string>
+    <string name="invalid_promo_code">Geçersiz promosyon kodu!</string>
+    <string name="temp_package_expiration_message">Geçici paketinizin süresi doldu! Özelliklerini kullanmaya devam etmek için şimdi premium paket satın alın.</string>
     <string name="translations">Çeviriler</string>
     <string name="translations_file_help">Strings.xml dosyası bu uygulamada kullanılan metni içerir. Telefonunuzu kullanarak çevirmek isterseniz çeviri dosyasını depolama alanınıza kopyalayabilirsiniz. Çeviriyi bitirdikten sonra, e-posta desteğimiz aracılığıyla bize geri göndermeniz yeterlidir.</string>
     <string name="translations_github_help">Tercih ederseniz, önceden çevrilmiş dosyaları görebilmenin farkıyla aynı dosyayı GitHub\'da alabilirsiniz. Dosyaları doğrudan oradan indirin veya projeyi çatallayın, ardından çevirmeyi bitirdiğinizde bir istek açmanız yeterlidir. Çeviri Hüseyin Küpeli (andheartman)</string>
     <string name="tips">İpuçları</string>
     <string name="translation_tips">Bu uygulamayı çevirmekle ilgilendiğiniz için teşekkür ederiz, işte bazı ipuçları:  - tırnak işareti kullanmanız gerekiyorsa, her birinin önüne bir ters eğik çizgi koyun. - \\n satır sonu anlamına gelir, aklınızda bulundurun - Bunları çevirmeyin %s, %1$s, %2$d vb. Uygulama çalışırken gösterilecek değişken verileri temsil ederler.</string>
     <string name="balanced">Dengeli</string>
+    <string name="sign_out">Çıkış yap</string>
     <string name="skip">geç</string>
     <string name="window_manager">Pencere Yöneticisi</string>
     <string name="screen_density">Ekran yoğunluğu</string>
@@ -514,6 +570,7 @@
     <string name="virtual_memory">Sanal bellek</string>
     <string name="zram_sum">Daha yavaş takas bölümü yerine takas için kullanılacak olan RAM\'de sıkıştırılmış bir blok aygıtı oluşturur ve daha hızlı veri alışverişine olanak tanır.</string>
     <string name="vip_force_device_idle">Cihazı boşta kalmaya zorla (Uyku)</string>
+    <string name="not_logged_in_sum">Daha önceden \"HEBF Optimizer Pro\" uygulamasını satın aldıysanız, satın alma işleminizi doğrulamak ve tüm özelliklerin kilidini açmak için giriş yapmanız gerekir. Uygulamanın paylaşım işlevlerinden ve sunduğumuz diğer her şeyden yararlanmak için şimdi oturum açın. </string>
     <string name="you_are_not_logged_in">Giriş Yapmadınız</string>
     <string name="toolbox">Araç Kutusu</string>
     <string name="change_brightness">Parlaklığı değiştir</string>
@@ -526,6 +583,7 @@
     <string name="entropy_generate_from_storage_sum">Depodaki IO entropi havuzuna daha fazla rastgele katkıda bulunmasını sağlayın.</string>
     <string name="special_offer">Özel teklif</string>
     <string name="rootless_warning">Köksüz moddasınız. Birkaç seçenek yalnızca kök erişimiyle kullanılabilir. Süper kullanıcı haklarını tekrar istemek için dokunun.</string>
+    <string name="purchase_offer_warning">Premium paketi sınırlı bir süre için özel indirimle alın!</string>
     <string name="entropy_min_reseed">Minimum yeniden yapılandırma süresi</string>
     <string name="entropy_min_reseed_sum">Belirleyici rastgele sayı üreteçlerinin yeniden yapılandıracağı saniye sayısı.</string>
     <string name="vip_smart_pixels">Akıllı Pikseller.</string>

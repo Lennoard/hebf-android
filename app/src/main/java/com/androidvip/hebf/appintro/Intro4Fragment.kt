@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.*
-import com.androidvip.hebf.fragments.BaseFragment
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.utils.Utils
 import com.topjohnwu.superuser.Shell
@@ -42,7 +41,6 @@ class Intro4Fragment : BaseFragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.e("hebf", "setUserVisibleHint: onresume")
 
         lifecycleScope.launch (workerContext) {
             delay(1000)
@@ -58,7 +56,7 @@ class Intro4Fragment : BaseFragment() {
     private fun updateUi(isRooted: Boolean, isBusyboxInstalled: Boolean) {
         if (isRooted) {
             if (!isBusyboxInstalled) {
-                text.setTextColor(ContextCompat.getColor(findContext(), R.color.warning))
+                text.setTextColor(ContextCompat.getColor(findContext(), R.color.colorWarning))
                 text.text = getString(R.string.busybox_not_found)
             }
             checkingEnvironmentText.goAway()

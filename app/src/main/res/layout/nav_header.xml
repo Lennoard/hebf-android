@@ -21,7 +21,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="?attr/toolBarBackgroundColorLighter" />
+                android:src="@color/colorPrimaryLighter" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
             android:layout_marginRight="18dp"
             android:gravity="center_vertical"
             android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline5"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline5"
             android:textColor="?attr/colorOnSurface" />
 
     </LinearLayout>

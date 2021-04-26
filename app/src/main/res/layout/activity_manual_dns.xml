@@ -13,7 +13,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -39,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:background="?attr/toolBarBackgroundColorLighter"
+                    android:background="@color/colorPrimaryOrBackground"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -49,8 +48,7 @@
                         android:padding="16dp"
                         android:text="@string/apply_on_boot"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="16sp"
-                        android:theme="@style/Switch" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -59,11 +57,10 @@
                     android:layout_height="match_parent"
                     android:animateLayoutChanges="true"
                     android:orientation="vertical"
-                    android:paddingLeft="@dimen/default_card_margin"
-                    android:paddingRight="@dimen/default_card_margin">
+                    android:paddingLeft="@dimen/default_margin_alt"
+                    android:paddingRight="@dimen/default_margin_alt">
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -91,7 +88,7 @@
                                 android:layout_marginRight="16dp"
                                 android:layout_marginBottom="4dp"
                                 android:text="@string/dns_sum"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/dnsUrlButton"
@@ -144,7 +141,6 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -180,7 +176,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="number"
                                     android:nextFocusForward="@+id/dns1_2"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -198,7 +194,7 @@
                                     android:imeOptions="actionNext"
                                     android:inputType="number"
                                     android:nextFocusForward="@+id/dns1_3"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -214,7 +210,7 @@
                                     android:hint="254"
                                     android:inputType="number"
                                     android:nextFocusDown="@+id/dns1_4"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -230,7 +226,7 @@
                                     android:hint="254"
                                     android:inputType="number"
                                     android:nextFocusDown="@+id/dns2_1"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <View
                                     android:layout_width="0dp"
@@ -248,7 +244,7 @@
                                     android:paddingLeft="8dp"
                                     android:paddingRight="8dp"
                                     app:srcCompat="@drawable/ic_close"
-                                    app:tint="@color/red" />
+                                    app:tint="@color/colorError" />
 
                             </LinearLayout>
 
@@ -257,7 +253,6 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -291,7 +286,7 @@
                                     android:hint="254"
                                     android:inputType="number"
                                     android:nextFocusDown="@+id/dns2_2"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -307,7 +302,7 @@
                                     android:hint="254"
                                     android:inputType="number"
                                     android:nextFocusDown="@+id/dns2_3"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -323,7 +318,7 @@
                                     android:hint="254"
                                     android:inputType="number"
                                     android:nextFocusDown="@+id/dns2_4"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
@@ -338,7 +333,7 @@
                                     android:gravity="center_vertical|center_horizontal"
                                     android:hint="254"
                                     android:inputType="number"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                                 <View
                                     android:layout_width="0dp"
@@ -356,7 +351,7 @@
                                     android:paddingLeft="8dp"
                                     android:paddingRight="8dp"
                                     app:srcCompat="@drawable/ic_close"
-                                    app:tint="@color/red" />
+                                    app:tint="@color/colorError" />
 
                             </LinearLayout>
 
@@ -377,8 +372,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/done"
         app:srcCompat="@drawable/ic_check" />

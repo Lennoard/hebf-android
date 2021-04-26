@@ -17,4 +17,9 @@
         android:icon="@drawable/ic_filter_list"
         app:showAsAction="ifRoom" />
 
+    <item android:id="@+id/action_send"
+        android:title="@string/send"
+        android:icon="@drawable/ic_send"
+        app:showAsAction="never" />
+
 </menu>

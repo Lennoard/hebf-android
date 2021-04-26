@@ -192,7 +192,7 @@ object GameBooster {
             )
         }
 
-        return referenceParams to listOf(
+        return referenceParams.map { it.toInt() } to listOf(
                 ((referenceParams[0] * 90.1) / 100).toInt(),
                 ((referenceParams[1] * 90.5) / 100).toInt(),
                 ((referenceParams[2] * 91.3) / 100).toInt(),
@@ -250,9 +250,9 @@ object GameBooster {
     fun forceStopApps(applicationContext: Context?) {
         if (applicationContext == null) return
 
-        val packagesSet: MutableSet<String> = UserPrefs(applicationContext).getStringSet(K.PREF.FORCE_STOP_APPS_SET, HashSet())
+        val packagesSet: MutableSet<String>? = UserPrefs(applicationContext).getStringSet(K.PREF.FORCE_STOP_APPS_SET, HashSet())
         val commands = mutableListOf<String>()
-        packagesSet.forEach {
+        packagesSet?.forEach {
             if (it != "android" && it != "com.android.chrome" && !it.contains("com.androidvip") && it.isNotEmpty()) {
                 commands.add("am force-stop $it")
                 commands.add("am set-inactive $it true")

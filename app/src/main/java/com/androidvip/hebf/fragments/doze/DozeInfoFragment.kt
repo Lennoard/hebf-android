@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.androidvip.hebf.R
 import com.androidvip.hebf.adapters.DozeRecordAdapter
-import com.androidvip.hebf.fragments.BaseFragment
 import com.androidvip.hebf.runSafeOnUiThread
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.Doze
 import com.androidvip.hebf.utils.Logger
 import com.google.android.material.floatingactionbutton.FloatingActionButton

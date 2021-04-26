@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.dashboard.DashboardFragment"
+    tools:ignore="HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:paddingBottom="100dp">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/warningLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noRootWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22ff6d00"
+                android:drawablePadding="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/rootless_warning"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorWarning"
+                app:drawableLeftCompat="@drawable/ic_root"
+                app:drawableStartCompat="@drawable/ic_root"
+                app:drawableTint="@color/colorWarning" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/statisticsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin"
+            android:text="@string/statistics"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:layout_constraintTop_toBottomOf="@+id/warningLayout" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@+id/statisticsText" />
+
+        <com.google.android.material.progressindicator.ProgressIndicator
+            android:id="@+id/indicatorRam"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:circularRadius="@dimen/bigger_margin"
+            app:growMode="outgoing"
+            app:indicatorSize="@dimen/small_margin_alt"
+            app:indicatorType="circular"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/indicatorStorage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            app:showDelay="100"
+            tools:progress="65"
+            tools:visibility="visible" />
+
+        <com.google.android.material.progressindicator.ProgressIndicator
+            android:id="@+id/indicatorStorage"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:circularRadius="@dimen/bigger_margin"
+            app:growMode="incoming"
+            android:layout_marginTop="@dimen/default_margin"
+            app:indicatorSize="@dimen/small_margin_alt"
+            app:indicatorType="circular"
+            app:layout_constraintEnd_toStartOf="@+id/indicatorVirtual"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/indicatorRam"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            app:showDelay="175"
+            tools:progress="72"
+            tools:visibility="visible" />
+
+        <com.google.android.material.progressindicator.ProgressIndicator
+            android:id="@+id/indicatorVirtual"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:circularRadius="@dimen/bigger_margin"
+            app:growMode="incoming"
+            app:indicatorSize="@dimen/small_margin_alt"
+            app:indicatorType="circular"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/indicatorStorage"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            app:showDelay="250"
+            tools:progress="48"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRam"
+            style="@style/SelectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/default_margin"
+            android:padding="@dimen/medium_margin"
+            android:text="…"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+            app:layout_constraintBottom_toBottomOf="@+id/indicatorRam"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorRam"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/indicatorRam"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            tools:text="65%" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="…"
+            android:layout_marginTop="@dimen/default_margin"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+            app:layout_constraintBottom_toBottomOf="@+id/indicatorStorage"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorStorage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/indicatorStorage"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            tools:text="72%" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textVirtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="…"
+            android:layout_marginTop="@dimen/default_margin"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+            app:layout_constraintBottom_toBottomOf="@+id/indicatorVirtual"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorVirtual"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/indicatorVirtual"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            tools:text="48%" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/SingleLineText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_alt"
+            android:gravity="center_horizontal"
+            android:text="@string/virtual_memory"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle3"
+            android:textColor="@color/colorOnBackground"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorVirtual"
+            app:layout_constraintStart_toStartOf="@+id/indicatorVirtual"
+            app:layout_constraintTop_toBottomOf="@+id/indicatorVirtual" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/storageLabel"
+            style="@style/SingleLineText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_alt"
+            android:gravity="center_horizontal"
+            android:text="@string/storage"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle3"
+            android:textColor="@color/colorOnBackground"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorStorage"
+            app:layout_constraintStart_toStartOf="@+id/indicatorStorage"
+            app:layout_constraintTop_toBottomOf="@+id/indicatorVirtual" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/SingleLineText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_alt"
+            android:gravity="center_horizontal"
+            android:text="@string/memory"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle3"
+            android:textColor="@color/colorOnBackground"
+            app:layout_constraintEnd_toEndOf="@+id/indicatorRam"
+            app:layout_constraintStart_toStartOf="@+id/indicatorRam"
+            app:layout_constraintTop_toBottomOf="@+id/indicatorRam" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/servicesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin"
+            android:text="@string/services"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:layout_constraintTop_toBottomOf="@+id/storageLabel" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/vipCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/servicesText">
+
+            <com.androidvip.hebf.views.ServiceState
+                android:id="@+id/vipState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vip_battery_saver"
+                app:serviceIcon="@drawable/ic_battery" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dozeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/vipCard">
+
+            <com.androidvip.hebf.views.ServiceState
+                android:id="@+id/dozeState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aggressive_doze"
+                app:serviceIcon="@drawable/ic_sleep" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fstrimCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/dozeCard">
+
+            <com.androidvip.hebf.views.ServiceState
+                android:id="@+id/fstrimState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fstrim"
+                app:serviceIcon="@drawable/ic_fstrim_menu" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profilesCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/fstrimCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_margin"
+                android:paddingTop="@dimen/default_margin_alt"
+                android:paddingRight="@dimen/default_margin"
+                android:paddingBottom="@dimen/default_margin_alt">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profilesIcon"
+                    android:layout_width="@dimen/bigger_margin_alt"
+                    android:layout_height="@dimen/bigger_margin_alt"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/divider"
+                    app:srcCompat="@drawable/ic_perfis_1"
+                    app:tint="@color/colorWarning" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/huge_margin_alt"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:background="@color/disabled"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profilesIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/profilesText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/profiles"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body1"
+                    android:textColor="@color/colorOnSurface"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/profilesRadioGroup"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/divider"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/profilesRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checkedButton="@id/profilesBalanced"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/profilesBatteryPlus"
+                        android:layout_width="@dimen/big_margin"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_margin="@dimen/tiny_margin"
+                        android:background="@drawable/radio_profile_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/cairo_bold"
+                        android:gravity="center"
+                        android:text="B+"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        app:fontFamily="@font/cairo_bold" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/profilesBattery"
+                        android:layout_width="@dimen/big_margin"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_margin="@dimen/tiny_margin"
+                        android:background="@drawable/radio_profile_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="B"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/profilesBalanced"
+                        android:layout_width="@dimen/big_margin"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_margin="@dimen/tiny_margin"
+                        android:background="@drawable/radio_profile_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/profilesPerformance"
+                        android:layout_width="@dimen/big_margin"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_margin="@dimen/tiny_margin"
+                        android:background="@drawable/radio_profile_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="P"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/profilesPerformancePLus"
+                        android:layout_width="@dimen/big_margin"
+                        android:layout_height="@dimen/big_margin"
+                        android:layout_margin="@dimen/tiny_margin"
+                        android:background="@drawable/radio_profile_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/cairo_bold"
+                        android:gravity="center"
+                        android:text="P+"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        app:fontFamily="@font/cairo_bold" />
+
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/profileCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/balanced"
+                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle3"
+                    app:layout_constraintEnd_toEndOf="@+id/profilesRadioGroup"
+                    app:layout_constraintStart_toStartOf="@+id/profilesRadioGroup"
+                    app:layout_constraintTop_toBottomOf="@+id/profilesRadioGroup" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilesCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

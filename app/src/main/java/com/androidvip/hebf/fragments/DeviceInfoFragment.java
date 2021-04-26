@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.androidvip.hebf.R;
 import com.androidvip.hebf.helpers.CPUDatabases;
+import com.androidvip.hebf.ui.base.BaseFragment;
 import com.androidvip.hebf.utils.FileUtils;
 import com.androidvip.hebf.utils.K;
 import com.androidvip.hebf.utils.RootUtils;

@@ -9,20 +9,17 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.lifecycleScope
-import com.androidvip.hebf.BuildConfig
-import com.androidvip.hebf.R
+import com.androidvip.hebf.*
 import com.androidvip.hebf.activities.internal.AboutActivity
 import com.androidvip.hebf.fragments.*
-import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.services.RootShellService
-import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationView
@@ -200,7 +197,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
             runSafeOnUiThread {
                 if (!success.get()) {
-                    builder.show()
+                    builder.applyAnim().also {
+                        it.show()
+                    }
                 } else {
                     startService(Intent(activity, RootShellService::class.java))
                 }
@@ -275,25 +274,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             this, drawerLayout, toolbar,
             R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
-
-        if (userPrefs.getString(K.PREF.THEME, Themes.LIGHT) == Themes.WHITE) {
-            toggle.isDrawerIndicatorEnabled = false
-            toggle.setHomeAsUpIndicator(R.drawable.ic_menu_white_theme)
-            toggle.toolbarNavigationClickListener = View.OnClickListener {
-
-                when {
-                    isLandscape && isTablet -> {
-                        onBackPressed()
-                    }
-                    drawerLayout.isDrawerOpen(GravityCompat.START) -> {
-                        drawerLayout.closeDrawer(GravityCompat.START)
-                    }
-                    else -> {
-                        drawerLayout.openDrawer(GravityCompat.START)
-                    }
-                }
-            }
-        }
 
         if (isLandscape && isTablet) {
             drawerLayout.openDrawer(GravityCompat.START)

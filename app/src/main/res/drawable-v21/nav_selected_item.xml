@@ -3,7 +3,7 @@
     <item android:right="8dp">
         <shape android:shape="rectangle">
             <corners android:topRightRadius="24dp" android:bottomRightRadius="24dp" />
-            <solid android:color="?attr/colorAccentLighter" />
+            <solid android:color="@color/colorAccentLight" />
         </shape>
     </item>
 </layer-list>

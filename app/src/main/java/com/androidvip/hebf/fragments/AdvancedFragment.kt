@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
 import com.androidvip.hebf.activities.advanced.*
 import com.androidvip.hebf.activities.internal.CommandLineActivity
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.EditDialog
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.RootUtils

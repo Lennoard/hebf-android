@@ -12,9 +12,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.RootUtils

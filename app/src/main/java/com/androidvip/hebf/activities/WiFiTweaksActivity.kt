@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_wifi_tweaks.*

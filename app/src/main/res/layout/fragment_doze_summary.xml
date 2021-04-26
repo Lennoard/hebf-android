@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/rv_margin"
-    android:paddingRight="@dimen/rv_margin">
+    android:paddingLeft="@dimen/small_margin"
+    android:paddingRight="@dimen/small_margin">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/doze_swipe_to_refresh_summary"

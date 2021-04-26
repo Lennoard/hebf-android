@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
 import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.helpers.GamePackages
+import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar

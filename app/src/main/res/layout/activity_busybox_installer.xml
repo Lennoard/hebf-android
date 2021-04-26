@@ -35,13 +35,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/busybox_install_headline"
-                android:textAppearance="@style/TextAppearance.AppTheme.Headline5"
+                android:textAppearance="@style/TextAppearance.HEBF.Headline5"
                 android:layout_marginTop="36dp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:text="@string/busybox_install_subtitle" />
@@ -96,7 +96,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:gravity="center_horizontal"
                 android:text="@string/busybox_install_hint"
                 android:layout_marginBottom="16dp"/>
@@ -112,7 +112,7 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            style="@style/MaterialButtonFlatColored"
+            style="@style/AppMaterialButtonFlatColored"
             android:id="@+id/busyboxButtonGooglePlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -12,7 +12,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -26,8 +25,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/default_card_margin"
-            android:layout_marginRight="@dimen/default_card_margin"
+            android:layout_marginLeft="@dimen/default_margin_alt"
+            android:layout_marginRight="@dimen/default_margin_alt"
             android:focusableInTouchMode="true"
             android:orientation="vertical">
 
@@ -67,7 +66,7 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/build_version"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imageView"
@@ -92,7 +91,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
                         android:text="@string/build_date"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </RelativeLayout>
 
@@ -125,7 +124,7 @@
                         android:paddingRight="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/build_changelog"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textIsSelectable="true" />
 
                 </LinearLayout>

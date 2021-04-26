@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/TextInputOutlined"
+        style="@style/AppInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

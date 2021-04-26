@@ -16,7 +16,6 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.appbar.MaterialToolbar
-                style="@style/ToolbarStyle"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
@@ -27,8 +26,8 @@
             android:id="@+id/runningAppsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingEnd="@dimen/rv_margin"
-            android:paddingStart="@dimen/rv_margin"
+            android:paddingEnd="@dimen/small_margin"
+            android:paddingStart="@dimen/small_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior_local"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

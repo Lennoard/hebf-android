@@ -8,9 +8,9 @@ import android.view.View
 import android.widget.*
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
 import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.models.App
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -19,7 +19,6 @@ import kotlinx.coroutines.launch
 import java.io.File
 
 // Todo: check target sdk 29
-// FIXME: Legacy
 class AppDetailsActivity : BaseActivity() {
     private lateinit var appPackageName: TextView
     private lateinit var appVersion: TextView

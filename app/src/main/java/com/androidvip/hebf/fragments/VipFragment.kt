@@ -17,6 +17,7 @@ import com.androidvip.hebf.*
 import com.androidvip.hebf.adapters.ForceStopAppsAdapter
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.services.LockScreenWork
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar

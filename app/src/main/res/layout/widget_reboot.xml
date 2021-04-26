@@ -9,7 +9,6 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:background="@drawable/circulo_branco"
-        android:tint="@color/claro_roxo"
         android:id="@+id/widget_reboot"
         android:src="@drawable/ic_reboot" />
 

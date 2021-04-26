@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin">
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/status"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
             android:textColor="?attr/colorAccent" />
 
         <LinearLayout
@@ -98,11 +98,10 @@
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/improvements"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
             android:textColor="?attr/colorAccent" />
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -133,11 +132,11 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/battery_checklist_sum"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/checklistButton"
-                        style="@style/BorderedMaterialButtonColored"
+                        style="@style/AppMaterialButtonOutlined"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -164,7 +163,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dozeTrigger"
-                    style="@style/MaterialButtonFlat"
+                    style="@style/AppMaterialButtonFlat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -186,11 +185,10 @@
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/general"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
             android:textColor="?attr/colorAccent" />
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -231,7 +229,7 @@
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:text="@string/dark_wallpaper"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -243,7 +241,7 @@
                         android:paddingStart="16dp"
                         android:paddingEnd="16dp"
                         android:text="@string/dark_wallpaper_sum"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -290,7 +288,6 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/batteryPsfmcCard"
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -308,7 +305,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/psfmc"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
@@ -316,7 +313,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:text="@string/core_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <Spinner
                     android:id="@+id/batteryPsfmcSpinner"
@@ -333,7 +330,6 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -353,7 +349,7 @@
                     android:paddingRight="16dp"
                     android:paddingBottom="16dp"
                     android:text="@string/reset_battery_statistics"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp" />
 
@@ -363,11 +359,11 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:text="@string/reset_battery_statistics_sum"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/batteryResetButton"
-                    style="@style/BorderedMaterialButtonColored"
+                    style="@style/AppMaterialButtonOutlined"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"

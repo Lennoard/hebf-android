@@ -18,10 +18,8 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
-                style="@style/ToolbarStyle"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/toolbarBackgroundColor" />
+                android:layout_height="?attr/actionBarSize" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -67,7 +65,7 @@
                             android:maxLines="2"
                             android:orientation="horizontal"
                             android:text="Idle"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <EditText
                             android:id="@+id/wsIdleMs"
@@ -120,7 +118,7 @@
                             android:maxLines="2"
                             android:orientation="horizontal"
                             android:text="Supplicant scan interval"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <EditText
                             android:id="@+id/wsSupplicantScanInterval"
@@ -173,7 +171,7 @@
                             android:maxLines="2"
                             android:orientation="horizontal"
                             android:text="Framework scan interval"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <EditText
                             android:id="@+id/wsFrameworkScanInterval"
@@ -232,7 +230,7 @@
                             android:paddingEnd="16dp"
                             android:paddingBottom="16dp"
                             android:text="Scan always enabled"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textSize="16sp" />
 
                         <androidx.appcompat.widget.AppCompatImageView

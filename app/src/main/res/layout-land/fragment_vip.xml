@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/default_card_margin"
-    android:paddingRight="@dimen/default_card_margin"
+    android:paddingLeft="@dimen/default_margin_alt"
+    android:paddingRight="@dimen/default_margin_alt"
     android:scrollbars="none">
 
     <LinearLayout
@@ -23,7 +23,6 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/taskerSuggestionCard"
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -31,7 +30,7 @@
                 android:layout_marginRight="4dp"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone"
-                app:cardBackgroundColor="?attr/colorAccentLighter">
+                app:cardBackgroundColor="@color/colorPrimaryLighter">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -60,7 +59,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -87,7 +85,7 @@
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/vip_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/vipLastActivated"
@@ -96,7 +94,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:text="@string/last_activated"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/vipMasterSwitch"
@@ -105,7 +103,7 @@
                         android:checked="false"
                         android:padding="16dp"
                         android:text="@string/off"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1" />
 
                     <View
                         android:layout_width="match_parent"
@@ -134,7 +132,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/auto_turn_on"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface" />
 
                         <Spinner
@@ -195,9 +193,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
                                 android:max="255"
-                                android:progress="76" />
+                                android:progress="76"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/vipSeekBrightnessEnabledSum"
@@ -206,7 +204,7 @@
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
                                 android:text="76"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                         </LinearLayout>
@@ -239,8 +237,8 @@
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
                                 android:layout_marginBottom="16dp"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
                                 android:text="192"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                         </LinearLayout>
@@ -261,7 +259,6 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/vipPermissionCard"
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -281,7 +278,7 @@
                         style="@style/CardTitleSmall"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="?attr/colorAccentLighter"
+                        android:background="@color/colorPrimaryLighter"
                         android:gravity="center_horizontal"
                         android:text="@string/request_permission"
                         android:textColor="?attr/colorAccent" />
@@ -304,7 +301,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -331,7 +327,7 @@
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="8dp"
                         android:text="@string/vip_parameters_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/vipDefaultSaver"
@@ -342,7 +338,7 @@
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/vip_android_default_saver"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -354,7 +350,7 @@
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/vip_disable_data"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -378,7 +374,7 @@
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/vip_disable_sync"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -390,7 +386,7 @@
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/grayscale"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -402,7 +398,7 @@
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/vip_force_device_idle"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body1"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
                         android:textColor="?attr/colorOnSurface" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -434,7 +430,7 @@
                             android:paddingTop="16dp"
                             android:paddingBottom="16dp"
                             android:text="@string/force_stop"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body1" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body1" />
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/selectAppsForceStopButton"

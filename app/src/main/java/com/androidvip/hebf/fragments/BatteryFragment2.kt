@@ -23,6 +23,7 @@ import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.*
 import com.androidvip.hebf.activities.DozeActivity
 import com.androidvip.hebf.models.BatteryStats
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.CpuManager.Companion.cpuCount
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger.logError
@@ -399,9 +400,9 @@ class BatteryFragment2 : BaseFragment(), AdapterView.OnItemSelectedListener {
 
             batteryCardStatus?.setValueText("$percentage%")
             batteryCardStatus?.setValueTextColor(when {
-                percentage >= 90 -> ContextCompat.getColor(requireContext(), R.color.success)
-                percentage in 16F..30F -> ContextCompat.getColor(requireContext(), R.color.warning)
-                percentage <= 15 -> ContextCompat.getColor(requireContext(), R.color.color_error)
+                percentage >= 90 -> ContextCompat.getColor(requireContext(), R.color.colorSuccess)
+                percentage in 16F..30F -> ContextCompat.getColor(requireContext(), R.color.colorWarning)
+                percentage <= 15 -> ContextCompat.getColor(requireContext(), R.color.colorError)
                 else -> requireContext().getColorFromAttr(R.attr.colorOnSurface)
             })
 

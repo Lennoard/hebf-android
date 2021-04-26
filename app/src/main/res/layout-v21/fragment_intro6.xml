@@ -41,7 +41,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center_horizontal"
             android:text="@string/final_sub"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </LinearLayout>
 

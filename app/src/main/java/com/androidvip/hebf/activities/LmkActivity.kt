@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.*
+import com.androidvip.hebf.helpers.HebfApp
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.androidvip.hebf.views.InfoSeekBar
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -360,7 +362,7 @@ class LmkActivity : BaseActivity() {
                     ((referenceParams[0] * 66.66) / 100).toInt(),
                     ((referenceParams[1] * 74.3) / 100).toInt(),
                     ((referenceParams[2] * 83.4) / 100).toInt(),
-                    (referenceParams[3] * 91) / 100,
+                    ((referenceParams[3] * 91) / 100).toInt(),
                     ((referenceParams[4] * 93.4) / 100).toInt(),
                     ((referenceParams[5] * 93.6) / 100).toInt()
                 )
@@ -370,7 +372,7 @@ class LmkActivity : BaseActivity() {
             }
             4 -> {
                 seekSparseArray.forEachIndexed { index, infoSeekBar ->
-                    infoSeekBar.progress = referenceParams[index]
+                    infoSeekBar.progress = referenceParams[index].toInt()
                 }
             }
         }

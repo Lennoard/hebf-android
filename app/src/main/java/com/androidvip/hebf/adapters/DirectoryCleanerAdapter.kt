@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.models.Directory
 import com.androidvip.hebf.roundTo2Decimals
 import com.androidvip.hebf.utils.RootUtils

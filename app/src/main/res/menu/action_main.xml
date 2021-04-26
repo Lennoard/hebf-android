@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actionNotifications"
+        android:icon="@drawable/ic_notifications"
+        android:iconTint="@color/colorOnBackground"
+        android:title="@string/notifications"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/actionSettings"
+        android:icon="@drawable/ic_settings"
+        android:iconTint="@color/colorOnBackground"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/actionDeviceInfo"
+        android:title="@string/device_info"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionMyAccount"
+        android:title="@string/my_account"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionAbout"
+        android:title="@string/sobre"
+        app:showAsAction="never" />
+</menu>

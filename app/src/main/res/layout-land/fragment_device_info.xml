@@ -26,8 +26,8 @@
             android:animateLayoutChanges="true"
             android:baselineAligned="false"
             android:orientation="horizontal"
-            android:paddingLeft="@dimen/default_card_margin"
-            android:paddingRight="@dimen/default_card_margin">
+            android:paddingLeft="@dimen/default_margin_alt"
+            android:paddingRight="@dimen/default_margin_alt">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -37,7 +37,6 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_unlock_advanced_options"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -90,7 +89,7 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="8dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:visibility="visible" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -111,7 +110,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -176,7 +174,7 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="8dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:visibility="gone" />
 
                     </RelativeLayout>
@@ -192,7 +190,6 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -246,7 +243,7 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:visibility="gone" />
 
                     </RelativeLayout>
@@ -254,7 +251,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -310,7 +306,7 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:visibility="gone" />
 
                     </RelativeLayout>

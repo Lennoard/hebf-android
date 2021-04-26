@@ -7,10 +7,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import com.androidvip.hebf.R
-import com.androidvip.hebf.setThemeFromPrefs
-import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.Logger
+import com.androidvip.hebf.utils.Utils
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_translate.*
 import java.io.FileOutputStream
@@ -21,18 +20,10 @@ class TranslateActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setThemeFromPrefs()
-
         setContentView(R.layout.activity_translate)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        if (UserPrefs(applicationContext).getString(K.PREF.THEME, Themes.LIGHT) == Themes.WHITE) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite))
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness))
-            supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme)
-        }
 
         translationsGetXmlFile.setOnClickListener { copyTranslateFile() }
 

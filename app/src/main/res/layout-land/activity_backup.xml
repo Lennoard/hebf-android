@@ -12,7 +12,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -46,7 +45,7 @@
                     android:visibility="gone" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/TextInputOutlined"
+                    style="@style/AppInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name">
@@ -55,12 +54,12 @@
                         android:id="@+id/backupInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/TextInputOutlined"
+                    style="@style/AppInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/device_model">
@@ -69,12 +68,12 @@
                         android:id="@+id/backupInputModel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/TextInputOutlined"
+                    style="@style/AppInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/device_name">
@@ -83,13 +82,13 @@
                         android:id="@+id/backupInputDeviceName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/backup_comments_layout"
-                    style="@style/TextInputOutlined"
+                    style="@style/AppInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/comments"
@@ -125,7 +124,7 @@
                     android:checked="true"
                     android:padding="8dp"
                     android:text="@string/local_backup"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <RadioButton
                     android:id="@+id/backupRadioCloud"
@@ -134,7 +133,7 @@
                     android:layout_marginTop="4dp"
                     android:padding="8dp"
                     android:text="@string/cloud_backup"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
             </RadioGroup>
 
@@ -156,8 +155,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/backup"
         app:srcCompat="@drawable/ic_backup_local" />

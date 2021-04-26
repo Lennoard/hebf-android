@@ -12,7 +12,6 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            style="@style/ToolbarStyle"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
@@ -46,12 +45,12 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
                 app:endIconMode="clear_text"
-                style="@style/TextInputOutlined">
+                style="@style/AppInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:id="@+id/backupInputName"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -61,12 +60,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="@string/device_model"
-                style="@style/TextInputOutlined">
+                style="@style/AppInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:id="@+id/backupInputModel" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -76,12 +75,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="@string/device_name"
-                style="@style/TextInputOutlined">
+                style="@style/AppInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:id="@+id/backupInputDeviceName" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +91,7 @@
                 android:id="@+id/backup_comments_layout"
                 android:visibility="gone"
                 android:hint="@string/comments"
-                style="@style/TextInputOutlined">
+                style="@style/AppInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -110,7 +109,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:id="@+id/backupRadioLocal"
                     android:checked="true"
                     android:padding="8dp"
@@ -120,8 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/backupRadioCloud"
-                    android:enabled="false"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:layout_marginTop="8dp"
                     android:padding="8dp"
                     android:text="@string/cloud_backup"/>
@@ -149,7 +147,7 @@
         android:contentDescription="@string/backup"
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginBottom="16dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -16,11 +16,19 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.androidvip.hebf.R;
 import com.androidvip.hebf.utils.BackupUtils;
 import com.androidvip.hebf.utils.K;
 import com.androidvip.hebf.utils.Logger;
-import com.androidvip.hebf.utils.Themes;
 import com.androidvip.hebf.utils.UserPrefs;
 import com.androidvip.hebf.utils.Utils;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -32,15 +40,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 // FIXME: Broken
 public class ImportDataActivity extends AppCompatActivity {
@@ -55,19 +54,12 @@ public class ImportDataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Themes.setTheme(this);
 
         setContentView(R.layout.activity_import_data);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.import_data);
-
-        if (new UserPrefs(getApplicationContext()).getString(K.PREF.THEME, Themes.LIGHT).equals(Themes.WHITE)) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite));
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness));
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme);
-        }
 
         bindViews();
 
@@ -228,7 +220,7 @@ public class ImportDataActivity extends AppCompatActivity {
                 sdkVersionText.setText(s);
                 try {
                     if (Build.VERSION.SDK_INT == Integer.parseInt(sdkVersion))
-                        sdkVersionText.setTextColor(ContextCompat.getColor(this, R.color.success));
+                        sdkVersionText.setTextColor(ContextCompat.getColor(this, R.color.colorSuccess));
                 } catch (Exception ignored){}
             } else {
                 sdkVersionText.setText(android.R.string.unknownName);
@@ -237,17 +229,17 @@ public class ImportDataActivity extends AppCompatActivity {
             String deviceFormat = String.format("%1$s (%2$s)", deviceModel, deviceName);
             deviceText.setText(deviceFormat);
             if (!deviceModel.equals(Build.MODEL))
-                deviceText.setTextColor(ContextCompat.getColor(this, R.color.red));
+                deviceText.setTextColor(ContextCompat.getColor(this, R.color.colorError));
             else
-                deviceText.setTextColor(ContextCompat.getColor(this, R.color.success));
+                deviceText.setTextColor(ContextCompat.getColor(this, R.color.colorSuccess));
 
             Boolean forRoot = (Boolean) rootMap.get("for_root");
             if (forRoot == null || forRoot) {
                 rootText.setText("true");
                 if (new UserPrefs(getApplicationContext()).getBoolean(K.PREF.USER_HAS_ROOT, true)) {
-                    rootText.setTextColor(ContextCompat.getColor(this, R.color.success));
+                    rootText.setTextColor(ContextCompat.getColor(this, R.color.colorSuccess));
                 } else {
-                    rootText.setTextColor(ContextCompat.getColor(this, R.color.red));
+                    rootText.setTextColor(ContextCompat.getColor(this, R.color.colorError));
                 }
             } else {
                 rootText.setText("false");

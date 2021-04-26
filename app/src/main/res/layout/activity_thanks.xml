@@ -18,7 +18,6 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
-                style="@style/ToolbarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
 
@@ -41,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/special"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline4" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/special_sub"
@@ -50,7 +49,7 @@
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="5dp"
                     android:text="@string/special_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textIsSelectable="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -62,7 +61,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="16dp"
                     android:text="@string/special_sub_1"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textIsSelectable="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -73,7 +72,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="16dp"
                     android:text="@string/special_sub_2"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textIsSelectable="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -83,14 +82,14 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:text="Weazie, Alekss Ro, VenityZ, Christof Schäfer, Nitorac, Hanabish Recca, TheGatorade, Umut TURUNÇ and of course Sohamsen for the translations and revisions."
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
                     android:text="@string/beta"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
                     android:textColor="?attr/colorPrimarySurface" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -101,7 +100,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="16dp"
                     android:text="▪ Alef\n▪ Matheus Rosa\n▪ Gominha\n▪ Anderson Chimiloski\n▪ H4nd4niel"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textIsSelectable="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -110,7 +109,7 @@
                     android:layout_marginTop="14dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/contribuicoes"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
                     android:textColor="?attr/colorPrimarySurface" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -121,7 +120,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="16dp"
                     android:text="@string/honrra"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textIsSelectable="true" />
 
             </LinearLayout>

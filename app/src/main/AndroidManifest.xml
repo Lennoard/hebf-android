@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.androidvip.hebf">
 
+    <uses-sdk tools:overrideLibrary="io.karn.notify" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -18,7 +20,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -26,25 +28,29 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="com.android.vending.BILLING" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.REAL_GET_TASKS" tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
 
-    <uses-sdk tools:overrideLibrary="io.karn.notify" />
-
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
-    
+
     <application
         android:name=".helpers.HebfApp"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"
         android:label="@string/app_name"
-        android:allowBackup="false"
-        android:fullBackupContent="false"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/AppTheme.DayNight">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".ui.main.MainActivity2"
+            android:label="@string/title_activity_main2" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -52,8 +58,7 @@
 
         <activity
             android:name=".activities.ImportDataActivity"
-            android:label="@string/import_data"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:label="@string/import_data">
             <intent-filter
                 android:icon="@mipmap/ic_launcher"
                 android:label="@string/import_data"
@@ -73,9 +78,7 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.hebf" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.SplashActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -86,14 +89,12 @@
         <activity
             android:name=".activities.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.DayNight.NoActionBar"
-            android:hardwareAccelerated="true"/>
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name" />
         <activity
             android:name=".activities.internal.AboutActivity"
             android:label="@string/title_activity_sobre"
-            android:parentActivityName=".activities.MainActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
@@ -101,8 +102,7 @@
         <activity
             android:name=".activities.internal.ThanksActivity"
             android:label="@string/title_activity_thanks"
-            android:parentActivityName=".activities.internal.AboutActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:parentActivityName=".activities.internal.AboutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.internal.AboutActivity" />
@@ -110,135 +110,107 @@
         <activity
             android:name=".activities.internal.VersionActivity"
             android:label="@string/title_activity_versao"
-            android:parentActivityName=".activities.internal.AboutActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:parentActivityName=".activities.internal.AboutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.internal.AboutActivity" />
         </activity>
         <activity
             android:name=".widgets.WidgetReboot"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true" />
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".widgets.WidgetGameBooster"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true"/>
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".widgets.WidgetVipBatterySaver"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true"/>
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".widgets.WidgetFstrim"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true"/>
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".widgets.WidgetLMK"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true"/>
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".widgets.WidgetBoost"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            android:excludeFromRecents="true"/>
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".activities.LmkActivity"
-            android:label="@string/low_memory_killer"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
-        <activity android:name=".activities.VmActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar"
-            android:label="@string/virtual_memory"/>
+            android:label="@string/low_memory_killer" />
+        <activity
+            android:name=".activities.VmActivity"
+            android:label="@string/virtual_memory" />
         <activity
             android:name=".activities.internal.TranslateActivity"
-            android:label="@string/translations"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
-        </activity>
+            android:label="@string/translations" />
         <activity
             android:name=".activities.internal.BusyboxInstallerActivity"
-            android:label="Busybox"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="Busybox" />
         <activity
             android:name=".activities.advanced.BuildPropActivity"
-            android:label="@string/title_activity_build_prop"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/title_activity_build_prop" />
         <activity
             android:name=".activities.advanced.ManualDnsActivity"
-            android:label="@string/title_activity_dns"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/title_activity_dns" />
         <activity
             android:name=".activities.advanced.EntropyActivity"
-            android:label="@string/entropy"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/entropy" />
         <activity
             android:name=".activities.advanced.WindowManagerActivity"
-            android:label="@string/window_manager"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/window_manager" />
         <activity
             android:name=".activities.internal.LogActivity"
-            android:label="Logs"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
-        <activity
-            android:name=".appintro.AppIntroActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="Logs" />
+        <activity android:name=".appintro.AppIntroActivity" />
         <activity
             android:name=".activities.advanced.ArtCompilerFilter"
-            android:label="@string/title_activity_dex2oat_filter"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/title_activity_dex2oat_filter" />
         <activity
             android:name=".activities.CleanerActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/cleaner"
-            android:parentActivityName=".activities.MainActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
             android:name=".activities.apps.AppsManagerActivity"
-            android:label="@string/apps_manager"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/apps_manager" />
         <activity
             android:name=".activities.WiFiTweaksActivity"
-            android:label="@string/wifi_tweaks"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/wifi_tweaks" />
         <activity
             android:name=".activities.apps.AppDetailsActivity"
             android:label="Details"
-            android:parentActivityName=".activities.apps.AppsManagerActivity"
-            android:theme="@style/AppTheme.DayNight.NoActionBar">
+            android:parentActivityName=".activities.apps.AppsManagerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.apps.AppsManagerActivity" />
         </activity>
         <activity
             android:name=".activities.CpuManagerActivity"
-            android:label="@string/cpu_manager"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/cpu_manager" />
         <activity
             android:name=".activities.DozeActivity"
-            android:label="@string/doze_settings"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="@string/doze_settings" />
         <activity
             android:name=".activities.CpuTunerActivity"
-            android:label="CPU Tuner"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="CPU Tuner" />
         <activity
             android:name=".activities.LaunchGamesActivity"
-            android:label="@string/launch_games"
-            android:theme="@style/AppTheme.DayNight.NoActionBar"
-            />
+            android:label="@string/launch_games" />
         <activity
             android:name=".activities.apps.AppOpsActivity"
-            android:label="AppOps"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
+            android:label="AppOps" />
         <activity
-            android:name=".activities.apps.AutoStartDisablerActivity"
-            android:label="@string/auto_start_disabler"
-            android:theme="@style/AppTheme.DayNight.NoActionBar" />
-
-        <activity android:name=".activities.internal.CommandLineActivity"
-            android:label="HEBF Terminal"
-            android:theme="@style/Base.AppTheme.Black"/>
+            android:name=".activities.internal.CommandLineActivity"
+            android:label="HEBF Terminal" />
 
         <receiver android:name=".services.mediaserver.MediaserverAlarm" />
         <receiver android:name=".services.doze.DozeAlarm" />
@@ -337,7 +309,6 @@
             android:name=".services.RootShellService"
             android:enabled="true"
             android:stopWithTask="true" />
-
         <service
             android:name=".services.mediaserver.MediaserverService"
             android:enabled="true"
@@ -348,7 +319,6 @@
             android:name=".services.mediaserver.MediaserverJobService"
             android:label="Mediaserver kill"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-
         <service
             android:name=".services.gb.QSTGame"
             android:icon="@drawable/ic_game_booster"
@@ -358,9 +328,8 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-
         <service
-            android:name=".services.QSTProfiles"
+            android:name=".services.profiles.QSTProfiles"
             android:icon="@drawable/ic_perfis_1"
             android:label="@string/profiles"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -403,7 +372,6 @@
                 <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

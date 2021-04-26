@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
 import com.androidvip.hebf.adapters.CpuTunableAdapter
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.CpuManager
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger

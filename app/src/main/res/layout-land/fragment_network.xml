@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none"
-    android:paddingLeft="@dimen/default_card_margin"
-    android:paddingRight="@dimen/default_card_margin">
+    android:paddingLeft="@dimen/default_margin_alt"
+    android:paddingRight="@dimen/default_margin_alt">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/public_card_public_configs"
@@ -46,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/public_configurations"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         style="@style/SingleLineText"/>
 

@@ -90,42 +90,6 @@ class PreferencesFragment : PreferenceFragmentCompat(), SharedPreferences.OnShar
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
         try {
-            if (key == K.PREF.THEME) {
-                preferenceScreen.sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
-                val e = userPrefs.edit()
-                when (sharedPreferences.getString(key, Themes.LIGHT)) {
-                    Themes.LIGHT -> {
-                        e.putString(K.PREF.THEME, Themes.LIGHT).apply()
-                    }
-                    Themes.DARKNESS -> {
-                        e.putString(K.PREF.THEME, Themes.DARKNESS).apply()
-                    }
-                    Themes.AMOLED -> {
-                        e.putString(K.PREF.THEME, Themes.AMOLED).apply()
-                    }
-                    Themes.GREEN -> {
-                        e.putString(K.PREF.THEME, Themes.GREEN).apply()
-                    }
-                    Themes.SYSTEM_DEFAULT -> {
-                        e.putString(K.PREF.THEME, Themes.SYSTEM_DEFAULT).apply()
-                    }
-                    Themes.WHITE -> {
-                        e.putString(K.PREF.THEME, Themes.WHITE).apply()
-                    }
-                    Themes.DARK_GREEN -> {
-                        e.putString(K.PREF.THEME, Themes.DARK_GREEN).apply()
-                    }
-                }
-
-                Themes.changeToTheme(activity as AppCompatActivity?)
-
-                if (userPrefs.getString(K.PREF.THEME, Themes.DARKNESS) == Themes.DARKNESS) {
-                    if (context != null) {
-                        Toast.makeText(context, "My old friend, I've come to talk with you again", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
-
             if (key == K.PREF.USER_TYPE) {
                 val e = userPrefs.edit()
                 when (sharedPreferences.getString(key, "normal")) {

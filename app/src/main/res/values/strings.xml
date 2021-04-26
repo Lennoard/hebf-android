@@ -14,6 +14,12 @@
         ▪ Updated Games database\n
     </string>
     <string name="spmk" translatable="false">Will be removed in future updates. Please use <a href="https://play.google.com/store/apps/details?id=com.smartpack.kernelmanager">SPKM</a> instead.</string>
+    <string name="accessibility_alert">We need your permission to perform battery-saving actions and close inactive applications. Click on continue and the settings screen will open, look for something similar to what the tutorial below shows:</string>
+    <string name="accessibility_service">Accessibility Service</string>
+    <string name="accessibility_service_description">This service will automatically force stop an application at its details screen once you invoke it (through HEBF only).</string>
+    <string name="accessibility_service_label">HEBF Optimizer - Battery Saver</string>
+    <string name="account_created">Account created</string>
+    <string name="account_options">Account options</string>
     <string name="achievement_backup">Better safe than sorry</string>
     <string name="achievement_command_line" translatable="false">Superuser</string>
     <string name="achievement_help">What does this thing do?</string>
@@ -31,6 +37,8 @@
     <string name="aggressive_doze_off">Aggressive doze disabled</string>
     <string name="aggressive_doze_on">Aggressive doze enabled</string>
     <string name="aggressive_doze_sum">Forces the Doze Mode activation moments after the screen turns off, putting the device in deep sleep regardless of other previous state.</string>
+    <string name="always_anonymous">Always anonymous</string>
+    <string name="always_anonymous_sum">Ignore the login screen. Warning: This will not sign you in, if you need to make in-app purchases or verify your account, you\'ll need to sign in first.</string>
     <string name="android_version">Android version</string>
     <string name="announcements">Announcements</string>
     <string name="anonymous">Anonymous</string>
@@ -53,6 +61,10 @@
     <string name="art_cache_warning">For this function to work smoothly, you need to clear the cache and reboot.\nWhen you press OK the device will reboot.</string>
     <string name="art_sum">The Android Runtime (ART) uses ahead-of-time compilation to compile the dex code into native code at the time of installation, pre-optimizing it using the dex2oat tool so your processor can interpret the code easier.\nThis option allows you to change the dex2oat compiler filter to control how it compiles.</string>
     <string name="art_warning_not_found">The ART compiler filter options were not found on your system, you can close this window or enable them at your own risk.</string>
+    <string name="auth_failure">Authentication failure</string>
+    <string name="auto_optimize_performance">Auto optimize your device every 15 minutes, this option will give you a new experience in the performance of your device</string>
+    <string name="auto_optimize_sub">Auto optimize your game after 15 minutes, very useful in heavy or open world games (this may produce negative effects, activate it only if you are sure)</string>
+    <string name="auto_optimizer">Auto optimizer</string>
     <string name="auto_start_disabler">Auto start disabler</string>
     <string name="auto_start_disabler_sum">Use this option to control which apps can be executed on startup. By default, all apps holding the RECEIVE_BOOT_COMPLETED permission will receive a broadcast indicating that the system finished booting.</string>
     <string name="backup">Backup</string>
@@ -70,6 +82,7 @@
     <string name="beta" translatable="false"><![CDATA[Alpha & Beta Testers]]></string>
     <string name="bluetooth">Bluetooth</string>
     <string name="bootloader">BOOTLOADER</string>
+    <string name="br_sum">If you found a bug or have any suggestions please feel free to send us (via email). We will respond as soon as possible.</string>
     <string name="browsing">Improve browsing speed</string>
     <string name="browsing_off">Buffer tweaks disabled</string>
     <string name="browsing_on">Buffer tweaks enabled</string>
@@ -127,11 +140,15 @@
     <string name="default_">Default</string>
     <string name="default_username">A HEBF user</string>
     <string name="delete">Delete</string>
+    <string name="delete_account">Delete account</string>
+    <string name="delete_account_confirm">Are you sure you want to delete your account? Your data will not be preserved. After the operation, you will be disconnected.</string>
+    <string name="delete_account_sum">Delete your account</string>
     <string name="device">Device</string>
     <string name="device_info">Device info</string>
     <string name="device_model">Device model</string>
     <string name="device_name">Device name</string>
     <string name="disable">Disable</string>
+    <string name="disconnection_warning">You\'ll be disconnected</string>
     <string name="dns_off">Google DNS disabled</string>
     <string name="dns_on">Google DNS enabled</string>
     <string name="dns_sum">A custom DNS can improve speed, response and security. It and can also allow you to access blocked websites and bypass some censorship filters of your network, depending of your location.</string>
@@ -203,6 +220,7 @@
     <string name="game_booster_sum">Improve your performance in games by setting the CPU governor before open the game.</string>
     <string name="game_off">Gaming mode deactivated</string>
     <string name="game_on">Gaming mode activated</string>
+    <string name="gamenews">Increase gaming performance</string>
     <string name="gaming_lmk_profile">Gaming LMK profile</string>
     <string name="general">General</string>
     <string name="google_dns">Use Google DNS</string>
@@ -237,6 +255,7 @@
     <string name="iv" translatable="false">Ivson Emídio</string>
     <string name="iv_h1">Initial project, developer</string>
     <string name="iv_sub">…And full battery, in a moment of a loving disillusion, on top of this, my device\'s battery was discharging fast, so I started working on HEBF with a empty heart and a full battery. \n– Ivson Emídio</string>
+    <string name="join_club">Forget the past and join the club</string>
     <string name="junk_cleaned">Junk removed</string>
     <string name="kernel">Kernel Options</string>
     <string name="kernel_fail1">It seems that you have no option to enable.</string>
@@ -277,6 +296,10 @@
     <string name="log_off">Logging disabled</string>
     <string name="log_on">Logging enabled again</string>
     <string name="log_sub">If you don\'t want to see the Android striving to record everything that is happening in all applications, enable this option</string>
+    <string name="login_failure">Login failure</string>
+    <string name="login_failure_no_user">There is no user with this email address</string>
+    <string name="login_failure_password">Email or password is incorrect</string>
+    <string name="login_with_email">Login with email</string>
     <string name="low_ram_device_flag">Low RAM Device flag</string>
     <string name="low_ram_device_flag_sub">This option flags the device as a low RAM one, turning off specific memory-intensive features (status bar tinting, notification panel background effect etc) which works poorly on low-memory devices.\n\nIf disabled, you may need to REBOOT to apply the changes.</string>
     <string name="mascote">The mascot</string>
@@ -296,6 +319,9 @@
     <string name="multitasking_off">Multitasking profile disabled</string>
     <string name="multitasking_on">Multitasking profile enabled</string>
     <string name="multitasking_sub">Tunes the Low memory killer parameters for a better multitasking profile, based on the amount of RAM available.</string>
+    <string name="my_account">My account</string>
+    <string name="my_public_configs">My public configs</string>
+    <string name="my_public_configs_sum">Manage your public configurations</string>
     <string name="name">Name</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -319,6 +345,7 @@
     <string name="optimize_now">Optimize NOW</string>
     <string name="other_games">Games optimizer</string>
     <string name="outro">Others</string>
+    <string name="owned">Owned</string>
     <string name="package_disabled">Package has been disabled</string>
     <string name="package_uninstalled">Package has been uninstalled</string>
     <string name="panic_off">Kernel panic disabled</string>
@@ -336,7 +363,15 @@
     <string name="please_log_in">Please log in with your account</string>
     <string name="please_wait">Please wait, this may take up to 1 minute.</string>
     <string name="power_off">POWER OFF</string>
+    <string name="premium_package">Premium package</string>
+    <string name="premium_package_ad">Premium Package (with ads)</string>
+    <string name="premium_package_ad_sum">A taste of the premium package with the exact same extra features but with ad serving</string>
+    <string name="premium_package_sum">This unique purchase offers extra features such as unlimited application selections to force-stop, custom service scheduling and the AppOps Manager</string>
+    <string name="premium_package_sum_header">Purchase HEBF Optimizer Premium Package</string>
     <string name="previous">Previous</string>
+    <string name="pro_ad" translatable="false">PRO/\nAD</string>
+    <string name="pro_feature">Pro feature</string>
+    <string name="pro_feature_sum">Please consider purchasing HEBF Optimizer Pro in order to user this feature</string>
     <string name="profiles">Profiles</string>
     <string name="profiles_set">Profiles set</string>
     <string name="profile_format">Profile: %s</string>
@@ -345,8 +380,16 @@
     <string name="profile_battery_plus_sum">Reduces energy consumption where possible, ignoring any side effects</string>
     <string name="profile_performance_sum">Attempts to increase performance and improve overall device feel</string>
     <string name="profile_performance_plus_sum">Increases performance where possible, ignoring any side effects</string>
+    <string name="promo_warning">HEBF Optimizer Premium Package is available for only %s for a limited time!</string>
     <string name="psfmc">Power saver for multicore CPUs</string>
     <string name="public_configurations">Public configurations</string>
+    <string name="purchase">Purchase</string>
+    <string name="purchase_error_billing_unavailable">Current Billing API version is not supported for the type requested</string>
+    <string name="purchase_error_fatal">Inconsistency detected, aborting…</string>
+    <string name="purchase_error_feature_not_supported">Requested feature is not supported by Google Play Store on this current device</string>
+    <string name="purchase_error_item_already_owned">Failed to purchase since item is already owned</string>
+    <string name="purchase_error_item_unavailable">Requested product is not available for purchase</string>
+    <string name="purchase_error_service_disconnected">Failed to establish connection, please try again</string>
     <string name="quick_settings">Quick settings</string>
     <string name="ram_manager">RAM Manager</string>
     <string name="rate_this_app">Rate this app</string>
@@ -377,12 +420,15 @@
     <string name="reset_password">Reset password</string>
     <string name="restore">Restore</string>
     <string name="restore_confirmation">Are you sure you want to replace all your data by restoring this backup?</string>
+    <string name="restore_purchases">Restore purchases</string>
+    <string name="restore_purchases_sum">Tap to retrieve purchases from server</string>
     <string name="ring">Reduce in-call delay</string>
     <string name="ring_off">In-call delay tweak disabled</string>
     <string name="ring_on">In-call delay has been reduced</string>
     <string name="ring_sub">Reduces the delay to receive or end a call.</string>
     <string name="root_access">Root Access</string>
     <string name="root_access_sub">HEBF needs root access in order to work. Please ensure that you have superuser privileges and click on the button \"Next\"</string>
+    <string name="rootless_intro_sub">You\'ll enter non-root mode</string>
     <string name="running">Running</string>
     <string name="sair">Do you really want to close this application?</string>
     <string name="schedule">Schedule</string>
@@ -411,7 +457,12 @@
     <string name="special_sub"><a href="http://forum.xda-developers.com/member.php?u=5514152">\@paget96</a> for the:</string>
     <string name="special_sub_1"><a href="http://forum.xda-developers.com/android/software-hacking/guide-tut-learn-basic-scripting-busybox-t3209180">Learn basic scripting, how to execute scripts, mod building</a> guide, where we took inspiration and some initial knowledge. Thanks, you are somewhere in our empty heart.</string>
     <string name="special_sub_2">We also use some open source scripts made by own paget96 and with contributions from several members of the developer community.</string>
+    <string name="splash_less_1">The show must go on</string>
+    <string name="splash_less_2">VIP Battery Saver can save lives</string>
     <string name="splash_less_3">Before playing, open your game from here</string>
+    <string name="splash_less_4">Our support is at your disposal</string>
+    <string name="splash_less_6">We believe your time is valuable</string>
+    <string name="splash_less_7">We can feel your heart</string>
     <string name="splash1">The recommended frequency for trimming the file system is once a week</string>
     <string name="splash10">Created in the midst of a broken heart</string>
     <string name="splash11">[LMK] You can tap the current value to quickly get back to the default / found one</string>
@@ -457,7 +508,7 @@
     <string name="title_activity_versao">Version</string>
     <string name="toggle_ipv6">Toggle IPv6</string>
     <string name="tools">Tools</string>
-    <string name="tweaks">Tweaks (legacy)</string>
+    <string name="tweaks">Tweaks</string>
     <string name="ui_tweaks">UI Tweaks</string>
     <string name="vip_battery_saver_off">VIP battery saver turned off</string>
     <string name="vip_battery_saver_on">VIP battery saver turned on</string>
@@ -502,12 +553,18 @@
     <string name="zipalign_off">Zipalign turned off</string>
     <string name="zipalign_on">Zipalign turned on</string>
     <string name="zipalign_sub">Optimizes the android package files (and its uncompressed data) to reduce the amount of RAM consumed when running an application.</string>
+    <string name="purchase_premium">Purchase premium upgrade</string>
+    <string name="promo_code">Promotional code</string>
+    <string name="checking_code">Checking promotional code…</string>
+    <string name="invalid_promo_code">Invalid promotional code!</string>
+    <string name="temp_package_expiration_message">Your temporary package has expired! Purchase premium package now to keep using its features.</string>
     <string name="translations">Translations</string>
     <string name="translations_file_help">The strings.xml file contains the text used in this application. You can copy the translation file to your storage if you want to translate it using your phone. Once you\'re done translating, just send us back through our email support.</string>
     <string name="translations_github_help">If you prefer, you can get the same file on GitHub with the difference of being able to see the files already translated. Download the files directly from there or fork the project, then you just need to open a pull-request when you finish translating.</string>
     <string name="tips">Tips</string>
-    <string name="translation_tips">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
+    <string name="translation_tips" formatted="false">Thank you for your interest in translating this app, here are some tips:  - If you need to use quotation marks, place a backslash before each - \\n means a line break, keep in mind - Do not translate %s, %1$s, %2$d etc. They represent variable data that will be shown when the app is running.</string>
     <string name="balanced">Balanced</string>
+    <string name="sign_out">Sign out</string>
     <string name="skip">Skip</string>
     <string name="window_manager">Window Manager</string>
     <string name="screen_density">Screen density</string>
@@ -536,6 +593,7 @@
     <string name="virtual_memory">Virtual Memory</string>
     <string name="zram_sum">Creates a compressed block device in RAM that will be used for swapping instead of the slower swap partition, allowing faster data exchange.</string>
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
+    <string name="not_logged_in_sum">If you previously bought the old \"HEBF Optimizer Pro\" app, you must sign in to verify your purchase and unlock all the features. Sign in now to take advantage of the app\'s sharing functions and everything else the we offer. </string>
     <string name="you_are_not_logged_in">You are not logged in</string>
     <string name="toolbox">Toolbox</string>
     <string name="change_brightness">Change brightness</string>
@@ -554,8 +612,9 @@
     <string name="usage_stats_sum">Used to get the current foreground app</string>
     <string name="write_sys_settings">Write system settings</string>
     <string name="write_sys_settings_sum">Used to change brightness and screen timeout</string>
+    <string name="purchase_offer_warning">Get the Premium package with a special discount for limited time!</string>
     <string name="special_offer">Special offer</string>
-    <string name="rootless_warning">You are in rootless mode. Several options are only available with root access. Tap to request superuser rights again.</string>
+    <string name="rootless_warning">You are in rootless mode. Several options are only available with root access. Tap to request superuser rights again or swipe to dismiss.</string>
     <string name="checking_the_environment">Checking the environment…</string>
     <string name="other">Other</string>
     <string name="status">Status</string>
@@ -575,6 +634,17 @@
     <string name="battery_connection_usb">USB</string>
     <string name="battery_connection_wireless">wireless charger</string>
     <string name="battery_connection_unplugged">unplugged</string>
+    <string name="account_root_check_gps">Taking too long? Please update <a href="https://play.google.com/store/apps/details?id=com.google.android.gms">Google Play Services</a>.</string>
     <string name="app_intro_rootless_not_supported">This application no longer supports non-rooted devices</string>
+    <string name="rootless_warning_support">Support for non-rooted devices will end in early 2021. Only premium users will be able to access the app after this time but no new features will be added.</string>
+    <string name="account_root_check">Checking, please wait…</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="notifications">Notifications</string>
+    <string name="tune">Tune</string>
+    <string name="sign_in">Sign in</string>
+    <string name="statistics">Statistics</string>
+    <string name="battery_percentage">Battery percentage</string>
 
 </resources>

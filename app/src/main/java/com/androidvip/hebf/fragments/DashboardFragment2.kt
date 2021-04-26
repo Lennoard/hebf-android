@@ -27,7 +27,9 @@ import com.androidvip.hebf.activities.CpuManagerActivity
 import com.androidvip.hebf.activities.internal.BusyboxInstallerActivity
 import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.models.BatteryStats
+import com.androidvip.hebf.models.HebfAccount
 import com.androidvip.hebf.services.mediaserver.MediaserverService
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.androidvip.hebf.views.DashCard
 import com.google.android.material.chip.Chip
@@ -45,7 +47,6 @@ import java.util.concurrent.atomic.AtomicReference
 class DashboardFragment2 : BaseFragment() {
     private lateinit var getInfoRunnable: Runnable
     private lateinit var dashCardVm: DashCard
-    private val b = AtomicBoolean(false)
     private val handler = Handler()
 
     override fun onCreateView(
@@ -126,8 +127,6 @@ class DashboardFragment2 : BaseFragment() {
             }
         }
 
-        setUpUserCard()
-
         lifecycleScope.launch(workerContext) {
             val isBusyboxAvailable = RootUtils.executeSync("which busybox").isNotEmpty()
             val imgBitmap = "https://static.vakinha.com.br/uploads/ckeditor/pictures/49371/content_DSC00215.JPG".getBitMapFromUrl()
@@ -195,7 +194,7 @@ class DashboardFragment2 : BaseFragment() {
             }
         }
 
-        with(stopMediaserver) {
+        with (stopMediaserver) {
             val mediaserverInterval = prefs.getLong(K.PREF.MEDIASERVER_SCHDL_INTERVAL_MILLIS, 0)
             setOnCheckedChangeListener(null)
             isChecked = MediaserverService.isRunning() || prefs.getBoolean(K.PREF.MEDIASERVER_JOB_SCHEDULED, false)
@@ -284,12 +283,12 @@ class DashboardFragment2 : BaseFragment() {
         fun updateProfileText(progress: Int) {
             when (progress) {
                 0 -> {
-                    profilesIcon.setImageResource(R.drawable.ic_battery_full)
+                    profilesIcon.setImageResource(R.drawable.ic_battery)
                     profilesText.text = getString(R.string.profile_format, "${getString(R.string.battery)}+")
                     profilesSum.text = getString(R.string.profile_battery_plus_sum)
                 }
                 1 -> {
-                    profilesIcon.setImageResource(R.drawable.ic_battery_full)
+                    profilesIcon.setImageResource(R.drawable.ic_battery)
                     profilesText.text = getString(R.string.profile_format, getString(R.string.battery))
                     profilesSum.text = getString(R.string.profile_battery_sum)
                 }
@@ -318,8 +317,8 @@ class DashboardFragment2 : BaseFragment() {
         updateProfileText(quickProfileVal)
 
         profilesIcon.setImageResource(when (quickProfileVal) {
-            0 -> R.drawable.ic_battery_full
-            1 -> R.drawable.ic_battery_full
+            0 -> R.drawable.ic_battery
+            1 -> R.drawable.ic_battery
             2 -> R.drawable.ic_perfis_1
             3 -> R.drawable.ic_performance
             4 -> R.drawable.ic_performance
@@ -473,28 +472,8 @@ class DashboardFragment2 : BaseFragment() {
         }
 
         if (pro) {
-            @ColorRes val accentColor: Int
-            @ColorRes val accentColorLighter: Int
-
-            when (userPrefs.getString(K.PREF.THEME, Themes.DARKNESS)) {
-                Themes.GREEN, Themes.DARK_GREEN -> {
-                    accentColor = R.color.colorAccentGreen
-                    accentColorLighter = R.color.colorAccentGreenLighter
-                }
-                Themes.WHITE -> {
-                    accentColor = R.color.colorAccentWhite
-                    accentColorLighter = R.color.colorAccentWhiteLighter
-                }
-
-                Themes.AMOLED -> {
-                    accentColor = R.color.colorAccentLighterAlt
-                    accentColorLighter = R.color.colorAccentLighter
-                }
-                else -> {
-                    accentColor = R.color.colorAccent
-                    accentColorLighter = R.color.colorAccentLighter
-                }
-            }
+            @ColorRes val accentColor: Int = R.color.colorAccent
+            @ColorRes val accentColorLighter: Int = R.color.colorPrimaryLighter
 
             with(chip) {
                 setChipBackgroundColorResource(accentColorLighter)

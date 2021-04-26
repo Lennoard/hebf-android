@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Rootless options">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_dashboard_less" android:icon="@drawable/ic_dashboard"
+                    android:title="@string/dashboard" />
+                <item android:id="@+id/nav_battery_less" android:icon="@drawable/ic_battery"
+                    android:title="@string/vip_battery_saver" />
+                <item android:id="@+id/nav_game_booster_less" android:icon="@drawable/ic_game_booster"
+                    android:title="@string/game_booster" />
+                <item android:id="@+id/nav_performance_less" android:icon="@drawable/ic_performance"
+                    android:title="@string/performance" />
+                <item android:id="@+id/nav_cleaner_less" android:icon="@drawable/ic_delete"
+                    android:title="@string/cleaner" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/outro">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_my_account" android:icon="@drawable/ic_user"
+                    android:title="@string/my_account" />
+                <item android:id="@+id/nav_public" android:icon="@drawable/ic_public"
+                    android:title="Network" />
+                <item android:id="@+id/nav_settings" android:icon="@drawable/ic_settings"
+                    android:title="@string/settings" />
+                <item android:id="@+id/nav_purchase_premium" android:icon="@drawable/ic_pro"
+                    android:title="@string/purchase_premium" />
+                <item android:id="@+id/nav_bug_less" android:icon="@drawable/ic_bug_report"
+                    android:title="@string/bug_report" />
+                <item android:id="@+id/nav_about_less" android:icon="@drawable/ic_info_outline"
+                    android:title="@string/sobre" />
+            </group>
+        </menu>
+    </item>
+
+
+
+</menu>

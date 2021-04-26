@@ -16,7 +16,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="?attr/toolBarBackgroundColorLighter" />
+            android:src="@color/colorPrimaryLighter" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/directory_cleaner_size"
@@ -25,9 +25,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:lines="2"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="?attr/colorOnPrimary"
-            android:textSize="12sp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Caption"
+            android:textColor="@color/black_65" />
 
     </FrameLayout>
 
@@ -45,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/directory_cleaner_path"
@@ -56,7 +55,7 @@
             android:layout_marginRight="12dp"
             android:ellipsize="middle"
             android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </LinearLayout>
 

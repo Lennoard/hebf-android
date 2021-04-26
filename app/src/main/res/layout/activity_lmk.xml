@@ -11,7 +11,6 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            style="@style/ToolbarStyle"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
@@ -41,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline5"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline5"
             android:text="Failed to read LMK parameters: Immutable file."/>
 
     </LinearLayout>
@@ -62,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="?attr/toolBarBackgroundColorLighter"
+                android:background="@color/colorPrimaryOrBackground"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -76,7 +75,7 @@
                     android:text="@string/apply_on_boot"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp"
-                    android:theme="@style/Switch" />
+                    />
 
             </LinearLayout>
 
@@ -84,11 +83,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="@dimen/default_card_margin"
-                android:paddingRight="@dimen/default_card_margin">
+                android:paddingLeft="@dimen/default_margin_alt"
+                android:paddingRight="@dimen/default_margin_alt">
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/lmkSummaryCard"
@@ -113,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:layout_marginLeft="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:layout_marginRight="16dp"
                             android:text="@string/lmk_sub" />
 
@@ -131,7 +129,7 @@
                                 android:paddingBottom="16dp"
                                 android:paddingTop="24dp"
                                 android:textColor="?attr/colorOnSurface"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:text="@string/profiles" />
 
                             <Spinner
@@ -186,11 +184,10 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/parameters"
                     android:layout_gravity="center_horizontal"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline6"
                     android:textColor="?attr/colorPrimary" />
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -210,7 +207,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -231,7 +227,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -252,7 +247,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -273,7 +267,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -294,7 +287,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -326,8 +318,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
         app:srcCompat="@drawable/ic_check"
         android:contentDescription="@string/done" />
 

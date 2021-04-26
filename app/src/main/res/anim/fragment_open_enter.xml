@@ -11,6 +11,6 @@
         android:fillEnabled="true"
         android:fillBefore="true"
         android:fillAfter="true"
-        android:interpolator="@android:anim/decelerate_interpolator"
-        android:duration="380"/>
+        android:interpolator="@anim/decelerate_interpolator"
+        android:duration="@android:integer/config_mediumAnimTime"/>
 </set>

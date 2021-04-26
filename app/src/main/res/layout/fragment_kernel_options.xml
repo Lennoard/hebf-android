@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="?attr/toolBarBackgroundColorLighter"
+                android:background="@color/colorPrimaryOrBackground"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -41,8 +41,7 @@
                     android:paddingBottom="16dp"
                     android:text="@string/apply_on_boot"
                     android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp"
-                    android:theme="@style/Switch" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -50,13 +49,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:paddingLeft="@dimen/default_card_margin"
-                android:paddingRight="@dimen/default_card_margin"
+                android:paddingLeft="@dimen/default_margin_alt"
+                android:paddingRight="@dimen/default_margin_alt"
                 android:paddingBottom="12dp">
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_fsync_main"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -77,7 +75,7 @@
                             android:paddingTop="24dp"
                             android:paddingBottom="16dp"
                             android:text="Fsync"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 
@@ -88,7 +86,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/fsync_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     </LinearLayout>
 
@@ -96,7 +94,6 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_tap"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -118,7 +115,7 @@
                             android:paddingTop="24dp"
                             android:paddingBottom="16dp"
                             android:text="DoubleTap2Wake"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 
@@ -132,14 +129,13 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/tap_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
                     </RelativeLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_dyn_fsync"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -160,7 +156,7 @@
                             android:paddingTop="24dp"
                             android:paddingBottom="16dp"
                             android:text="@string/dynamic_fsync"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 
@@ -172,14 +168,13 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/dynamic_fsync_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
                     </RelativeLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_ksm"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -200,7 +195,7 @@
                             android:paddingTop="24dp"
                             android:paddingBottom="16dp"
                             android:text="KSM (Kernel Same Page Merging)"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 
@@ -212,14 +207,13 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/ksm_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
                     </RelativeLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_charge"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -240,7 +234,7 @@
                             android:paddingTop="24dp"
                             android:paddingBottom="16dp"
                             android:text="@string/fast_charge"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 
@@ -253,7 +247,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/fast_charge_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
                     </RelativeLayout>
 
                 </com.google.android.material.card.MaterialCardView>
@@ -283,7 +277,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text=":("
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline1"
             android:textColor="?attr/colorAccent"
             android:textSize="74sp"
             android:textStyle="bold" />
@@ -304,7 +297,7 @@
             android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
             android:text="@string/kernel_fail2"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:textColor="?attr/colorOnSurface" />
     </LinearLayout>
 

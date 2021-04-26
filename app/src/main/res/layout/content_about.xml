@@ -14,8 +14,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin">
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +23,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -46,7 +45,7 @@
                         android:layout_toEndOf="@+id/card_img_hebf"
                         android:layout_toRightOf="@+id/card_img_hebf"
                         android:text="@string/app_name"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp" />
 
@@ -60,7 +59,7 @@
                         android:layout_toEndOf="@+id/card_img_hebf"
                         android:layout_toRightOf="@+id/card_img_hebf"
                         android:text="@string/hebf_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/card_text_sobre"
@@ -72,7 +71,7 @@
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="16dp"
                         android:text="@string/hebf_sobre_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/card_img_hebf"
@@ -89,7 +88,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -119,7 +117,7 @@
                         android:layout_toEndOf="@+id/card_img_iv"
                         android:layout_toRightOf="@+id/card_img_iv"
                         android:text="@string/iv"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp" />
 
@@ -131,7 +129,7 @@
                         android:layout_toEndOf="@+id/card_img_iv"
                         android:layout_toRightOf="@+id/card_img_iv"
                         android:text="@string/iv_h1"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -163,7 +161,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="12dp"
                                 android:text="@string/xda"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="14sp" />
 
@@ -176,7 +174,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -207,7 +204,7 @@
                         android:layout_toEndOf="@+id/card_img_lennoard"
                         android:layout_toRightOf="@+id/card_img_lennoard"
                         android:text="@string/lennoard"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp" />
 
@@ -219,7 +216,7 @@
                         android:layout_toEndOf="@+id/card_img_lennoard"
                         android:layout_toRightOf="@+id/card_img_lennoard"
                         android:text="@string/lennoard_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -250,7 +247,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="12dp"
                                 android:text="@string/xda"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="14sp" />
 
@@ -277,7 +274,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="12dp"
                                 android:text="Email"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="14sp" />
 
@@ -305,7 +302,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="12dp"
                                 android:text="GitHub"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="14sp" />
 
@@ -318,7 +315,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -360,7 +356,7 @@
                         android:layout_toEndOf="@+id/frame_tr"
                         android:layout_toRightOf="@+id/frame_tr"
                         android:text="Translation"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp" />
 
@@ -374,7 +370,7 @@
                         android:layout_toEndOf="@+id/frame_tr"
                         android:layout_toRightOf="@+id/frame_tr"
                         android:text="Help with the translations"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/translateButton"
@@ -383,14 +379,13 @@
                         android:layout_below="@id/frame_tr"
                         android:padding="16dp"
                         android:text="Are you enjoying the app? You know a little Japanese or any other language and want to help in translation? Just click here."
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -435,7 +430,7 @@
                         android:layout_toEndOf="@+id/frame_sobre"
                         android:layout_toRightOf="@+id/frame_sobre"
                         android:text="+Info"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp" />
 
@@ -449,7 +444,7 @@
                         android:layout_toEndOf="@+id/frame_sobre"
                         android:layout_toRightOf="@+id/frame_sobre"
                         android:text="@string/hebf_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -464,7 +459,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="16dp"
                             android:text="@string/empty"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface" />
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -476,7 +471,7 @@
                             android:layout_marginEnd="16dp"
                             android:layout_marginRight="16dp"
                             android:text="@string/iv_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
@@ -485,7 +480,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginRight="16dp"
                             android:text="@string/mascote"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp" />
 
@@ -499,7 +494,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:text="@string/mitch_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/imageView"

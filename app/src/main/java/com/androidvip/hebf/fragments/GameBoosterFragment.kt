@@ -23,6 +23,7 @@ import com.androidvip.hebf.models.App
 import com.androidvip.hebf.runSafeOnUiThread
 import com.androidvip.hebf.show
 import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar

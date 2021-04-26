@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     android:id="@+id/dashCard"
-    style="?attr/materialCardStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -19,16 +18,16 @@
             style="@style/SingleLineText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="?attr/colorOnSurface" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="@color/colorOnSurface" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/dashCardValue"
-            style="@style/TextAppearance.AppTheme.Headline4"
+            style="@style/TextAppearance.HEBF.Headline4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="@color/colorOnSurface"
             android:visibility="gone" />
 
         <com.github.mikephil.charting.charts.LineChart
@@ -45,8 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="?attr/colorOnSurface"
+            android:textAppearance="@style/TextAppearance.HEBF.Body1"
+            android:textColor="@color/colorOnSurface"
             android:textSize="16sp"
             android:visibility="gone" />
 

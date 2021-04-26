@@ -14,7 +14,6 @@
             android:layout_margin="8dp">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -32,7 +31,7 @@
                         android:layout_height="wrap_content"
                         android:text="System Default"
                         android:checked="true"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:padding="8dp"
                         android:id="@+id/radio_system_default"
                         android:textSize="16sp" />
@@ -43,7 +42,7 @@
                         android:layout_marginLeft="32dp"
                         android:layout_marginStart="32dp"
                         android:padding="8dp"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:text="Theme defined by the system" />
 
                 </LinearLayout>
@@ -51,7 +50,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -67,7 +65,7 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:text="Light"
                         android:padding="8dp"
                         android:id="@+id/radio_light"
@@ -75,7 +73,7 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:layout_height="match_parent"
                         android:text="@string/theme_light_sum"
                         android:padding="8dp"
@@ -87,7 +85,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -105,13 +102,13 @@
                         android:layout_height="wrap_content"
                         android:text="Dark"
                         android:checked="false"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:padding="8dp"
                         android:id="@+id/radio_dark"
                         android:textSize="16sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="32dp"

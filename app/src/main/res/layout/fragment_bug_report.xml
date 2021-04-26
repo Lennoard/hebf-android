@@ -28,7 +28,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/text_input_layout"
-                style="@style/TextInputOutlined"
+                style="@style/AppInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -50,7 +50,7 @@
                 android:checked="false"
                 android:padding="8dp"
                 android:text="@string/more"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:textColor="?attr/colorOnSurface" />
 
             <LinearLayout
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:minWidth="100dp"
                     android:text="Type"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <Spinner
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:minWidth="100dp"
                     android:text="Android version"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <Spinner
@@ -114,13 +114,13 @@
                 android:checked="false"
                 android:padding="8dp"
                 android:text="@string/iscustom_rom"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:textColor="?attr/colorOnSurface"
                 android:visibility="gone" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/text_input_layout_which"
-                style="@style/TextInputOutlined"
+                style="@style/AppInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -145,7 +145,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Privacy policy"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
         </LinearLayout>
 
@@ -158,7 +158,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/default_margin"
         android:contentDescription="@string/send"
         app:srcCompat="@drawable/ic_send" />
 

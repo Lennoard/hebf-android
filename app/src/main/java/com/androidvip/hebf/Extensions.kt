@@ -1,5 +1,6 @@
 package com.androidvip.hebf
 
+import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
@@ -11,17 +12,16 @@ import android.os.Looper
 import android.util.SparseArray
 import android.util.TypedValue
 import android.view.View
+import android.view.animation.DecelerateInterpolator
+import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.annotation.AttrRes
-import androidx.annotation.ColorInt
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.annotation.*
+import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
 import androidx.fragment.app.Fragment
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
-import com.androidvip.hebf.fragments.BaseFragment
-import com.androidvip.hebf.utils.Themes
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.Utils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.BaseTransientBottomBar
@@ -47,6 +47,16 @@ fun View.hide() {
 
 fun View.show() {
     this.visibility = View.VISIBLE
+}
+
+fun ProgressBar.animProgress(progress: Int) {
+    ObjectAnimator.ofInt(
+        this, "progress", this.progress, progress
+    ).apply {
+        duration = 400
+        interpolator = DecelerateInterpolator()
+        start()
+    }
 }
 
 fun Context?.toast(messageRes: Int, short: Boolean = true) {
@@ -138,11 +148,7 @@ fun Int.toPx(context: Context): Int {
     if (Utils.isInvalidContext(context)) return this
     var px = this
     runCatching {
-        px = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            this.toFloat(),
-            context.resources.displayMetrics
-        ).toInt()
+        px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), context.resources.displayMetrics).toInt()
     }
     return px
 }
@@ -151,7 +157,13 @@ fun Double.roundTo2Decimals(decimals: Int): Double {
     return BigDecimal(this).setScale(decimals, RoundingMode.HALF_UP).toDouble()
 }
 
-infix fun Number.percentOf(target: Number): Int = ((this.toDouble() * target.toDouble()) / 100).toInt()
+infix fun Number.percentOf(other: Number): Double {
+    return (this.toDouble() / 100) * other.toDouble()
+}
+infix fun Number.isWhatPercentOf(other: Number): Double {
+    return (this.toDouble() / other.toDouble()) * 100
+}
+
 infix fun Int.isMultipleOf(target: Int): Boolean = this % target == 0
 
 fun Int.findNearestPositiveMultipleOf(target: Int): Int {
@@ -187,8 +199,10 @@ suspend fun String.getBitMapFromUrl() : Bitmap? {
     }
 }
 
-fun Activity.setThemeFromPrefs() {
-    Themes.setTheme(this)
+fun MaterialAlertDialogBuilder.applyAnim(
+    @StyleRes styleResId: Int = R.style.AppDialogAnimation
+): AlertDialog = create().also {
+    it.window?.attributes?.windowAnimations = styleResId
 }
 
 fun Uri.readLines(context: Context?, forEachLine: (String) -> Unit) {

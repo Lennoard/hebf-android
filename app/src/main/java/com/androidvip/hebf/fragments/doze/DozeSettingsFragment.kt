@@ -12,11 +12,11 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.fragments.BaseFragment
 import com.androidvip.hebf.goAway
 import com.androidvip.hebf.runSafeOnUiThread
 import com.androidvip.hebf.services.PowerConnectedWork
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton

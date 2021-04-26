@@ -5,8 +5,8 @@
     android:id="@+id/dashboardScroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/default_card_margin"
-    android:paddingRight="@dimen/default_card_margin">
+    android:paddingLeft="@dimen/default_margin_alt"
+    android:paddingRight="@dimen/default_margin_alt">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -59,7 +58,7 @@
                             android:layout_toRightOf="@id/dashboardUserPhoto"
                             android:gravity="bottom"
                             android:text="@string/anonymous"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/dashboard_user_description"
@@ -97,7 +96,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/busyboxNotFoundCard"
@@ -119,7 +117,7 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/ic_warning"
                         android:layout_gravity="center_vertical"
-                        app:tint="@color/warning"/>
+                        app:tint="@color/colorWarning"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -138,12 +136,12 @@
                             android:layout_height="wrap_content"
                             android:text="@string/busybox_not_found"
                             android:layout_marginStart="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:layout_marginLeft="16dp"/>
 
 
                         <com.google.android.material.button.MaterialButton
-                            style="@style/BorderedMaterialButtonColored"
+                            style="@style/AppMaterialButtonOutlined"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/busyboxInstallButton"
@@ -158,7 +156,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -186,7 +183,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/profilesDisable"
-                            style="@style/MaterialButtonFlatColored"
+                            style="@style/AppMaterialButtonFlatColored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
@@ -246,7 +243,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/dashboardHelpAndreCard"
@@ -267,7 +263,7 @@
                         android:layout_gravity="center_horizontal"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/TextAppearance.AppTheme.Headline5"
+                        style="@style/TextAppearance.HEBF.Headline5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="?attr/colorOnSurface"
@@ -280,7 +276,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:padding="16dp"
                         android:text="@string/help_andre_sum"/>
 
@@ -300,14 +296,14 @@
                         android:gravity="end">
 
                         <com.google.android.material.button.MaterialButton
-                            style="@style/MaterialButtonFlatColored"
+                            style="@style/AppMaterialButtonFlatColored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/helpAndreDismiss"
                             android:text="@string/dismiss"/>
 
                         <com.google.android.material.button.MaterialButton
-                            style="@style/BorderedMaterialButtonColored"
+                            style="@style/AppMaterialButtonOutlined"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/helpAndreHelp"

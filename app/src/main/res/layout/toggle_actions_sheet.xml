@@ -58,7 +58,7 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:text="Wi-Fi"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -68,7 +68,7 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:text="@string/bluetooth"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -78,7 +78,7 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:text="@string/sync"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -88,7 +88,7 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:text="@string/location"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
             </LinearLayout>
@@ -123,7 +123,7 @@
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
                     android:text="Doze mode"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:textColor="?attr/colorOnSurface" />
 
             </LinearLayout>

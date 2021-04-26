@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/lmkRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
@@ -12,7 +11,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -45,8 +43,8 @@
         android:id="@+id/lmkScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin"
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt"
         app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
         <LinearLayout
@@ -63,7 +61,6 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/lmkSummaryCard"
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -90,7 +87,7 @@
                             android:layout_marginRight="16dp"
                             android:layout_marginBottom="4dp"
                             android:text="@string/lmk_sub"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/lmkOnBootSwitch"
@@ -101,7 +98,7 @@
                             android:paddingEnd="16dp"
                             android:paddingBottom="16dp"
                             android:text="@string/apply_on_boot"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textSize="16sp" />
 
                         <RelativeLayout
@@ -118,7 +115,7 @@
                                 android:paddingTop="24dp"
                                 android:paddingBottom="16dp"
                                 android:text="@string/profiles"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                             <Spinner
@@ -165,7 +162,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -185,7 +181,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -214,7 +209,6 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -235,7 +229,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -256,7 +249,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -277,7 +269,6 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -309,8 +300,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/done"
         app:srcCompat="@drawable/ic_check" />

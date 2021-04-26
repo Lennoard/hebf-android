@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stateLayout"
+    style="@style/SelectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_margin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/stateIcon"
+        android:layout_width="@dimen/bigger_margin_alt"
+        android:layout_height="@dimen/bigger_margin_alt"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:tint="@color/colorWarning"
+        tools:srcCompat="@drawable/ic_battery" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stateTitle"
+        style="@style/SingleLineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:gravity="start"
+        android:textAppearance="@style/TextAppearance.HEBF.Body1"
+        android:textColor="@color/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="@+id/stateIcon"
+        app:layout_constraintEnd_toStartOf="@+id/stateCaption"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="@+id/stateIcon"
+        tools:text="@string/vip_battery_saver" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stateCaption"
+        style="@style/SingleLineText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_alt"
+        android:layout_marginLeft="@dimen/default_margin_alt"
+        android:gravity="end"
+        android:text="OFF"
+        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+        android:textColor="@color/colorTextNormal"
+        app:layout_constraintBottom_toBottomOf="@+id/stateIcon"
+        app:layout_constraintEnd_toStartOf="@+id/stateSwitch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stateTitle"
+        app:layout_constraintTop_toTopOf="@+id/stateIcon" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/stateSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/stateIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stateCaption"
+        app:layout_constraintTop_toTopOf="@+id/stateIcon"
+        app:thumbTint="@color/switch_thumb" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/huge_margin_alt"
+        android:layout_marginStart="@dimen/small_margin"
+        android:background="@color/disabled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stateIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

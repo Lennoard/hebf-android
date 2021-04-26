@@ -4,13 +4,14 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.core.app.ActivityCompat
+
 import com.androidvip.hebf.R
-import com.androidvip.hebf.fragments.BaseFragment
+import com.androidvip.hebf.ui.base.BaseFragment
 
 class Intro5Fragment : BaseFragment() {
     private lateinit var grantPermission: Button
@@ -24,7 +25,7 @@ class Intro5Fragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_intro5, container, false)
         grantPermission = view.findViewById(R.id.intro_button_grant_permission)
@@ -41,7 +42,7 @@ class Intro5Fragment : BaseFragment() {
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
-        grantResults: IntArray
+        grantResults: IntArray,
     ) {
         val writePerm = Manifest.permission.WRITE_EXTERNAL_STORAGE
         if (requestCode == REQUEST_CODE_WRITE_STORAGE) {

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -13,17 +12,16 @@ import android.widget.*
 import androidx.annotation.StringDef
 import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.fragments.BaseFragment
 import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.helpers.CPUDatabases
 import com.androidvip.hebf.runSafeOnUiThread
-import com.androidvip.hebf.setThemeFromPrefs
+import com.androidvip.hebf.ui.base.BaseActivity
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_cpu_manager.*
@@ -34,31 +32,16 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
 
-@Deprecated("")
 class CpuManagerActivity : BaseActivity() {
     private lateinit var cpuManager: CpuManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setThemeFromPrefs()
         setContentView(R.layout.activity_cpu_manager)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        spkm.movementMethod = LinkMovementMethod.getInstance()
-
-        if (userPrefs.getString(K.PREF.THEME, Themes.SYSTEM_DEFAULT) == Themes.WHITE) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite))
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness))
-            supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme)
-
-            cpuTabLayout.setTabTextColors(
-                ContextCompat.getColor(this, R.color.colorAccentWhiteLighter),
-                ContextCompat.getColor(this, R.color.colorAccentWhite)
-            )
-        }
 
         val cpuAbi = Utils.getProp("ro.product.cpu.abi", "null")
         val osArch = System.getProperty("os.arch") ?: ""
@@ -173,8 +156,7 @@ class CpuManagerActivity : BaseActivity() {
                 }
                 fragmentList.clear()
                 transaction.commitAllowingStateLoss()
-            } catch (e: Exception) {
-            }
+            } catch (e: Exception) {}
         }
     }
 

@@ -2,28 +2,24 @@ package com.androidvip.hebf.activities.apps
 
 import android.app.SearchManager
 import android.content.Context
-import android.graphics.PorterDuff
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
 import com.androidvip.hebf.adapters.AutoStartAdapter
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.models.OpApp
 import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import kotlinx.android.synthetic.main.activity_app_ops.*
 import kotlinx.coroutines.launch
 import java.util.*
-import kotlin.Comparator
 
 class AutoStartDisablerActivity : BaseActivity() {
     private lateinit var rv: RecyclerView
@@ -83,22 +79,6 @@ class AutoStartDisablerActivity : BaseActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.apps_manager, menu)
-        if (UserPrefs(applicationContext).getString(K.PREF.THEME, Themes.LIGHT) == Themes.WHITE) {
-            for (i in 0 until menu.size()) {
-                val menuItem = menu.getItem(i)
-                if (menuItem != null) {
-                    val iconDrawable = menuItem.icon
-                    if (iconDrawable != null) {
-                        iconDrawable.mutate()
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            iconDrawable.setTint(ContextCompat.getColor(this, R.color.colorAccentWhite))
-                        } else {
-                            iconDrawable.setColorFilter(ContextCompat.getColor(this, R.color.colorAccentWhite), PorterDuff.Mode.LIGHTEN)
-                        }
-                    }
-                }
-            }
-        }
 
         val searchMenuItem = menu.findItem(R.id.action_search)
         menu.findItem(R.id.action_filter).isVisible = false

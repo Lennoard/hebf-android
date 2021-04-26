@@ -13,7 +13,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -38,7 +37,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:background="?attr/toolBarBackgroundColorLighter"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -49,8 +47,7 @@
                         android:padding="16dp"
                         android:text="@string/apply_on_boot"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="16sp"
-                        android:theme="@style/Switch" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -58,11 +55,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="@dimen/default_card_margin"
-                    android:paddingRight="@dimen/default_card_margin">
+                    android:paddingLeft="@dimen/default_margin_alt"
+                    android:paddingRight="@dimen/default_margin_alt">
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -88,7 +84,7 @@
                                 android:layout_marginRight="16dp"
                                 android:layout_marginBottom="4dp"
                                 android:text="@string/entropy_sum"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                             <com.androidvip.hebf.views.ControlSwitch
                                 android:id="@+id/entropyAddRandom"
@@ -113,7 +109,7 @@
                                     android:layout_weight="0.6"
                                     android:gravity="center_vertical"
                                     android:text="@string/profiles"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                     android:textColor="?attr/colorOnSurface" />
 
                                 <Spinner
@@ -132,7 +128,6 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -166,7 +161,7 @@
                                 android:paddingLeft="16dp"
                                 android:paddingRight="16dp"
                                 android:text="@string/entropy_read_sum"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textSize="14sp" />
 
                             <androidx.appcompat.widget.AppCompatSeekBar
@@ -183,9 +178,7 @@
                                 android:layout_toLeftOf="@+id/read_frame"
                                 android:max="2048"
                                 android:paddingStart="12dp"
-                                android:paddingLeft="12dp"
-                                android:paddingEnd="@dimen/margem"
-                                android:paddingRight="@dimen/margem" />
+                                android:paddingLeft="12dp" />
 
                             <FrameLayout
                                 android:id="@+id/read_frame"
@@ -202,7 +195,7 @@
                                 <de.hdodenhof.circleimageview.CircleImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="?attr/toolBarBackgroundColorLighter" />
+                                    android:src="@color/colorPrimaryLighter" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/entropyReadText"
@@ -212,8 +205,8 @@
                                     android:layout_marginTop="1dp"
                                     android:gravity="center"
                                     android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                    android:textColor="#ffffff" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                                    android:textColor="@color/black_65" />
 
                             </FrameLayout>
 
@@ -222,7 +215,6 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -256,7 +248,7 @@
                                 android:paddingLeft="16dp"
                                 android:paddingRight="16dp"
                                 android:text="@string/entropy_write_sum"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textSize="14sp" />
 
                             <FrameLayout
@@ -273,7 +265,7 @@
                                 <de.hdodenhof.circleimageview.CircleImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="?attr/toolBarBackgroundColorLighter" />
+                                    android:src="@color/colorPrimaryLighter" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/entropyWriteText"
@@ -283,8 +275,8 @@
                                     android:layout_marginTop="1dp"
                                     android:gravity="center"
                                     android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                    android:textColor="#ffffff" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                                    android:textColor="@color/black_65" />
 
                             </FrameLayout>
 
@@ -302,9 +294,7 @@
                                 android:layout_toLeftOf="@+id/write_frame"
                                 android:max="2048"
                                 android:paddingStart="12dp"
-                                android:paddingLeft="12dp"
-                                android:paddingEnd="@dimen/margem"
-                                android:paddingRight="@dimen/margem" />
+                                android:paddingLeft="12dp" />
 
                         </RelativeLayout>
 
@@ -312,7 +302,6 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/entropyReseedCard"
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
@@ -348,7 +337,7 @@
                                 android:paddingLeft="16dp"
                                 android:paddingRight="16dp"
                                 android:text="@string/entropy_min_reseed_sum"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                             <FrameLayout
                                 android:id="@+id/reseed_frame"
@@ -364,7 +353,7 @@
                                 <de.hdodenhof.circleimageview.CircleImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="?attr/toolBarBackgroundColorLighter" />
+                                    android:src="@color/colorPrimaryLighter" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/entropyReseedText"
@@ -374,8 +363,8 @@
                                     android:layout_marginTop="1dp"
                                     android:gravity="center"
                                     android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                    android:textColor="#ffffff" />
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                                    android:textColor="@color/black_87" />
 
                             </FrameLayout>
 
@@ -394,8 +383,6 @@
                                 android:max="120"
                                 android:paddingStart="12dp"
                                 android:paddingLeft="12dp"
-                                android:paddingEnd="@dimen/margem"
-                                android:paddingRight="@dimen/margem"
                                 android:progress="60" />
 
                         </RelativeLayout>
@@ -427,10 +414,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
-                android:layout_marginStart="@dimen/margem"
-                android:layout_marginLeft="@dimen/margem"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginLeft="@dimen/small_margin"
                 android:text="@string/entropy"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:textColor="?attr/colorOnPrimary" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -438,7 +425,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:textColor="?attr/colorOnPrimary" />
 
         </FrameLayout>

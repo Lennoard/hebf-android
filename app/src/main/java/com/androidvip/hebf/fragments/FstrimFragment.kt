@@ -14,6 +14,7 @@ import com.androidvip.hebf.activities.internal.BusyboxInstallerActivity
 import com.androidvip.hebf.goAway
 import com.androidvip.hebf.runSafeOnUiThread
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.*
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_fstrim.*

@@ -19,7 +19,7 @@
         android:layout_gravity="start"
         android:maxWidth="330dp"
         app:itemBackground="@drawable/nav_item_background_selector"
-        app:itemTextAppearance="@style/TextAppearance.AppTheme.Body2"
+        app:itemTextAppearance="@style/TextAppearance.HEBF.Body2"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer" />
 

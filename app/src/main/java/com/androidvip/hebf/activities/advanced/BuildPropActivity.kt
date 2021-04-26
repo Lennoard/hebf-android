@@ -2,19 +2,17 @@ package com.androidvip.hebf.activities.advanced
 
 import android.app.SearchManager
 import android.content.Context
-import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.adapters.PropAdapter
 import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.utils.*
@@ -66,23 +64,6 @@ class BuildPropActivity : BaseActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.action_search, menu)
-        if (UserPrefs(applicationContext).getString(K.PREF.THEME, Themes.SYSTEM_DEFAULT) == Themes.WHITE) {
-            for (i in 0 until menu.size()) {
-                val menuItem = menu.getItem(i)
-                if (menuItem != null) {
-                    val iconDrawable = menuItem.icon
-                    if (iconDrawable != null) {
-                        iconDrawable.mutate()
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            iconDrawable.setTint(ContextCompat.getColor(this, R.color.colorAccentWhite))
-                        } else {
-                            iconDrawable.setColorFilter(ContextCompat.getColor(this, R.color.colorAccentWhite), PorterDuff.Mode.LIGHTEN)
-                        }
-                    }
-                }
-            }
-
-        }
 
         val searchMenuItem = menu.findItem(R.id.action_search)
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager?
@@ -143,7 +124,6 @@ class BuildPropActivity : BaseActivity() {
         overridePendingTransition(R.anim.fragment_close_enter, android.R.anim.slide_out_right)
     }
 
-    // FIXME
     private suspend fun mountSystem(rw: Boolean) = withContext(Dispatchers.Default) {
         val options = if (rw) "rw,remount" else "ro,remount"
 

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TextAppearance.HEBF.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">40.5sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">40.5sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/cairo_black</item>
+        <item name="fontFamily">@font/cairo_black</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineHeight" tools:targetApi="p">36sp</item>
+        <item name="android:fontFamily">@font/cairo_bold</item>
+        <item name="fontFamily">@font/cairo_bold</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline4.AutoSized" parent="TextAppearance.HEBF.Headline4">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeMaxTextSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineHeight" tools:targetApi="p">28sp</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline5.AutoSized" parent="TextAppearance.HEBF.Headline5">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeMaxTextSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineHeight" tools:targetApi="p">24sp</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+        <item name="fontFamily">@font/cairo_semibold</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Headline6.AutoSized" parent="TextAppearance.HEBF.Headline6">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeMaxTextSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">19.3sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">19.3sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Subtitle1.AutoSized" parent="TextAppearance.HEBF.Subtitle1">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">21sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Subtitle3" parent="TextAppearance.HEBF.Subtitle1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorTextNormal</item>
+        <item name="lineHeight">18sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">14.7sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">24sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">16sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Body2.AutoSized" parent="TextAppearance.HEBF.Body2">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeMaxTextSize">14sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Caption" parent="TextAppearance.HEBF.Subtitle1">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/colorTextNormal</item>
+        <item name="lineHeight">14.7sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">14.7sp</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="TextAppearance.HEBF.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">21sp</item>
+        <item name="android:lineHeight" tools:targetApi="P">21sp</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+    </style>
+
+</resources>

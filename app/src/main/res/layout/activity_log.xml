@@ -19,7 +19,6 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
-                style="@style/ToolbarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
 
@@ -31,8 +30,8 @@
             android:layout_height="match_parent"
             android:divider="#ccc"
             android:dividerHeight="1dp"
-            android:paddingLeft="@dimen/rv_margin"
-            android:paddingRight="@dimen/rv_margin"
+            android:paddingLeft="@dimen/small_margin"
+            android:paddingRight="@dimen/small_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior_local"
             tools:listitem="@layout/list_item_small" />
 

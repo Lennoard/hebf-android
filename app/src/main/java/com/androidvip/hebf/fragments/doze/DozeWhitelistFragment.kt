@@ -21,10 +21,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
 import com.androidvip.hebf.activities.BaseActivity
 import com.androidvip.hebf.adapters.ForceStopAppsAdapter
-import com.androidvip.hebf.fragments.BaseFragment
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.runSafeOnUiThread
 import com.androidvip.hebf.toast
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.Doze
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.PackagesManager

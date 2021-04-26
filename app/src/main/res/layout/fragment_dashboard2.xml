@@ -5,8 +5,8 @@
     android:id="@+id/dashboardScroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/default_card_margin"
-    android:paddingRight="@dimen/default_card_margin">
+    android:paddingLeft="@dimen/default_margin_alt"
+    android:paddingRight="@dimen/default_margin_alt">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,6 @@
         android:orientation="vertical">
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
@@ -53,7 +52,7 @@
                         android:layout_toRightOf="@id/dashboardUserPhoto"
                         android:gravity="bottom"
                         android:text="@string/anonymous"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="18sp" />
 
@@ -94,7 +93,6 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/busyboxNotFoundCard"
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -115,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_warning"
-                    app:tint="@color/warning"/>
+                    app:tint="@color/colorWarning"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -136,14 +134,13 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:text="@string/busybox_not_found"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/busyboxInstallButton"
-                        style="@style/BorderedMaterialButtonColored"
+                        style="@style/AppMaterialButtonOutlined"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="12dp"
                         android:layout_gravity="end"
                         android:layout_marginBottom="8dp"
                         android:text="@string/install_now"/>
@@ -156,7 +153,6 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/dashboardHelpAndreCard"
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -176,7 +172,7 @@
                     android:layout_marginTop="16dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/TextAppearance.AppTheme.Headline5"
+                    style="@style/TextAppearance.HEBF.Headline5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -191,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:text="@string/help_andre_sum"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <View
                     android:layout_width="match_parent"
@@ -210,14 +206,14 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/helpAndreDismiss"
-                        style="@style/MaterialButtonFlatColored"
+                        style="@style/AppMaterialButtonFlatColored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/dismiss"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/helpAndreHelp"
-                        style="@style/BorderedMaterialButtonColored"
+                        style="@style/AppMaterialButtonOutlined"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/help_a"/>
@@ -311,7 +307,6 @@
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -340,7 +335,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/profilesDisable"
-                        style="@style/MaterialButtonFlatColored"
+                        style="@style/AppMaterialButtonFlatColored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
@@ -386,7 +381,7 @@
                     android:layout_marginBottom="16dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"/>
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"/>
 
             </LinearLayout>
 

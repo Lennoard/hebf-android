@@ -9,9 +9,9 @@ import java.util.regex.Pattern
 import kotlin.coroutines.CoroutineContext
 
 private fun List<String>.toListOfInts(defValue: Int): List<Int> {
-    val list = mutableListOf<Int>()
-    this.forEach { list.add(try { it.toInt() } catch (e: Exception) { defValue }) }
-    return list
+    return map {
+        runCatching { it.toInt() }.getOrDefault(defValue)
+    }
 }
 
 class CpuManager : CoroutineScope {
@@ -22,6 +22,7 @@ class CpuManager : CoroutineScope {
     companion object {
         const val CPU_DIR = "/sys/devices/system/cpu"
         const val DEFAULT_GOVERNORS = "performance ondemand userspace interactive conservative powersave"
+        const val EAS_GOVS = "schedutil blu_schedutil pwrutilx"
         private const val DEFAULT_FREQS = "400000 800000 1200000 1400000"
         val cpuCount: Int
             get() {
@@ -31,7 +32,7 @@ class CpuManager : CoroutineScope {
                 return try {
                     File("$CPU_DIR/").listFiles { _, name ->
                         Pattern.matches("cpu[0-11]+", name)
-                    }?.size ?: 1
+                    }.size
                 } catch (e: Exception) {
                     1
                 }

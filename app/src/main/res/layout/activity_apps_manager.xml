@@ -13,7 +13,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
@@ -29,9 +28,6 @@
             android:id="@+id/appsManagerRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="@dimen/rv_margin"
-            android:paddingLeft="@dimen/rv_margin"
-            android:paddingEnd="@dimen/rv_margin"
             android:scrollbars="vertical"
             tools:listitem="@layout/list_item_apps_manager">
 

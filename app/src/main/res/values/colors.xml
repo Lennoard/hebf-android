@@ -1,80 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorPrimaryLight">#323232</color>
-    <color name="colorAccent">#ff1744</color>
-    <color name="colorAccentLight">#ff5252</color>
-    <color name="colorAccentLighter">#1fff5252</color>
-    <color name="colorAccentLighterAlt">#ff8a80</color>
-    <color name="claro_roxo">#616161</color>
-    <color name="red">#f44336</color>
-    <color name="success">#4caf50</color>
-    <color name="warning">#ff6d00</color>
-    <color name="darkness">#212121</color>
-    <color name="darkness_action">#141414</color>
-    <color name="black">#000000</color>
-    <color name="colorPrimaryLightGreen">#158e3c</color>
-    <color name="colorPrimaryGreen">#2e7d32</color>
-    <color name="colorPrimaryDarkGreen">#1b5e20</color>
-    <color name="colorAccentGreen">#00e676</color>
-    <color name="colorAccentGreenLight">#4caf50</color>
-    <color name="colorAccentGreenLighter">#1f00e676</color>
-    <color name="iconLight">#616161</color>
-    <color name="iconDark">#ffffff</color>
-    <color name="iconColorOnSurface">#b3000000</color>
-    <color name="colorPrimaryLightWhite">#eeeeee</color>
-    <color name="colorAccentWhite">#009688</color>
-    <color name="colorAccentWhiteLight">#26a69a</color>
-    <color name="colorAccentWhiteLighter">#1f009688</color>
-    <color name="ice">#e0e0e0</color>
+    <color name="colorPrimary">#D32F2F</color>
+    <color name="colorPrimaryDark">#9A0007</color>
+    <color name="colorPrimaryLight">#DD6659</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorAccentDark">@color/colorPrimaryDark</color>
+    <color name="colorAccentLight">@color/colorPrimaryLight</color>
+    <color name="colorPrimaryAlpha12">#18D32F2F</color> <!-- Used in progress bars -->
+    <color name="colorPrimaryAlpha50">#80D32F2F</color> <!-- Used in disabled state -->
+    <color name="colorPrimaryLighter">#ffCAB6</color>
 
+    <color name="colorPrimaryVariant">@color/colorPrimaryDark</color>
+    <color name="colorSecondaryVariant">@color/colorAccentDark</color>
+    <color name="colorBackground">#FAF4F4</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#DEFFFFFF</color>
+    <color name="colorOnBackground">#DE000000</color>
+    <color name="colorError">#9B0000</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorWarning">#FF6D00</color>
+    <color name="colorSuccess">#00C853</color>
 
-    <!--LIGHT COLOR THEME-->
+    <!-- colorPrimary in light mode, colorBackground in dark mode -->
+    <color name="colorPrimaryOrBackground">@color/colorPrimary</color>
+    <color name="secondaryText">#61000000</color>
+    <color name="disabled">#1F000000</color>
+    <color name="disabledInverse">#CFEFEFFF</color>
+    <color name="statusBarColor">#C2C3C9</color> <!-- Will will be used only in Marshmallow -->
+    <color name="dividerColor">#EBEBEB</color>
+    <color name="selectedSurface">#F1F6FF</color>
 
-    <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
-    <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
-    <!--selection controls.-->
-    <color name="color_primary">#ff1744</color>
-    <color name="color_primary_variant">#d50000</color>
-    <color name="color_secondary">#ff1744</color>
-    <color name="color_secondary_variant">#d50000</color>
-
-    <color name="color_primary_green">#2e7d32</color>
-    <color name="color_primary_variant_green">#1b5e20</color>
-    <color name="color_secondary_green">#00e676</color>
-    <color name="color_secondary_variant_green">#00c853</color>
-
-    <color name="color_primary_white">#009688</color>
-    <color name="color_primary_variant_white">#00695c</color>
-    <color name="color_secondary_white">#009688</color>
-    <color name="color_secondary_variant_white">#00695c</color>
-
-    <!--colorBackground appears behind scrollable content and is used for the default window-->
-    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
-    <!--and menus. colorError is used to indicate an error state for components such as-->
-    <!--text fields.-->
-    <color name="color_background">#F5F5F5</color>
-    <color name="shortcut_background">#f5f5f5</color>
-    <color name="color_surface">#ffffff</color>
-    <color name="color_error">#b00020</color>
-
-    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
-    <!--on which they appear.-->
-    <color name="color_on_primary">#ffffff</color>
-    <color name="color_on_secondary">#ffffff</color>
-    <color name="color_on_background">#000000</color>
-    <color name="color_on_surface">#000000</color>
-    <color name="color_on_error">#ffffff</color>
-
-    <color name="color_on_primary_green">#ffffff</color>
-    <color name="color_on_secondary_green">#000000</color>
-    <color name="color_on_background_green">#000000</color>
-    <color name="color_on_surface_green">#000000</color>
-
-    <color name="color_on_primary_white">#ffffff</color>
-    <color name="color_on_secondary_white">#000000</color>
-    <color name="color_on_background_white">#000000</color>
-    <color name="color_on_surface_white">#000000</color>
-
+    <color name="colorTextNormal">#80000000</color>
+    <color name="switchThumbUnchecked">#EDEDED</color>
+    <color name="black_65">#a6000000</color>
+    <color name="black_87">#de000000</color>
 </resources>

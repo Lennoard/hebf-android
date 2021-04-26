@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingLeft="@dimen/default_card_margin"
-    android:paddingRight="@dimen/default_card_margin">
+    android:paddingLeft="@dimen/default_margin_alt"
+    android:paddingRight="@dimen/default_margin_alt">
 
     <ScrollView
         android:layout_width="0dp"
@@ -20,7 +20,6 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/busyboxNotFoundCard"
@@ -41,7 +40,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         app:srcCompat="@drawable/ic_warning"
-                        app:tint="@color/warning" />
+                        app:tint="@color/colorWarning" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -63,7 +62,7 @@
                             android:layout_marginLeft="16dp"/>
 
                         <com.google.android.material.button.MaterialButton
-                            style="@style/MaterialButtonFlatColored"
+                            style="@style/AppMaterialButtonFlatColored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/busyboxInstallButton"
@@ -78,7 +77,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -123,7 +121,7 @@
                         android:layout_below="@id/fstrim_tittle"
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="16dp"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:layout_marginRight="16dp"
                         android:text="@string/fstrim_sub" />
 
@@ -141,7 +139,7 @@
                             android:padding="8dp"
                             android:checked="true"
                             android:id="@+id/fstrim_system"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:text="/system"/>
 
@@ -149,7 +147,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="8dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:checked="true"
                             android:id="@+id/fstrim_data"
                             android:textColor="?attr/colorOnSurface"
@@ -162,11 +160,11 @@
                             android:checked="true"
                             android:id="@+id/fstrim_cache"
                             android:textColor="?attr/colorOnSurface"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:text="/cache"/>
 
                         <com.google.android.material.button.MaterialButton
-                            style="@style/MaterialButtonFlatColored"
+                            style="@style/AppMaterialButtonFlatColored"
                             android:id="@+id/fstrim_botao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -186,7 +184,6 @@
     </ScrollView>
 
     <com.google.android.material.card.MaterialCardView
-        style="?attr/materialCardStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -221,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="@string/schedule"
-                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:layout_below="@id/fstrim_apply_on_boot"
                 android:textColor="?attr/colorOnSurface"
                 android:id="@+id/schedule_text"/>

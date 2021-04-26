@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigationDashboard">
+
+    <fragment
+        android:id="@+id/navigationDashboard"
+        android:name="com.androidvip.hebf.ui.main.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigationBattery"
+        android:name="com.androidvip.hebf.ui.main.battery.BatteryFragment"
+        android:label="@string/battery"
+        tools:layout="@layout/fragment_battery" />
+
+    <fragment
+        android:id="@+id/navigationPerformance"
+        android:name="com.androidvip.hebf.ui.main.notifications.PerformanceFragment"
+        android:label="@string/performance"
+        tools:layout="@layout/fragment_performance2" />
+
+    <fragment
+        android:id="@+id/navigationTools"
+        android:name="com.androidvip.hebf.ui.main.tools.ToolsFragment2"
+        android:label="@string/tools"
+        tools:layout="@layout/fragment_tools2" />
+
+    <fragment
+        android:id="@+id/navigationTune"
+        android:name="com.androidvip.hebf.ui.main.tune.TuneFragment"
+        android:label="@string/tune"
+        tools:layout="@layout/fragment_tune" />
+</navigation>

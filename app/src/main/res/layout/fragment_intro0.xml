@@ -50,14 +50,14 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="4dp"
                     android:text="@string/app_name"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline5" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline5" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="26dp"
                     android:text="@string/hebf_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
             </LinearLayout>
 
         </LinearLayout>
@@ -83,7 +83,7 @@
             android:gravity="center_horizontal"
             android:padding="4dp"
             android:text="@string/intro_guia"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
     </LinearLayout>
 
 </RelativeLayout>

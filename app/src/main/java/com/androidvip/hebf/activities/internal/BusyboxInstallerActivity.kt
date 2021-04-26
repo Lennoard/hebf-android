@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.androidvip.hebf.R
-import com.androidvip.hebf.setThemeFromPrefs
 import com.androidvip.hebf.utils.Utils
 import kotlinx.android.synthetic.main.activity_busybox_installer.*
 
@@ -12,7 +11,6 @@ class BusyboxInstallerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setThemeFromPrefs()
         setContentView(R.layout.activity_busybox_installer)
 
         busyboxButtonGooglePlay.setOnClickListener {

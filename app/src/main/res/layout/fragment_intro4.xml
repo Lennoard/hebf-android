@@ -41,7 +41,7 @@
             android:gravity="center_horizontal"
             android:padding="8dp"
             android:text="@string/checking_the_environment"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:gravity="center_horizontal"
             android:padding="4dp"
             android:text="@string/root_access_sub"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
     </LinearLayout>
 
 </RelativeLayout>

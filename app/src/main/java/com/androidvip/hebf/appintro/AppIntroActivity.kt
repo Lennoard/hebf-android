@@ -18,7 +18,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.activities.MainActivity
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Prefs
@@ -72,7 +72,7 @@ class AppIntroActivity : BaseActivity() {
 
                 textView.apply {
                     this.layoutParams = layoutParams
-                    typeface = ResourcesCompat.getFont(this@AppIntroActivity, R.font.asap_medium)
+                    typeface = ResourcesCompat.getFont(this@AppIntroActivity, R.font.cairo_semibold)
                 }
             }
 
@@ -93,7 +93,7 @@ class AppIntroActivity : BaseActivity() {
 
         pb = findViewById<ProgressBar>(R.id.intro_progress).apply {
             indeterminateDrawable.setColorFilter(
-                    ContextCompat.getColor(this@AppIntroActivity, R.color.darkness),
+                    ContextCompat.getColor(this@AppIntroActivity, R.color.colorOnBackground),
                     PorterDuff.Mode.SRC_IN
             )
             isIndeterminate = true
@@ -144,7 +144,7 @@ class AppIntroActivity : BaseActivity() {
                         leftButton.setOnClickListener { mPager.currentItem = 3 }
                         rightButton.setOnClickListener { mPager.currentItem = 5 }
                         rightButton.isEnabled = false
-                        lifecycleScope.launch (workerContext) {
+                        lifecycleScope.launch(workerContext) {
                             while (true) {
                                 if (checkedEnvironment) {
                                     runSafeOnUiThread { rightButton.isEnabled = true }
@@ -158,7 +158,7 @@ class AppIntroActivity : BaseActivity() {
                         leftButton.setOnClickListener { mPager.currentItem = 4 }
                         rightButton.setOnClickListener { mPager.currentItem = 6 }
                         rightButton.isEnabled = false
-                        lifecycleScope.launch (workerContext) {
+                        lifecycleScope.launch(workerContext) {
                             while (true) {
                                 if (Intro5Fragment.isPermissionGranted) {
                                     runSafeOnUiThread { rightButton.isEnabled = true }
@@ -179,7 +179,7 @@ class AppIntroActivity : BaseActivity() {
                             startActivity(i)
                             finish()
                         }
-                        lifecycleScope.launch (workerContext) {
+                        lifecycleScope.launch(workerContext) {
                             val filesDir = filesDir.toString()
                             if (isRooted) {
                                 RootUtils.execute("chmod 755 $filesDir/zipalign", this@AppIntroActivity)
@@ -198,6 +198,7 @@ class AppIntroActivity : BaseActivity() {
                                     } catch (e: IOException) {
                                         runCommand("touch $checkFile")
                                     }
+
                                 }
                                 pb.visibility = View.GONE
                                 rightButton.visibility = View.VISIBLE

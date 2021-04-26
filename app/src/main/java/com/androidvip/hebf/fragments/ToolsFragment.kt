@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.*
 import com.androidvip.hebf.activities.apps.AppsManagerActivity
 import com.androidvip.hebf.activities.apps.AutoStartDisablerActivity
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.RootUtils

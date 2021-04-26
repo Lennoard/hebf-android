@@ -5,9 +5,7 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.text.TextUtils
@@ -25,8 +23,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.getThemedVectorDrawable
+import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -35,6 +34,7 @@ import kotlinx.android.synthetic.main.activity_apps_manager.*
 import kotlinx.coroutines.launch
 import java.io.File
 import java.util.*
+import kotlin.Comparator
 
 class AppsManagerActivity : BaseActivity() {
     private val packagesManager: PackagesManager by lazy { PackagesManager(this) }
@@ -206,23 +206,7 @@ class AppsManagerActivity : BaseActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.apps_manager, menu)
-        if (UserPrefs(applicationContext).getString(K.PREF.THEME, Themes.LIGHT) == Themes.WHITE) {
-            for (i in 0 until menu.size()) {
-                val menuItem = menu.getItem(i)
-                if (menuItem != null) {
-                    val iconDrawable = menuItem.icon
-                    if (iconDrawable != null) {
-                        iconDrawable.mutate()
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            iconDrawable.setTint(ContextCompat.getColor(this, R.color.colorAccentWhite))
-                        } else {
-                            iconDrawable.setColorFilter(ContextCompat.getColor(this, R.color.colorAccentWhite), PorterDuff.Mode.LIGHTEN)
-                        }
-                    }
-                }
-            }
 
-        }
         val searchMenuItem = menu.findItem(R.id.action_search)
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager?

@@ -17,7 +17,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.*
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.helpers.HebfApp
 import com.androidvip.hebf.receivers.NotificationButtonReceiver
 import com.androidvip.hebf.utils.K

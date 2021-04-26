@@ -10,6 +10,7 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
 import com.androidvip.hebf.getThemedVectorDrawable
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.RootUtils

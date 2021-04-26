@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:background="?attr/toolBarBackgroundColorLighter"
+            android:background="@color/colorPrimaryOrBackground"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.SwitchCompat
@@ -29,8 +29,7 @@
                 android:paddingBottom="16dp"
                 android:text="@string/off"
                 android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp"
-                android:theme="@style/Switch" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -38,19 +37,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="@dimen/default_card_margin"
-            android:paddingRight="@dimen/default_card_margin">
+            android:paddingLeft="@dimen/default_margin_alt"
+            android:paddingRight="@dimen/default_margin_alt">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/taskerSuggestionCard"
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginBottom="8dp"
                 android:visibility="gone"
-                app:cardBackgroundColor="?attr/colorAccentLighter">
+                app:cardBackgroundColor="@color/colorPrimaryLighter">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,7 +70,7 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/tasker_plugin_available"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="?attr/colorAccent" />
 
                 </LinearLayout>
@@ -80,7 +78,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -107,7 +104,7 @@
                         android:layout_marginRight="16dp"
                         android:maxLines="3"
                         android:text="@string/game_booster_sum"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textColor="#ffffff" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -124,7 +121,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -149,7 +145,7 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/game_booster_parameters_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -252,7 +248,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="8dp"
                             android:text="@string/vip_brightness_level_when_enabled"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface" />
 
                         <LinearLayout
@@ -276,7 +272,7 @@
                                 android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
                                 android:text="240"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                         </LinearLayout>
@@ -287,7 +283,7 @@
                             android:paddingTop="16dp"
                             android:paddingBottom="8dp"
                             android:text="@string/vip_brightness_level_when_disabled"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface" />
 
                         <LinearLayout
@@ -311,7 +307,7 @@
                                 android:layout_marginLeft="16dp"
                                 android:layout_marginBottom="16dp"
                                 android:text="144"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                         </LinearLayout>
@@ -324,7 +320,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/gameBoosterLaunchGames"
-                style="@style/BorderedMaterialButton"
+                style="@style/AppMaterialButtonOutlined"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"

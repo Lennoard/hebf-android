@@ -209,9 +209,6 @@ class ArtCompilerFilter : BaseActivity() {
                         fab.show()
                         artProgress.visibility = View.GONE
                         artScroll.visibility = View.VISIBLE
-                        runCatching {
-                            findViewById<View>(R.id.art_root_layout_land).show()
-                        }
                     }
                 }
             }

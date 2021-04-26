@@ -24,8 +24,8 @@
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:orientation="vertical"
-            android:paddingLeft="@dimen/default_card_margin"
-            android:paddingRight="@dimen/default_card_margin">
+            android:paddingLeft="@dimen/default_margin_alt"
+            android:paddingRight="@dimen/default_margin_alt">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -36,11 +36,10 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/general"
-                android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                android:textAppearance="@style/TextAppearance.HEBF.Headline6"
                 android:textColor="?attr/colorPrimary" />
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -105,11 +104,11 @@
                             android:hint="@string/hostname"
                             android:inputType="text"
                             android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2" />
+                            android:textAppearance="@style/TextAppearance.HEBF.Subtitle2" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/host_botao"
-                            style="@style/MaterialButtonFlatColored"
+                            style="@style/AppMaterialButtonFlatColored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -133,11 +132,10 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Experimental"
-                android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                android:textAppearance="@style/TextAppearance.HEBF.Headline6"
                 android:textColor="?attr/colorPrimary" />
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -205,7 +203,7 @@
                             android:layout_toStartOf="@+id/go_wifi"
                             android:layout_toLeftOf="@+id/go_wifi"
                             android:text="@string/wifi_tweaks"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp" />
 

@@ -17,7 +17,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/fstrim"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:textColor="?attr/colorOnSurface" />
 
         <ToggleButton
@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="Mediaserver"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:textColor="?attr/colorOnSurface" />
 
         <ToggleButton
@@ -73,7 +73,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/vip_battery_saver"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:textColor="?attr/colorOnSurface" />
 
         <ToggleButton
@@ -102,7 +102,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/aggressive_doze"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:textColor="?attr/colorOnSurface" />
 
         <ToggleButton

@@ -6,12 +6,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.CompoundButton
 import android.widget.SeekBar
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
 import com.androidvip.hebf.roundTo2Decimals
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.RootUtils
@@ -52,7 +53,7 @@ class EntropyActivity : BaseActivity(), SeekBar.OnSeekBarChangeListener {
                 if (supportsAddRandom) {
                     entropyAddRandom.setChecked(addRandomStatus == "1")
                     entropyAddRandom.show()
-                    entropyAddRandom.setOnCheckedChangeListener { _, isChecked ->
+                    entropyAddRandom.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { _, isChecked ->
                         launch {
                             if (isChecked) {
                                 RootUtils.execute("echo '1' > /sys/block/mmcblk0/queue/add_random")
@@ -62,7 +63,7 @@ class EntropyActivity : BaseActivity(), SeekBar.OnSeekBarChangeListener {
                                 prefs.putString(K.PREF.ENTROPY_ADD_RANDOM, "0")
                             }
                         }
-                    }
+                    })
                 }
 
                 if (supportsMinReseed) {

@@ -7,21 +7,21 @@
     tools:context=".appintro.AppIntroActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_intro"
+        android:layout_height="240dp"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/toolbarBackgroundColor">
+            app:contentScrim="@color/colorPrimaryOrBackground">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?attr/toolbarBackgroundColor"
+                android:background="@color/colorPrimaryOrBackground"
                 app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline6"
                 app:expandedTitleTextAppearance="?attr/textAppearanceHeadline4"/>
 
@@ -41,7 +41,6 @@
             </LinearLayout>
 
             <com.google.android.material.appbar.MaterialToolbar
-                style="@style/ToolbarStyle"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -54,7 +53,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/app_bar_intro">
+        android:layout_marginTop="240dp">
 
         <com.androidvip.hebf.views.CustomViewPager
             android:id="@+id/intro_pager"
@@ -71,7 +70,7 @@
             android:padding="6dp">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/MaterialButtonFlat"
+                style="@style/AppMaterialButtonFlat"
                 android:id="@+id/intro_button_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,8 +87,8 @@
                 app:iconGravity="start"/>
 
             <com.google.android.material.button.MaterialButton
-                style="@style/MaterialButtonFlat"
                 android:id="@+id/intro_button_right"
+                style="@style/AppMaterialButtonFlat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -101,8 +100,8 @@
                 android:text="@string/next"
                 android:textColor="@color/material_flat_button_text"
                 app:icon="@drawable/ic_chevron_right"
-                app:iconTint="?attr/colorOnSurface"
-                app:iconGravity="end"/>
+                app:iconGravity="end"
+                app:iconTint="?attr/colorOnSurface" />
 
             <ProgressBar
                 android:id="@+id/intro_progress"

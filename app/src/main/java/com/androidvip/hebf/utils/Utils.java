@@ -378,7 +378,8 @@ public final class Utils {
             return Settings.canDrawOverlays(context);
         } else {
             if (Settings.canDrawOverlays(context)) return true;
-
+            // Android 8.0 Oreo bug, always returns false
+            // This workaround tries to create a window and if an exception is thrown then return false
             try {
                 WindowManager mgr = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                 if (mgr == null) return false; //getSystemService might return null

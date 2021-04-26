@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/asap_bold</item>
-        <item>@font/asap_medium</item>
-        <item>@font/rambla</item>
+        <item>@font/cairo</item>
+        <item>@font/cairo_black</item>
+        <item>@font/cairo_bold</item>
+        <item>@font/cairo_semibold</item>
+        <item>@font/open_sans_semibold</item>
     </array>
 </resources>

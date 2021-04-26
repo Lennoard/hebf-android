@@ -14,6 +14,7 @@ import com.androidvip.hebf.R
 import com.androidvip.hebf.activities.WiFiTweaksActivity
 import com.androidvip.hebf.goAway
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseFragment
 import com.androidvip.hebf.utils.K
 import com.androidvip.hebf.utils.Logger
 import com.androidvip.hebf.utils.RootUtils

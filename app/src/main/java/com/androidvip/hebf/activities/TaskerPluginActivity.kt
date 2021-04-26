@@ -2,7 +2,6 @@ package com.androidvip.hebf.activities
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.CompoundButton
@@ -15,6 +14,7 @@ import com.androidvip.hebf.hide
 import com.androidvip.hebf.models.App
 import com.androidvip.hebf.receivers.TaskerReceiver
 import com.androidvip.hebf.show
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.*
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar

@@ -16,8 +16,8 @@
         android:id="@+id/netScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin"
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt"
         android:scrollbars="none"
         android:visibility="gone">
 
@@ -43,11 +43,10 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="@string/general"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline6"
                     android:textColor="?attr/colorPrimary" />
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -114,7 +113,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/host_botao"
-                                style="@style/MaterialButtonFlatColored"
+                                style="@style/AppMaterialButtonFlatColored"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
@@ -146,11 +145,10 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="Experimental"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+                    android:textAppearance="@style/TextAppearance.HEBF.Headline6"
                     android:textColor="?attr/colorPrimary" />
 
                 <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"

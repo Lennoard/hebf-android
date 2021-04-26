@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.whenStarted
 import com.androidvip.hebf.R
-import com.androidvip.hebf.setThemeFromPrefs
 import com.androidvip.hebf.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -24,18 +23,11 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Utils.toEnglish(this)
-        setThemeFromPrefs()
     }
 
     protected fun setUpToolbar(toolbar: Toolbar) {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        if (userPrefs.getString(K.PREF.THEME, Themes.LIGHT) == Themes.WHITE) {
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorAccentWhite))
-            toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.darkness))
-            supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_theme)
-        }
     }
 
     suspend inline fun runSafeOnUiThread(crossinline uiBlock: () -> Unit) {

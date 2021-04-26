@@ -1,16 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="small_margin_alt">4.9dp</dimen>
+    <dimen name="small_margin">6.6dp</dimen>
+    <dimen name="default_margin_alt">9.9dp</dimen>
+    <dimen name="default_margin">13.2dp</dimen>
+    <dimen name="medium_margin_alt">16.6dp</dimen>
+    <dimen name="medium_margin">19.9dp</dimen>
+    <dimen name="big_margin_alt">23.2dp</dimen>
+    <dimen name="big_margin">26.5dp</dimen>
+    <dimen name="bigger_margin_alt">33.2dp</dimen>
+    <dimen name="bigger_margin">39.8dp</dimen>
+    <dimen name="huge_margin_alt">46.4dp</dimen>
+    <dimen name="huge_margin">53.1dp</dimen>
+    <dimen name="button_min_height">@dimen/huge_margin_alt</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="rv_margin">0dp</dimen>
-    <dimen name="larger_margin">24dp</dimen>
-    <dimen name="default_margin">16dp</dimen>
-    <dimen name="default_card_margin">8dp</dimen>
-    <dimen name="short_margin">8dp</dimen>
-
-    <dimen name="mtrl_shape_corner_size_small_component">4dp</dimen>
-    <dimen name="mtrl_shape_corner_size_medium_component">4dp</dimen>
-    <dimen name="mtrl_shape_corner_size_large_component">0dp</dimen>
-    <dimen name="seekbar_thumb_width">24dp</dimen>
-
+    <dimen name="collapsing_app_bar_height">160dp</dimen>
 </resources>
