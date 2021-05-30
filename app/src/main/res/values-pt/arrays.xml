@@ -1,42 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="psfmc_array">
-        <item>Desativado</item>
-        <item>Médio</item>
-        <item>Máximo</item>
-    </string-array>
-
-    <string-array name="bateria">
-        <item>Status:</item>
-        <item>Carregando via:</item>
-        <item>Saúde:</item>
-        <item>Tecnologia:</item>
-        <item>Voltagem:</item>
-        <item>Escala:</item>
-    </string-array>
-
-    <string-array name="bateria_status">
-        <item>carregando</item>
-        <item>descarregando</item>
-        <item>não está carregando</item>
-        <item>completamente carregada</item>
-    </string-array>
-
-    <string-array name="bateria_conectado">
-        <item>carregador</item>
-        <item>USB</item>
-        <item>carregador sem fio</item>
-    </string-array>
-
-    <string-array name="bateria_saude">
-        <item>saudável</item>
-        <item>fria</item>
-        <item>não está mais entre nós…</item>
-        <item>sobreaquecida!</item>
-        <item>sobretensionada!</item>
-        <item>desconhecida</item>
-        <item>falha não especificada</item>
-    </string-array>
 
     <string-array name="lmk_profiles">
         <item>@string/custom</item>
@@ -89,16 +52,6 @@
         <item>20 minutos</item>
         <item>30 minutos</item>
         <item>45 minutos</item>
-    </string-array>
-
-    <string-array name="schedule_mediaserver_values">
-        <item>@string/off</item>
-        <item>3 horas</item>
-        <item>6 horas</item>
-        <item>9 horas</item>
-        <item>12 horas</item>
-        <item>16 horas</item>
-        <item>24 horas</item>
     </string-array>
 
 </resources>

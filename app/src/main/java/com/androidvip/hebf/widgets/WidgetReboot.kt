@@ -5,7 +5,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.applyAnim
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.utils.RootUtils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -49,7 +50,13 @@ class WidgetReboot : BaseActivity() {
                         setSingleChoiceItems(dialogItems, 0) { _, _ -> }
                         setPositiveButton(android.R.string.ok) { dialog, _ ->
                             val position = (dialog as AlertDialog).listView.checkedItemPosition
-                            d = showConfirmDialog(warnings[position], commands[position]).show()
+                            d = showConfirmDialog(
+                                warnings[position], commands[position]
+                            ).applyAnim().also {
+                                if (isAlive) {
+                                    it.show()
+                                }
+                            }
                             dialog.dismiss()
                         }
                         setOnDismissListener {

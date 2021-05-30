@@ -6,14 +6,20 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:background="@color/colorSurface"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorSurface"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -25,19 +31,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/default_margin_alt"
-            android:layout_marginRight="@dimen/default_margin_alt"
-            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginTop="@dimen/default_margin"
+                app:cardCornerRadius="0dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -98,12 +98,10 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp">
+                app:cardCornerRadius="0dp"
+                android:layout_marginTop="@dimen/default_margin">
 
                 <LinearLayout
                     android:layout_width="match_parent"

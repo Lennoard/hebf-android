@@ -4,7 +4,10 @@ import androidx.collection.ArrayMap
 
 object CPUDatabases {
 
-    val data: Map<String, String> get() = snapdragon + helio + exynos
+    val data: Map<String, String>
+        get() {
+            return snapdragon + helio + exynos
+        }
 
     private val snapdragon: ArrayMap<String, String>
         get() {

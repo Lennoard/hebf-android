@@ -102,6 +102,7 @@ class GameBoosterOverlayService : Service() {
             addView(testText)
         }
 
+        // Add layout raiz à janela
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (Utils.canDrawOverlays(this)) {
                 windowManager?.addView(rootLayout, windowParams)

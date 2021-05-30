@@ -93,11 +93,11 @@ class QSTProfiles : TileService() {
                 qsTile?.label = getString(R.string.profile_format, getString(R.string.balanced))
             }
             3 -> {
-                qsTile?.icon = Icon.createWithResource(this, R.drawable.ic_performance)
+                qsTile?.icon = Icon.createWithResource(this, R.drawable.ic_nav_performance)
                 qsTile?.label = getString(R.string.profile_format, getString(R.string.performance))
             }
             4 -> {
-                qsTile?.icon = Icon.createWithResource(this, R.drawable.ic_performance)
+                qsTile?.icon = Icon.createWithResource(this, R.drawable.ic_nav_performance)
                 qsTile?.label = getString(R.string.profile_format, "${getString(R.string.performance)}+")
             }
             else -> {

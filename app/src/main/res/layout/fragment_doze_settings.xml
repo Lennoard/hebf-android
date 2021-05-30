@@ -30,24 +30,14 @@
             android:orientation="vertical"
             android:paddingBottom="8dp">
 
-            <LinearLayout
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/dozeMasterSwitch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimaryOrBackground"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/dozeMasterSwitch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:padding="16dp"
-                    android:text="@string/doze_master_switch"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
+                android:checked="false"
+                android:padding="@dimen/default_margin"
+                android:textAppearance="@style/TextAppearance.HEBF.Body1"
+                android:text="@string/doze_master_switch" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

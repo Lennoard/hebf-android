@@ -7,13 +7,20 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -38,7 +45,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:gravity="center_horizontal"
             android:textAppearance="@style/TextAppearance.HEBF.Headline5"
             android:text="Failed to read LMK parameters: Immutable file."/>
@@ -57,27 +64,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/lmkOnBootSwitch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimaryOrBackground"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/lmkOnBootSwitch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingStart="16dp"
-                    android:paddingTop="16dp"
-                    android:text="@string/apply_on_boot"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp"
-                    />
-
-            </LinearLayout>
+                android:padding="@dimen/default_margin"
+                android:text="@string/apply_on_boot"
+                android:textAppearance="@style/TextAppearance.HEBF.Body1"
+                app:fontFamily="@font/cairo_semibold" />
 
             <LinearLayout
                 android:layout_width="match_parent"

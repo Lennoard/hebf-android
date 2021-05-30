@@ -11,17 +11,17 @@ import java.io.Serializable
 import java.lang.reflect.Type
 
 data class BatteryStats(
-    var percentage: Float = 0F,
-    var voltage: Int = 0,
-    var current: Float = 0F,
-    var temperature: Float = 0F,
-    var time: Long = System.currentTimeMillis()
+        var percentage: Float = 0F,
+        var voltage: Int = 0,
+        var current: Float = 0F,
+        var temperature: Float = 0F,
+        var time: Long = System.currentTimeMillis()
 ) : Serializable {
     companion object {
         private const val FILENAME = "bs.json"
 
         suspend fun getBatteryStats(
-            context: Context?
+                context: Context?
         ): MutableList<BatteryStats> = withContext(Dispatchers.IO) {
             if (context == null) return@withContext mutableListOf()
 
@@ -47,7 +47,7 @@ data class BatteryStats(
         suspend fun getCurrent(): Float {
             return runCatching {
                 val rate = RootUtils.readSingleLineFile(
-                    "/sys/class/power_supply/battery/current_now", "0"
+                        "/sys/class/power_supply/battery/current_now", "0"
                 ).toInt()
 
                 return rate / 1000F
@@ -57,7 +57,7 @@ data class BatteryStats(
         suspend fun getVoltage(): Float {
             return runCatching {
                 return RootUtils.readSingleLineFile(
-                    "/sys/class/power_supply/battery/voltage_now", "0"
+                        "/sys/class/power_supply/battery/voltage_now", "0"
                 ).toInt() / 1000F
             }.getOrDefault(0F)
         }

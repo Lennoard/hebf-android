@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
@@ -62,18 +62,18 @@
         <item name="cornerRadius">@dimen/medium_margin</item>
     </style>
 
-    <style name="AppMaterialButtonFlatColored" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="AppMaterialButtonFlatColored" parent="AppMaterialButtonFlat">
+        <item name="android:textColor">@color/material_flat_button_colored_text</item>
+    </style>
+
+    <style name="AppMaterialButtonFlat" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:minHeight">@dimen/button_min_height</item>
         <item name="android:paddingLeft">@dimen/default_margin</item>
         <item name="android:paddingRight">@dimen/default_margin</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textAppearance">@style/TextAppearance.HEBF.Headline6</item>
-        <item name="android:textColor">@color/material_flat_button_colored_text</item>
-        <item name="cornerRadius">@dimen/medium_margin</item>
-    </style>
-
-    <style name="AppMaterialButtonFlat" parent="AppMaterialButtonFlatColored">
         <item name="android:textColor">@color/material_flat_button_text</item>
+        <item name="cornerRadius">@dimen/medium_margin</item>
     </style>
 
     <style name="AppMaterialButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -89,11 +89,11 @@
     </style>
 
     <style name="AppInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
-        <item name="boxBackgroundColor">@color/colorBackground</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
         <item name="boxStrokeWidth">1.5dp</item>
         <item name="fontFamily">@font/cairo_semibold</item>
         <item name="android:fontFamily">@font/cairo_semibold</item>
-        <item name="android:background">@color/colorBackground</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="AppDialogAnimation">
@@ -130,10 +130,15 @@
 
     <style name="AppBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/AppBottomSheet</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">
+            @android:color/transparent
+        </item>
     </style>
 
     <style name="AppBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
         <item name="shapeAppearanceOverlay">@style/BottomSheetShapeAppearanceOverlay</item>
+        <item name="behavior_peekHeight">420dp</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="AppShapeAppearance.Button.Rounded" parent="">
@@ -153,10 +158,10 @@
         <item name="android:textAppearance">@style/TextAppearance.HEBF.Headline6</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">16dp</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">@dimen/medium_margin</item>
+        <item name="android:paddingBottom">@dimen/default_margin</item>
+        <item name="android:paddingLeft">@dimen/default_margin</item>
+        <item name="android:paddingRight">@dimen/default_margin</item>
         <item name="android:textSize">20sp</item>
         <item name="android:gravity">start</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
@@ -166,28 +171,27 @@
         <item name="android:textAppearance">@style/TextAppearance.HEBF.Subtitle1</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">@dimen/default_margin</item>
+        <item name="android:paddingRight">@dimen/default_margin</item>
+        <item name="android:paddingBottom">@dimen/default_margin</item>
         <item name="android:paddingTop">18dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:gravity">start</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
     </style>
 
     <style name="RightLeadCheckBox">
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:textSize">16sp</item>
         <item name="android:button">@null</item>
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:drawableEnd">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:textAppearance">@style/TextAppearance.HEBF.Body1</item>
-        <item name="android:drawablePadding">24dp</item>
+        <item name="android:drawablePadding">@dimen/medium_margin</item>
         <item name="android:layout_marginBottom">4dp</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:layout_marginLeft">@dimen/default_margin</item>
+        <item name="android:layout_marginRight">@dimen/default_margin</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
     </style>
 
     <style name="SingleLineText">

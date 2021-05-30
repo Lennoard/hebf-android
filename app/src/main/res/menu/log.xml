@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/action_delete"
-        android:title="@string/apagar"
+    <item
+        android:id="@+id/action_delete"
         android:icon="@drawable/ic_delete"
+        android:title="@string/apagar"
+        app:iconTint="@color/colorOnSurface"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_search"
-        android:title="@string/search"
         android:icon="@drawable/ic_search"
+        android:title="@string/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="collapseActionView|ifRoom"/>
+        app:iconTint="@color/colorOnSurface"
+        app:showAsAction="collapseActionView|ifRoom" />
 
-    <item android:id="@+id/action_filter"
-        android:title="Filter"
+    <item
+        android:id="@+id/action_filter"
         android:icon="@drawable/ic_filter_list"
+        android:title="Filter"
+        app:iconTint="@color/colorOnSurface"
         app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/action_send"
-        android:title="@string/send"
+    <item
+        android:id="@+id/action_send"
         android:icon="@drawable/ic_send"
+        android:title="@string/send"
+        app:iconTint="@color/colorOnSurface"
         app:showAsAction="never" />
 
 </menu>

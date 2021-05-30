@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:id="@+id/cl">
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/backup"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -22,82 +29,89 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior_local"
         android:orientation="vertical"
         android:paddingStart="@dimen/default_margin"
-        android:paddingEnd="@dimen/default_margin">
+        android:paddingEnd="@dimen/default_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:layout_marginTop="8dp">
+            android:orientation="vertical">
 
             <ProgressBar
+                android:id="@+id/backupProgress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/backupProgress"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
-                app:endIconMode="clear_text"
-                style="@style/AppInputLayout">
+                app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/backupInputName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                    android:id="@+id/backupInputName"/>
+                    android:background="@android:color/transparent"
+                    android:inputType="textShortMessage"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="@string/device_model"
-                style="@style/AppInputLayout">
+                android:hint="@string/device_model">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/backupInputModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                    android:id="@+id/backupInputModel" />
+                    android:background="@android:color/transparent"
+                    android:inputType="textShortMessage"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="@string/device_name"
-                style="@style/AppInputLayout">
+                android:hint="@string/device_name">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/backupInputDeviceName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                    android:id="@+id/backupInputDeviceName" />
+                    android:background="@android:color/transparent"
+                    android:inputType="textShortMessage"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/backup_comments_layout"
-                android:visibility="gone"
+                style="@style/AppInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/comments"
-                style="@style/AppInputLayout">
+                android:visibility="gone">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/backupInputComments"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/backupInputComments"
-                    android:inputType="textMultiLine"/>
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,48 +120,51 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/backupRadioLocal"
-                    android:checked="true"
-                    android:padding="8dp"
-                    android:text="@string/local_backup"/>
-
-                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/backupRadioCloud"
+                    android:checked="true"
+                    android:padding="@dimen/small_margin"
+                    android:text="@string/local_backup"
                     android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                    android:layout_marginTop="8dp"
+                    app:buttonTint="@color/checkbox_selector" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/backupRadioCloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
                     android:padding="8dp"
-                    android:text="@string/cloud_backup"/>
+                    android:text="@string/cloud_backup"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    app:buttonTint="@color/checkbox_selector" />
 
             </RadioGroup>
 
-            <CheckBox
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/backupCheckPublic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/backupCheckPublic"
-                android:layout_marginTop="8dp"
-                android:padding="8dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:padding="@dimen/small_margin"
+                android:text="@string/backup_make_it_public"
                 android:visibility="gone"
-                android:text="@string/backup_make_it_public"/>
+                app:buttonTint="@color/checkbox_selector" />
 
         </LinearLayout>
 
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backupFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/backupFab"
-        app:srcCompat="@drawable/ic_backup_local"
-        android:contentDescription="@string/backup"
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="@dimen/default_margin"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/backup"
+        app:srcCompat="@drawable/ic_backup_local" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

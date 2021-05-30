@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingLeft="@dimen/small_margin"
     android:paddingRight="@dimen/small_margin">
@@ -20,5 +21,18 @@
             tools:listitem="@layout/list_item_doze_record" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rootRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/medium_margin"
+        android:text="@string/root_access_required"
+        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+        android:textColor="@color/colorError"
+        android:visibility="gone"
+        app:drawableTopCompat="@drawable/ic_warning"
+        app:drawableTint="@color/colorError" />
 
 </FrameLayout>

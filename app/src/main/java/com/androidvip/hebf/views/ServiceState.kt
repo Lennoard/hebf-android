@@ -70,9 +70,13 @@ class ServiceState @JvmOverloads constructor(
 
     fun setChecked(checked: Boolean) {
         if (ShellUtils.onMainThread()) {
+            statusTextView.text = if (checked) "ON" else "OFF"
             switch.isChecked = checked
         } else {
-            switch.context.runOnMainThread { switch.isChecked = checked }
+            switch.context.runOnMainThread {
+                switch.isChecked = checked
+                statusTextView.text = if (checked) "ON" else "OFF"
+            }
         }
     }
 

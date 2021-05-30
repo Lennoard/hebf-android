@@ -11,7 +11,15 @@ import com.androidvip.hebf.getThemedVectorDrawable
 import com.androidvip.hebf.services.RootShellService
 import com.androidvip.hebf.services.mediaserver.MediaserverService
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.gb.GameBoosterImpl
+import com.androidvip.hebf.utils.gb.GameBoosterNutellaImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
+import com.androidvip.hebf.utils.vip.VipServices
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.topjohnwu.superuser.Shell
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
 class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
@@ -107,7 +115,7 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                         "\t* Spanish (es)\n" +
                         "\t* Turkish (tr)\n\n" +
                         "EMULATED COMMAND LINE:\n" +
-                        "Heart-Empty-Battery-Full emulated command line v1.0. Copyright (C) 2021 Android VIP.\n" +
+                        "Heart-Empty-Battery-Full emulated command line v1.0. Copyright (C) 2018 Android VIP.\n" +
                         "This emulated command line was by made Lennoard (probably drunk) for quick setting/toggling some HEBF-" +
                         "related options that could only be done inside the app's interface, later it was a little bit extended to support " +
                         "a few other commands not available in the app's UI and then, for some reason, released.\nYoung people, stay away from drinks, warns Lennoard."
@@ -169,9 +177,21 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                 onCompleteListener.onComplete(help, true)
             } else {
                 val option = args[0]
-                if (!TextUtils.isEmpty(option)) {
+                if (option.isNotEmpty()) {
+                    val isRooted = Shell.rootAccess()
+                    val gb = if (isRooted) {
+                        GameBoosterImpl(activityRef.get()?.applicationContext)
+                    } else {
+                        GameBoosterNutellaImpl(activityRef.get()?.applicationContext)
+                    }
+
+                    val vip = if (isRooted) {
+                        VipBatterySaverImpl(activityRef.get()?.applicationContext)
+                    } else {
+                        VipBatterySaverNutellaImpl(activityRef.get()?.applicationContext)
+                    }
                     clear()
-                    val lastArg = args[args.size - 1].trim { it <= ' ' }
+                    val lastArg = args[args.size - 1].trim()
                     val prefs = Prefs(activityRef.get()!!)
                     val services = arrayOf(
                             "app-killing-tendency", "doze",
@@ -250,7 +270,7 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                                     print("Service scheduled (default scheduling: runs every 5 hours)")
                                 }
                                 "game-booster" -> {
-                                    GameBooster.toggle(true, activityRef.get()?.applicationContext)
+                                    GlobalScope.launch { gb.enable() }
                                     print("Service started")
                                 }
                                 "mediaserver" -> {
@@ -262,11 +282,11 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                                     print("Service started")
                                 }
                                 "vip" -> {
-                                    VipBatterySaver.toggle(true, activityRef.get())
+                                    GlobalScope.launch { vip.enable() }
                                     print("Service started")
                                 }
                                 "vip-service" -> {
-                                    VipBatterySaver.toggleService(true, activityRef.get())
+                                    VipServices.toggleVipService(true, activityRef.get())
                                     print("Service started")
                                 }
                                 else -> print("Unknown service: $service", false)
@@ -299,7 +319,7 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                                     print("Service stopped")
                                 }
                                 "game-booster" -> {
-                                    GameBooster.toggle(false, activityRef.get()?.applicationContext)
+                                    GlobalScope.launch { gb.disable() }
                                     print("Service stopped")
                                 }
                                 "mediaserver" -> {
@@ -315,12 +335,12 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                                     })
                                 }
                                 "vip" -> {
-                                    VipBatterySaver.toggle(false, activityRef.get())
+                                    GlobalScope.launch { vip.disable() }
                                     print("Service stopped")
                                 }
                                 "vip-service" -> {
-                                    VipBatterySaver.toggleService(false, activityRef.get())
-                                    VipBatterySaver.toggleChargerService(false, activityRef.get()!!)
+                                    VipServices.toggleVipService(false, activityRef.get())
+                                    VipServices.toggleChargerService(false, activityRef.get()!!)
                                     print("Service stopped")
                                 }
                                 else -> print("Unknown service: $service", false)
@@ -330,27 +350,27 @@ class HebfCommandLine(private val activityRef: WeakReference<Activity>) {
                             print("Must be superuser to stop services", false)
                         } else {
                             promptUser(
-                                    { _, _ -> print("Aborted...", false) },
-                                    { _, _ ->
-                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                            Doze.toggleDozeService(false, activityRef.get())
-                                            prefs.putBoolean(K.PREF.DOZE_AGGRESSIVE, false)
-                                            print("Service stopped")
-                                        }
-                                        Fstrim.toggleService(false, activityRef.get())
-                                        prefs.putInt(K.PREF.FSTRIM_SCHEDULE_MINUTES, 300)
-                                        prefs.putInt(K.PREF.FSTRIM_SPINNER_SELECTION, 0)
-
-                                        GameBooster.toggle(false, activityRef.get())
-
-                                        Utils.toggleMediaserverService(false, activityRef.get())
-
-                                        activityRef.get()?.stopService(Intent(activityRef.get(), RootShellService::class.java))
-
-                                        VipBatterySaver.toggle(false, activityRef.get())
-                                        VipBatterySaver.toggleService(false, activityRef.get())
-                                        print("Done")
+                                { _, _ -> print("Aborted...", false) },
+                                { _, _ ->
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                        Doze.toggleDozeService(false, activityRef.get())
+                                        prefs.putBoolean(K.PREF.DOZE_AGGRESSIVE, false)
+                                        print("Service stopped")
                                     }
+                                    Fstrim.toggleService(false, activityRef.get())
+                                    prefs.putInt(K.PREF.FSTRIM_SCHEDULE_MINUTES, 300)
+                                    prefs.putInt(K.PREF.FSTRIM_SPINNER_SELECTION, 0)
+
+                                    GlobalScope.launch { gb.disable() }
+
+                                    Utils.toggleMediaserverService(false, activityRef.get())
+
+                                    activityRef.get()?.stopService(Intent(activityRef.get(), RootShellService::class.java))
+
+                                    VipServices.toggleVipService(false, activityRef.get())
+                                    VipServices.toggleChargerService(false, activityRef.get()!!)
+                                    print("Done")
+                                }
                             )
                         }
                         else -> print("Unrecognized option: $option", false)

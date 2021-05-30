@@ -3,6 +3,7 @@ package com.androidvip.hebf
 import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
@@ -12,13 +13,18 @@ import android.os.Looper
 import android.util.SparseArray
 import android.util.TypedValue
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.annotation.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
+import androidx.core.view.forEach
+import androidx.core.widget.TextViewCompat
 import androidx.fragment.app.Fragment
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.androidvip.hebf.ui.base.BaseFragment
@@ -47,6 +53,24 @@ fun View.hide() {
 
 fun View.show() {
     this.visibility = View.VISIBLE
+}
+
+fun ViewGroup.setContentEnabled(enabled: Boolean) {
+    setOnClickListener(null)
+    isEnabled = false
+    forEach { child ->
+        if (child is ViewGroup) {
+            child.setContentEnabled(enabled)
+        } else {
+            if (child is AppCompatTextView) {
+                child.isEnabled = false
+                child.setTextColor(ContextCompat.getColor(context, R.color.disabled))
+                TextViewCompat.setCompoundDrawableTintList(
+                    child, ContextCompat.getColorStateList(context, R.color.disabled)
+                )
+            }
+        }
+    }
 }
 
 fun ProgressBar.animProgress(progress: Int) {
@@ -94,14 +118,15 @@ inline fun Context.confirm(
         crossinline onConfirm: () -> Unit
 ) = MaterialAlertDialogBuilder(this).apply {
     setTitle(android.R.string.dialog_alert_title)
-    setIcon(getThemedVectorDrawable(R.drawable.ic_warning))
     setMessage(message)
     setCancelable(false)
     setNegativeButton(R.string.cancelar) { _, _ -> }
     setPositiveButton(android.R.string.yes) { _, _ ->
         onConfirm()
     }
-    show()
+    applyAnim().also {
+        it.show()
+    }
 }
 
 fun Context.runOnMainThread(f: Context.() -> Unit) {
@@ -123,6 +148,12 @@ fun Fragment.createVectorDrawable(@DrawableRes resId: Int ) : VectorDrawableComp
 fun Context.getThemedVectorDrawable(@DrawableRes resId: Int): VectorDrawableCompat? {
     return createVectorDrawable(resId)?.apply {
         setTintCompat(getColorFromAttr(R.attr.colorOnSurface))
+    }
+}
+
+fun Context.getColoredVectorDrawable(@DrawableRes resId: Int): VectorDrawableCompat? {
+    return createVectorDrawable(resId)?.apply {
+        setTintCompat(getColorFromAttr(R.attr.colorPrimary))
     }
 }
 
@@ -153,7 +184,7 @@ fun Int.toPx(context: Context): Int {
     return px
 }
 
-fun Double.roundTo2Decimals(decimals: Int): Double {
+fun Double.roundDecimals(decimals: Int = 2): Double {
     return BigDecimal(this).setScale(decimals, RoundingMode.HALF_UP).toDouble()
 }
 
@@ -165,6 +196,9 @@ infix fun Number.isWhatPercentOf(other: Number): Double {
 }
 
 infix fun Int.isMultipleOf(target: Int): Boolean = this % target == 0
+
+// dp to pixels
+val Number.dp: Float get() = (this.toFloat() * Resources.getSystem().displayMetrics.density + 0.5F)
 
 fun Int.findNearestPositiveMultipleOf(target: Int): Int {
     if (this isMultipleOf target) return this

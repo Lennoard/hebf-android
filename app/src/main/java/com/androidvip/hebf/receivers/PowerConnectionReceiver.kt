@@ -6,6 +6,9 @@ import android.content.Intent
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
+import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -31,13 +34,20 @@ class PowerConnectionReceiver : BroadcastReceiver(), CoroutineScope {
 
     private suspend fun checkVip(context: Context) = withContext(Dispatchers.Default) {
         val vipPrefs = VipPrefs(context.applicationContext)
+        val isRooted = Shell.rootAccess()
         val isVipEnabled = vipPrefs.getBoolean(
                 K.PREF.VIP_ENABLED, false
         ) || RootUtils.executeSync("getprop hebf.vip.enabled") == "1"
 
+        val vip = if (isRooted) {
+            VipBatterySaverImpl(context)
+        } else {
+            VipBatterySaverNutellaImpl(context)
+        }
+
         if (isVipEnabled) {
             with (context.applicationContext) {
-                VipBatterySaver.toggle(false, this)
+                vip.disable()
                 vipPrefs.edit {
                     putBoolean(K.PREF.VIP_ENABLED, false)
                     putBoolean(K.PREF.VIP_SHOULD_STILL_ACTIVATE, false)

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
+import com.androidvip.hebf.createVectorDrawable
 import com.androidvip.hebf.utils.*
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
@@ -23,7 +24,10 @@ abstract class BaseActivity: AppCompatActivity() {
 
     protected fun setUpToolbar(toolbar: Toolbar) {
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(createVectorDrawable(R.drawable.ic_arrow_back))
+        }
     }
 
     protected suspend fun isRooted() = withContext(workerContext) {

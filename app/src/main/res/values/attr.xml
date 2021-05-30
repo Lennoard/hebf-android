@@ -1,14 +1,23 @@
 <resources>
     <declare-styleable name="InfoSeekBar">
-        <attr name="titleText" format="reference|string"/>
-        <attr name="descriptionText" format="reference|string"/>
-        <attr name="statusText" format="reference|string"/>
-        <attr name="seekbarProgress" format="integer"/>
+        <attr name="titleText" format="reference|string" />
+        <attr name="descriptionText" format="reference|string" />
+        <attr name="statusText" format="reference|string" />
+        <attr name="seekbarProgress" format="integer" />
     </declare-styleable>
 
     <declare-styleable name="ControlSwitch">
-        <attr name="title" format="reference|string"/>
-        <attr name="description" format="reference|string"/>
+        <attr name="title" format="reference|string" />
+        <attr name="description" format="reference|string" />
+        <attr name="android:enabled" format="reference|boolean" />
+        <attr name="android:checked" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ControlCheckBox">
+        <attr name="android:text" format="reference|string" />
+        <attr name="android:enabled" format="reference|boolean" />
+        <attr name="android:checked" format="reference|boolean" />
+        <attr name="controlDescription" format="reference|string" />
     </declare-styleable>
 
     <declare-styleable name="ServiceState">
@@ -19,8 +28,8 @@
     </declare-styleable>
 
     <declare-styleable name="DashCard">
-        <attr name="cardTitle" format="reference|string"/>
-        <attr name="cardValue" format="reference|string"/>
-        <attr name="cardSubText" format="reference|string"/>
+        <attr name="cardTitle" format="reference|string" />
+        <attr name="cardValue" format="reference|string" />
+        <attr name="cardSubText" format="reference|string" />
     </declare-styleable>
 </resources>

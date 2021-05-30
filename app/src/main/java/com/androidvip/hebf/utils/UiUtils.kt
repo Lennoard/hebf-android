@@ -16,15 +16,16 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.androidvip.hebf.R
+import com.androidvip.hebf.applyAnim
 import com.androidvip.hebf.show
 import com.androidvip.hebf.toPx
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.context_bottom_sheet.*
 import kotlinx.android.synthetic.main.modal_bottom_sheet.*
 import java.io.Serializable
 
 typealias SheetOption = ContextBottomSheet.Option
-
 class ContextBottomSheet : BottomSheetDialogFragment() {
     companion object {
         fun newInstance(title: String? = "", options: ArrayList<Option>): ContextBottomSheet = ContextBottomSheet().apply {
@@ -41,10 +42,8 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
 
     data class Option(var title: String, val tag: String, @DrawableRes var icon: Int?) : Serializable
 
-    var onOptionClickListener: OnOptionClickListener = object : OnOptionClickListener {
-        override fun onOptionClick(tag: String) {
-            dismiss()
-        }
+    var onOptionClickListener : OnOptionClickListener = object : OnOptionClickListener {
+        override fun onOptionClick(tag: String) { dismiss() }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -70,7 +69,7 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
         }
     }
 
-    private fun generateOptionView(option: Option): LinearLayout {
+    private fun generateOptionView(option: Option) : LinearLayout {
         val textColor = TypedValue()
         val backgroundDrawable = TypedValue()
         context?.theme?.resolveAttribute(R.attr.colorOnSurface, textColor, true)
@@ -130,14 +129,9 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
     var cancelButtonText: String? = ""
     var showOkButton = true
     var showCancelButton = false
-    var onButtonClickListener: OnButtonClickListener = object : OnButtonClickListener {
-        override fun onOkButtonClick() {
-            dismiss()
-        }
-
-        override fun onCancelButtonClick() {
-            dismiss()
-        }
+    var onButtonClickListener : OnButtonClickListener = object : OnButtonClickListener {
+        override fun onOkButtonClick() { dismiss() }
+        override fun onCancelButtonClick() { dismiss() }
     }
 
     companion object {
@@ -182,7 +176,7 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
 }
 
 /**
- * An useful class that displays a dialog with a single input field and get the text of it.
+ * A useful class that displays a dialog with a single input field and get the text of it.
  * It is also possible to set the input type, and add a cancelListener
  *
  * @author Lennoard
@@ -196,7 +190,7 @@ class EditDialog(private val activity: Activity) {
     var inputType = INPUT_TYPE_UNSPECIFIED
     var guessInputType = false
     var onCancelListener = DialogInterface.OnClickListener { _, _ -> }
-    var onConfirmListener: OnConfirmListener = object : OnConfirmListener {
+    var onConfirmListener : OnConfirmListener = object : OnConfirmListener {
         override fun onOkButtonClicked(newData: String) {
 
         }
@@ -236,17 +230,22 @@ class EditDialog(private val activity: Activity) {
             else -> inputType
         }
 
-        val dialog = AlertDialog.Builder(activity).apply {
+        val dialog = MaterialAlertDialogBuilder(activity).apply {
             setTitle(title)
             setView(dialogView)
             this@EditDialog.message?.let { setMessage(it) }
 
             setNegativeButton(android.R.string.cancel, onCancelListener)
-            setPositiveButton(android.R.string.ok) { _, _ -> onConfirmListener.onOkButtonClicked(editText?.text.toString()) }
+            setPositiveButton(android.R.string.ok) { _, _ ->
+                onConfirmListener.onOkButtonClicked(editText?.text.toString())
+            }
         }
 
-
-        dialog.show()
+        dialog.applyAnim().also {
+            if (!activity.isFinishing) {
+                it.show()
+            }
+        }
     }
 
     fun buildApplying(block: EditDialog.() -> Unit): EditDialog {

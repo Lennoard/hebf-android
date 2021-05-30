@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="16">
+
+    <item
+        android:id="@+id/state_on"
+        android:drawable="@drawable/avd_battery_in"
+        android:state_checked="true" />
+
+    <item
+        android:id="@+id/state_off"
+        android:drawable="@drawable/avd_battery_out"
+        android:state_checked="false" />
+
+    <transition
+        android:drawable="@drawable/avd_battery_in"
+        android:fromId="@id/state_off"
+        android:toId="@id/state_on" />
+
+    <transition
+        android:drawable="@drawable/avd_battery_out"
+        android:fromId="@id/state_on"
+        android:toId="@id/state_off" />
+
+</animated-selector>

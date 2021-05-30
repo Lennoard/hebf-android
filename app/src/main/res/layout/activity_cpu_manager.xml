@@ -13,18 +13,22 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|snap" />
+            android:background="@color/colorBackground"
+            android:elevation="0dp"
+            app:layout_scrollFlags="scroll|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/cpuTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryOrBackground"
-            app:tabMode="fixed"
+            android:background="@color/colorBackground"
             android:textAppearance="@style/TextAppearance.HEBF.Body1"
             app:tabGravity="fill"
-            app:tabTextColor="?attr/colorOnPrimary"
-            app:tabSelectedTextColor="?attr/colorAccent"/>
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -32,23 +36,23 @@
         android:id="@+id/cpuViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior_local"  />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior_local" />
 
     <ProgressBar
+        android:id="@+id/cpuProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cpuProgress"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cpuErrorText"
         style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cpuErrorText"
-        android:padding="8dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:visibility="gone"
-        android:text="@string/error"/>
+        android:padding="8dp"
+        android:text="@string/error"
+        android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

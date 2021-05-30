@@ -2,11 +2,16 @@ package com.androidvip.hebf.services.gb
 
 import android.annotation.TargetApi
 import android.content.ContentResolver
+import android.content.Context
 import android.os.Build
 import android.provider.Settings
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.gb.GameBoosterImpl
+import com.androidvip.hebf.utils.gb.GameBoosterNutellaImpl
+import com.androidvip.hebf.utils.gb.IGameBooster
+import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -29,6 +34,12 @@ class QSTGame : TileService(), CoroutineScope {
                     qsTile?.state = Tile.STATE_INACTIVE
                 qsTile?.updateTile()
             }
+        } else {
+            if (prefs.getBoolean(K.PREF.LESS_GAME_BOOSTER, false))
+                qsTile?.state = Tile.STATE_ACTIVE
+            else
+                qsTile?.state = Tile.STATE_INACTIVE
+            qsTile?.updateTile()
         }
     }
 
@@ -37,25 +48,31 @@ class QSTGame : TileService(), CoroutineScope {
     }
 
     override fun onClick() {
+        // After the click, it becomes active (so, checked)
         val isChecked = qsTile?.state == Tile.STATE_INACTIVE
 
-        if (userPrefs.getBoolean(K.PREF.USER_HAS_ROOT, false)) {
-            if (isChecked) {
-                qsTile?.state = Tile.STATE_ACTIVE
-                qsTile?.updateTile()
+        if (isChecked) {
+            qsTile?.state = Tile.STATE_ACTIVE
+            qsTile?.updateTile()
 
-                launch (Dispatchers.Default) {
-                    GameBooster.toggle(true, applicationContext)
-                }
-            } else {
-                qsTile?.state = Tile.STATE_INACTIVE
-                qsTile?.updateTile()
-
-                launch (Dispatchers.Default) {
-                    GameBooster.toggle(false, applicationContext)
-                }
+            launch (Dispatchers.Default) {
+                getGameBooster().enable()
             }
-            userPrefs.putBoolean(K.PREF.USER_HAS_ROOT, true)
+        } else {
+            qsTile?.state = Tile.STATE_INACTIVE
+            qsTile?.updateTile()
+
+            launch (Dispatchers.Default) {
+                getGameBooster().disable()
+            }
+        }
+    }
+
+    private suspend fun getGameBooster(): IGameBooster = withContext(Dispatchers.Default) {
+        return@withContext if (Shell.rootAccess()) {
+            GameBoosterImpl(applicationContext)
+        } else {
+            GameBoosterNutellaImpl(applicationContext)
         }
     }
 

@@ -4,7 +4,6 @@ import android.content.ContentResolver
 import android.content.Context
 import android.os.Build
 import com.androidvip.hebf.utils.*
-import kotlinx.android.synthetic.main.fragment_dashboard2.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -15,7 +14,7 @@ class ProfilesManagerRootImpl(
     private val context: Context,
     private val prefs: Prefs,
     private val userPrefs: UserPrefs,
-) : ProfilesManager {
+) : IProfilesManager {
     private val cpuManager: CpuManager by lazy { CpuManager() }
 
     override fun getCurrentProfile(): Int = userPrefs.getInt(K.PREF.QUICK_PROFILE, -1)
@@ -37,6 +36,8 @@ class ProfilesManagerRootImpl(
 
             putBoolean(K.PREF.DOZE_AGGRESSIVE, true)
         }
+
+        userPrefs.putInt(K.PREF.QUICK_PROFILE, IProfilesManager.BATTERY_PLUS)
     }
 
     override suspend fun setBatteryProfile() {
@@ -51,6 +52,7 @@ class ProfilesManagerRootImpl(
 
         prefs.putBoolean(K.PREF.PERFORMANCE_LS_UI, false)
         prefs.putBoolean(K.PREF.PERFORMANCE_PERF_TWEAK, false)
+        userPrefs.putInt(K.PREF.QUICK_PROFILE, IProfilesManager.BATTERY)
     }
 
     override suspend fun setBalancedProfile() {
@@ -58,6 +60,7 @@ class ProfilesManagerRootImpl(
         setAnim(1.0)
         ContentResolver.setMasterSyncAutomatically(true)
         applyGov("interactive")
+        userPrefs.putInt(K.PREF.QUICK_PROFILE, IProfilesManager.BALANCED)
     }
 
     override suspend fun setPerformanceProfile() {
@@ -66,6 +69,8 @@ class ProfilesManagerRootImpl(
 
         prefs.putBoolean(K.PREF.BATTERY_IMPROVE, false)
         prefs.putBoolean(K.PREF.PERFORMANCE_LS_UI, true)
+
+        userPrefs.putInt(K.PREF.QUICK_PROFILE, IProfilesManager.PERFORMANCE)
     }
 
     override suspend fun setPerformancePlusProfile() {
@@ -78,6 +83,7 @@ class ProfilesManagerRootImpl(
         }
         setAnim(0.4)
         applyGov("performance")
+        userPrefs.putInt(K.PREF.QUICK_PROFILE, IProfilesManager.PERFORMANCE_PLUS)
     }
 
     override suspend fun disableProfiles() {
@@ -122,8 +128,15 @@ class ProfilesManagerRootImpl(
      */
     private suspend fun applyGov(gov: String?) = withContext(Dispatchers.Default) {
         runCatching {
-            val currentGov = cpuManager.policies?.firstOrNull()?.currentGov ?: "interactive"
-            if (currentGov in CpuManager.EAS_GOVS) return@runCatching // EAS stuff?
+            val policy = cpuManager.policies?.firstOrNull()
+            val currentGov = policy?.currentGov ?: "interactive"
+            val availableGovs =
+                policy?.availableGovs ?: CpuManager.DEFAULT_GOVERNORS.split(" ").toTypedArray()
+            val easHint = availableGovs.firstOrNull {
+                it in CpuManager.EAS_GOVS.split(" ")
+            } != null
+
+            if (currentGov in CpuManager.EAS_GOVS || easHint) return@runCatching // EAS stuff?
 
             cpuManager.cpus.forEach {
                 it.setGov(gov)

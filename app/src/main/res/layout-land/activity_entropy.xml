@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.advanced.EntropyActivity">
+    tools:context=".ui.main.tune.EntropyActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -13,13 +13,20 @@
         android:fitsSystemWindows="false">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorOnBackground" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -426,14 +433,15 @@
             android:layout_height="32dp"
             android:layout_gravity="bottom">
 
-            <ProgressBar
+            <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/entropyProgress"
-                style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                app:trackThickness="@dimen/medium_margin"
                 android:max="4096"
-                android:progressDrawable="@drawable/horizontal_progress_large" />
+                tools:progress="2048"
+                app:trackColor="@color/secondaryText" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"

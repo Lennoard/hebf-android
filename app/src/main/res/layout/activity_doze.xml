@@ -6,25 +6,34 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            android:background="@color/colorBackground"
+            android:elevation="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/dozeTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryOrBackground"
+            android:background="@color/colorBackground"
+            app:layout_scrollFlags="scroll|snap"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="?attr/colorAccent"
+            app:tabSelectedTextColor="@color/colorOnBackground"
             app:tabTextAppearance="@style/TextAppearance.HEBF.Subtitle1"
-            app:tabTextColor="?attr/colorOnPrimary" />
+            app:tabTextColor="@color/colorTextNormal" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

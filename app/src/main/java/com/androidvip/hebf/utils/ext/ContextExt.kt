@@ -27,21 +27,13 @@ import androidx.annotation.DrawableRes
 import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
-import com.androidvip.hebf.BuildConfig
-import com.androidvip.hebf.R
-import com.androidvip.hebf.getColorFromAttr
-import com.androidvip.hebf.setTintCompat
+import com.androidvip.hebf.*
 import com.androidvip.hebf.utils.Logger.logError
 import com.androidvip.hebf.utils.Logger.logWTF
 import com.androidvip.hebf.utils.UserPrefs
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.topjohnwu.superuser.ShellUtils
 import java.util.*
-
-val Int.dp: Int
-    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
-val Int.px: Int
-    get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 
 fun Context?.toast(messageRes: Int, short: Boolean = true) {
     if (this == null) return
@@ -67,14 +59,15 @@ inline fun Context.confirm(
     crossinline onConfirm: () -> Unit
 ) = MaterialAlertDialogBuilder(this).apply {
     setTitle(android.R.string.dialog_alert_title)
-    setIcon(getThemedVectorDrawable(R.drawable.ic_warning))
     setMessage(message)
     setCancelable(false)
     setNegativeButton(R.string.cancelar) { _, _ -> }
     setPositiveButton(android.R.string.yes) { _, _ ->
         onConfirm()
     }
-    show()
+    applyAnim().also {
+        it.show()
+    }
 }
 
 fun Context.runOnMainThread(f: Context.() -> Unit) {
@@ -183,7 +176,7 @@ fun Context?.webDialog(url: String?) {
  * @param context used to start the new activity
  * @param url the url to load externally
  */
-fun Context?.webPage(url: String?) {
+fun Context?.launchUrl(url: String?) {
     if (this == null) return
     try {
         val uri = Uri.parse(url)

@@ -7,13 +7,20 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -28,6 +35,7 @@
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         android:text="@string/done"
+        android:textAllCaps="false"
         android:visibility="invisible"
         app:icon="@drawable/ic_check" />
 

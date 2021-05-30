@@ -6,7 +6,7 @@ import android.widget.*
 import androidx.appcompat.widget.AppCompatTextView
 import com.androidvip.hebf.R
 
-class InfoSeekBar(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
+class InfoSeekBar(context: Context, attrs: AttributeSet): RelativeLayout(context, attrs) {
     interface OnSeekBarChangeListener {
         fun onProgressChanged(infoSeekBar: InfoSeekBar, progress: Int, fromUser: Boolean)
         fun onStartTrackingTouch(infoSeekBar: InfoSeekBar)

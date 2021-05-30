@@ -22,7 +22,9 @@ import com.androidvip.hebf.models.BatteryStats
 import com.androidvip.hebf.services.profiles.ProfilesManagerNutellaImpl
 import com.androidvip.hebf.services.profiles.ProfilesManagerRootImpl
 import com.androidvip.hebf.ui.base.binding.BaseViewBindingFragment
+import com.androidvip.hebf.ui.main.LottieAnimViewModel
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipServices
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -30,12 +32,14 @@ import com.github.mikephil.charting.formatter.ValueFormatter
 import com.google.android.material.behavior.SwipeDismissBehavior
 import kotlinx.coroutines.*
 import org.koin.android.ext.android.get
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import kotlin.math.roundToInt
 
 class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
     FragmentDashboardBinding::inflate
 ) {
     private lateinit var getInfoRunnable: Runnable
+    private val animViewModel: LottieAnimViewModel by sharedViewModel()
     private var storageStatsManager: StorageStatsManager? = null
     private val memoryInfo by lazy { ActivityManager.MemoryInfo() }
     private val handler by lazy { Handler(Looper.getMainLooper()) }
@@ -53,6 +57,7 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
             val isRooted = isRooted()
             val batteryStats = getBatteryStats()
 
+            setUpChart()
             fillChart(batteryStats, batteryStats.isEmpty(), 0)
             setUpSwipes(isRooted)
             setUpServices(isRooted)
@@ -60,7 +65,7 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
 
             binding.textRam.setOnClickListener {
                 if (isRooted) {
-                    runCommand("sync && sysctl -w vm.drop_caches=3")
+                    runCommand("sync && echo 3 > /proc/sys/vm/drop_caches")
                 }
                 System.runFinalization()
                 System.gc()
@@ -72,6 +77,11 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
     override fun onStart() {
         super.onStart()
         setUpHandler()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        animViewModel.setAnimRes(R.raw.dashboard_anim)
     }
 
     override fun onStop() {
@@ -94,7 +104,7 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
     private fun setUpSwipes(isRooted: Boolean) {
         if (isRooted) return
 
-        binding.noRootWarning.show()
+        binding.warningLayout.show()
         binding.noRootWarning.updateLayoutParams<CoordinatorLayout.LayoutParams> {
             behavior = SwipeDismissBehavior<AppCompatTextView>().apply {
                 setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY)
@@ -168,14 +178,14 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
             setChecked(vipPrefs.getBoolean(K.PREF.VIP_IS_SCHEDULED, false))
             setOnCheckedChangeListener { isChecked ->
                 if (isChecked) {
-                    VipBatterySaver.toggleService(true, findContext())
+                    VipServices.toggleVipService(true, findContext())
                     vipPrefs.edit {
                         putBoolean(K.PREF.VIP_AUTO_TURN_ON, true)
                         putInt("percentage_selection", 0)
                         putBoolean(K.PREF.VIP_IS_SCHEDULED, true)
                     }
                 } else {
-                    VipBatterySaver.toggleService(false, findContext())
+                    VipServices.toggleVipService(false, findContext())
                     vipPrefs.edit {
                         putBoolean(K.PREF.VIP_AUTO_TURN_ON, false)
                         putInt("percentage_selection", 1)
@@ -235,12 +245,14 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
         val supportsZram = ZRAM.supported()
 
         val deferredVirtualMemory = async {
+            if (!isAdded) return@async 0.0 to 0.0
             val free = ZRAM.getFreeSwap()
             val total = ZRAM.getTotalSwap()
             total to (total - free)
         }
 
         val deferredMemory = async {
+            if (!isAdded) return@async 0.0 to 0.0
             activityManager?.getMemoryInfo(memoryInfo)
 
             val totalMemory: Long = runCatching {
@@ -256,6 +268,7 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
         }
 
         val deferredStorage = async {
+            if (!isAdded) return@async 0.0 to 0.0
             val hasStoragePermission = Utils.hasStoragePermissions(applicationContext)
             var totalSpace = Int.MIN_VALUE.toDouble()
             var availableSpace = Int.MIN_VALUE.toDouble()
@@ -278,9 +291,9 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
         }
 
         withContext(Dispatchers.Main) updateUi@ {
+            val (totalSwap, usedSwap) = deferredVirtualMemory.await()
             if (!isActivityAlive) return@updateUi
 
-            val (totalSwap, usedSwap) = deferredVirtualMemory.await()
             if (!supportsZram || !isRooted) {
                 binding.indicatorVirtual.show()
                 binding.textVirtual.apply {
@@ -295,28 +308,38 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
                 }
 
                 binding.textVirtual.show()
-                val percent = (usedSwap isWhatPercentOf totalSwap).roundToInt()
+                val percent = runCatching {
+                    (usedSwap isWhatPercentOf totalSwap).roundToInt()
+                }.getOrDefault(0F)
                 binding.textVirtual.text = "$percent%"
             }
 
             val (totalMemory, usedMemory) = deferredMemory.await()
+            if (!isActivityAlive) return@updateUi
+
             binding.indicatorRam.apply {
                 show()
                 max = totalMemory.toInt()
                 animProgress(usedMemory.toInt())
                 binding.textRam.show()
-                val percent = (usedMemory isWhatPercentOf totalMemory).roundToInt()
+                val percent = runCatching {
+                    (usedMemory isWhatPercentOf totalMemory).roundToInt()
+                }.getOrDefault(0F)
                 binding.textRam.text = "$percent%"
             }
 
             val (totalSpace, availableSpace) = deferredStorage.await()
             val usedSpace = totalSpace - availableSpace
+            if (!isActivityAlive) return@updateUi
+
             binding.indicatorStorage.apply {
                 max = totalSpace.toInt()
                 animProgress(usedSpace.toInt())
                 show()
                 binding.textStorage.show()
-                val percent = (usedSpace isWhatPercentOf totalSpace).roundToInt()
+                val percent = runCatching {
+                    (usedSpace isWhatPercentOf totalSpace).roundToInt()
+                }.getOrDefault(0F)
                 binding.textStorage.text = "$percent%"
             }
         }
@@ -330,14 +353,13 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
         }
     }
 
-    private fun fillChart(stats: MutableList<BatteryStats>, hadNoData: Boolean, iteration: Int) {
-        if (!isActivityAlive) return
-
+    private fun setUpChart() {
         val textColor = ContextCompat.getColor(requireContext(), R.color.colorOnBackground)
         with(binding.lineChart) {
             description.isEnabled = false
             setDrawMarkers(true)
             setPinchZoom(false)
+            setNoDataText(getString(R.string.vip_chart_no_data))
             axisRight.isEnabled = false
             axisLeft.textColor = textColor
             axisLeft.gridColor = ContextCompat.getColor(requireContext(), R.color.disabled)
@@ -351,12 +373,16 @@ class DashboardFragment : BaseViewBindingFragment<FragmentDashboardBinding>(
             setDrawAxisLine(false)
             setDrawLabels(true)
             setTextColor(textColor)
+        }
+    }
 
-            valueFormatter = object : ValueFormatter() {
-                override fun getFormattedValue(value: Float): String {
-                    if (hadNoData) return value.toString()
-                    return Utils.dateMillisToString(value.toLong(), "HH:ss")
-                }
+    private fun fillChart(stats: MutableList<BatteryStats>, hadNoData: Boolean, iteration: Int) {
+        if (!isActivityAlive) return
+
+        binding.lineChart.xAxis.valueFormatter = object : ValueFormatter() {
+            override fun getFormattedValue(value: Float): String {
+                if (hadNoData) return value.toString()
+                return Utils.dateMillisToString(value.toLong(), "HH:ss")
             }
         }
 

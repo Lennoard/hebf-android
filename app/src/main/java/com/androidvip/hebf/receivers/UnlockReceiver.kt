@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
+import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -37,8 +40,19 @@ class UnlockReceiver : BroadcastReceiver() {
 
             if (vipPrefs.getBoolean(K.PREF.VIP_SCREEN_OFF, false)) {
                 launch {
+                    val isRooted = Shell.rootAccess()
                     delay(2000)
-                    VipBatterySaver.toggle(!isInteractive, context.applicationContext)
+                    val vip = if (isRooted) {
+                        VipBatterySaverImpl(context.applicationContext)
+                    } else {
+                        VipBatterySaverNutellaImpl(context.applicationContext)
+                    }
+
+                    if (isInteractive) {
+                        vip.disable()
+                    } else {
+                        vip.enable()
+                    }
                 }
             }
         }

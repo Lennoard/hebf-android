@@ -7,13 +7,20 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -54,6 +61,7 @@
                         android:id="@+id/backupInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
                         android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -68,6 +76,7 @@
                         android:id="@+id/backupInputModel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
                         android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -82,6 +91,7 @@
                         android:id="@+id/backupInputDeviceName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
                         android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -117,34 +127,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp">
 
-                <RadioButton
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/backupRadioLocal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:padding="8dp"
+                    android:padding="@dimen/small_margin"
                     android:text="@string/local_backup"
-                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    app:buttonTint="@color/checkbox_selector" />
 
-                <RadioButton
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/backupRadioCloud"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:padding="8dp"
+                    android:layout_marginTop="@dimen/tiny_margin"
+                    android:padding="@dimen/small_margin"
                     android:text="@string/cloud_backup"
                     android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
             </RadioGroup>
 
-            <CheckBox
+            <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/backupCheckPublic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:padding="8dp"
+                android:layout_marginTop="@dimen/tiny_margin"
+                android:padding="@dimen/small_margin"
                 android:text="@string/backup_make_it_public"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:buttonTint="@color/checkbox_selector" />
 
         </LinearLayout>
 

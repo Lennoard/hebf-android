@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <View
-        android:layout_width="36dp"
+        android:layout_width="@dimen/huge_margin_alt"
         android:layout_height="6dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="12dp"
@@ -36,10 +36,16 @@
         android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
         android:textColor="?attr/colorOnSurface" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/disabled" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="@dimen/small_margin"
         android:layout_marginBottom="@dimen/default_margin"
         android:gravity="end"
         android:orientation="horizontal"

@@ -14,4 +14,6 @@
     <dimen name="huge_margin_alt">46.4dp</dimen>
     <dimen name="huge_margin">53.1dp</dimen>
     <dimen name="button_min_height">@dimen/huge_margin_alt</dimen>
+    <dimen name="collapsing_app_bar_height">166dp</dimen>
+    <dimen name="profile_pic_size">89.6dp</dimen>
 </resources>

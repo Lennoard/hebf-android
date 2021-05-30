@@ -16,6 +16,10 @@
         <!--Your custom shape here-->
     </style>
 
+    <style name="ShapeAppearance.AppTheme.Flat" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">0dp</item>
+    </style>
+
     <style name="BottomSheetShapeAppearanceOverlay" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">@dimen/medium_margin</item>

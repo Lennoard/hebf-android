@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.annotation.ColorInt
 import androidx.appcompat.widget.AppCompatTextView
@@ -47,7 +48,7 @@ class DashCard @JvmOverloads constructor(
 
         attributes.recycle()
 
-        with(chart) {
+        with (chart) {
             description.isEnabled = false
             isDragEnabled = false
             setTouchEnabled(false)
@@ -58,7 +59,7 @@ class DashCard @JvmOverloads constructor(
             legend.isEnabled = false
         }
 
-        with(chart.xAxis) {
+        with (chart.xAxis) {
             setDrawGridLines(false)
             setDrawAxisLine(false)
             setDrawLabels(false)
@@ -84,8 +85,8 @@ class DashCard @JvmOverloads constructor(
     fun addCard(dashCard: DashCard) {
         val separator = View(context).apply {
             layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                Utils.dpToPx(context, 1)
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    Utils.dpToPx(context, 1)
             ).apply {
                 setMargins(0, Utils.dpToPx(context, 16), 0, Utils.dpToPx(context, 16))
             }

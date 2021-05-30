@@ -6,6 +6,8 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import com.androidvip.hebf.toast
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
@@ -35,25 +37,23 @@ class QSTVip : TileService(), CoroutineScope {
         val isChecked = qsTile.state == Tile.STATE_INACTIVE
 
         launch {
-            if (isRooted()) {
-                if (isChecked) {
-                    qsTile?.state = Tile.STATE_ACTIVE
-                    qsTile?.updateTile()
-
-                    withContext(Dispatchers.Default) {
-                        VipBatterySaver.toggle(true, applicationContext)
-                    }
-                } else {
-                    vipPrefs.putBoolean(K.PREF.VIP_SHOULD_STILL_ACTIVATE, false)
-                    qsTile?.state = Tile.STATE_INACTIVE
-                    qsTile?.updateTile()
-
-                    withContext(Dispatchers.Default) {
-                        VipBatterySaver.toggle(false, applicationContext)
-                    }
-                }
+            val isRooted = isRooted()
+            val vip = if (isRooted) {
+                VipBatterySaverImpl(applicationContext)
             } else {
-                toast("VIP: Only for root users!")
+                VipBatterySaverNutellaImpl(applicationContext)
+            }
+
+            if (isChecked) {
+                qsTile?.state = Tile.STATE_ACTIVE
+                qsTile?.updateTile()
+                vip.enable()
+            } else {
+                vipPrefs.putBoolean(K.PREF.VIP_SHOULD_STILL_ACTIVATE, false)
+                qsTile?.state = Tile.STATE_INACTIVE
+                qsTile?.updateTile()
+
+                vip.disable()
             }
         }
     }

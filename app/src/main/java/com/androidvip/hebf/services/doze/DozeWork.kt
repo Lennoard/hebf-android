@@ -24,10 +24,10 @@ class DozeWork(
     private val userPrefs: UserPrefs by lazy { UserPrefs(applicationContext) }
     private val prefs: Prefs by lazy { Prefs(applicationContext) }
 
-    override suspend fun doWork(): Result {
+    override suspend fun doWork(): Result = withContext(Dispatchers.IO) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             Logger.logWTF("Running DozeWork on a non-marshmallow framework", applicationContext)
-            return Result.failure()
+            return@withContext Result.success()
         }
 
         if (isScreenOff) {
@@ -41,7 +41,7 @@ class DozeWork(
         } else {
             if (Doze.isInIdleState) {
                 val powerManager = applicationContext.getSystemService(
-                    Context.POWER_SERVICE
+                        Context.POWER_SERVICE
                 ) as PowerManager?
                 if (powerManager != null && powerManager.isInteractive) {
                     Logger.logDebug("Exiting idle...", applicationContext)
@@ -50,7 +50,7 @@ class DozeWork(
             }
         }
 
-        return Result.success()
+        return@withContext Result.success()
     }
 
     private fun enterDeviceIdleMode() {
@@ -70,7 +70,7 @@ class DozeWork(
     private val isScreenOff: Boolean
         get() {
             val dm = applicationContext.getSystemService(
-                Context.DISPLAY_SERVICE
+                    Context.DISPLAY_SERVICE
             ) as DisplayManager?
             if (dm != null)
                 for (display in dm.displays)
@@ -96,23 +96,23 @@ class DozeWork(
             if (context == null) return
 
             val constraints = Constraints.Builder()
-                .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
-                .setRequiresCharging(false)
-                .build()
+                    .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+                    .setRequiresCharging(false)
+                    .build()
 
             val request = PeriodicWorkRequest.Builder(
-                DozeWork::class.java,
-                PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
-                TimeUnit.MILLISECONDS,
-                PeriodicWorkRequest.MIN_PERIODIC_FLEX_MILLIS,
-                TimeUnit.MILLISECONDS
+                    DozeWork::class.java,
+                    PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
+                    TimeUnit.MILLISECONDS,
+                    PeriodicWorkRequest.MIN_PERIODIC_FLEX_MILLIS,
+                    TimeUnit.MILLISECONDS
             ).setConstraints(constraints).build()
 
             val workManager = WorkManager.getInstance(context.applicationContext)
             workManager.enqueueUniquePeriodicWork(
-                WORK_TAG,
-                ExistingPeriodicWorkPolicy.KEEP,
-                request
+                    WORK_TAG,
+                    ExistingPeriodicWorkPolicy.KEEP,
+                    request
             )
             Prefs(context.applicationContext).putBoolean(K.PREF.DOZE_IS_DOZE_SCHEDULED, true)
         }

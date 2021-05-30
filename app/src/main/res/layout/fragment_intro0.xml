@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:padding="4dp"
-    tools:context=".appintro.Intro1Fragment">
+    tools:context=".ui.appintro.Intro1Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"

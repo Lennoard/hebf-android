@@ -25,7 +25,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
-                app:srcCompat="@drawable/ic_build_outline"
+                app:srcCompat="@drawable/ic_nav_tools"
                 app:tint="?attr/colorOnSurface"
                 android:layout_marginTop="48dp"
                 android:layout_gravity="center_horizontal"/>

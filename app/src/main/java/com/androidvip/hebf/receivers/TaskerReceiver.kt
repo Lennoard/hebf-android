@@ -4,14 +4,60 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.androidvip.hebf.utils.GameBooster
 import com.androidvip.hebf.utils.Logger
-import com.androidvip.hebf.utils.VipBatterySaver
-import kotlin.contracts.ExperimentalContracts
-import kotlin.contracts.contract
+import com.androidvip.hebf.utils.gb.GameBoosterImpl
+import com.androidvip.hebf.utils.gb.GameBoosterNutellaImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
+import com.topjohnwu.superuser.Shell
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
-@ExperimentalContracts
 class TaskerReceiver : BroadcastReceiver() {
+
+    override fun onReceive(context: Context, intent: Intent) {
+        if (ACTION_FIRE_SETTING != intent.action) return
+
+        val isRooted = Shell.rootAccess()
+        val gameBooster = if (isRooted) {
+            GameBoosterImpl(context)
+        } else {
+            GameBoosterNutellaImpl(context)
+        }
+
+        val vip = if (isRooted) {
+            VipBatterySaverImpl(context)
+        } else {
+            VipBatterySaverNutellaImpl(context)
+        }
+
+        val bundle = intent.getBundleExtra(EXTRA_BUNDLE)
+        if (isBundleValid(bundle)) {
+            val actionType = bundle.getInt(BUNDLE_EXTRA_ACTION_TYPE, ACTION_TYPE_INVALID)
+            when (bundle.getInt(BUNDLE_EXTRA_HEBF_FEATURE, HEBF_FEATURE_INVALID)) {
+                HEBF_FEATURE_VIP -> GlobalScope.launch {
+                    when (actionType) {
+                        ACTION_TYPE_ENABLE -> vip.enable()
+                        ACTION_TYPE_DISABLE -> vip.disable()
+                    }
+                }
+                HEBF_FEATURE_GB -> GlobalScope.launch {
+                    when (actionType) {
+                        ACTION_TYPE_ENABLE -> gameBooster.enable()
+                        ACTION_TYPE_DISABLE -> gameBooster.disable()
+                    }
+                }
+            }
+        } else {
+            Logger.logWarning("Invalid tasker bundle: $bundle", context)
+        }
+    }
+
+    private fun isBundleValid(bundle: Bundle?): Boolean {
+        return (bundle != null && bundle.containsKey(BUNDLE_EXTRA_HEBF_FEATURE) && bundle.containsKey(
+            BUNDLE_EXTRA_ACTION_TYPE
+        ))
+    }
 
     companion object {
         const val EXTRA_BUNDLE = "com.twofortyfouram.locale.intent.extra.BUNDLE"
@@ -30,40 +76,4 @@ class TaskerReceiver : BroadcastReceiver() {
         const val ACTION_TYPE_ENABLE: Int = 1
     }
 
-    override fun onReceive(context: Context, intent: Intent) {
-        if (ACTION_FIRE_SETTING != intent.action) return
-
-        val bundle = intent.getBundleExtra(EXTRA_BUNDLE)
-        if (bundle.isValidTaskerBundle()) {
-            val actionType = bundle.getInt(BUNDLE_EXTRA_ACTION_TYPE, ACTION_TYPE_INVALID)
-            when (bundle.getInt(BUNDLE_EXTRA_HEBF_FEATURE, HEBF_FEATURE_INVALID)) {
-                HEBF_FEATURE_VIP -> {
-                    when (actionType) {
-                        ACTION_TYPE_ENABLE -> VipBatterySaver.toggle(true, context.applicationContext)
-                        ACTION_TYPE_DISABLE -> VipBatterySaver.toggle(false, context.applicationContext)
-                    }
-                }
-                HEBF_FEATURE_GB -> {
-                    when (actionType) {
-                        ACTION_TYPE_ENABLE -> GameBooster.toggle(true, context.applicationContext)
-                        ACTION_TYPE_DISABLE -> GameBooster.toggle(false, context.applicationContext)
-                    }
-                }
-            }
-        } else {
-            Logger.logWarning("Invalid tasker bundle: $bundle", context)
-        }
-    }
-
-}
-
-@ExperimentalContracts
-fun Bundle?.isValidTaskerBundle() : Boolean {
-    contract {
-        returns(true) implies (this@isValidTaskerBundle != null)
-    }
-
-    return this != null
-        && containsKey(TaskerReceiver.BUNDLE_EXTRA_HEBF_FEATURE)
-        && containsKey(TaskerReceiver.BUNDLE_EXTRA_ACTION_TYPE)
 }

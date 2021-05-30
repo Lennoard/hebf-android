@@ -4,26 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context=".appintro.AppIntroActivity">
+    tools:context=".ui.appintro.AppIntroActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="@dimen/collapsing_app_bar_height"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimaryOrBackground">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimaryOrBackground"
-                app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline6"
-                app:expandedTitleTextAppearance="?attr/textAppearanceHeadline4"/>
+            android:animateLayoutChanges="true"
+            android:background="@color/colorBackground"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:contentScrim="@color/colorBackground"
+            app:expandedTitleMarginStart="@dimen/big_margin"
+            app:expandedTitleTextAppearance="@style/TextAppearance.HEBF.Headline3"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +44,9 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin" />
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

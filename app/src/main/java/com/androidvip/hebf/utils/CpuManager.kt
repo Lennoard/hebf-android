@@ -32,7 +32,7 @@ class CpuManager : CoroutineScope {
                 return try {
                     File("$CPU_DIR/").listFiles { _, name ->
                         Pattern.matches("cpu[0-11]+", name)
-                    }.size
+                    }?.size ?: 0
                 } catch (e: Exception) {
                     1
                 }

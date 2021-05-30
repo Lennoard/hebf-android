@@ -1,20 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_dashboard"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
-        android:text="Tune Fragment"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/warningLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noRootWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22ff6d00"
+                android:drawablePadding="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/rootless_warning"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorWarning"
+                app:drawableLeftCompat="@drawable/ic_root"
+                app:drawableStartCompat="@drawable/ic_root"
+                app:drawableTint="@color/colorWarning" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/runAsRoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/default_margin_alt"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:text="Run as root"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@color/colorOnSurface"
+                    app:drawableEndCompat="@drawable/ic_root"
+                    app:drawableTint="@color/colorOnSurface" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/hebfTerminal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:text="HEBF Terminal"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@color/colorOnSurface"
+                    app:drawableEndCompat="@drawable/ic_nav_tools"
+                    app:drawableTint="@color/colorOnSurface" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ramManager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/tiny_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/tiny_margin"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:text="@string/ram_manager"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@color/colorOnSurface"
+                    app:drawableEndCompat="@drawable/ic_memoria"
+                    app:drawableTint="@color/colorOnSurface" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cpuManager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/tiny_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:text="@string/cpu_manager"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@color/colorOnSurface"
+                    app:drawableEndCompat="@drawable/ic_cpu"
+                    app:drawableTint="@color/colorOnSurface" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/buildProp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="@string/title_activity_build_prop"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="@string/title_activity_dns"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/wm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="@string/window_manager"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/entropy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="@string/entropy"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/art"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="@string/title_activity_dex2oat_filter"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sysctl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/medium_margin"
+                android:text="Sysctl"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorOnSurface"
+                app:drawableEndCompat="@drawable/ic_external_link"
+                app:drawableTint="@color/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

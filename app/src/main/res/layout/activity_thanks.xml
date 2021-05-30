@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.internal.ThanksActivity">
+    tools:context=".ui.internal.ThanksActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -13,13 +13,20 @@
         android:fitsSystemWindows="false">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorOnBackground" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -90,7 +97,7 @@
                     android:layout_marginTop="14dp"
                     android:text="@string/beta"
                     android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
-                    android:textColor="?attr/colorPrimarySurface" />
+                    android:textColor="@color/colorPrimary" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
@@ -107,10 +114,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
-                    android:fontFamily="sans-serif-medium"
                     android:text="@string/contribuicoes"
                     android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
-                    android:textColor="?attr/colorPrimarySurface" />
+                    android:textColor="@color/colorPrimary" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"

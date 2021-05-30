@@ -147,9 +147,9 @@ class PackagesManager(private val context: Context) {
                     UsageStatsManager.INTERVAL_DAILY,
                     now - interval,
                     now
-            ).sortedWith(Comparator { o1, o2 ->
+            ).sortedWith { o1, o2 ->
                 o2.lastTimeUsed.compareTo(o1.lastTimeUsed)
-            })
+            }
 
             return usageStats.map { it.packageName }.toMutableList()
         }

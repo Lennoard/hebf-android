@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/small_margin"
+        android:paddingRight="@dimen/small_margin">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/warningLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noRootWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22ff6d00"
+                android:drawablePadding="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/rootless_warning"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorWarning"
+                app:drawableLeftCompat="@drawable/ic_root"
+                app:drawableStartCompat="@drawable/ic_root"
+                app:drawableTint="@color/colorWarning" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/wsIdleMs"
+                android:layout_toLeftOf="@+id/wsIdleMs"
+                android:maxLines="2"
+                android:orientation="horizontal"
+                android:text="Idle"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+            <EditText
+                android:id="@+id/wsIdleMs"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/wsIdleMsApply"
+                android:layout_toLeftOf="@+id/wsIdleMsApply"
+                android:hint="30000"
+                android:inputType="number" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsIdleMsApply"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:layout_toStartOf="@+id/wsIdleMsInfo"
+                android:layout_toLeftOf="@+id/wsIdleMsInfo"
+                app:srcCompat="@drawable/ic_check"
+                app:tint="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsIdleMsInfo"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/ic_info_outline"
+                app:tint="?attr/colorOnSurface" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/wsSupplicantScanInterval"
+                android:layout_toLeftOf="@+id/wsSupplicantScanInterval"
+                android:maxLines="2"
+                android:orientation="horizontal"
+                android:text="Supplicant scan interval"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+            <EditText
+                android:id="@+id/wsSupplicantScanInterval"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/wsSupplicantScanIntervalApply"
+                android:layout_toLeftOf="@+id/wsSupplicantScanIntervalApply"
+                android:hint="15000"
+                android:inputType="number" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsSupplicantScanIntervalApply"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:layout_toStartOf="@+id/wsSupplicantScanInfo"
+                android:layout_toLeftOf="@+id/wsSupplicantScanInfo"
+                app:srcCompat="@drawable/ic_check"
+                app:tint="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsSupplicantScanInfo"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/ic_info_outline"
+                app:tint="?attr/colorOnSurface" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/wsFrameworkScanInterval"
+                android:layout_toLeftOf="@+id/wsFrameworkScanInterval"
+                android:maxLines="2"
+                android:orientation="horizontal"
+                android:text="Framework scan interval"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+            <EditText
+                android:id="@+id/wsFrameworkScanInterval"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/wsFrameworkScanIntervalApply"
+                android:layout_toLeftOf="@+id/wsFrameworkScanIntervalApply"
+                android:hint="300000"
+                android:inputType="number" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsFrameworkScanIntervalApply"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:layout_toStartOf="@+id/wsFrameworkScanInfo"
+                android:layout_toLeftOf="@+id/wsFrameworkScanInfo"
+                app:srcCompat="@drawable/ic_check"
+                app:tint="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsFrameworkScanInfo"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/ic_info_outline"
+                app:tint="?attr/colorOnSurface" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/wsScanAlwaysEnabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/wsScanAlwaysEnabledInfo"
+                android:layout_toLeftOf="@+id/wsScanAlwaysEnabledInfo"
+                android:checked="false"
+                android:ellipsize="end"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:text="Scan always enabled"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/wsScanAlwaysEnabledInfo"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/ic_info_outline"
+                app:tint="?attr/colorOnSurface" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

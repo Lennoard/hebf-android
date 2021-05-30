@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context=".appintro.Intro1Fragment">
+    tools:context=".ui.appintro.Intro1Fragment">
 
     <ScrollView
         android:layout_width="match_parent"

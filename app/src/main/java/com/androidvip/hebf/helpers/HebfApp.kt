@@ -5,21 +5,26 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDexApplication
 import com.androidvip.hebf.BuildConfig
 import com.androidvip.hebf.R
-import com.androidvip.hebf.utils.Prefs
-import com.androidvip.hebf.utils.UserPrefs
-import com.androidvip.hebf.utils.VipPrefs
+import com.androidvip.hebf.ui.main.LottieAnimViewModel
+import com.androidvip.hebf.ui.main.NotificationViewModel
+import com.androidvip.hebf.utils.*
 import com.topjohnwu.superuser.Shell
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.GlobalContext.startKoin
 import org.koin.dsl.module
 
 class HebfApp : MultiDexApplication() {
     private var appliedNewWmSettings = false
+    private var allowRootless = true
 
     private val appModules = module {
         single { Prefs(this@HebfApp) }
         single { UserPrefs(this@HebfApp) }
         single { VipPrefs(this@HebfApp) }
+        single { GbPrefs(this@HebfApp) }
+        viewModel { LottieAnimViewModel() }
+        viewModel { NotificationViewModel() }
     }
 
     override fun onCreate() {
@@ -49,8 +54,19 @@ class HebfApp : MultiDexApplication() {
         appliedNewWmSettings = applied
     }
 
+    @Synchronized
+    fun setAllowRootless(b: Boolean) {
+        this.allowRootless = b
+    }
+
+    @Synchronized
+    fun getAllowRootless(): Boolean {
+        return allowRootless
+    }
+
 
     companion object {
+
         init {
             Shell.enableVerboseLogging = BuildConfig.DEBUG
             Shell.setDefaultBuilder(Shell.Builder.create()

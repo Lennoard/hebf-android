@@ -11,6 +11,6 @@
         android:fillEnabled="true"
         android:fillBefore="true"
         android:fillAfter="true"
-        android:interpolator="@android:interpolator/fast_out_extra_slow_in"
-        android:duration="380"/>
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:duration="@android:integer/config_shortAnimTime"/>
 </set>

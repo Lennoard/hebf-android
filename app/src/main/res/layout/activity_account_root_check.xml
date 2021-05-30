@@ -21,13 +21,11 @@
         android:text="@string/account_root_check"
         android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
 
-    <com.google.android.material.progressindicator.ProgressIndicator
+    <com.google.android.material.progressindicator.CircularProgressIndicator
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        app:circularInset="12dp"
-        app:circularRadius="24dp"
-        app:indicatorType="circular" />
+        app:trackColor="@color/disabled" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/checkAccountRootGpsText"

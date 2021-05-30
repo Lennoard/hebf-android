@@ -5,16 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.advanced.EntropyActivity">
+    tools:context=".ui.main.tune.EntropyActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorSurface"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -44,352 +51,345 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:checked="false"
-                        android:padding="16dp"
+                        android:padding="@dimen/default_margin"
                         android:text="@string/apply_on_boot"
-                        android:textColor="?attr/colorOnPrimary"
-                        android:textSize="16sp" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body1"
+                        android:textColor="@color/colorOnBackground"
+                        app:fontFamily="@font/cairo_semibold" />
 
                 </LinearLayout>
 
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingLeft="@dimen/default_margin_alt"
-                    android:paddingRight="@dimen/default_margin_alt">
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp">
 
-                    <com.google.android.material.card.MaterialCardView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="8dp">
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/CardTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/entropy_sum"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                        <com.androidvip.hebf.views.ControlSwitch
+                            android:id="@+id/entropyAddRandom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:visibility="gone"
+                            app:description="@string/entropy_generate_from_storage_sum"
+                            app:title="@string/entropy_generate_from_storage" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:animateLayoutChanges="true"
-                            android:orientation="vertical">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16dp">
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                style="@style/CardTitle"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/summary" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="16dp"
                                 android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:text="@string/entropy_sum"
-                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
-
-                            <com.androidvip.hebf.views.ControlSwitch
-                                android:id="@+id/entropyAddRandom"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="gone"
-                                app:description="@string/entropy_generate_from_storage_sum"
-                                app:title="@string/entropy_generate_from_storage" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
                                 android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingBottom="16dp">
+                                android:text="@string/profiles"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                                android:textColor="?attr/colorOnSurface" />
 
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="36dp"
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_weight="0.6"
-                                    android:gravity="center_vertical"
-                                    android:text="@string/profiles"
-                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                    android:textColor="?attr/colorOnSurface" />
-
-                                <Spinner
-                                    android:id="@+id/entropySpinner"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_marginRight="16dp"
-                                    android:layout_weight="1"
-                                    android:spinnerMode="dropdown" />
-
-                            </LinearLayout>
+                            <Spinner
+                                android:id="@+id/entropySpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_weight="1"
+                                android:spinnerMode="dropdown" />
 
                         </LinearLayout>
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
 
-                    <com.google.android.material.card.MaterialCardView
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    app:cardCornerRadius="0dp">
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="8dp">
+                        android:layout_height="wrap_content">
 
-                        <RelativeLayout
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/read_sum"
+                            style="@style/CardTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toStartOf="@+id/read_frame"
+                            android:layout_toLeftOf="@+id/read_frame"
+                            android:text="@string/read" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/read_frame"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="16dp"
+                            android:layout_toStartOf="@+id/read_frame"
+                            android:layout_toLeftOf="@+id/read_frame"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:text="@string/entropy_read_sum"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/entropyReadSeekBar"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/read_sum"
+                            android:layout_alignBottom="@+id/read_frame"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toStartOf="@+id/read_frame"
+                            android:layout_toLeftOf="@+id/read_frame"
+                            android:max="2048"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="12dp" />
+
+                        <FrameLayout
+                            android:id="@+id/read_frame"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:padding="1dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@color/colorPrimaryLighter"
+                                app:shapeAppearance="@style/AppShapeAppearance.Button.Rounded" />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/read_sum"
-                                style="@style/CardTitle"
+                                android:id="@+id/entropyReadText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_toStartOf="@+id/read_frame"
-                                android:layout_toLeftOf="@+id/read_frame"
-                                android:text="@string/read" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/read_frame"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginBottom="16dp"
-                                android:layout_toStartOf="@+id/read_frame"
-                                android:layout_toLeftOf="@+id/read_frame"
-                                android:paddingLeft="16dp"
-                                android:paddingRight="16dp"
-                                android:text="@string/entropy_read_sum"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center"
+                                android:padding="8dp"
                                 android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                android:textSize="14sp" />
+                                android:textColor="@color/black_65" />
 
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/entropyReadSeekBar"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/read_sum"
-                                android:layout_alignBottom="@+id/read_frame"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_toStartOf="@+id/read_frame"
-                                android:layout_toLeftOf="@+id/read_frame"
-                                android:max="2048"
-                                android:paddingStart="12dp"
-                                android:paddingLeft="12dp" />
+                        </FrameLayout>
 
-                            <FrameLayout
-                                android:id="@+id/read_frame"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_alignParentTop="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:padding="1dp">
+                    </RelativeLayout>
 
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@color/colorPrimaryLighter" />
+                </com.google.android.material.card.MaterialCardView>
 
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/entropyReadText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="1dp"
-                                    android:gravity="center"
-                                    android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                    android:textColor="@color/black_65" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/bigger_margin"
+                    app:cardCornerRadius="0dp">
 
-                            </FrameLayout>
-
-                        </RelativeLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="38dp">
+                        android:layout_height="wrap_content">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/write_sum"
+                            style="@style/CardTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toStartOf="@+id/write_frame"
+                            android:layout_toLeftOf="@+id/write_frame"
+                            android:text="@string/write" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/entropyWriteSeekBar"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="16dp"
+                            android:layout_toStartOf="@+id/write_frame"
+                            android:layout_toLeftOf="@+id/write_frame"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:text="@string/entropy_write_sum"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                            android:textSize="14sp" />
+
+                        <FrameLayout
+                            android:id="@+id/write_frame"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@color/colorPrimaryLighter"
+                                app:shapeAppearance="@style/AppShapeAppearance.Button.Rounded" />
 
                             <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/write_sum"
-                                style="@style/CardTitle"
+                                android:id="@+id/entropyWriteText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_toStartOf="@+id/write_frame"
-                                android:layout_toLeftOf="@+id/write_frame"
-                                android:text="@string/write" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/entropyWriteSeekBar"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginBottom="16dp"
-                                android:layout_toStartOf="@+id/write_frame"
-                                android:layout_toLeftOf="@+id/write_frame"
-                                android:paddingLeft="16dp"
-                                android:paddingRight="16dp"
-                                android:text="@string/entropy_write_sum"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center"
+                                android:padding="8dp"
                                 android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                android:textSize="14sp" />
+                                android:textColor="@color/black_65" />
 
-                            <FrameLayout
-                                android:id="@+id/write_frame"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="8dp">
+                        </FrameLayout>
 
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@color/colorPrimaryLighter" />
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/entropyWriteText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="1dp"
-                                    android:gravity="center"
-                                    android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                    android:textColor="@color/black_65" />
-
-                            </FrameLayout>
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/entropyWriteSeekBar"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/write_sum"
-                                android:layout_alignBottom="@+id/write_frame"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_toStartOf="@+id/write_frame"
-                                android:layout_toLeftOf="@+id/write_frame"
-                                android:max="2048"
-                                android:paddingStart="12dp"
-                                android:paddingLeft="12dp" />
-
-                        </RelativeLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/entropyReseedCard"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="-32dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="38dp"
-                        android:visibility="gone">
-
-                        <RelativeLayout
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/entropyWriteSeekBar"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/write_sum"
+                            android:layout_alignBottom="@+id/write_frame"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toStartOf="@+id/write_frame"
+                            android:layout_toLeftOf="@+id/write_frame"
+                            android:max="2048"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="12dp" />
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/reseed_sum"
-                                style="@style/CardTitle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_toStartOf="@+id/reseed_frame"
-                                android:layout_toLeftOf="@+id/reseed_frame"
-                                android:text="@string/entropy_min_reseed" />
+                    </RelativeLayout>
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/entropyReseedSeekBar"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginBottom="16dp"
-                                android:layout_toStartOf="@+id/reseed_frame"
-                                android:layout_toLeftOf="@+id/reseed_frame"
-                                android:paddingLeft="16dp"
-                                android:paddingRight="16dp"
-                                android:text="@string/entropy_min_reseed_sum"
-                                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+                </com.google.android.material.card.MaterialCardView>
 
-                            <FrameLayout
-                                android:id="@+id/reseed_frame"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="8dp">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/entropyReseedCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="-32dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="38dp"
+                    android:visibility="gone">
 
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@color/colorPrimaryLighter" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/entropyReseedText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="1dp"
-                                    android:gravity="center"
-                                    android:padding="8dp"
-                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
-                                    android:textColor="@color/black_87" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/reseed_sum"
+                            style="@style/CardTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toStartOf="@+id/reseed_frame"
+                            android:layout_toLeftOf="@+id/reseed_frame"
+                            android:text="@string/entropy_min_reseed" />
 
-                            </FrameLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/entropyReseedSeekBar"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="16dp"
+                            android:layout_toStartOf="@+id/reseed_frame"
+                            android:layout_toLeftOf="@+id/reseed_frame"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:text="@string/entropy_min_reseed_sum"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/entropyReseedSeekBar"
+                        <FrameLayout
+                            android:id="@+id/reseed_frame"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@color/colorPrimaryLighter" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/entropyReseedText"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/reseed_sum"
-                                android:layout_alignBottom="@+id/reseed_frame"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_toStartOf="@+id/reseed_frame"
-                                android:layout_toLeftOf="@+id/reseed_frame"
-                                android:max="120"
-                                android:paddingStart="12dp"
-                                android:paddingLeft="12dp"
-                                android:progress="60" />
+                                android:layout_gravity="center"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                                android:textColor="@color/black_87" />
 
-                        </RelativeLayout>
+                        </FrameLayout>
 
-                    </com.google.android.material.card.MaterialCardView>
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/entropyReseedSeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/reseed_sum"
+                            android:layout_alignBottom="@+id/reseed_frame"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toStartOf="@+id/reseed_frame"
+                            android:layout_toLeftOf="@+id/reseed_frame"
+                            android:max="120"
+                            android:paddingStart="12dp"
+                            android:paddingLeft="12dp"
+                            android:progress="60" />
 
-                </LinearLayout>
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
@@ -397,25 +397,26 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="8dp">
 
-            <ProgressBar
+            <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/entropyProgress"
-                style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                app:trackThickness="@dimen/big_margin_alt"
                 android:max="4096"
-                android:progressDrawable="@drawable/horizontal_progress_large" />
+                tools:progress="2048"
+                app:trackColor="@color/secondaryText" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
-                android:layout_marginStart="@dimen/small_margin"
-                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginStart="@dimen/default_margin_alt"
+                android:layout_marginLeft="@dimen/default_margin_alt"
                 android:text="@string/entropy"
                 android:textAppearance="@style/TextAppearance.HEBF.Body2"
                 android:textColor="?attr/colorOnPrimary" />

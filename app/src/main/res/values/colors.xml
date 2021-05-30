@@ -12,8 +12,9 @@
 
     <color name="colorPrimaryVariant">@color/colorPrimaryDark</color>
     <color name="colorSecondaryVariant">@color/colorAccentDark</color>
-    <color name="colorBackground">#FAF4F4</color>
+    <color name="colorBackground">#F8F5F5</color>
     <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceAlt">#EEEEEE</color>
     <color name="colorOnSurface">#000000</color>
     <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorOnSecondary">#DEFFFFFF</color>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="tiny_margin">3.3dp</dimen>
     <dimen name="small_margin_alt">4.9dp</dimen>
     <dimen name="small_margin">6.6dp</dimen>
     <dimen name="default_margin_alt">9.9dp</dimen>
@@ -13,8 +14,6 @@
     <dimen name="huge_margin_alt">46.4dp</dimen>
     <dimen name="huge_margin">53.1dp</dimen>
     <dimen name="button_min_height">@dimen/huge_margin_alt</dimen>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="collapsing_app_bar_height">160dp</dimen>
+    <dimen name="collapsing_app_bar_height">166dp</dimen>
+    <dimen name="profile_pic_size">89.6dp</dimen>
 </resources>

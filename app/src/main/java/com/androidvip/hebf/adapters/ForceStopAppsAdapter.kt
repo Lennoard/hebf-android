@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
 import com.androidvip.hebf.models.App
 
-class ForceStopAppsAdapter(
-    private val activity: Activity,
-    private val apps: List<App>
-) : RecyclerView.Adapter<ForceStopAppsAdapter.ViewHolder>() {
+class ForceStopAppsAdapter(private val activity: Activity, private val apps: List<App>) : RecyclerView.Adapter<ForceStopAppsAdapter.ViewHolder>() {
     val selectedApps: MutableSet<App> = mutableSetOf()
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {

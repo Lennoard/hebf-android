@@ -12,10 +12,11 @@
 
     <color name="colorPrimaryVariant">@color/colorPrimaryDark</color>
     <color name="colorSecondaryVariant">@color/colorAccentDark</color>
-    <color name="colorBackground">#121212</color>
-    <color name="colorSurface">#212121</color>
+    <color name="colorBackground">#191212</color>
+    <color name="colorSurface">#282121</color>
+    <color name="colorSurfaceAlt">#393232</color>
     <color name="colorOnSurface">#FFFFFF</color>
-    <color name="colorOnPrimary">#000000</color>
+    <color name="colorOnPrimary">#DE000000</color>
     <color name="colorOnSecondary">#DE000000</color>
     <color name="colorOnBackground">#DEFFFFFF</color>
     <color name="colorError">#D4442B</color>
@@ -28,7 +29,7 @@
     <color name="secondaryText">#61FFFFFF</color>
     <color name="disabled">#1FFFFFFF</color>
     <color name="disabledInverse">#2F000000</color>
-    <color name="statusBarColor">#101010</color> <!-- Will only be used in Marshmallow -->
+    <color name="statusBarColor">#161010</color> <!-- Will only be used in Marshmallow -->
     <color name="dividerColor">#1FEBEBEB</color>
     <color name="selectedSurface">#212224</color>
     <color name="colorTextNormal">#80FFFFFF</color>
