@@ -21,8 +21,8 @@
             android:background="@color/colorSurface"
             app:layout_collapseMode="pin"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextColor="@color/colorOnBackground"
-            app:title="@string/sobre" />
+            app:title="@string/sobre"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -85,13 +85,22 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/small_margin"
                         android:layout_marginEnd="@dimen/default_margin"
-                        android:paddingBottom="@dimen/default_margin"
                         android:text="@string/hebf_sobre_sub"
                         android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/card_img_hebf"
                         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
 
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/AppMaterialButtonFlatColored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/source_code"
+                        app:icon="@drawable/ic_code"
+                        android:layout_marginBottom="@dimen/default_margin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/card_text_sobre"
+                        app:layout_constraintTop_toBottomOf="@+id/card_text_sobre" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

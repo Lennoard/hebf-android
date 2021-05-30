@@ -446,4 +446,5 @@
     <string name="you_are_not_logged_in">Du bist nicht eingeloggt</string>
     <string name="notification_settings">Benachrichtigungseinstellungen</string>
     <string name="vip_smart_pixels">Smart Pixels</string>
+    <string name="source_code">Quellcode</string>
 </resources>

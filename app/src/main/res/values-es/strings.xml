@@ -496,5 +496,26 @@
     <string name="manufacturer">Fabricante</string>
     <string name="brand">Marca</string>
     <string name="scan">Escanear</string>
+    <string name="source_code">Código fuente</string>
+    <string name="title_dashboard">Tablero</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="tune">Ajuste preciso</string>
+    <string name="statistics">Estadísticas</string>
+    <string name="battery_percentage">Porcentaje de batería</string>
+    <string name="vip_chart_no_data">Datos no disponibles. Habilite la recopilación de estadísticas en la configuración de VIP</string>
+    <string name="no_notifications">No Notificaciones</string>
+    <string name="legacy">Legado</string>
+    <string name="set_cpu_governor">Establecer el gobernador de la CPU</string>
+    <string name="eas_gov_warning">Advertencia: Parece que está utilizando un kernel EAS, de ser así, no intente cambiar esta opción.</string>
+    <string name="root_access_required">Se requiere acceso de root</string>
+    <string name="doze_sum">El modo Doze reduce el consumo de batería al diferir la CPU en segundo plano y la actividad de la red para las aplicaciones cuando el dispositivo no se usa durante largos períodos de tiempo hasta las ventanas de mantenimiento</string>
+    <string name="vip_allow_stats_collection">Permitir recopilación de estadísticas</string>
+    <string name="vip_allow_stats_collection_sum">Hace que VIP recopile información de la batería periódicamente para fines de informes</string>
+    <string name="vip_smart_pixels_sum">Apaga algunos píxeles de la pantalla para reducir el consumo de energía. La implementación depende del framework.</string>
+    <string name="vip_default_saver_sum">Activa el modo de ahorro de energía predeterminado de Android independientemente del nivel de batería</string>
+    <string name="vpi_cpu_sum">Cambiar el gobernador de la CPU cuando está activado</string>
+    <string name="vip_grayscale_sum">Activa el modo de escala de grises para ahorrar energía. Advertencia: esto anulará cualquier modo daltónico o configuración anterior de KCAL.</string>
+    <string name="vip_doze_sum">Fuerza el modo inactivo del dispositivo inmediatamente independientemente de cualquier estado anterior.</string>
+    <string name="vip_force_stop_sum">Forzar la detención de aplicaciones cuando está activado</string>
 
 </resources>

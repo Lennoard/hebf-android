@@ -462,5 +462,6 @@
     <string name="battery_connection_ac">adaptor AC</string>
     <string name="battery_connection_usb">USB</string>
     <string name="battery_connection_wireless">pengisi daya nirkabel</string>
+    <string name="source_code">Kode sumber</string>
 
 </resources>
