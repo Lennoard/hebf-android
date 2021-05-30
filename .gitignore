@@ -11,3 +11,55 @@ app/src/main/main.iml
 HEBFOptimizer.iml
 .vs/*
 .idea/gradle.xml
+
+# Node artifact files
+node_modules/
+
+# Compiled Java class files
+*.class
+
+# Log files
+*.log
+
+# Maven
+target/
+dist/
+
+# Unit test reports
+TEST*.xml
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+*.iml
+.gradle
+/local.properties
+/build
+/captures
+
+# Version control
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+
+#Signing config
+/keystore.properties

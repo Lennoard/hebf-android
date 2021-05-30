@@ -448,4 +448,5 @@
     <string name="special_offer">विशेष पेशकश</string>
     <string name="purchase_offer_warning">सीमित समय के लिए विशेष छूट के साथ प्रीमियम पैकेज प्राप्त करें!</string>
     <string name="rootless_warning">आप रूटलेस मोड में हैं। कई विकल्प केवल रूट एक्सेस के साथ उपलब्ध हैं। फिर से सुपरयुसर अधिकारों का अनुरोध करने के लिए टैप करें।</string>
+    <string name="source_code">सोर्स कोड</string>
 </resources>

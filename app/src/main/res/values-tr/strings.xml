@@ -468,6 +468,7 @@
     <string name="usage_stats_sum">Mevcut ön plan uygulamasını almak için kullanılır</string>
     <string name="write_sys_settings">Sistem ayarlarını yaz</string>
     <string name="write_sys_settings_sum">Parlaklığı ve ekran zaman aşımını değiştirmek için kullanılır</string>
+    <string name="source_code">Kaynak kodu</string>
 
 
 </resources>

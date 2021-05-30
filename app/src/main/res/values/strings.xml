@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HEBF Optimizer</string>
-    <string name="build_date" translatable="false">Codename: Amanda\n2020/10/10</string>
-    <string name="build_version" translatable="false">v2.5.0 (180)</string>
-    <string name="build_changelog" translatable="false">\n
-        ▪ Added brightness control to Game Booster\n
-        ▪ Launch any app with Game Booster\n
-        ▪ New dashboard screen\n
-        ▪ Improved coroutines management, app should be a bit more snappier\n
-        ▪ Improved background services execution\n
-        ▪ Updated Turkish translations (credits:  Hüseyin Küpeli)\n
-        ▪ Fixed a bug that caused a few layouts not to adjust when changing orientation\n
-        ▪ Updated Games database\n
+    <string name="build_date" translatable="false">Codename: Luana\n2021/05/30</string>
+    <string name="build_version" translatable="false">v3.0.0 (184)</string>
+    <string name="build_changelog" translatable="false">\n\n
+        ▪ OPEN SOURCE! (https://github.com/Lennoard/hebf-android)\n\n
+        ▪ Huge interface redesign\n
+        ▪ Bug fixes for older APIs\n
+        ▪ New dashboard screen with statistics\n
+        ▪ Merged root and rootless mode\n
+        ▪ Updated Cleaner paths\n
+        ▪ Removed Media server options\n
+        ▪ Removed power saver for multicore CPUs\n
+        ▪ Removed Better Multitasking option, use LMK instead\n
     </string>
     <string name="accessibility_alert">We need your permission to perform battery-saving actions and close inactive applications. Click on continue and the settings screen will open, look for something similar to what the tutorial below shows:</string>
     <string name="accessibility_service">Accessibility Service</string>
@@ -535,5 +536,6 @@
     <string name="manufacturer">Manufacturer</string>
     <string name="brand">Brand</string>
     <string name="scan">Scan</string>
+    <string name="source_code">Source code</string>
 
 </resources>

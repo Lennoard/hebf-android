@@ -22,6 +22,7 @@
             android:layout_marginRight="@dimen/default_margin"
             android:outlineSpotShadowColor="@color/colorPrimary"
             app:cardElevation="@dimen/default_margin_alt"
+            app:cardPreventCornerOverlap="false"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -162,8 +163,11 @@
             android:layout_marginTop="@dimen/default_margin"
             android:layout_marginRight="@dimen/default_margin"
             android:outlineSpotShadowColor="@color/colorPrimary"
+            android:visibility="gone"
             app:cardElevation="@dimen/default_margin_alt"
-            app:layout_constraintTop_toBottomOf="@id/lowRamFlag">
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintTop_toBottomOf="@id/lowRamFlag"
+            tools:visibility="visible">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"

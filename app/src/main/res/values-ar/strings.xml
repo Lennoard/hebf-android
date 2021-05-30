@@ -443,4 +443,5 @@
     <string name="vip_force_device_idle">Force device-idle (Doze)</string>
     <string name="you_are_not_logged_in">لم يتم دخولك</string>
     <string name="apps_manager_system_apps">System apps</string>
+    <string name="source_code">مصدر الرمز</string>
 </resources>

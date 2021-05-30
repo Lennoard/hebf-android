@@ -12,6 +12,7 @@ import android.widget.*
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
@@ -47,6 +48,7 @@ class AppIntroActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        ViewCompat.setElevation(toolbar, 0F)
 
         val tempFolder = K.HEBF.getTempDir(this)
         if (!tempFolder.exists()) {
@@ -63,7 +65,7 @@ class AppIntroActivity : BaseActivity() {
             titleTextSwitcher.setFactory {
                 val textView = TextView(this).apply {
                     textSize = 30f
-                    setTextColor(Color.WHITE)
+                    setTextColor(ContextCompat.getColor(context, R.color.colorOnSurface))
                 }
 
                 val layoutParams = FrameLayout.LayoutParams(

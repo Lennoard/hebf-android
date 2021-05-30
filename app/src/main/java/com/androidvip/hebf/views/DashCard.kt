@@ -21,7 +21,7 @@ class DashCard @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0
-) : MaterialCardView(context, attrs, defStyle) {
+) : LinearLayout(context, attrs, defStyle) {
 
     private val titleTextView: AppCompatTextView by lazy { findViewById(R.id.dashCardTitle) }
     private val valueTextView: AppCompatTextView by lazy { findViewById(R.id.dashCardValue) }

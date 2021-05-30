@@ -516,4 +516,5 @@
     <string name="manufacturer">Fabricante</string>
     <string name="brand">Marca</string>
     <string name="scan">Escanear</string>
+    <string name="source_code">Código fonte</string>
 </resources>

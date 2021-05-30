@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -35,11 +36,35 @@ android {
         multiDexEnabled = true
     }
 
+    signingConfigs {
+        create("release") {
+            val keyFile = rootProject.file("keystore.properties")
+            if (!keyFile.exists()) {
+                keyFile.createNewFile()
+                keyFile.writeText(buildString {
+                    appendln("keyAlias=")
+                    appendln("keyPassword=")
+                    appendln("storeFile=/")
+                    appendln("storePassword=")
+                })
+            }
+            val keystoreProps = Properties().apply {
+                load(keyFile.inputStream())
+            }
+
+            keyAlias = keystoreProps["keyAlias"] as? String ?: ""
+            keyPassword = keystoreProps["keyPassword"] as? String ?: ""
+            storeFile = file(keystoreProps["storeFile"] as? String ?: "/")
+            storePassword =  keystoreProps["storePassword"] as? String ?: ""
+        }
+    }
+
     buildTypes {
         getByName("release") {
             isDebuggable = false
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
