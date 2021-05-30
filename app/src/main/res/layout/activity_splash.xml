@@ -1,104 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:background="#212121">
+    android:animateLayoutChanges="true">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/pb_splash"
-        android:paddingLeft="@dimen/lmk"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingRight="@dimen/lmk"
-        android:paddingBottom="@dimen/activity_vertical_margin">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/hebfIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_hebf"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/appName"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="128dp"
-            android:layout_centerVertical="true"
-            android:animateLayoutChanges="true"
-            android:foregroundGravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:id="@+id/splashIconLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:animateLayoutChanges="true"
-                android:visibility="gone">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/ic_hebf" />
-            </FrameLayout>
-
-            <LinearLayout
-                android:id="@+id/splashAppNameLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:animateLayoutChanges="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="4dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/app_name"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
-                    android:textColor="#e6ffffff" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="32dp"
-                    android:text="@string/hebf_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                    android:textColor="#e6ffffff" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/splashTip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:gravity="center_horizontal"
-            android:text="@string/build_version"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="#e6ffffff" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/splashTip"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:gravity="center"
-            android:orientation="vertical" />
-    </RelativeLayout>
-
-    <ProgressBar
-        android:id="@+id/pb_splash"
-        style="?android:attr/progressBarStyle"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginStart="@dimen/medium_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/appSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hebfIcon"
+        app:layout_constraintTop_toTopOf="@+id/hebfIcon"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:visibility="visible" />
 
-</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hebf_sub"
+        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/hebfIcon"
+        app:layout_constraintStart_toStartOf="@+id/appName"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        tools:visibility="visible" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:indeterminate="true"
+        app:indicatorSize="@dimen/bigger_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/disabled" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

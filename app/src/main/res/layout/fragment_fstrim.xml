@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true">
@@ -10,42 +11,58 @@
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/default_card_margin"
-        android:paddingRight="@dimen/default_card_margin">
+        android:paddingLeft="@dimen/default_margin_alt"
+        android:paddingTop="@dimen/default_margin_alt"
+        android:paddingRight="@dimen/default_margin_alt">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/warningLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/general"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
-            android:textColor="?attr/colorPrimarySurface" />
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noRootWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22ff6d00"
+                android:drawablePadding="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/rootless_warning"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorWarning"
+                app:drawableLeftCompat="@drawable/ic_root"
+                app:drawableStartCompat="@drawable/ic_root"
+                app:drawableTint="@color/colorWarning" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/busyboxNotFoundCard"
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="8dp"
-            android:visibility="gone">
+            android:layout_marginLeft="@dimen/tiny_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/tiny_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:visibility="gone"
+            tools:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:paddingLeft="@dimen/default_margin"
+                android:paddingRight="@dimen/default_margin">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_warning"
-                    app:tint="@color/warning" />
+                    app:tint="@color/colorWarning" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -62,17 +79,17 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="@dimen/default_margin"
+                        android:layout_marginLeft="@dimen/default_margin"
                         android:text="@string/busybox_not_found" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/busyboxInstallButton"
-                        style="@style/MaterialButtonFlatColored"
+                        style="@style/AppMaterialButtonFlatColored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="@dimen/small_margin"
                         android:text="@string/install_now" />
 
                 </LinearLayout>
@@ -81,209 +98,169 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fstrim_sub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:text="@string/fstrim_sub"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/fstrim_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="@dimen/small_margin"
+            android:text="/system"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="?attr/colorOnSurface"
+            app:buttonTint="@color/checkbox_selector" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fstrim_tittle"
-                    style="@style/CardTitleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_toStartOf="@id/fstrim_info"
-                    android:layout_toLeftOf="@id/fstrim_info"
-                    android:text="@string/fstrim" />
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/fstrim_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="@dimen/small_margin"
+            android:text="/data"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="?attr/colorOnSurface"
+            app:buttonTint="@color/checkbox_selector" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fstrim_info"
-                    style="@style/SelectableItemBackgroundBorderless"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp"
-                    android:padding="12dp"
-                    app:srcCompat="@drawable/ic_info_outline"
-                    app:tint="?attr/colorOnSurface" />
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/fstrim_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="@dimen/small_margin"
+            android:text="/cache"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="?attr/colorOnSurface"
+            app:buttonTint="@color/checkbox_selector" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fstrim_sub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/fstrim_tittle"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/fstrim_sub"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="end|center_vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/fstrim_sub"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fstrim_info"
+                style="@style/SelectableItemBackgroundBorderless"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_info_outline"
+                app:tint="?attr/colorOnSurface" />
 
-                    <CheckBox
-                        android:id="@+id/fstrim_system"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:padding="8dp"
-                        android:text="/system"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                        android:textColor="?attr/colorOnSurface" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fstrim_botao"
+                style="@style/AppMaterialButtonFlatColored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                    <CheckBox
-                        android:id="@+id/fstrim_data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:padding="8dp"
-                        android:text="/data"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                        android:textColor="?attr/colorOnSurface" />
+                android:padding="@dimen/small_margin"
+                android:text="@string/fstrim_botao" />
 
-                    <CheckBox
-                        android:id="@+id/fstrim_cache"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:padding="8dp"
-                        android:text="/cache"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                        android:textColor="?attr/colorOnSurface" />
+        </LinearLayout>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/fstrim_botao"
-                        style="@style/MaterialButtonFlatColored"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginBottom="8dp"
-                        android:padding="8dp"
-                        android:text="@string/fstrim_botao" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@color/disabled" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="12dp"
-            android:text="@string/title_activity_opcoes"
-            android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
-            android:textColor="?attr/colorPrimarySurface" />
-
-        <com.google.android.material.card.MaterialCardView
-            style="?attr/materialCardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="10dp">
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/title_activity_opcoes"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
 
-            <RelativeLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/fstrim_apply_on_boot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true">
+                android:text="@string/apply_on_boot"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/fstrim_apply_on_boot"
-                    style="@style/CardTitleSmall"
-                    android:layout_width="match_parent"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/schedule_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/fstrim_apply_on_boot"
+                android:paddingTop="@dimen/default_margin"
+                android:paddingBottom="@dimen/default_margin"
+                android:text="@string/schedule"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+            <Spinner
+                android:id="@+id/spinner_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fstrim_apply_on_boot"
+                android:layout_alignBottom="@+id/schedule_text"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_toEndOf="@+id/schedule_text"
+                android:layout_toRightOf="@+id/schedule_text"
+                android:spinnerMode="dialog" />
+
+            <LinearLayout
+                android:id="@+id/linear_custom_schedule_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_schedule"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/custom_schedule_time"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/apply_on_boot"
-                    android:textColor="?attr/colorOnSurface" />
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:layout_weight="1"
+                    android:hint="Minutes"
+                    android:inputType="number"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/schedule_text"
+                <Button
+                    android:id="@+id/set_custom_schedule_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/fstrim_apply_on_boot"
-                    android:padding="16dp"
-                    android:text="@string/schedule"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                    android:textColor="?attr/colorOnSurface" />
-
-                <Spinner
-                    android:id="@+id/spinner_schedule"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/fstrim_apply_on_boot"
-                    android:layout_alignBottom="@+id/schedule_text"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_toEndOf="@+id/schedule_text"
-                    android:layout_toRightOf="@+id/schedule_text"
-                    android:spinnerMode="dialog" />
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:text="@string/set" />
 
-                <LinearLayout
-                    android:id="@+id/linear_custom_schedule_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/spinner_schedule"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
+            </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/custom_schedule_time"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_weight="1"
-                        android:hint="Minutes"
-                        android:inputType="number"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/log_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_custom_schedule_time"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:fontFamily="monospace"
+                android:padding="@dimen/default_margin"
+                android:textIsSelectable="true" />
 
-                    <Button
-                        android:id="@+id/set_custom_schedule_time"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:text="@string/set" />
-
-                </LinearLayout>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/log_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/linear_custom_schedule_time"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="monospace"
-                    android:padding="16dp"
-                    android:textIsSelectable="true" />
-
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

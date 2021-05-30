@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.annotation.StringDef
 import kotlinx.coroutines.*
 
+// TODO: class -> inject
 object Logger : CoroutineScope {
     override val coroutineContext = Dispatchers.IO + SupervisorJob()
     private const val TAG_DEBUG = "[DEBUG]"

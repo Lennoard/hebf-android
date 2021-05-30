@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/vipCard"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            app:cardElevation="@dimen/default_margin_alt"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/imagery_vip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_battery_saver"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/medium_margin_alt"
+                    android:text="@string/vip_sub"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin"
+            android:text="@string/status"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:layout_constraintTop_toBottomOf="@+id/vipCard"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <com.androidvip.hebf.views.DashCard
+            android:id="@+id/cardStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/tiny_margin"
+            app:cardTitle="@string/status"
+            app:cardValue="@string/loading"
+            app:layout_constraintEnd_toStartOf="@+id/cardHealth"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusText" />
+
+        <com.androidvip.hebf.views.DashCard
+            android:id="@+id/cardHealth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:cardSubText="Li-poly"
+            app:cardTitle="@string/health"
+            app:cardValue="@string/battery_health_healthy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardStatus"
+            app:layout_constraintTop_toBottomOf="@+id/statusText" />
+
+        <com.androidvip.hebf.views.DashCard
+            android:id="@+id/cardCurrent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:cardSubText="@string/loading"
+            app:cardTitle="@string/current"
+            app:cardValue="@string/loading"
+            app:layout_constraintEnd_toStartOf="@+id/cardTemperature"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardStatus" />
+
+        <com.androidvip.hebf.views.DashCard
+            android:id="@+id/cardTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:cardTitle="@string/temperature"
+            app:cardValue="@string/loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardCurrent"
+            app:layout_constraintTop_toBottomOf="@+id/cardHealth" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/improvementsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:padding="@dimen/default_margin"
+            android:text="@string/improvements"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:layout_constraintTop_toBottomOf="@+id/cardCurrent" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/improveBattery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin_alt"
+            android:enabled="false"
+            app:description="@string/bateria_lp_sub"
+            app:layout_constraintTop_toBottomOf="@+id/improvementsText"
+            app:title="@string/bateria_lp" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/lowRamFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin_alt"
+            android:enabled="false"
+            app:description="@string/low_ram_device_flag_sub"
+            app:layout_constraintTop_toBottomOf="@+id/improveBattery"
+            app:title="@string/low_ram_device_flag" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dozeCard"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            app:cardElevation="@dimen/default_margin_alt"
+            app:layout_constraintTop_toBottomOf="@id/lowRamFlag">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/imagery_doze" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/doze_settings"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/medium_margin_alt"
+                    android:text="@string/doze_sum"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:padding="@dimen/default_margin"
+            android:text="@string/battery_checklist"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:layout_constraintTop_toBottomOf="@+id/dozeCard" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:text="@string/battery_checklist_sum"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toStartOf="@+id/checklistButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checklistButton"
+            style="@style/AppMaterialButtonOutlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:text="@string/check"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appCompatTextView2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/wallpaperCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/appCompatTextView2">
+
+            <RelativeLayout
+                style="@style/SelectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/battery_less_current_wall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/battery_less_current_wall_layout"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wall" />
+
+                <LinearLayout
+                    android:id="@+id/battery_less_current_wall_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@id/battery_less_current_wall"
+                    android:layout_toRightOf="@id/battery_less_current_wall"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="4dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SingleLineText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/dark_wallpaper"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:ellipsize="end"
+                        android:maxLines="5"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/dark_wallpaper_sum"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:gravity="end"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp">
+
+                        <ProgressBar
+                            android:id="@+id/batteryWallpaperProgress"
+                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:indeterminate="true"
+                            android:padding="8dp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/batteryWallpaperApply"
+                            style="@style/SelectableItemBackgroundBorderless"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:tint="?attr/colorOnSurface"
+                            app:srcCompat="@drawable/ic_check" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/batteryWallpaperRestore"
+                            style="@style/SelectableItemBackgroundBorderless"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:tint="?attr/colorOnSurface"
+                            app:srcCompat="@drawable/ic_restore" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resetStatisticsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/wallpaperCard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="24dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/reset_battery_statistics"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/reset_battery_statistics_sum"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/batteryResetButton"
+                    style="@style/AppMaterialButtonOutlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:text="@string/reset" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/resetStatisticsCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

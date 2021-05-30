@@ -23,7 +23,7 @@
             android:gravity="bottom"
             android:textColor="?attr/colorOnSurface"
             android:textSize="20sp"
-            app:fontFamily="@font/asap_medium" />
+            app:fontFamily="@font/cairo_bold" />
 
         <SeekBar
             android:id="@+id/infoSeekbar"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:gravity="bottom"
             android:paddingBottom="8dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </LinearLayout>
 
@@ -60,7 +60,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="?attr/toolBarBackgroundColorLighter" />
+            android:src="@color/colorPrimaryLighter" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/infoSeekbarStatusText"
@@ -68,9 +68,9 @@
             android:layout_height="80dp"
             android:gravity="center"
             android:padding="16dp"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/black_65"
             app:autoSizeTextType="uniform"
-            app:fontFamily="@font/rambla" />
+            app:fontFamily="@font/cairo" />
     </FrameLayout>
 
 

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="100dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gameBoosterCard"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            app:cardElevation="@dimen/default_margin_alt">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/imagery_gb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_booster"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:text="@string/game_booster_sum"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/bigger_margin_alt"
+                    android:text="@string/subgame_news"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/general_performance"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/lsUi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/liquid_sub"
+            app:title="@string/liquid" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/scroll_sub"
+            app:title="@string/scroll" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/fps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/fps_unlocker_sum"
+            app:title="FPS Unlocker" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@color/disabled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/legacy"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/performance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:description="@string/performance_sub"
+            app:title="@string/performance_tweak" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/render"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/rendering_sub"
+            app:title="@string/rendering" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/gpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/gpu_sub"
+            app:title="@string/gpu" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/ring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:enabled="false"
+            app:description="@string/ring_sub"
+            app:title="@string/ring" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/optimize"
+            style="@style/AppMaterialButtonOutlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/default_margin"
+            android:minHeight="@dimen/huge_margin_alt"
+            android:text="@string/optimize_now"
+            android:visibility="gone"
+            app:icon="@drawable/ic_check"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

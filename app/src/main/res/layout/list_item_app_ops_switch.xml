@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="@dimen/default_margin">
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/app_ops_switch"
@@ -30,8 +30,7 @@
             android:layout_marginEnd="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
-            android:textSize="16sp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/app_ops_description"
@@ -41,8 +40,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textSize="14sp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </LinearLayout>
 

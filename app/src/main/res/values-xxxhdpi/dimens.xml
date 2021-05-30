@@ -1,10 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_horizontal_margin">6dp</dimen>
-    <dimen name="activity_vertical_margin">6dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="lmk">16dp</dimen>
-    <dimen name="margem">2dp</dimen>
-    <dimen name="app_bar_intro">260dp</dimen>
-    <dimen name="rv_margin">0dp</dimen>
-    <dimen name="larger_margin">24dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+    <dimen name="small_margin_alt">6dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="default_margin_alt">12dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="medium_margin_alt">20dp</dimen>
+    <dimen name="medium_margin">24dp</dimen>
+    <dimen name="big_margin_alt">28dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+    <dimen name="bigger_margin_alt">40dp</dimen>
+    <dimen name="bigger_margin">48dp</dimen>
+    <dimen name="huge_margin_alt">56dp</dimen>
+    <dimen name="huge_margin">64dp</dimen>
+    <dimen name="button_min_height">52dp</dimen>
+    <dimen name="collapsing_app_bar_height">200dp</dimen>
+    <dimen name="profile_pic_size">108dp</dimen>
 </resources>

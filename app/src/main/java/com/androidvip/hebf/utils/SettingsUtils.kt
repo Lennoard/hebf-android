@@ -7,7 +7,7 @@ import android.provider.Settings
 
 /**
  * Helper class for reading / writing on System settings
- * This class may not be able to write "Secure" or "Global" settings
+ * This class will not be able to write "Secure" or "Global" settings
  *
  * @param applicationContext non-null
  */

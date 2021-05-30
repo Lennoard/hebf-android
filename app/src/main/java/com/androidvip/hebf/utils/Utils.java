@@ -18,7 +18,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,13 +31,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.androidvip.hebf.BuildConfig;
@@ -116,17 +109,16 @@ public final class Utils {
     /**
      * Coverts java.util.Date to a pattern format
      *
-     * @param millis  the Date reference in milliseconds
+     * @param millis the Date reference in milliseconds
      * @param pattern the data patter
      * @return an empty String if {@param date} is illegal, the formatted String otherwise
      */
     public static String dateMillisToString(long millis, String pattern) {
         String s = "Unknown date";
-        try {
+        try  {
             DateFormat df = new SimpleDateFormat(pattern, Locale.getDefault());
             s = df.format(new Date(millis));
-        } catch (Exception ignored) {
-        }
+        } catch (Exception ignored) {}
         return s;
     }
 
@@ -139,7 +131,7 @@ public final class Utils {
      */
     public static boolean isOnline(Context context) {
         if (isInvalidContext(context)) return false;
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
@@ -149,7 +141,7 @@ public final class Utils {
      * the current page via {@link SwipeRefreshLayout}
      *
      * @param context used to load resources
-     * @param url     the url to load into the dialog's WebView
+     * @param url the url to load into the dialog's WebView
      */
     public static void webDialog(Context context, String url) {
         if (isInvalidContext(context) || TextUtils.isEmpty(url)) return;
@@ -192,7 +184,7 @@ public final class Utils {
      * Opens a web page in a external app
      *
      * @param context used to start the new activity
-     * @param url     the url to load externally
+     * @param url the url to load externally
      */
     public static void webPage(Context context, String url) {
         if (isInvalidContext(context)) return;
@@ -216,49 +208,9 @@ public final class Utils {
     }
 
     /**
-     * Replaces/switches the MainActivity container
-     * with a new fragment and adds a custom animation.
-     *
-     * @param fragment the replacing fragment
-     * @param activity current host activity
-     * @param title    the title to set in the ActionBar
-     */
-    @Keep
-    public static void replaceFragment(Fragment fragment, AppCompatActivity activity, String title) {
-        if (activity == null || activity.isFinishing() || fragment == null || fragment.isAdded())
-            return;
-
-        FragmentManager supportFragmentManager = activity.getSupportFragmentManager();
-        ActionBar supportActionBar = activity.getSupportActionBar();
-        System.gc();
-        try {
-            Runnable r = () -> {
-                FragmentTransaction ft = supportFragmentManager.beginTransaction();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    ft.setCustomAnimations(R.anim.fragment_open_enter, R.anim.fragment_open_exit);
-                }
-                ft.replace(R.id.mainFragmentHolder, fragment);
-                ft.commitAllowingStateLoss();
-                if (!supportFragmentManager.isStateSaved()) {
-                    supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                }
-                if (supportActionBar != null) {
-                    supportActionBar.setTitle(title);
-                }
-            };
-
-            if (!new Handler().postDelayed(r, 266)) {
-                r.run();
-            }
-        } catch (Exception ignored) {
-
-        }
-    }
-
-    /**
      * Runs a command line command and waits for its output
      *
-     * @param command       the command to tun
+     * @param command the command to tun
      * @param defaultOutput value to return in case of error
      * @return the command output or defaultOutput
      */
@@ -272,7 +224,6 @@ public final class Utils {
 
     /**
      * Changes the interface text to English (US)
-     *
      * @param context is used to get resources
      */
     public static void toEnglish(Context context) {
@@ -378,7 +329,8 @@ public final class Utils {
             return Settings.canDrawOverlays(context);
         } else {
             if (Settings.canDrawOverlays(context)) return true;
-
+            // Android 8.0 Oreo bug, always returns false
+            // This workaround tries to create a window and if an exception is thrown then return false
             try {
                 WindowManager mgr = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                 if (mgr == null) return false; //getSystemService might return null

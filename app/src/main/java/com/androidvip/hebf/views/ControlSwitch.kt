@@ -3,46 +3,52 @@ package com.androidvip.hebf.views
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.CompoundButton
-import android.widget.FrameLayout
-import androidx.appcompat.widget.AppCompatTextView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.ContextThemeWrapper
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import com.androidvip.hebf.R
 import com.androidvip.hebf.runOnMainThread
+import com.androidvip.hebf.utils.ModalBottomSheet
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.topjohnwu.superuser.ShellUtils
 
-class ControlSwitch(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
+class ControlSwitch @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0,
+) : LinearLayout(context, attrs, defStyle) {
 
     private val controlSwitch: SwitchMaterial by lazy {
-        findViewById<SwitchMaterial>(R.id.controlSwitch)
+        findViewById(R.id.controlSwitch)
     }
-    private val titleTextView: AppCompatTextView by lazy {
-        findViewById<AppCompatTextView>(R.id.controlSwitchTitle)
-    }
-    private val descriptionTextView: AppCompatTextView by lazy {
-        findViewById<AppCompatTextView>(R.id.controlSwitchDescription)
-    }
-    private val layout: FrameLayout by lazy { findViewById<FrameLayout>(R.id.controlSwitchLayout) }
 
     init {
         inflate(context, R.layout.control_switch, this)
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.ControlSwitch)
+        val title = attributes.getString(R.styleable.ControlSwitch_title)
+        val enabled = attributes.getBoolean(R.styleable.ControlSwitch_android_enabled, true)
+        val checked = attributes.getBoolean(R.styleable.ControlSwitch_android_checked, false)
+        val description = attributes.getString(R.styleable.ControlSwitch_description)
+        val infoButton = findViewById<AppCompatImageView>(R.id.infoButton)
 
-        titleTextView.text = attributes.getString(R.styleable.ControlSwitch_title)
-        descriptionTextView.text = attributes.getString(R.styleable.ControlSwitch_description)
-
-        layout.setOnClickListener {
-            controlSwitch.isChecked = !controlSwitch.isChecked
+        infoButton.setOnClickListener {
+            getFragmentManager(context)?.let {
+                ModalBottomSheet.newInstance(title, description).show(it, "ControlSwitch")
+            }
         }
 
+        controlSwitch.text = title
+        setChecked(checked)
+        isEnabled = enabled
         attributes.recycle()
     }
 
-    fun setTitleText(title: String) {
-        titleTextView.text = title
-    }
-
-    fun setDescriptionText(description: String) {
-        descriptionTextView.text = description
+    override fun setEnabled(enabled: Boolean) {
+        super.setEnabled(enabled)
+        setControlEnabled(enabled)
     }
 
     fun setOnCheckedChangeListener(listener: CompoundButton.OnCheckedChangeListener?) {
@@ -57,7 +63,7 @@ class ControlSwitch(context: Context, attrs: AttributeSet) : FrameLayout(context
         }
     }
 
-    fun setControlEnabled(enabled: Boolean) {
+    private fun setControlEnabled(enabled: Boolean) {
         if (ShellUtils.onMainThread()) {
             controlSwitch.isEnabled = enabled
         } else {
@@ -65,13 +71,13 @@ class ControlSwitch(context: Context, attrs: AttributeSet) : FrameLayout(context
         }
     }
 
-    override fun setEnabled(enabled: Boolean) {
-        super.setEnabled(enabled)
-        setControlEnabled(enabled)
-    }
-
-    override fun setOnClickListener(l: OnClickListener?) {
-        super.setOnClickListener(l)
-        layout.setOnClickListener(l)
+    private fun getFragmentManager(context: Context): FragmentManager? {
+        return when (context) {
+            is AppCompatActivity -> context.supportFragmentManager
+            is FragmentActivity -> context.supportFragmentManager
+            is ContextThemeWrapper -> getFragmentManager(context.baseContext)
+            is android.view.ContextThemeWrapper -> getFragmentManager(context.baseContext)
+            else -> null
+        }
     }
 }

@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
-            style="@style/ToolbarStyle"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/vmScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/vmScroll"
         android:paddingBottom="4dp"
         android:visibility="gone"
         app:layout_behavior="@string/appbar_scrolling_view_behavior_local"
@@ -32,268 +38,242 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/onBootSwitch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="?attr/toolBarBackgroundColorLighter"
-                android:orientation="vertical">
+                android:padding="@dimen/default_margin"
+                android:text="@string/apply_on_boot"
+                android:textAppearance="@style/TextAppearance.HEBF.Body1"
+                app:fontFamily="@font/cairo_semibold" />
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/vmOnBootSwitch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingStart="16dp"
-                    android:paddingTop="16dp"
-                    android:text="@string/apply_on_boot"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp"
-                    android:theme="@style/Switch" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="@dimen/default_card_margin"
-                android:paddingRight="@dimen/default_card_margin">
+                android:layout_marginTop="@dimen/tiny_margin"
+                app:cardCornerRadius="0dp">
 
-                <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CardTitleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/summary"
+                        android:textColor="?attr/colorOnSurface" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingBottom="12dp">
+                        android:orientation="horizontal">
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            style="@style/CardTitleSmall"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/summary"
-                            android:textColor="?attr/colorOnSurface"/>
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:text="@string/memory"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="14sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vmMemoryTotal"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                android:layout_weight="1"
-                                android:text="@string/memory"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:textSize="14sp"
-                                android:textColor="?attr/colorOnSurface"/>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/vmMemoryTotal"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:textSize="14sp"
-                                android:textColor="?attr/colorOnSurface"/>
-
-                        </LinearLayout>
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:layout_marginBottom="16dp">
-
-                            <ProgressBar
-                                style="@android:style/Widget.ProgressBar.Horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/vmMemoryProgress"
-                                android:layout_gravity="center"
-                                android:progressDrawable="@drawable/horizontal_progress_large"
-                                android:max="4096" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/vmMemoryCurrentText"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:layout_gravity="start|center_vertical"
-                                android:textColor="?attr/colorOnPrimary"/>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Swap"
-                                android:layout_marginLeft="16dp"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:textColor="?attr/colorOnSurface"/>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/vmSwapTotal"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:textColor="?attr/colorOnSurface"/>
-
-                        </LinearLayout>
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp">
-
-                            <ProgressBar
-                                style="@android:style/Widget.ProgressBar.Horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/vmSwapProgress"
-                                android:layout_gravity="center"
-                                android:progressDrawable="@drawable/horizontal_progress_large"
-                                android:max="2056" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/vmSwapCurrentText"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:layout_gravity="start|center_vertical"
-                                android:textColor="?attr/colorOnPrimary"/>
-
-                        </FrameLayout>
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
-                </com.google.android.material.card.MaterialCardView>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/medium_margin"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_marginBottom="@dimen/default_margin">
 
-                <com.google.android.material.card.MaterialCardView
-                    style="?attr/materialCardStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/vmZramCard"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp">
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/memoryProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="4096"
+                            app:trackColor="@color/disabled"
+                            app:trackThickness="@dimen/medium_margin"
+                            tools:progress="2048" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vmMemoryCurrentText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_vertical"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingBottom="8dp">
+                        android:orientation="horizontal">
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            style="@style/CardTitleSmall"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Z-RAM"
+                            android:layout_marginStart="@dimen/default_margin"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:text="Swap"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2"
                             android:textColor="?attr/colorOnSurface" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
+                            android:id="@+id/vmSwapTotal"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                            android:text="@string/zram_sum"/>
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Disk size"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                            android:layout_marginTop="16dp"
-                            android:textColor="?attr/colorOnSurface"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp"
-                            android:layout_marginTop="4dp">
-
-                            <SeekBar
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:id="@+id/vmZramSeek"
-                                android:max="2560"
-                                android:paddingTop="6dp"
-                                android:paddingBottom="6dp"/>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-                                android:text="0 MB"
-                                android:id="@+id/vmZramDiskSizeText"/>
-
-                        </LinearLayout>
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="?attr/colorOnSurface" />
 
                     </LinearLayout>
 
-                </com.google.android.material.card.MaterialCardView>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/medium_margin"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_marginRight="@dimen/default_margin">
 
-                <androidx.appcompat.widget.AppCompatTextView
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/swapProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="4096"
+                            app:trackColor="@color/disabled"
+                            app:trackThickness="@dimen/medium_margin"
+                            tools:progress="1024" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vmSwapCurrentText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_vertical"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/vmZramCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/parameters"
-                    android:textColor="?attr/colorPrimary" />
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/small_margin">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/vmParamsRecyclerView"
-                    android:layout_marginLeft="4dp"
-                    tools:listitem="@layout/list_item_generic_param"
-                    android:layout_marginRight="4dp"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CardTitleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Z-RAM"
+                        android:textColor="?attr/colorOnSurface" />
 
-            </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="@string/zram_sum"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_marginTop="@dimen/default_margin"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:text="Disk size"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="@dimen/default_margin">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/zramSeek"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:stepSize="8"
+                            android:value="1024"
+                            android:valueTo="2560"
+                            app:tickVisible="false" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/zramDiskSizeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0 MB"
+                            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/parameters"
+                android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+                android:textColor="?attr/colorPrimary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vmParamsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/list_item_generic_param" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    <ProgressBar
-        android:layout_width="match_parent"
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/vmProgress"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/vmProgress"/>
+        android:indeterminate="true"
+        app:indicatorSize="@dimen/bigger_margin"
+        app:trackColor="@color/disabled" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

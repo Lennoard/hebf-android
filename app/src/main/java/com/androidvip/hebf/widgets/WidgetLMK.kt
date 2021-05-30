@@ -7,14 +7,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.utils.Prefs
 import com.androidvip.hebf.utils.RootUtils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.launch
 
-//TODO: use provided calcs
+//TODO
 class WidgetLMK : BaseActivity() {
 
     private companion object {

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:paddingBottom="100dp">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/warningLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noRootWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22ff6d00"
+                android:drawablePadding="@dimen/default_margin"
+                android:padding="@dimen/default_margin"
+                android:text="@string/rootless_warning"
+                android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                android:textColor="@color/colorWarning"
+                app:drawableLeftCompat="@drawable/ic_root"
+                app:drawableStartCompat="@drawable/ic_root"
+                app:drawableTint="@color/colorWarning" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/ipv6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            app:description="@string/toggle_ipv6_sum"
+            app:title="@string/toggle_ipv6" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/prefer5ghz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            app:description="@string/prefer_5ghz_sum"
+            app:title="@string/prefer_5ghz" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/captivePortal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            app:description="@string/captive_sub"
+            app:title="@string/captive_portal" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/disableLogging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            app:description="@string/log_sub"
+            app:title="@string/log" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/kernelPanic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:enabled="false"
+            app:description="@string/panic_sub"
+            app:title="@string/kernel_panic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wifiSettings"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/wifi_tweaks"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@color/disabled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/utilidades"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cleaner"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/cleaner"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appsManager"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/apps_manager"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/autoStartDisabler"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/auto_start_disabler"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fstrim"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/fstrim"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/kernelOptions"
+            style="@style/SelectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/kernel"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:drawableEndCompat="@drawable/ic_chevron_right"
+            app:drawableTint="@color/colorOnBackground" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@color/disabled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/legacy"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/tcp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:description="@string/net_sub"
+            app:title="@string/net" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/signal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:description="@string/signal_sub"
+            app:title="@string/signal" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/browsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:description="@string/browsing_sub"
+            app:title="@string/browsing" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/stream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:description="@string/stream_sub"
+            app:title="@string/stream" />
+
+        <com.androidvip.hebf.views.ControlSwitch
+            android:id="@+id/zipalign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:description="@string/zipalign_sub"
+            app:title="@string/zipalign"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@color/disabled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin"
+            android:text="@string/host"
+            android:textAppearance="@style/TextAppearance.HEBF.Body1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:text="@string/host_sub" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/hostnameField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hostname"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/hostnameButton"
+                style="@style/AppMaterialButtonFlatColored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dpi_botao" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

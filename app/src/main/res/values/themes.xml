@@ -1,166 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Top level DayNight theme to be used in AndroidManifest.xml-->
-    <style name="AppTheme.DayNight" parent="Base.AppTheme"/>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorWarning</item>
 
-    <style name="AppTheme.DayNight.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="android:windowActionModeOverlay">true</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+        <item name="android:colorBackground">@color/colorBackground</item>
 
-    <!--Base custom theme which will be shared between both light and dark theme variants-->
-    <style name="Base.AppTheme" parent="Base.HebfOptimizer">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
-        <item name="colorAccentLighter">@color/colorAccentLighter</item>
-        <item name="colorControlNormal">@android:color/white</item>
-
-        <item name="android:colorBackground">@color/color_background</item>
-        <item name="colorSurface">@color/color_surface</item>
-        <item name="colorError">@color/color_error</item>
-
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <item name="colorOnSecondary">@color/color_on_secondary</item>
-        <item name="colorOnBackground">@color/color_on_background</item>
-        <item name="colorOnSurface">@color/color_on_surface</item>
-        <item name="colorOnError">@color/color_on_error</item>
-
-        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
-        <item name="toolbarBackgroundColor">@color/darkness_action</item>
-        <item name="appStatusBarColor">@color/black</item>
-    </style>
-
-    <style name="Base.AppTheme.Dark" parent="Base.HebfOptimizer.Dark">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
-        <item name="colorAccentLighter">@color/colorAccentLighter</item>
-
-        <item name="colorSurface">@color/darkness</item>
-        <item name="colorError">@color/color_error</item>
-
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorOnSecondary">@android:color/white</item>
-        <item name="colorOnBackground">@android:color/white</item>
-        <item name="colorOnSurface">@android:color/white</item>
-        <item name="colorOnError">@android:color/white</item>
-
-        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
-        <item name="toolbarBackgroundColor">@color/darkness_action</item>
-        <item name="appStatusBarColor">@color/black</item>
-    </style>
-
-    <style name="Base.AppTheme.Darkness" parent="Base.AppTheme.Dark">
-        <item name="android:colorBackground">@color/darkness</item>
-        <item name="android:windowBackground">@color/darkness</item>
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorSurface">@color/colorPrimaryLight</item>
-    </style>
-
-    <style name="Base.AppTheme.Black" parent="Base.AppTheme.Darkness">
-        <item name="android:colorBackground">@color/black</item>
-        <item name="android:windowBackground">@color/black</item>
-        <item name="colorSurface">@color/black</item>
-        <item name="materialCardStyle">@style/MaterialCardViewStyleDark</item>
-    </style>
-
-    <style name="Base.AppTheme.Green" parent="Base.HebfOptimizer">
-        <!--Material color attributes -->
-        <item name="colorPrimary">@color/color_primary_green</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant_green</item>
-        <item name="colorSecondary">@color/color_secondary_green</item>
-        <item name="colorSecondaryVariant">@color/color_secondary_variant_green</item>
-        <item name="colorAccentLighter">@color/colorAccentGreenLighter</item>
-        <item name="colorControlNormal">@android:color/white</item>
-
-        <item name="android:colorBackground">@color/color_background</item>
-        <item name="colorSurface">@color/color_surface</item>
-        <item name="colorError">@color/color_error</item>
-
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <item name="colorOnSecondary">#B3000000</item>
-        <item name="colorOnBackground">@color/color_on_background</item>
-        <item name="colorOnSurface">@color/color_on_surface</item>
-        <item name="colorOnError">@android:color/white</item>
-
-        <item name="toolBarBackgroundColorLighter">#388e3c</item>
-        <item name="toolbarBackgroundColor">@color/color_primary_green</item>
-        <item name="appStatusBarColor">@color/color_primary_variant_green</item>
-    </style>
-
-    <style name="Base.AppTheme.DarkGreen" parent="Base.AppTheme.Dark">
-        <item name="colorPrimary">@color/color_primary_green</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant_green</item>
-        <item name="colorSecondary">@color/color_secondary_green</item>
-        <item name="colorSecondaryVariant">@color/color_secondary_variant_green</item>
-        <item name="colorAccentLighter">@color/colorAccentGreenLighter</item>
-
-        <item name="colorError">@color/color_error</item>
-        <item name="colorOnError">@android:color/white</item>
-
-        <item name="android:colorBackground">@color/darkness</item>
-        <item name="android:windowBackground">@color/darkness</item>
-        <item name="android:textColor">#B3FFFFFF</item>
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorSurface">@color/colorPrimaryLight</item>
-
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorOnSecondary">#B3000000</item>
-        <item name="colorOnBackground">@android:color/white</item>
-        <item name="colorOnSurface">@android:color/white</item>
-
-        <item name="toolBarBackgroundColorLighter">@color/darkness</item>
-        <item name="toolbarBackgroundColor">@color/darkness_action</item>
-        <item name="appStatusBarColor">@color/black</item>
-    </style>
-
-    <style name="Base.AppTheme.White" parent="Base.HebfOptimizer">
-        <!--Material color attributes -->
-        <item name="colorPrimary">@color/color_primary_white</item>
-        <item name="colorPrimaryVariant">@color/color_primary_variant_white</item>
-        <item name="colorSecondary">@color/color_secondary_white</item>
-        <item name="colorSecondaryVariant">@color/color_secondary_variant_white</item>
-        <item name="colorAccentLighter">@color/colorAccentWhiteLighter</item>
-
-        <item name="android:colorBackground">@android:color/white</item>
-        <item name="colorSurface">@android:color/white</item>
-        <item name="colorError">@color/color_error</item>
-
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <item name="colorOnSecondary">@color/color_on_primary</item>
-        <item name="colorOnBackground">@color/color_on_background</item>
-        <item name="colorOnSurface">@color/color_on_surface</item>
-        <item name="colorOnError">@color/color_on_error</item>
-
-        <item name="toolBarBackgroundColorLighter">@color/ice</item>
-        <item name="toolbarBackgroundColor">@color/color_background</item>
-        <item name="appStatusBarColor">@color/ice</item>
-        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
-    </style>
-
-    <style name="Base.HebfOptimizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
-        <item name="colorAccent">?colorSecondary</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="scrimBackground">@color/mtrl_scrim_color</item>
 
         <!--Material type attributes-->
-        <item name="textAppearanceHeadline1">@style/TextAppearance.AppTheme.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.AppTheme.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.AppTheme.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.AppTheme.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.AppTheme.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.AppTheme.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.AppTheme.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.AppTheme.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.AppTheme.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.AppTheme.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.AppTheme.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.AppTheme.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.AppTheme.Overline</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.HEBF.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.HEBF.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.HEBF.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.HEBF.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.HEBF.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.HEBF.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.HEBF.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.HEBF.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.HEBF.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.HEBF.Caption</item>
 
         <!--Material shape attributes-->
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AppTheme.SmallComponent</item>
@@ -168,48 +38,27 @@
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AppTheme.LargeComponent</item>
 
         <!--Component styles-->
-        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
-        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AppTheme.BottomSheetDialog</item>
-        <item name="navigationViewStyle">@style/Widget.AppTheme.NavigationView</item>
+        <item name="materialAlertDialogTheme">@style/AppMaterialDialog</item>
+        <item name="materialButtonStyle">@style/AppMaterialButton</item>
+        <item name="materialCardViewStyle">@style/AppMaterialCardView</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialog</item>
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
-
-        <item name="materialCardStyle">@style/MaterialCardViewStyle</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
-    <style name="Base.HebfOptimizer.Dark" parent="Theme.MaterialComponents.NoActionBar">
-        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
-        <item name="colorAccent">?colorSecondary</item>
+    <!-- Theme for activities with colored action bar -->
+    <style name="ColoredActivity" parent="AppTheme" />
 
-        <!--Material type attributes-->
-        <item name="textAppearanceHeadline1">@style/TextAppearance.AppTheme.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.AppTheme.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.AppTheme.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.AppTheme.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.AppTheme.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.AppTheme.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.AppTheme.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.AppTheme.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.AppTheme.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.AppTheme.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.AppTheme.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.AppTheme.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.AppTheme.Overline</item>
-
-        <!--Material shape attributes-->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AppTheme.SmallComponent</item>
-        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AppTheme.MediumComponent</item>
-        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AppTheme.LargeComponent</item>
-
-        <!--Component styles-->
-        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
-        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AppTheme.BottomSheetDialog</item>
-        <item name="navigationViewStyle">@style/Widget.AppTheme.NavigationView</item>
-        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
-
-        <item name="materialCardStyle">@style/MaterialCardViewStyle</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    <style name="TranslucentActivity" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
     </style>
 
+    <style name="AppTheme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

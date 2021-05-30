@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.androidvip.hebf.BuildConfig
 import com.androidvip.hebf.R
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipServices
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
@@ -277,11 +278,11 @@ class BootReceiver : BroadcastReceiver(), CoroutineScope {
 
                     val vipPrefs = context.getSharedPreferences("VIP", MODE_PRIVATE)
                     if (vipPrefs.getBoolean(K.PREF.VIP_AUTO_TURN_ON, false)) {
-                        VipBatterySaver.toggleService(true, context)
+                        VipServices.toggleVipService(true, context)
                         Logger.logInfo("Starting VIP Battery Saver service", context)
 
                         if (vipPrefs.getBoolean(K.PREF.VIP_DISABLE_WHEN_CHARGING, false)) {
-                            VipBatterySaver.toggleChargerService(true, context)
+                            VipServices.toggleChargerService(true, context)
                         }
                     }
 

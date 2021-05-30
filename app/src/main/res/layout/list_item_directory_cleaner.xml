@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/directory_cleaner_layout"
     style="@style/SelectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="@dimen/small_margin">
 
     <FrameLayout
         android:id="@+id/app_icon_layout"
@@ -13,21 +14,23 @@
         android:layout_height="56dp"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="?attr/toolBarBackgroundColorLighter" />
+            android:src="@color/colorPrimaryLighter"
+            app:shapeAppearance="@style/AppShapeAppearance.Button.Rounded" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/directory_cleaner_size"
             android:layout_width="48dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:fontFamily="@font/cairo_semibold"
             android:gravity="center"
             android:lines="2"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="?attr/colorOnPrimary"
-            android:textSize="12sp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Caption"
+            android:textColor="@color/black_65"
+            app:fontFamily="@font/cairo_semibold" />
 
     </FrameLayout>
 
@@ -44,26 +47,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:fontFamily="@font/cairo_semibold"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/directory_cleaner_path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:layout_marginEnd="@dimen/default_margin_alt"
+            android:layout_marginRight="@dimen/default_margin_alt"
             android:ellipsize="middle"
             android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="@color/colorTextNormal" />
 
     </LinearLayout>
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/directory_cleaner_check"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:checked="false" />
+        android:checked="false"
+        android:translationX="@dimen/default_margin_alt"
+        app:buttonTint="@color/checkbox_selector" />
 
 </LinearLayout>

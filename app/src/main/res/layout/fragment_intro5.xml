@@ -11,15 +11,14 @@
         android:layout_above="@+id/layout_intro_bottom"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="@dimen/medium_margin">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:gravity="center"
             android:text="@string/request_permission"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textSize="15sp" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="86dp"
@@ -57,7 +56,7 @@
             android:layout_height="wrap_content"
             android:padding="4dp"
             android:text="@string/request_storage_permission_sum"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
     </LinearLayout>
 
 

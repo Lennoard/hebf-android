@@ -14,14 +14,20 @@
         android:fitsSystemWindows="false">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <com.google.android.material.appbar.MaterialToolbar
-                style="@style/ToolbarStyle"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorOnBackground" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -35,8 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/restore_backup_rv"
-                android:paddingStart="@dimen/rv_margin"
-                android:paddingEnd="@dimen/rv_margin"
+                android:paddingStart="@dimen/small_margin"
+                android:paddingEnd="@dimen/small_margin"
                 android:visibility="visible"/>
 
             <LinearLayout
@@ -56,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                     android:text="@string/failed"/>
 
             </LinearLayout>
@@ -71,8 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingEnd="@dimen/larger_margin"
-                    android:paddingStart="@dimen/larger_margin">
+                    android:paddingEnd="@dimen/medium_margin"
+                    android:paddingStart="@dimen/medium_margin">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -98,14 +104,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/username"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
                                 style="@style/SingleLineText" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:id="@+id/import_data_owner" />
 
                         </LinearLayout>
@@ -121,7 +127,7 @@
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_dashboard"
+                            app:srcCompat="@drawable/ic_nav_dashboard"
                             app:tint="?attr/colorOnSurface"/>
 
                         <LinearLayout
@@ -135,14 +141,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/data_type"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
                                 style="@style/SingleLineText"/>
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:id="@+id/import_data_type" />
 
                         </LinearLayout>
@@ -172,7 +178,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/device_model"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
                                 style="@style/SingleLineText" />
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -286,14 +292,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/date"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
                                 style="@style/SingleLineText" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:id="@+id/import_data_date" />
 
                         </LinearLayout>
@@ -325,7 +331,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/comments"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
                                 style="@style/SingleLineText" />
 
                             <androidx.appcompat.widget.AppCompatTextView

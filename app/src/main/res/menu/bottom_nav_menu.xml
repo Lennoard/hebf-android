@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigationDashboard"
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_nav_dashboard" />
+
+    <item
+        android:id="@+id/navigationBattery"
+        android:title="@string/battery"
+        android:icon="@drawable/ic_nav_battery" />
+
+    <item
+        android:id="@+id/navigationPerformance"
+        android:title="@string/performance"
+        android:icon="@drawable/ic_nav_performance" />
+
+    <item
+        android:id="@+id/navigationTools"
+        android:title="@string/tools"
+        android:icon="@drawable/ic_nav_tools" />
+
+    <item
+        android:id="@+id/navigationTune"
+        android:title="@string/tune"
+        android:icon="@drawable/ic_nav_tune" />
+
+</menu>

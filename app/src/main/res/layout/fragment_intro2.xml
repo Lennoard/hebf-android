@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context=".appintro.Intro1Fragment">
+    tools:context=".ui.appintro.Intro1Fragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
             android:layout_margin="8dp">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -36,7 +35,7 @@
                         android:checked="true"
                         android:padding="8dp"
                         android:text="@string/normal_user"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textSize="16sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -46,14 +45,13 @@
                         android:layout_marginLeft="32dp"
                         android:padding="8dp"
                         android:text="@string/normal_user_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
@@ -72,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:padding="8dp"
                         android:text="@string/expert_user"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textSize="16sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -82,7 +80,7 @@
                         android:layout_marginLeft="32dp"
                         android:padding="8dp"
                         android:text="@string/expert_user_sub"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </LinearLayout>
 

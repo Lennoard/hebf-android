@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/controlCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/small_margin"
+        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+        app:buttonTint="@color/checkbox_selector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/infoButton"
+        style="@style/SelectableItemBackgroundBorderless"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/default_margin_alt"
+        android:layout_marginLeft="@dimen/default_margin_alt"
+        android:padding="4dp"
+        android:tint="@color/colorOnBackground"
+        app:srcCompat="@drawable/ic_info_outline" />
+
+</LinearLayout>

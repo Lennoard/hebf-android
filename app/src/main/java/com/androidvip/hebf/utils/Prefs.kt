@@ -11,14 +11,6 @@ sealed class BasePrefs(context: Context?, prefName: String) {
         preferences = context.getSharedPreferences(prefName, 0)
     }
 
-    inline fun edit(action: SharedPreferences.Editor.() -> Unit) {
-        val editor = preferences.edit()
-        action(editor)
-        editor.apply()
-    }
-
-    fun clearAll() = edit { clear() }
-
     fun remove(key: String) {
         preferences.edit().remove(key).apply()
     }
@@ -80,6 +72,12 @@ sealed class BasePrefs(context: Context?, prefName: String) {
         } catch (e: Exception) {
             preferences.getLong(key, defaultValue)
         }
+    }
+
+    inline fun edit(action: SharedPreferences.Editor.() -> Unit) {
+        val editor = preferences.edit()
+        action(editor)
+        editor.apply()
     }
 }
 

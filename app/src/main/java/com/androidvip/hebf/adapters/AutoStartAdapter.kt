@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.androidvip.hebf.R
-import com.androidvip.hebf.activities.BaseActivity
+import com.androidvip.hebf.ui.base.BaseActivity
 import com.androidvip.hebf.models.OpApp
 
 class AutoStartAdapter(

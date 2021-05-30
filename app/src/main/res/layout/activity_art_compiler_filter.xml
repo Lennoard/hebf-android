@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.advanced.ArtCompilerFilter">
+    tools:context=".ui.main.tune.ArtCompilerFilter">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fitsSystemWindows="false">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <com.google.android.material.appbar.MaterialToolbar
-                style="@style/ToolbarStyle"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorOnBackground" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -29,20 +34,20 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/done"
             android:layout_gravity="bottom|end"
-            android:layout_marginEnd="@dimen/fab_margin"
-            android:visibility="gone"
-            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/ic_check"/>
+            android:contentDescription="@string/done"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_check" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:paddingLeft="@dimen/default_card_margin"
-            android:paddingRight="@dimen/default_card_margin"
+            android:paddingLeft="@dimen/default_margin_alt"
+            android:paddingRight="@dimen/default_margin_alt"
             app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
             <ProgressBar
@@ -56,10 +61,11 @@
                 android:id="@+id/artScroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
-                android:visibility="gone">
+                android:scrollbars="none"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,14 +73,13 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="4dp"
-                        android:layout_marginBottom="8dp"
                         android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp">
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="4dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -86,10 +91,10 @@
                                 style="@style/CardTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_toLeftOf="@+id/artShowMoreSummary"
+                                android:layout_alignParentLeft="true"
                                 android:layout_toStartOf="@+id/artShowMoreSummary"
+                                android:layout_toLeftOf="@+id/artShowMoreSummary"
                                 android:text="@string/summary" />
 
                             <androidx.appcompat.widget.AppCompatImageView
@@ -100,17 +105,18 @@
                                 android:layout_alignParentRight="true"
                                 android:layout_margin="16dp"
                                 android:theme="@style/SelectableItemBackgroundBorderless"
-                                app:tint="?attr/colorOnSurface"
-                                app:srcCompat="@drawable/ic_up"/>
+                                app:srcCompat="@drawable/ic_up"
+                                app:tint="?attr/colorOnSurface" />
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/artSummaryText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/art_titulo"
-                                android:layout_marginBottom="4dp"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:layout_marginLeft="16dp"
                                 android:layout_marginRight="16dp"
+                                android:layout_marginBottom="4dp"
                                 android:text="@string/art_sum"
                                 android:visibility="visible" />
 
@@ -118,32 +124,31 @@
                                 android:id="@+id/artInfo"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:tint="?attr/colorOnSurface"
+                                android:layout_below="@+id/artSummaryText"
                                 android:layout_alignParentEnd="true"
                                 android:layout_alignParentRight="true"
-                                android:layout_below="@+id/artSummaryText"
-                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_marginRight="16dp"
-                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="8dp"
                                 android:paddingLeft="8dp"
                                 android:paddingRight="8dp"
                                 android:theme="@style/SelectableItemBackgroundBorderless"
+                                android:tint="?attr/colorOnSurface"
                                 android:visibility="visible"
-                                app:srcCompat="@drawable/ic_info_outline"/>
+                                app:srcCompat="@drawable/ic_info_outline" />
 
                         </RelativeLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="4dp"
-                        android:layout_marginBottom="8dp"
                         android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="4dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -155,33 +160,33 @@
                                 style="@style/CardTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
-                                android:layout_toLeftOf="@+id/artShowMoreFilters"
+                                android:layout_alignParentLeft="true"
                                 android:layout_toStartOf="@+id/artShowMoreFilters"
+                                android:layout_toLeftOf="@+id/artShowMoreFilters"
                                 android:text="@string/compiler_filters" />
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/artShowMoreFilters"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:tint="?attr/colorOnSurface"
                                 android:layout_alignParentEnd="true"
                                 android:layout_alignParentRight="true"
                                 android:layout_margin="16dp"
                                 android:theme="@style/SelectableItemBackgroundBorderless"
-                                app:srcCompat="@drawable/ic_down"/>
+                                android:tint="?attr/colorOnSurface"
+                                app:srcCompat="@drawable/ic_down" />
 
                             <WebView
                                 android:id="@+id/artWebView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/filters_titulo"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginEnd="16dp"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
                                 android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="8dp"
                                 android:padding="4dp"
                                 android:visibility="gone" />
 
@@ -190,13 +195,12 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="4dp"
-                        android:layout_marginBottom="8dp"
                         android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="4dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -207,37 +211,36 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingBottom="8dp"
-                                android:paddingTop="8dp"
-                                android:text="vm.dext2oat-filter"
                                 android:layout_gravity="center_vertical"
-                                android:textColor="?attr/colorOnSurface"
                                 android:gravity="center"
-                                android:maxWidth="100dp"/>
+                                android:maxWidth="100dp"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:text="vm.dext2oat-filter"
+                                android:textColor="?attr/colorOnSurface" />
 
                             <Spinner
                                 android:id="@+id/artVmSpinner"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginEnd="4dp"
-                                android:spinnerMode="dialog"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginEnd="4dp"
                                 android:layout_marginRight="4dp"
-                                android:layout_marginLeft="8dp" />
+                                android:spinnerMode="dialog" />
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        style="?attr/materialCardStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="4dp"
-                        android:layout_marginBottom="8dp"
                         android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="4dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -248,23 +251,23 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingBottom="8dp"
-                                android:paddingTop="8dp"
-                                android:text="vm.image-dext2oat.filter"
-                                android:textColor="?attr/colorOnSurface"
+                                android:gravity="center"
                                 android:maxWidth="100dp"
-                                android:gravity="center" />
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:text="vm.image-dext2oat.filter"
+                                android:textColor="?attr/colorOnSurface" />
 
                             <Spinner
                                 android:id="@+id/artVmImageSpinner"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginEnd="4dp"
-                                android:spinnerMode="dialog"
                                 android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginEnd="4dp"
                                 android:layout_marginRight="4dp"
-                                android:layout_marginLeft="8dp" />
+                                android:spinnerMode="dialog" />
 
                         </LinearLayout>
 

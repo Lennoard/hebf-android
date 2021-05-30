@@ -13,7 +13,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="?attr/toolBarBackgroundColorLighter" />
+            android:src="@color/colorPrimaryLighter" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/doze_record_count"
@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:maxLines="1"
-            android:textColor="?attr/colorOnPrimary"
+            android:textColor="@color/black_65"
             android:textSize="18sp" />
 
     </FrameLayout>
@@ -43,7 +43,7 @@
             android:layout_marginEnd="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/doze_record_duration"
@@ -54,7 +54,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
     </RelativeLayout>
 

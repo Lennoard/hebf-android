@@ -6,15 +6,20 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:background="@color/colorSurface"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorSurface"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,19 +31,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/default_card_margin"
-            android:layout_marginRight="@dimen/default_card_margin"
-            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginTop="@dimen/default_margin"
+                app:cardCornerRadius="0dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -67,7 +66,7 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/build_version"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imageView"
@@ -92,19 +91,17 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
                         android:text="@string/build_date"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 </RelativeLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="?attr/materialCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp">
+                app:cardCornerRadius="0dp"
+                android:layout_marginTop="@dimen/default_margin">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -125,7 +122,7 @@
                         android:paddingRight="16dp"
                         android:paddingBottom="16dp"
                         android:text="@string/build_changelog"
-                        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
                         android:textIsSelectable="true" />
 
                 </LinearLayout>

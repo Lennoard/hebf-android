@@ -3,7 +3,13 @@ package com.androidvip.hebf.utils;
 import android.content.Context;
 import android.os.Environment;
 
+import androidx.annotation.Keep;
+import androidx.collection.ArrayMap;
+
+import com.androidvip.hebf.BuildConfig;
+
 import java.io.File;
+import java.util.Locale;
 
 public final class K {
     public static final int USER_TYPE_NORMAL = 1;
@@ -13,19 +19,26 @@ public final class K {
     public static final int NOTIF_DISMISS_ONLY_ID = 0;
     public static final int NOTIF_REAPPLY_ID = 1;
     public static final int NOTIF_GB_ID = 2;
+    public static final int NOTIF_GB_LESS_ID = 3;
     public static final int NOTIF_VIP_ID = 4;
+    public static final int NOTIF_VIP_LESS_ID = 5;
     public static final int NOTIF_WM_ID = 6;
 
     public static final int NOTIF_ACTION_DISMISS_ID = 300;
     public static final int NOTIF_ACTION_WM_RESET_ID = 301;
     public static final int NOTIF_ACTION_BOOST_ID = 302;
+    public static final int NOTIF_ACTION_BOOST_LESS_ID = 303;
     public static final int NOTIF_ACTION_STOP_GB_ID = 304;
+    public static final int NOTIF_ACTION_STOP_GB_LESS_ID = 305;
     public static final int NOTIF_ACTION_STOP_VIP_ID = 306;
+    public static final int NOTIF_ACTION_STOP_VIP_LESS_ID = 307;
 
     static final int VIP_JOB_ID = 10;
     static final int VIP_CHARGER_JOB_ID = 16;
     static final int DOZE_JOB_ID = 11;
     static final int FSTRIM_JOB_ID = 12;
+    public static final int GAME_LESS_JOB_ID = 13;
+    public static final int VIP_LESS_JOB_ID = 14;
     static final int MEDIASERVER_JOB_ID = 15;
     public static final int SCREEN_OFF_JOB_ID = 16;
     public static final int POWER_CONNECTED_JOB_ID = 17;
@@ -52,6 +65,7 @@ public final class K {
     }
 
     public static class HEBF {
+        @Deprecated
         public static final File HEBF_FOLDER = new File(Environment.getExternalStorageDirectory(), "HEBF");
 
         public static File getLogFile(Context ctx) {
@@ -72,7 +86,6 @@ public final class K {
         public static final String FORCE_STOP_APPS_SET = "force_stop_set";
         public static final String HAS_CRASHED = "crashed";
         public static final String CRASH_MESSAGE = "crash_msg";
-        public static final String SHOW_ANNOUNCEMENTS = "show_announcements";
         public static final String EXTENDED_LOGGING_ENABLED = "extended_logging_enabled";
         public static final String IS_FIRST_START = "firststart";
         public static final String UNLOCKED_ADVANCED_OPTIONS = "unlocked_advanced_options";
@@ -87,29 +100,43 @@ public final class K {
         public static final String VIP_ENABLED = "vip_enabled";
         public static final String VIP_DEFAULT_SAVER = "default_saver";
         public static final String VIP_SCREEN_OFF = "enable_on_screen_off";
+        public static final String VIP_CHANGE_GOV = "change_gov";
+        public static final String VIP_GOV = "governor";
         public static final String VIP_FORCE_STOP = "force_stop_enabled";
         public static final String VIP_AUTO_TURN_ON = "auto_turn_on_enabled";
         public static final String VIP_DISABLE_DATA = "disable_data_enabled";
         public static final String VIP_DISABLE_SYNC = "disable_sync_enabled";
+        public static final String VIP_DISABLE_SYNC_LESS = "disable_sync_enabled_less";
         public static final String VIP_DISABLE_BLUETOOTH = "disable_bluetooth_enabled";
+        public static final String VIP_DISABLE_BLUETOOTH_LESS = "disable_bluetooth_enabled_less";
         public static final String VIP_GRAYSCALE = "grayscale_enabled";
         public static final String VIP_DEVICE_IDLE = "device_idle_enabled";
         public static final String VIP_SMART_PIXELS = "smart_pixels_enabled";
         public static final String VIP_PERCENTAGE = "percentage";
+        public static final String VIP_PERCENTAGE_LESS = "percentage_less";
         public static final String VIP_AUTO_TURN_ON_SELECTION = "percentage_selection";
+        public static final String VIP_PERCENTAGE_SELECTION_LESS = "percentage_selection_less";
         public static final String VIP_DISABLE_WHEN_CHARGING = "disable_when_connecting";
         public static final String VIP_SHOULD_STILL_ACTIVATE = "should_still_activate_automatically";
         public static final String VIP_CHANGE_BRIGHTNESS = "change_brightness";
         public static final String VIP_BRIGHTNESS_LEVEL_ENABLED = "brightness_level_enable";
+        public static final String VIP_BRIGHTNESS_LEVEL_ENABLED_LESS = "brightness_level_enable_less";
         public static final String VIP_BRIGHTNESS_LEVEL_DISABLED = "brightness_level_disable";
+        public static final String VIP_BRIGHTNESS_LEVEL_DISABLED_LESS = "brightness_level_disable_less";
         public static final String VIP_IS_SCHEDULED = "is_service_scheduled";
+        public static final String VIP_AUTO_TURN_ON_LESS = "auto_turn_on_enabled_less";
+        public static final String VIP_DISABLE_WIFI_LESS = "disable_wifi_enabled_less";
+        public static final String VIP_ALLOW_STATS_COLLECTION = "allow_stats_collection";
 
         public static final String GB_ENABLED = "gb_enabled";
         public static final String GB_CLEAR_CACHES = "clear_cache_enabled";
         public static final String GB_CHANGE_LMK = "change_lmk_params";
+        public static final String GB_CHANGE_GOV = "change_gov";
+        public static final String GB_GOV = "governor";
         public static final String GB_CUSTOM_LMK_PARAMS = "lmk_param";
         public static final String GB_LMK_PROFILE_SELECTION = "lmk_profile_selection";
         public static final String GB_FORCE_STOP = "force_stop_enabled";
+        public static final String GB_IS_SCHEDULED_LESS = "is_game_job_scheduled";
         public static final String GB_DND = "dnd_enabled";
         public static final String GB_CHANGE_BRIGHTNESS = "change_brightness";
         public static final String GB_BRIGHTNESS_LEVEL_ENABLED = "brightness_level_enable";
@@ -164,9 +191,14 @@ public final class K {
         public static final String TOOLS_ZIPALIGN = "zipalign";
         public static final String TOOLS_LOGCAT = "onLog";
         public static final String TOOLS_KERNEL_PANIC = "kernel_panic";
+        public static final String LESS_GAME_BOOSTER = "game_booster_less";
+        public static final String LESS_AUTO_OPT = "auto_optimizer_less";
+        public static final String LESS_AUTO_OPT_PER = "auto_optimizer_less_per";
         public static final String ACHIEVEMENT_SET = "achievement_set";
         public static final String QUICK_PROFILE = "quick_profile";
+        public static final String QUICK_PROFILE_LESS = "quick_profile_less";
         public static final String VM_ON_BOOT = "__vm_apply_on_boot";
         public static final String VM_DISK_SIZE_MB = "__vm_disk_size";
+        public static final String SHOW_PUSH_NOTIFICATIONS = "show_push_notifications";
     }
 }

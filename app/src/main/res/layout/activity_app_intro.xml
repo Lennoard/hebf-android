@@ -4,26 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context=".appintro.AppIntroActivity">
+    tools:context=".ui.appintro.AppIntroActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_intro"
+        android:layout_height="@dimen/collapsing_app_bar_height"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/toolbarBackgroundColor">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/toolbarBackgroundColor"
-                app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline6"
-                app:expandedTitleTextAppearance="?attr/textAppearanceHeadline4"/>
+            android:animateLayoutChanges="true"
+            android:background="@color/colorBackground"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.HEBF.Headline6"
+            app:contentScrim="@color/colorBackground"
+            app:expandedTitleMarginStart="@dimen/big_margin"
+            app:expandedTitleTextAppearance="@style/TextAppearance.HEBF.Headline3"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,11 +41,12 @@
             </LinearLayout>
 
             <com.google.android.material.appbar.MaterialToolbar
-                style="@style/ToolbarStyle"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin" />
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -54,7 +55,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/app_bar_intro">
+        android:layout_marginTop="240dp">
 
         <com.androidvip.hebf.views.CustomViewPager
             android:id="@+id/intro_pager"
@@ -71,7 +72,7 @@
             android:padding="6dp">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/MaterialButtonFlat"
+                style="@style/AppMaterialButtonFlat"
                 android:id="@+id/intro_button_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,8 +89,8 @@
                 app:iconGravity="start"/>
 
             <com.google.android.material.button.MaterialButton
-                style="@style/MaterialButtonFlat"
                 android:id="@+id/intro_button_right"
+                style="@style/AppMaterialButtonFlat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -101,8 +102,8 @@
                 android:text="@string/next"
                 android:textColor="@color/material_flat_button_text"
                 app:icon="@drawable/ic_chevron_right"
-                app:iconTint="?attr/colorOnSurface"
-                app:iconGravity="end"/>
+                app:iconGravity="end"
+                app:iconTint="?attr/colorOnSurface" />
 
             <ProgressBar
                 android:id="@+id/intro_progress"

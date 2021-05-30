@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="64dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ic_hebf" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="@string/account_root_check"
+        android:textAppearance="@style/TextAppearance.HEBF.Headline6" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:trackColor="@color/disabled" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/checkAccountRootGpsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/account_root_check_gps"
+        android:textAppearance="@style/TextAppearance.HEBF.Body2" />
+
+</LinearLayout>

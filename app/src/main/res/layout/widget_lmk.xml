@@ -10,7 +10,6 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:background="@drawable/widget_lmk"
-        android:tint="@color/claro_roxo"
         android:id="@+id/widget_lmk"/>
 
 </LinearLayout>

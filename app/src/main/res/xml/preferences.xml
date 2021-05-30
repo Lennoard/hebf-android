@@ -11,15 +11,6 @@
             android:entryValues="@array/user_profiles_values"
             android:dialogTitle="@string/tipo_usuario" />
 
-        <ListPreference
-            android:key="theme"
-            android:title="@string/theme"
-            android:summary="@string/theme_sub"
-            android:entries="@array/themes"
-            android:defaultValue="system_default"
-            android:entryValues="@array/themes_values"
-            android:dialogTitle="@string/theme" />
-
         <SwitchPreferenceCompat
             android:key="english_language"
             android:title="@string/force_english_language"
@@ -45,9 +36,11 @@
 
         <PreferenceScreen
             android:key="notification_settings"
-            android:title="@string/notification_settings">
+            android:title="@string/notification_settings" />
 
-        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="bug_report"
+            android:title="@string/bug_report" />
 
         <PreferenceScreen
             android:title="Logs"
@@ -55,7 +48,7 @@
 
             <intent android:action="android.intent.action.VIEW"
                 android:targetPackage="com.androidvip.hebf"
-                android:targetClass="com.androidvip.hebf.activities.internal.LogActivity" />
+                android:targetClass="com.androidvip.hebf.ui.internal.LogActivity" />
 
         </PreferenceScreen>
 

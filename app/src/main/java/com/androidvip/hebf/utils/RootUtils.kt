@@ -35,7 +35,7 @@ object RootUtils {
 
     @JvmStatic
     fun execute(commands: List<String>, activity: Activity?, callback: Runnable) {
-        Shell.su(*commands.toTypedArray()).submit { _ ->
+        Shell.su(*commands.toTypedArray()).submit {_ ->
             activity?.let {
                 if (!it.isFinishing) {
                     it.runOnUiThread {
@@ -47,7 +47,7 @@ object RootUtils {
     }
 
     @JvmStatic
-    fun executeSync(vararg commands: String): String {
+    fun executeSync(vararg commands: String) : String {
         return runCatching {
             val out = Shell.su(*commands).exec().out
             if (ShellUtils.isValidOutput(out)) out.last() else ""
@@ -80,10 +80,10 @@ object RootUtils {
     @JvmOverloads
     @JvmStatic
     suspend fun executeWithOutput(
-        command: String?,
-        defaultOutput: String? = "",
-        context: Context? = null,
-        forEachLine: ((String) -> Unit)? = null
+            command: String?,
+            defaultOutput: String? = "",
+            context: Context? = null,
+            forEachLine: ((String) -> Unit)? = null
     ): String = withContext(Dispatchers.Default) {
         val cmd = command ?: "pwd"
         val sb = StringBuilder()

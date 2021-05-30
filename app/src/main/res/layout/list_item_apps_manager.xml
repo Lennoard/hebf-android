@@ -52,7 +52,7 @@
             android:layout_marginEnd="4dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
             android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -64,7 +64,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+            android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/app_status"
@@ -75,7 +75,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
             android:gravity="end"
             android:textStyle="italic" />
 

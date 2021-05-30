@@ -1,41 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="psfmc_array">
-        <item>Disabled</item>
-        <item>Medium</item>
-        <item>Maximum</item>
-    </string-array>
-    <string-array name="bateria">
-        <item>状态:</item>
-        <item>通过充电:</item>
-        <item>健康:</item>
-        <item>技术:</item>
-        <item>电压:</item>
-        <item>规模:</item>
-    </string-array>
-
-    <string-array name="bateria_status">
-        <item>充电</item>
-        <item>放电</item>
-        <item>不收费</item>
-        <item>充满电</item>
-    </string-array>
-
-    <string-array name="bateria_conectado">
-        <item>AC adapter</item>
-        <item>USB</item>
-        <item>wireless charger</item>
-    </string-array>
-
-    <string-array name="bateria_saude">
-        <item>健康</item>
-        <item>cold</item>
-        <item>is no longer with us</item>
-        <item>overheat</item>
-        <item>over voltage!</item>
-        <item>unknown</item>
-        <item>unspecified failure</item>
-    </string-array>
 
     <string-array name="lmk_profiles">
         <item>@string/custom</item>
@@ -88,16 +52,6 @@
         <item>20分钟</item>
         <item>30分钟</item>
         <item>45分钟</item>
-    </string-array>
-
-    <string-array name="schedule_mediaserver_values">
-        <item>@string/off</item>
-        <item>3小时</item>
-        <item>6个小时</item>
-        <item>9个小时</item>
-        <item>12小时</item>
-        <item>16小时</item>
-        <item>24小时</item>
     </string-array>
 
 </resources>

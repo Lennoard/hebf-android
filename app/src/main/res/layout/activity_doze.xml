@@ -6,26 +6,34 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            android:background="@color/colorBackground"
+            android:elevation="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/dozeTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/toolbarBackgroundColor"
+            android:background="@color/colorBackground"
+            app:layout_scrollFlags="scroll|snap"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="?attr/colorAccent"
-            app:tabTextAppearance="@style/TextAppearance.AppTheme.Subtitle1"
-            app:tabTextColor="?attr/colorOnPrimary" />
+            app:tabSelectedTextColor="@color/colorOnBackground"
+            app:tabTextAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:tabTextColor="@color/colorTextNormal" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -40,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/add"
         android:visibility="invisible"

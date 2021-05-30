@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.apps.AppsManagerActivity">
+    tools:context=".ui.main.tools.apps.AppsManagerActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -13,14 +13,20 @@
         android:fitsSystemWindows="false">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
-                style="@style/ToolbarStyle"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBackground"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorOnBackground" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -60,7 +66,7 @@
                     android:layout_toRightOf="@+id/app_details_icon"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1"
+                    android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp" />
 
@@ -74,7 +80,7 @@
                     android:layout_toRightOf="@+id/app_details_icon"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppTheme.Body2" />
+                    android:textAppearance="@style/TextAppearance.HEBF.Body2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,7 +90,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/appDetailsUninstall"
-                        style="@style/BorderedMaterialButtonColored"
+                        style="@style/AppMaterialButtonOutlined"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
@@ -93,7 +99,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/appDetailsDisable"
-                        style="@style/BorderedMaterialButtonColored"
+                        style="@style/AppMaterialButtonOutlined"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/disable" />
@@ -151,7 +157,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:gravity="center_vertical"
                                 android:text="@string/storage"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -160,7 +166,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
                                 android:text="@string/loading"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textSize="14sp" />
 
                         </LinearLayout>
@@ -188,7 +194,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:gravity="center_vertical"
                                 android:text="Package path"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textColor="?attr/colorOnSurface" />
 
                             <androidx.appcompat.widget.AppCompatTextView
@@ -197,7 +203,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
                                 android:text="@string/loading"
-                                android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                 android:textSize="14sp" />
 
                         </LinearLayout>
@@ -230,7 +236,7 @@
                                     android:layout_marginBottom="2dp"
                                     android:gravity="center_vertical"
                                     android:text="AppOps"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                     android:textColor="?attr/colorOnSurface" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
@@ -240,7 +246,7 @@
                                     android:layout_marginRight="16dp"
                                     android:gravity="center_vertical"
                                     android:text="@string/app_ops_sum"
-                                    android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+                                    android:textAppearance="@style/TextAppearance.HEBF.Body2"
                                     android:textSize="14sp" />
 
                             </LinearLayout>

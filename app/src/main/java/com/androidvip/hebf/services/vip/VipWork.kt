@@ -8,6 +8,11 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.androidvip.hebf.models.BatteryStats
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipBatterySaverImpl
+import com.androidvip.hebf.utils.vip.VipBatterySaverNutellaImpl
+import com.topjohnwu.superuser.Shell
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class VipWork(private val context: Context, params: WorkerParameters): CoroutineWorker(context, params) {
     private val vipPrefs: VipPrefs by lazy { VipPrefs(applicationContext) }
@@ -16,10 +21,19 @@ class VipWork(private val context: Context, params: WorkerParameters): Coroutine
     private var batteryTemperature = 32.0F
     private var batteryVoltage = 0
 
-    override suspend fun doWork(): Result {
+    override suspend fun doWork(): Result = withContext(Dispatchers.Default) {
         Logger.logDebug("Running VIP work", applicationContext)
-        return try {
-            getBatteryStats(context)
+        return@withContext try {
+            if (vipPrefs.getBoolean(K.PREF.VIP_ALLOW_STATS_COLLECTION, true)) {
+                getBatteryStats(context)
+            }
+
+            val isRooted = Shell.rootAccess()
+            val vip = if (isRooted) {
+                VipBatterySaverImpl(applicationContext)
+            } else {
+                VipBatterySaverNutellaImpl(applicationContext)
+            }
 
             val current = BatteryStats.getCurrent()
             BatteryStats.putStat(BatteryStats(
@@ -35,7 +49,7 @@ class VipWork(private val context: Context, params: WorkerParameters): Coroutine
                         // We are allowed to turn VIP on automatically and the device is not charging
                         if (vipPrefs.getBoolean(K.PREF.VIP_SHOULD_STILL_ACTIVATE, false)) {
                             // User hasn't deliberately disabled VIP before, turn it on
-                            VipBatterySaver.toggle(true, applicationContext)
+                            vip.enable()
                             Logger.logWarning(
                                     "Automatically enabling VIP Battery Saver, " +
                                             "battery level is less than " +
@@ -54,7 +68,7 @@ class VipWork(private val context: Context, params: WorkerParameters): Coroutine
                 if (isCharging && vipPrefs.getBoolean(K.PREF.VIP_DISABLE_WHEN_CHARGING, false)) {
                     // Device is charging, user wants to disable VIP in this situation and VIP happens to be turned on
                     isEnabled = false
-                    VipBatterySaver.toggle(false, applicationContext)
+                    vip.disable()
                 }
             }
 

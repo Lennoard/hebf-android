@@ -2,69 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="#06000000">
+    android:background="#06000000"
+    android:orientation="vertical">
 
     <View
-        android:layout_width="36dp"
+        android:layout_width="@dimen/huge_margin_alt"
         android:layout_height="6dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/sheet_drag_indicator"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sheet_drag_indicator" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/modalBottomSheetTitle"
         style="@style/SingleLineText"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/modalBottomSheetTitle"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
+        android:minHeight="@dimen/button_min_height"
+        android:paddingStart="@dimen/default_margin"
+        android:paddingTop="@dimen/default_margin_alt"
+        android:paddingEnd="@dimen/default_margin"
         android:text="@android:string/dialog_alert_title"
-        android:paddingTop="12dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textAppearance="@style/TextAppearance.AppTheme.Headline6"
+        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
         android:textColor="?attr/colorOnSurface" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/modalBottomSheetMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/modalBottomSheetMessage"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:textAppearance="@style/TextAppearance.AppTheme.Subtitle2"
-        android:textColor="?attr/colorOnSurface"/>
+        android:layout_marginTop="@dimen/small_margin"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:textAppearance="@style/TextAppearance.HEBF.Subtitle2"
+        android:textColor="?attr/colorOnSurface" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/disabled" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/default_margin"
         android:gravity="end"
         android:orientation="horizontal"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp">
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin">
 
         <com.google.android.material.button.MaterialButton
-            style="@style/MaterialButtonFlatColored"
+            android:id="@+id/modalBottomSheetCancel"
+            style="@style/AppMaterialButtonFlatColored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/modalBottomSheetCancel"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:maxWidth="140dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="@android:string/cancel"/>
+            android:ellipsize="end"
+            android:maxWidth="140dp"
+            android:maxLines="1"
+            android:text="@android:string/cancel" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/MaterialButtonFlatColored"
+            android:id="@+id/modalBottomSheetOk"
+            style="@style/AppMaterialButtonFlatColored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:ellipsize="end"
             android:maxWidth="160dp"
-            android:id="@+id/modalBottomSheetOk"
-            android:text="@android:string/ok"/>
+            android:maxLines="1"
+            android:text="@android:string/ok" />
 
     </LinearLayout>
 

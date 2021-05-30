@@ -7,204 +7,215 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.MaterialToolbar
-            style="@style/ToolbarStyle"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/colorOnBackground" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/taskerDoneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/taskerDoneButton"
         android:layout_gravity="bottom|end"
-        android:text="@string/done"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:paddingBottom="14dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/done"
+        android:textAllCaps="false"
         android:visibility="invisible"
         app:icon="@drawable/ic_check" />
 
     <LinearLayout
+        android:id="@+id/taskerSelectFeatureLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/taskerSelectFeatureLayout"
         app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:textAppearance="@style/TextAppearance.AppTheme.Body2"
-            android:textColor="?attr/colorAccent"
-            android:text="@string/tasker_select_feature" />
+            android:text="@string/tasker_select_feature"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            android:textColor="?attr/colorAccent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center_horizontal"
+            android:orientation="horizontal"
             android:padding="8dp">
 
             <com.google.android.material.button.MaterialButton
-                style="@style/BorderedMaterialButton"
+                android:id="@+id/taskerSelectFeatureGameBooster"
+                style="@style/AppMaterialButtonOutlined"
                 android:layout_width="0dp"
                 android:layout_height="114dp"
-                android:layout_weight="1"
-                android:id="@+id/taskerSelectFeatureGameBooster"
-                app:drawableTopCompat="@drawable/ic_game_booster"
-                app:drawableTint="?attr/colorOnSurface"
-                android:text="@string/game_booster"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:maxLines="2"
-                android:ellipsize="end"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/game_booster"
+                android:textColor="@color/colorOnBackground"
+                app:drawableTint="?attr/colorOnSurface"
+                app:drawableTopCompat="@drawable/ic_game_booster"
+                app:strokeColor="@color/colorOnBackground" />
 
             <com.google.android.material.button.MaterialButton
-                style="@style/BorderedMaterialButton"
+                android:id="@+id/taskerSelectFeatureVip"
+                style="@style/AppMaterialButtonOutlined"
                 android:layout_width="0dp"
                 android:layout_height="114dp"
-                android:layout_weight="1"
-                android:id="@+id/taskerSelectFeatureVip"
-                app:drawableTopCompat="@drawable/ic_battery_full"
-                app:drawableTint="?attr/colorOnSurface"
-                android:text="@string/vip_battery_saver"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:maxLines="2"
-                android:ellipsize="end"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/vip_battery_saver"
+                android:textColor="@color/colorOnBackground"
+                app:drawableTint="?attr/colorOnSurface"
+                app:drawableTopCompat="@drawable/ic_battery"
+                app:strokeColor="@color/colorOnBackground" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/gameBoosterTaskerScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
-        android:id="@+id/gameBoosterTaskerScroll"
         android:visibility="gone"
         app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="@dimen/default_margin"
-            android:paddingRight="@dimen/default_margin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:paddingRight="@dimen/default_margin">
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/SingleLineText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Action"
-                android:textAllCaps="true"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:textColor="?attr/colorAccent"
-                android:layout_marginTop="16dp"/>
+                android:text="Action"
+                android:textAllCaps="true"
+                android:textColor="?attr/colorAccent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/disable"/>
+                    android:text="@string/disable" />
 
                 <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/gameBoosterTaskerActionSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gameBoosterTaskerActionSwitch"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:checked="true"/>
+                    android:checked="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/enable"/>
+                    android:text="@string/enable" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/gameBoosterTaskerActionlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/gameBoosterTaskerActionlayout">
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:text="@string/parameters"
                     style="@style/CardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parameters"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/game_booster_parameters_sub"
+                    android:paddingLeft="16dp"
                     android:paddingRight="16dp"
-                    android:paddingLeft="16dp" />
+                    android:text="@string/game_booster_parameters_sub" />
 
                 <CheckBox
-                    style="@style/RightLeadCheckBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/gameBoosterTaskerCaches"
-                    android:text="@string/clear_caches"
-                    android:checked="true" />
-
-                <CheckBox
                     style="@style/RightLeadCheckBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/clear_caches" />
+
+                <CheckBox
                     android:id="@+id/gameBoosterTaskerLmk"
-                    android:text="@string/low_memory_killer"
-                    android:checked="false" />
+                    style="@style/RightLeadCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/low_memory_killer" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    style="@style/CardTitleSmall"
                     android:id="@+id/gameBoosterTaskerDnd"
+                    style="@style/CardTitleSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/do_not_disturb_mode"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:text="@string/do_not_disturb_mode" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <androidx.appcompat.widget.SwitchCompat
-                        style="@style/CardTitleSmall"
                         android:id="@+id/gameBoosterTaskerForceStop"
+                        style="@style/CardTitleSmall"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/force_stop"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:text="@string/force_stop" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/gameBoosterTaskerSelectAppsButton"
@@ -227,164 +238,164 @@
     </ScrollView>
 
     <ScrollView
+        android:id="@+id/vipTaskerScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/vipTaskerScroll"
         android:visibility="gone"
         app:layout_behavior="@string/appbar_scrolling_view_behavior_local">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="@dimen/default_margin"
-            android:paddingRight="@dimen/default_margin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:paddingRight="@dimen/default_margin">
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/SingleLineText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Action"
-                android:textAllCaps="true"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:textColor="?attr/colorAccent"
-                android:layout_marginTop="16dp"/>
+                android:text="Action"
+                android:textAllCaps="true"
+                android:textColor="?attr/colorAccent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/disable"/>
+                    android:text="@string/disable" />
 
                 <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/vipTaskerActionSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/vipTaskerActionSwitch"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:checked="true"/>
+                    android:checked="true" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/enable"/>
+                    android:text="@string/enable" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/vipTaskerActionlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/vipTaskerActionlayout">
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:text="@string/parameters"
                     style="@style/CardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parameters"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/vip_parameters_sub"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/vip_parameters_sub" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vip_android_default_saver"
                     android:id="@+id/vipTaskerDefaultSaver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
+                    android:text="@string/vip_android_default_saver"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vip_disable_data"
                     android:id="@+id/vipTaskerDisableData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
+                    android:text="@string/vip_disable_data"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vip_disable_sync"
                     android:id="@+id/vipTaskerDisableSync"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
+                    android:text="@string/vip_disable_sync"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vip_disable_bluetooth"
                     android:id="@+id/vipTaskerDisableBluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
+                    android:text="@string/vip_disable_bluetooth"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/grayscale"
                     android:id="@+id/vipTaskerGrayScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
+                    android:text="@string/grayscale"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/vipTaskerForceDoze"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/vip_force_device_idle"
-                    android:id="@+id/vipTaskerForceDoze"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:paddingTop="16dp"
                     android:paddingBottom="16dp"
-                    android:textSize="16sp"
-                    android:textColor="?attr/colorOnSurface"/>
+                    android:text="@string/vip_force_device_idle"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="16sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/vipTaskerForceStop"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/force_stop"
-                        android:id="@+id/vipTaskerForceStop"
-                        android:layout_marginLeft="16dp"
                         android:layout_marginStart="16dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
                         android:paddingTop="16dp"
                         android:paddingBottom="24dp"
-                        android:gravity="center_vertical"
+                        android:text="@string/force_stop"
                         android:textSize="16sp" />
 
                     <androidx.appcompat.widget.AppCompatImageView

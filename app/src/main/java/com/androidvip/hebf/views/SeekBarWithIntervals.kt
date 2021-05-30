@@ -27,7 +27,7 @@ class SeekBarWithIntervals(context: Context, attributeSet: AttributeSet) : Linea
         get() = context as Activity
 
     private val seekBarThumbWidth: Int
-        get() = resources.getDimensionPixelOffset(R.dimen.seekbar_thumb_width)
+        get() = resources.getDimensionPixelOffset(R.dimen.medium_margin)
 
     var progress: Int
         get() = seekBar!!.progress

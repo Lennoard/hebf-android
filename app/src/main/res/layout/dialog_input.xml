@@ -3,21 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="@dimen/default_margin"
+    android:paddingRight="@dimen/default_margin">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/TextInputOutlined"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/dialogTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dialogTextInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/default_margin_alt"
+        android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 </LinearLayout>

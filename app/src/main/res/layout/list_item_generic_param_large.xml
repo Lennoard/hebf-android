@@ -15,7 +15,7 @@
         android:layout_marginEnd="4dp"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textAppearance="@style/TextAppearance.AppTheme.Subtitle1" />
+        android:textAppearance="@style/TextAppearance.HEBF.Subtitle1" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/cpu_tunable_value"
@@ -25,7 +25,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="4dp"
-        android:textAppearance="@style/TextAppearance.AppTheme.Body2"
+        android:textAppearance="@style/TextAppearance.HEBF.Body2"
         android:textSize="14sp" />
 
 </LinearLayout>

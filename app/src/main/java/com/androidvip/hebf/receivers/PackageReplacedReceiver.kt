@@ -9,6 +9,7 @@ import com.androidvip.hebf.BuildConfig
 
 import android.content.Context.MODE_PRIVATE
 import com.androidvip.hebf.utils.*
+import com.androidvip.hebf.utils.vip.VipServices
 
 class PackageReplacedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
@@ -22,7 +23,7 @@ class PackageReplacedReceiver : BroadcastReceiver() {
             }
 
             if (VipPrefs(context).getBoolean(K.PREF.VIP_AUTO_TURN_ON, false)) {
-                VipBatterySaver.toggleService(true, context)
+                VipServices.toggleVipService(true, context)
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

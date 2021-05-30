@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/modelLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/model"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toStartOf="@+id/devicelLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toStartOf="@+id/device"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/modelLabel"
+            tools:text="Redmi Note 5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/devicelLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/device"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toStartOf="@+id/manufacturerLabel"
+            app:layout_constraintStart_toEndOf="@+id/modelLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/device"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toStartOf="@+id/manufacturer"
+            app:layout_constraintStart_toEndOf="@+id/model"
+            app:layout_constraintTop_toBottomOf="@id/modelLabel"
+            tools:text="whyred" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manufacturerLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:text="@string/manufacturer"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/devicelLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/manufacturer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/device"
+            app:layout_constraintTop_toBottomOf="@id/devicelLabel"
+            tools:text="Xiaomi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bootloaderLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="Bootloader"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toStartOf="@+id/hardwareLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/model" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bootloader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toStartOf="@+id/hardware"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bootloaderLabel"
+            tools:text="@android:string/unknownName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hardwareLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="Hardware"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toStartOf="@+id/brandLabel"
+            app:layout_constraintStart_toEndOf="@+id/bootloaderLabel"
+            app:layout_constraintTop_toBottomOf="@id/device" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hardware"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toStartOf="@+id/brand"
+            app:layout_constraintStart_toEndOf="@+id/bootloader"
+            app:layout_constraintTop_toBottomOf="@id/hardwareLabel"
+            tools:text="qcom" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/brandLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:text="@string/brand"
+            android:textAppearance="@style/TextAppearance.HEBF.Subtitle1"
+            app:fontFamily="@font/cairo_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hardwareLabel"
+            app:layout_constraintTop_toBottomOf="@id/manufacturer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.HEBF.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hardware"
+            app:layout_constraintTop_toBottomOf="@id/brandLabel"
+            tools:text="Xiaomi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/androidVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/bigger_margin_alt"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:drawablePadding="@dimen/default_margin"
+            android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hardware"
+            tools:drawableLeftCompat="@drawable/ic_sdk_31"
+            tools:text="Android 12" />
+
+        <FrameLayout
+            android:id="@+id/memoryFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            app:layout_constraintTop_toBottomOf="@id/androidVersion">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/memoryCard"
+                style="@style/SelectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/small_margin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:minHeight="64dp"
+                    android:padding="@dimen/default_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memoryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:text="@string/memory"
+                        android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+                        app:layout_constraintEnd_toStartOf="@+id/memoryPercentage"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        app:layout_constraintEnd_toStartOf="@+id/memoryPercentage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/memoryLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memoryPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/memoryLabel"
+                        tools:text="69%" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memoryDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/memory" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin_alt"
+                android:layout_marginBottom="@dimen/small_margin"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                app:cardElevation="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_memoria"
+                    app:tint="@color/colorOnPrimary" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cpuFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintTop_toBottomOf="@id/memoryFrame">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cpuCard"
+                style="@style/SelectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/small_margin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:minHeight="64dp"
+                    android:padding="@dimen/default_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cpuLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:text="CPU"
+                        android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+                        app:layout_constraintEnd_toStartOf="@+id/cpuPercentage"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cpu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        app:layout_constraintEnd_toStartOf="@+id/cpuPercentage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cpuLabel" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cpuPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.HEBF.Headline4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cpuLabel"
+                        tools:text="1.3GHz" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cpuDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cpu" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin_alt"
+                android:layout_marginBottom="@dimen/small_margin"
+                app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_cpu"
+                    app:tint="@color/colorOnPrimary" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/kernelFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/huge_margin"
+            app:layout_constraintTop_toBottomOf="@id/cpuFrame">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/SelectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/small_margin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:minHeight="64dp"
+                    android:padding="@dimen/default_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/kernelLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:text="Kernel"
+                        android:textAppearance="@style/TextAppearance.HEBF.Headline6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/kernelDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:textAppearance="@style/TextAppearance.HEBF.Body2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/kernelLabel" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin_alt"
+                android:layout_marginBottom="@dimen/small_margin"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                app:cardElevation="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_nav_tools"
+                    app:tint="@color/colorOnPrimary" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

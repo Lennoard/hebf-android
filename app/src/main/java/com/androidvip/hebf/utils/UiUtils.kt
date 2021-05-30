@@ -2,8 +2,6 @@ package com.androidvip.hebf.utils
 
 import android.app.Activity
 import android.content.DialogInterface
-import android.content.Intent
-import android.content.res.Configuration
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.text.InputType
@@ -16,62 +14,18 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.androidvip.hebf.R
+import com.androidvip.hebf.applyAnim
 import com.androidvip.hebf.show
 import com.androidvip.hebf.toPx
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.context_bottom_sheet.*
 import kotlinx.android.synthetic.main.modal_bottom_sheet.*
 import java.io.Serializable
 
-object Themes {
-    const val LIGHT = "light"
-    const val DARKNESS = "darkness"
-    const val AMOLED = "amoled"
-    const val GREEN = "green"
-    const val DARK_GREEN = "dark_green"
-    const val WHITE = "white"
-    const val SYSTEM_DEFAULT = "system_default"
-
-    @JvmStatic
-    fun changeToTheme(activity: AppCompatActivity?) {
-        if (activity != null) {
-            activity.finish()
-            val i = Intent(activity, activity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            activity.startActivity(i)
-        }
-    }
-
-    @JvmStatic
-    fun setTheme(activity: Activity) {
-        val isDarkModeOn: Boolean =
-            activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
-
-        if (isDarkModeOn) {
-            when (UserPrefs(activity.applicationContext).getString(K.PREF.THEME, SYSTEM_DEFAULT)) {
-                DARKNESS -> activity.setTheme(R.style.Base_AppTheme_Darkness)
-                GREEN, DARK_GREEN -> activity.setTheme(R.style.Base_AppTheme_Green)
-                WHITE -> activity.setTheme(R.style.Base_AppTheme_White)
-                else -> activity.setTheme(R.style.Base_AppTheme)
-            }
-        } else {
-            when (UserPrefs(activity.applicationContext).getString(K.PREF.THEME, SYSTEM_DEFAULT)) {
-                DARKNESS -> activity.setTheme(R.style.Base_AppTheme_Darkness)
-                AMOLED -> activity.setTheme(R.style.Base_AppTheme_Black)
-                GREEN -> activity.setTheme(R.style.Base_AppTheme_Green)
-                DARK_GREEN -> activity.setTheme(R.style.Base_AppTheme_DarkGreen)
-                WHITE -> activity.setTheme(R.style.Base_AppTheme_White)
-                else -> activity.setTheme(R.style.Base_AppTheme)
-            }
-        }
-    }
-}
-
 typealias SheetOption = ContextBottomSheet.Option
-
 class ContextBottomSheet : BottomSheetDialogFragment() {
     companion object {
         fun newInstance(title: String? = "", options: ArrayList<Option>): ContextBottomSheet = ContextBottomSheet().apply {
@@ -88,10 +42,8 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
 
     data class Option(var title: String, val tag: String, @DrawableRes var icon: Int?) : Serializable
 
-    var onOptionClickListener: OnOptionClickListener = object : OnOptionClickListener {
-        override fun onOptionClick(tag: String) {
-            dismiss()
-        }
+    var onOptionClickListener : OnOptionClickListener = object : OnOptionClickListener {
+        override fun onOptionClick(tag: String) { dismiss() }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -117,7 +69,7 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
         }
     }
 
-    private fun generateOptionView(option: Option): LinearLayout {
+    private fun generateOptionView(option: Option) : LinearLayout {
         val textColor = TypedValue()
         val backgroundDrawable = TypedValue()
         context?.theme?.resolveAttribute(R.attr.colorOnSurface, textColor, true)
@@ -145,7 +97,7 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
                 setImageResource(it)
 
                 if (option.tag == "uninstall") {
-                    setColorFilter(ContextCompat.getColor(context, R.color.color_error), PorterDuff.Mode.SRC_IN)
+                    setColorFilter(ContextCompat.getColor(context, R.color.colorError), PorterDuff.Mode.SRC_IN)
                 } else {
                     setColorFilter(ContextCompat.getColor(context, textColor.resourceId), PorterDuff.Mode.SRC_IN)
                 }
@@ -156,7 +108,7 @@ class ContextBottomSheet : BottomSheetDialogFragment() {
             layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1F)
             text = option.title
             if (option.tag == "uninstall") {
-                setTextColor(ContextCompat.getColor(context, R.color.color_error))
+                setTextColor(ContextCompat.getColor(context, R.color.colorError))
             } else {
                 setTextColor(ContextCompat.getColor(context, textColor.resourceId))
             }
@@ -177,14 +129,9 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
     var cancelButtonText: String? = ""
     var showOkButton = true
     var showCancelButton = false
-    var onButtonClickListener: OnButtonClickListener = object : OnButtonClickListener {
-        override fun onOkButtonClick() {
-            dismiss()
-        }
-
-        override fun onCancelButtonClick() {
-            dismiss()
-        }
+    var onButtonClickListener : OnButtonClickListener = object : OnButtonClickListener {
+        override fun onOkButtonClick() { dismiss() }
+        override fun onCancelButtonClick() { dismiss() }
     }
 
     companion object {
@@ -229,7 +176,7 @@ class ModalBottomSheet : BottomSheetDialogFragment() {
 }
 
 /**
- * An useful class that displays a dialog with a single input field and get the text of it.
+ * A useful class that displays a dialog with a single input field and get the text of it.
  * It is also possible to set the input type, and add a cancelListener
  *
  * @author Lennoard
@@ -243,7 +190,7 @@ class EditDialog(private val activity: Activity) {
     var inputType = INPUT_TYPE_UNSPECIFIED
     var guessInputType = false
     var onCancelListener = DialogInterface.OnClickListener { _, _ -> }
-    var onConfirmListener: OnConfirmListener = object : OnConfirmListener {
+    var onConfirmListener : OnConfirmListener = object : OnConfirmListener {
         override fun onOkButtonClicked(newData: String) {
 
         }
@@ -283,17 +230,22 @@ class EditDialog(private val activity: Activity) {
             else -> inputType
         }
 
-        val dialog = AlertDialog.Builder(activity).apply {
+        val dialog = MaterialAlertDialogBuilder(activity).apply {
             setTitle(title)
             setView(dialogView)
             this@EditDialog.message?.let { setMessage(it) }
 
             setNegativeButton(android.R.string.cancel, onCancelListener)
-            setPositiveButton(android.R.string.ok) { _, _ -> onConfirmListener.onOkButtonClicked(editText?.text.toString()) }
+            setPositiveButton(android.R.string.ok) { _, _ ->
+                onConfirmListener.onOkButtonClicked(editText?.text.toString())
+            }
         }
 
-
-        dialog.show()
+        dialog.applyAnim().also {
+            if (!activity.isFinishing) {
+                it.show()
+            }
+        }
     }
 
     fun buildApplying(block: EditDialog.() -> Unit): EditDialog {
