@@ -33,12 +33,10 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission
         android:name="android.permission.REAL_GET_TASKS"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -152,9 +150,6 @@
             android:name=".ui.internal.TranslateActivity"
             android:label="@string/translations" />
         <activity
-            android:name=".ui.internal.PurchasePremiumActivity"
-            android:label="@string/premium_package" />
-        <activity
             android:name=".ui.internal.BusyboxInstallerActivity"
             android:label="Busybox" />
         <activity
@@ -214,7 +209,6 @@
         <activity
             android:name=".ui.main.tools.apps.AutoStartDisablerActivity"
             android:label="@string/auto_start_disabler" />
-        <activity android:name=".ui.internal.AccountRootCheckActivity" />
         <activity
             android:name=".ui.internal.CommandLineActivity"
             android:label="HEBF Terminal" />
@@ -363,7 +357,6 @@
             android:name=".services.gb.GameJobService"
             android:label="GAME JOB SERVICE"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service android:name=".services.OverlayWindowService" />
         <service android:name=".services.gb.GameBoosterOverlayService" />
 
         <provider

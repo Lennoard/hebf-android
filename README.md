@@ -1,8 +1,31 @@
-
-# HEBF Optimizer   
- ![]( https://img.shields.io/github/license/Lennoard/hebf-android)     ![](https://img.shields.io/badge/requires-root-red) ![](https://img.shields.io/github/languages/count/Lennoard/hebf-android) ![](https://img.shields.io/github/languages/top/Lennoard/hebf-android) ![](https://img.shields.io/github/contributors/Lennoard/hebf-android) ![](https://img.shields.io/github/last-commit/Lennoard/hebf-android)
-
+<table align="center">
+  <thead align="center">
+    <tr>
+      <td><b>Code</b></td>
+      <td><b>Releases</b></td>
+      <td><b>Other</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://img.shields.io/github/languages/count/Lennoard/hebf-android"/></td>
+      <td><img src="https://img.shields.io/github/v/release/Lennoard/hebf-android"/></td>
+      <td><img src="https://img.shields.io/github/license/Lennoard/hebf-android"/></td>
+    </tr>
+	  <tr>
+      <td><img src="https://img.shields.io/github/languages/top/Lennoard/hebf-android"/></td>
+      <td><img src="https://img.shields.io/github/downloads/Lennoard/hebf-android/total"/></td>
+      <td><img src="https://img.shields.io/badge/requires-root-red"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://img.shields.io/github/last-commit/Lennoard/hebf-android"/></td>
+      <td><img src="https://img.shields.io/github/commits-since/Lennoard/hebf-android/latest/master"/></td>
+      <td><img src="https://img.shields.io/github/contributors/Lennoard/hebf-android"/></td>
+    </tr>
+  </tbody>
+</table>
  
+# HEBF Optimizer
 Originally created by [Ivsom  Emidio](http://forum.xda-developers.com/member.php?u=5968361/), HEBF Optimizer is an Android application that aims to improve how your device performs and focuses on battery saving by adjusting Android system and/or kernel parameters using superuser privileges.
 
 The application also features a useful and intelligent toolbox that you can use whenever you want.
