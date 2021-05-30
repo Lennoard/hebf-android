@@ -63,7 +63,7 @@ class AppIntroActivity : BaseActivity() {
             titleTextSwitcher.setFactory {
                 val textView = TextView(this).apply {
                     textSize = 30f
-                    setTextColor(Color.WHITE)
+                    setTextColor(ContextCompat.getColor(context, R.color.colorOnSurface))
                 }
 
                 val layoutParams = FrameLayout.LayoutParams(

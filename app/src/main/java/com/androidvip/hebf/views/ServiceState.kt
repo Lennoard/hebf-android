@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.forEach
 import androidx.core.widget.ImageViewCompat
 import com.androidvip.hebf.R
+import com.androidvip.hebf.createVectorDrawable
 import com.androidvip.hebf.runOnMainThread
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.topjohnwu.superuser.ShellUtils
@@ -50,8 +51,15 @@ class ServiceState @JvmOverloads constructor(
                 }
             }
 
-            val icon = attributes.getDrawable(R.styleable.ServiceState_serviceIcon)
-            this.icon.setImageDrawable(icon)
+            runCatching {
+                val icon = attributes.getDrawable(R.styleable.ServiceState_serviceIcon)
+                this.icon.setImageDrawable(icon)
+            }.onFailure {
+                val iconId = attributes.getResourceId(
+                    R.styleable.ServiceState_serviceIcon, R.drawable.ic_settings
+                )
+                this.icon.setImageDrawable(context.createVectorDrawable(iconId))
+            }
         } finally {
             attributes.recycle()
         }

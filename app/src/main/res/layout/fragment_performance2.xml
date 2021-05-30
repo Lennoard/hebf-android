@@ -23,7 +23,8 @@
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginRight="@dimen/default_margin"
             android:outlineSpotShadowColor="@color/colorPrimary"
-            app:cardElevation="@dimen/default_margin_alt">
+            app:cardElevation="@dimen/default_margin_alt"
+            app:cardPreventCornerOverlap="false">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"

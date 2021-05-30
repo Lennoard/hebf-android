@@ -55,7 +55,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="240dp">
+        android:layout_marginTop="@dimen/collapsing_app_bar_height">
 
         <com.androidvip.hebf.views.CustomViewPager
             android:id="@+id/intro_pager"
