@@ -55,7 +55,6 @@ HEBF provides a nice interface for power users to tweak their device. There are 
 
 
 ## Download  
- <a href='https://labs.xda-developers.com/store/app/com.androidvip.hebf'><img alt='Get it on Labs' height="64" src='https://i.imgur.com/Pz29bXH.png'/></a>  
 <a href='https://play.google.com/store/apps/details?id=com.androidvip.hebf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="64" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 
